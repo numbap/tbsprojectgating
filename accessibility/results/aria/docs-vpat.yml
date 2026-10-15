@@ -43,9 +43,9 @@
     - table "Report information":
       - caption: Report information
       - rowgroup:
-        - row "Name of product and version Project Gating Navigator (Navigateur des points de contrôle de projet) 1.0.0":
+        - row "Name of product and version Project Gating Navigator (Navigateur des points de contrôle de projet) 1.0.1":
           - rowheader "Name of product and version"
-          - cell "Project Gating Navigator (Navigateur des points de contrôle de projet) 1.0.0"
+          - cell "Project Gating Navigator (Navigateur des points de contrôle de projet) 1.0.1"
         - row "Report date 2026-10-15 (manual evaluation); automated results recompiled with each commit":
           - rowheader "Report date"
           - cell "2026-10-15 (manual evaluation); automated results recompiled with each commit"
@@ -68,17 +68,12 @@
           - rowheader "Evaluation methods used"
           - cell "WCAG 2.2 A/AA evaluation combining (1) axe-core automated rules on every page state in light and dark themes; (2) scripted Playwright checks for keyboard access, keyboard traps, focus visibility and contrast, focus obscuring, reflow at 320 CSS px, resize at 200%, text spacing, target size, non-text contrast, ARIA tabs, focus management and status messages; (3) code review of templates, styles and event handling; (4) visual inspection of light, dark and forced-colours rendering at several widths; and (5) review of the generated accessibility tree. Details are in the test methodology and test report."
   - heading "Build status" [level=2]
-  - paragraph: "Automated suite passed: 105 axe-core runs with no WCAG violations, and 564 scripted checks passed across 35 page states (axe-core 4.14.0, Chromium (Playwright 1.56.1))."
   - paragraph:
-    - strong: Manual review pending.
-    - text: "The user interface has changed since the last attested manual review (2026-10-15). Changed:"
-    - code: js/app.js
-    - text: ","
-    - code: js/report.js
-    - text: ","
-    - code: js/strings.js
-    - text: . Automated results in this report are current; judgements based on code review or visual inspection must be re-confirmed (
-    - code: npm run a11y:attest
+    - strong: "Automated suite failed:"
+    - text: 0 WCAG violation(s) and 3 failed scripted check(s). Affected criteria are downgraded below.
+  - paragraph:
+    - text: "Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint"
+    - code: 5a7a10a86dcec001
     - text: ).
   - heading "Notes" [level=2]
   - list:
@@ -118,7 +113,7 @@
   - term: Not Evaluated
   - definition: The product has not been evaluated against the criterion.
   - heading "Summary" [level=2]
-  - paragraph: "WCAG 2.2 Level A and AA (56 criteria, including 4.1.1): 45 Supports, 11 Not Applicable."
+  - paragraph: "WCAG 2.2 Level A and AA (56 criteria, including 4.1.1): 44 Supports, 1 Partially Supports, 11 Not Applicable."
   - heading "WCAG 2.x Report" [level=2]
   - paragraph: Tables 1 and 2 cover WCAG 2.0, 2.1 and 2.2. Criteria introduced in WCAG 2.1 or 2.2 are marked. EN 301 549 chapter 9 results follow from these tables.
   - 'region "Table 1: Success Criteria, Level A"':
@@ -467,14 +462,14 @@
             - paragraph:
               - strong: "Evidence:"
               - text: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection.
-        - 'row "1.4.12 Text Spacing (Level AA, WCAG 2.1 and 2.2) Supports With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed)."':
+        - 'row "1.4.12 Text Spacing (Level AA, WCAG 2.1 and 2.2) Partially Supports With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs)."':
           - rowheader "1.4.12 Text Spacing (Level AA, WCAG 2.1 and 2.2)"
-          - cell "Supports"
-          - 'cell "With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed)."':
-            - text: With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears.
+          - cell "Partially Supports"
+          - 'cell "With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs)."':
+            - text: "With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px."
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed).
+              - text: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs).
         - 'row "1.4.13 Content on Hover or Focus (Level AA, WCAG 2.1 and 2.2) Supports No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser. Evidence: code review."':
           - rowheader "1.4.13 Content on Hover or Focus (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
@@ -856,10 +851,10 @@
           - rowheader "9.1.4.11 Non-text Contrast"
           - cell "Supports"
           - cell "See WCAG 1.4.11."
-        - row "9.1.4.12 Text Spacing Supports See WCAG 1.4.12.":
+        - 'row "9.1.4.12 Text Spacing Partially Supports See WCAG 1.4.12. text-spacing on report (320px): Page scrolls horizontally by 11px."':
           - rowheader "9.1.4.12 Text Spacing"
-          - cell "Supports"
-          - cell "See WCAG 1.4.12."
+          - cell "Partially Supports"
+          - 'cell "See WCAG 1.4.12. text-spacing on report (320px): Page scrolls horizontally by 11px."'
         - row "9.1.4.13 Content on Hover or Focus Supports See WCAG 1.4.13.":
           - rowheader "9.1.4.13 Content on Hover or Focus"
           - cell "Supports"
@@ -900,10 +895,10 @@
           - rowheader "9.4.1.3 Status Messages"
           - cell "Supports"
           - cell "See WCAG 4.1.3."
-        - row "9.6 WCAG conformance requirements Supports All clauses 9.1 to 9.4 are supported or not applicable.":
+        - row "9.6 WCAG conformance requirements Partially Supports One or more clauses 9.1 to 9.4 are not fully supported.":
           - rowheader "9.6 WCAG conformance requirements"
-          - cell "Supports"
-          - cell "All clauses 9.1 to 9.4 are supported or not applicable."
+          - cell "Partially Supports"
+          - cell "One or more clauses 9.1 to 9.4 are not fully supported."
   - heading "Chapters 10 to 12" [level=3]
   - 'region "Chapters 10 to 12: Non-web documents, software, documentation and support"':
     - 'table "Chapters 10 to 12: Non-web documents, software, documentation and support"':

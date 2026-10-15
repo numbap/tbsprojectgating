@@ -24,7 +24,7 @@
   - heading "Déclaration d'accessibilité" [level=1]
   - paragraph: Le Navigateur des points de contrôle de projet vise à être utilisable par tous, y compris les personnes qui utilisent des technologies d'assistance. Nous visons le niveau AA des WCAG 2.2 et la norme EN 301 549 v3.2.1.
   - heading "État de conformité" [level=2]
-  - paragraph: "La version 1.0.0 est évaluée comme conforme au niveau AA des WCAG 2.2 : 45 critères pris en charge et 11 sans objet."
+  - paragraph: La version 1.0.1 n'est pas entièrement conforme pour le moment. 1 critères WCAG sont touchés par des échecs automatisés; consultez le VPAT.
   - paragraph: "L'examen manuel est à jour : les jugements fondés sur l'examen du code et l'inspection visuelle portent sur le code d'interface décrit par ce rapport."
   - paragraph:
     - text: Il s'agit d'une autoévaluation. Elle n'a

@@ -39,17 +39,10 @@
   - heading "Accessibility statement" [level=1]
   - paragraph: The Project Gating Navigator aims to be usable by everyone, including people who use assistive technologies. We target WCAG 2.2 Level AA and EN 301 549 v3.2.1.
   - heading "Conformance status" [level=2]
-  - paragraph: "Version 1.0.0 is evaluated as conforming to WCAG 2.2 Level AA: 45 criteria supported and 11 not applicable. EN 301 549: chapter 9 supported; 4.2.10 (usage with limited cognition, language or learning) is partially supported; 10 (non-web documents) is not evaluated."
+  - paragraph: Version 1.0.1 does not currently fully conform. 1 WCAG criteria are affected by automated failures; see the VPAT.
   - paragraph:
-    - strong: Manual review pending.
-    - text: "The user interface has changed since the last attested manual review (2026-10-15). Changed:"
-    - code: js/app.js
-    - text: ","
-    - code: js/report.js
-    - text: ","
-    - code: js/strings.js
-    - text: . Automated results in this report are current; judgements based on code review or visual inspection must be re-confirmed (
-    - code: npm run a11y:attest
+    - text: "Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint"
+    - code: 5a7a10a86dcec001
     - text: ).
   - paragraph:
     - text: This is a self-assessment. It has
