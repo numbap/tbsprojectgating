@@ -1,18 +1,18 @@
 {
   "reviewedAt": "2026-10-15",
   "reviewer": "Claude (AI assistant, Anthropic). Self-assessment; no accessibility certification; not independent",
-  "notes": "Version 1.0.1: re-review after source verification changes (governance summary and report rows for PCRA requirement, Treasury Board stages, concept case and OCG reporting; estimate accuracy block on gate pages); code review; automated suite passed",
+  "notes": "Version 1.0.1: narrow-screen wrapping for report tiles, status pills and requirement titles (CI text-spacing failures at 320 px); automated suite passed",
   "fingerprint": {
     "files": {
       "index.html": "bb41dea5e6b822fe",
-      "css/styles.css": "81c8fd8afa77a738",
+      "css/styles.css": "fc6c0422321d9fa7",
       "js/app.js": "15139fe9839739f6",
       "js/report.js": "ea2c500da1bc70bf",
       "js/strings.js": "45d98ca5c0713ce1",
       "scripts/build-vpat.mjs": "599d33c5a7463d4a",
       "accessibility/assets/docs.css": "5c8b73bd2f873c73"
     },
-    "combined": "5a7a10a86dcec001"
+    "combined": "f1aa0321a47e0d7b"
   },
   "history": [
     {
@@ -26,6 +26,12 @@
       "reviewer": "Claude (AI assistant, Anthropic). Self-assessment; no accessibility certification; not independent",
       "notes": "Version 1.0.1: re-review after source verification changes (governance summary and report rows for PCRA requirement, Treasury Board stages, concept case and OCG reporting; estimate accuracy block on gate pages); code review; automated suite passed",
       "fingerprint": "5a7a10a86dcec001"
+    },
+    {
+      "reviewedAt": "2026-10-15",
+      "reviewer": "Claude (AI assistant, Anthropic). Self-assessment; no accessibility certification; not independent",
+      "notes": "Version 1.0.1: narrow-screen wrapping for report tiles, status pills and requirement titles (CI text-spacing failures at 320 px); automated suite passed",
+      "fingerprint": "f1aa0321a47e0d7b"
     }
   ]
 }

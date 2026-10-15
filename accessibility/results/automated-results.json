@@ -556,9 +556,9 @@
     "wcagViolations": 0,
     "advisoryViolations": 0,
     "checksRun": 564,
-    "checksFailed": 3,
+    "checksFailed": 0,
     "pageErrors": 0,
-    "pass": false
+    "pass": true
   },
   "axe": [
     {
@@ -1236,7 +1236,7 @@
       "incomplete": [
         {
           "id": "color-contrast",
-          "count": 2
+          "count": 1
         },
         {
           "id": "label-content-name-mismatch",
@@ -2534,7 +2534,7 @@
       "incomplete": [
         {
           "id": "color-contrast",
-          "count": 120
+          "count": 117
         },
         {
           "id": "label-content-name-mismatch",
@@ -5585,7 +5585,6 @@
         "meta-viewport-large",
         "page-has-heading-one",
         "region",
-        "scrollable-region-focusable",
         "skip-link",
         "tabindex",
         "table-duplicate-name",
@@ -8623,12 +8622,8 @@
       "state": "report",
       "variant": "320px",
       "advisory": false,
-      "pass": false,
-      "failures": [
-        "Page scrolls horizontally by 11px",
-        "div \"26%Assessment progress\"",
-        "div \"RequiredTreasury Board approval\""
-      ]
+      "pass": true,
+      "failures": []
     },
     {
       "id": "keyboard-reach",
@@ -9407,12 +9402,8 @@
       "state": "fr-report",
       "variant": "320px",
       "advisory": false,
-      "pass": false,
-      "failures": [
-        "Page scrolls horizontally by 5px",
-        "div \"26 %Progression de l'évaluation\"",
-        "div \"RequiseApprobation du Conseil du Trésor\""
-      ]
+      "pass": true,
+      "failures": []
     },
     {
       "id": "keyboard-reach",
@@ -9606,10 +9597,8 @@
       "state": "fr-assess",
       "variant": "320px",
       "advisory": false,
-      "pass": false,
-      "failures": [
-        "Page scrolls horizontally by 10px"
-      ]
+      "pass": true,
+      "failures": []
     },
     {
       "id": "keyboard-reach",

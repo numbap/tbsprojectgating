@@ -326,7 +326,8 @@ label.check input { width: 24px; height: 24px; margin: 0; }
 .report h1 { font-size: 1.6rem; }
 .report h2 { font-size: 1.2rem; margin-top: 1.6em; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
 .report h3 { font-size: 1rem; margin-top: 1.2em; }
-.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 12px 0; }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+.kpi { min-width: 0; overflow-wrap: anywhere; }
 .kpi { background: var(--surface-2); border-radius: 8px; padding: 12px; }
 .kpi-v { font-size: 1.6rem; font-weight: 700; }
 .kpi-l { font-size: .8rem; color: var(--muted); }
@@ -435,3 +436,12 @@ tr.is-next td { background: var(--accent-soft); }
 .decision-options .box { font-size: 1.1rem; margin-right: 4px; }
 .sign { margin-top: 18px; font-family: inherit; }
 #lang-toggle { white-space: nowrap; }
+
+/* Narrow screens with WCAG text spacing (1.4.12): let tiles, pills and card
+   titles wrap instead of forcing horizontal scrolling, whatever the font. */
+@media (max-width: 480px) {
+  .kpis { grid-template-columns: minmax(0, 1fr); }
+  .pill { white-space: normal; overflow-wrap: anywhere; max-width: 100%; }
+  .ctitle { min-width: 0; flex-basis: 100%; overflow-wrap: anywhere; }
+  .ctl > summary, .ctl-body, .tab-panel, .questions, .seg-opt span { min-width: 0; overflow-wrap: anywhere; }
+}
