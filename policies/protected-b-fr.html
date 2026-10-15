@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Traitement de l&#39;information Protégé B · Navigateur des points de contrôle de projet</title>
+<link rel="stylesheet" href="../accessibility/assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Passer au contenu</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Navigateur des points de contrôle de projet</a> <span>Politiques</span> <a class="alt-lang" href="protected-b.html" lang="en">English</a></p>
+  <nav aria-label="Politiques"><ul><li><a href="privacy-fr.html">Politique de confidentialité</a></li><li><a href="protected-b-fr.html" aria-current="page">Traitement de l&#39;information Protégé B</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Traitement de l&#39;information Protégé B</h1>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Application</td>
+<td>Navigateur des points de contrôle de projet, version 1.0.0 et suivantes</td>
+</tr>
+<tr>
+<td>Dernier examen</td>
+<td>2026-10-15</td>
+</tr>
+<tr>
+<td>Statut</td>
+<td>Énoncé de conception et autoévaluation. <strong>Il ne s&#39;agit pas d&#39;une autorisation d&#39;utiliser l&#39;application avec de l&#39;information Protégé B.</strong></td>
+</tr>
+</tbody></table></div>
+<p><em>La version anglaise de ce document fait foi. La présente traduction a été rédigée avec l&#39;aide d&#39;outils de traduction automatique et n&#39;a pas encore été révisée par un traducteur agréé.</em></p>
+<p>Cette page explique comment l&#39;application est conçue pour protéger l&#39;information Protégé B, comment cela correspond aux exigences de sécurité du gouvernement du Canada, et ce qui doit être vrai de votre environnement pour que ces protections tiennent. Les mises en garde de la section 5 font partie de l&#39;énoncé; ce ne sont pas des notes de bas de page.</p>
+<blockquote>
+<p>La cote <strong>Protégé B</strong> s&#39;applique à l&#39;information dont la compromission risquerait vraisemblablement de causer un préjudice grave à une personne, à une organisation ou au gouvernement. Une évaluation de projet à un point de contrôle contient souvent de l&#39;information de ce genre : demandes de financement non annoncées et présentations au Cabinet ou au Conseil du Trésor, estimations de coûts et provisions pour éventualités, stratégie d&#39;approvisionnement avant la publication d&#39;une demande de soumissions, et constats francs sur les risques et les faiblesses. L&#39;application utilise donc <strong>Protégé B</strong> comme cote par défaut. Ne choisissez une cote inférieure que lorsque le contenu le justifie clairement.</p>
+</blockquote>
+<h2>1. Cadre des exigences</h2>
+<p>La conception répond aux instruments suivants :</p>
+<ul>
+<li>la <strong>Politique sur la sécurité du gouvernement</strong> et la <strong>Directive sur la gestion de la sécurité</strong> (Conseil du Trésor), qui exigent que les ministères protègent l&#39;information selon sa catégorie de sécurité et gèrent les risques pour les systèmes d&#39;information;</li>
+<li>l&#39;<strong>ITSG-33</strong>, <em>La gestion des risques liés à la sécurité des TI : Une méthode axée sur le cycle de vie</em> (Centre canadien pour la cybersécurité), dont les mesures servent à la section 4 à décrire les mesures de protection de l&#39;application elle-même;</li>
+<li>la <strong>Politique sur la planification et la gestion des investissements</strong> et la <strong>Directive sur la gestion des projets et programmes</strong>, objet des évaluations que produit cet outil (les documents confidentiels du Cabinet contenus dans des ébauches de présentations sont assujettis à leurs propres règles; ne collez pas de documents confidentiels du Cabinet dans l&#39;outil);</li>
+<li>l&#39;<strong>ITSP.40.111</strong>, <em>Algorithmes cryptographiques pour l&#39;information NON CLASSIFIÉ, PROTÉGÉ A et PROTÉGÉ B</em> (CCC);</li>
+<li>l&#39;<strong>ITSP.40.006</strong>, <em>Nettoyage des supports de TI</em> (CCC), pour l&#39;élimination.</li>
+</ul>
+<p>Les politiques et normes de sécurité ministérielles ont préséance. Votre agent de sécurité du ministère (ASM) et votre équipe de sécurité de la TI décident si l&#39;application peut être utilisée avec de l&#39;information Protégé B, et à quelles conditions.</p>
+<h2>2. Résumé</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 2, scrollable"><table>
+<thead>
+<tr>
+<th>Exigence</th>
+<th>Comment l&#39;application y répond</th>
+<th>Dépend de (voir la section 5)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L&#39;information reste sous contrôle ministériel</td>
+<td>Fonctionne entièrement dans le navigateur. Aucune composante côté serveur; aucune connexion réseau (bloquée par la politique de sécurité du contenu)</td>
+<td>Copie du code fiable et non modifiée (5.2)</td>
+</tr>
+<tr>
+<td>Protection au repos</td>
+<td>Chiffrement AES-256-GCM dans le stockage du navigateur par défaut. Le stockage non chiffré est refusé pour Protégé A et B</td>
+<td>Appareil géré avec chiffrement intégral du disque (5.1); cryptographie du navigateur non validée par le PVMC (5.3)</td>
+</tr>
+<tr>
+<td>Protection en transit</td>
+<td>Rien n&#39;est transmis. Fichiers d&#39;exportation chiffrés pour déplacer le travail entre appareils</td>
+<td>Voies approuvées pour les fichiers que vous transmettez (5.6)</td>
+</tr>
+<tr>
+<td>Contrôle d&#39;accès</td>
+<td>Phrase de passe pour déverrouiller; verrouillage automatique après 15 minutes d&#39;inactivité (réglable); verrouillage manuel</td>
+<td>Robustesse de la phrase de passe; verrouillage de l&#39;écran de l&#39;appareil (5.1, 5.4)</td>
+</tr>
+<tr>
+<td>Marquage</td>
+<td>Bandeau de cote sur chaque écran; cote sur les rapports, chaque page imprimée, le nom et le contenu des fichiers exportés</td>
+<td>Choix de la bonne cote par l&#39;utilisateur (5.8)</td>
+</tr>
+<tr>
+<td>Élimination</td>
+<td>Effacement en une étape de toutes les données stockées; les données chiffrées deviennent irrécupérables lorsque la clé disparaît</td>
+<td>Assainissement de l&#39;appareil en fin de vie (5.5)</td>
+</tr>
+<tr>
+<td>Responsabilisation</td>
+<td>Non fournie : aucun journal d&#39;accès (5.7)</td>
+<td>Gestion ministérielle des documents</td>
+</tr>
+</tbody></table></div>
+<h2>3. Mesures de protection en détail</h2>
+<h3>3.1 Aucune transmission d&#39;information</h3>
+<ul>
+<li>L&#39;application est constituée de HTML, de CSS et de JavaScript statiques. Tout le traitement (y compris l&#39;examen des documents de projet collés) se fait dans l&#39;onglet du navigateur.</li>
+<li>Chaque page déclare une <strong>politique de sécurité du contenu</strong> : <code>default-src &#39;none&#39;; connect-src &#39;none&#39;; form-action &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; base-uri &#39;none&#39;; object-src &#39;none&#39;</code>. Le navigateur bloque donc les connexions réseau, les soumissions de formulaires, les scripts intégrés et distants et le contenu distant, même si un attaquant parvenait à injecter du balisage. <code>referrer</code> est défini à <code>no-referrer</code>.</li>
+<li>Aucune bibliothèque de tiers n&#39;est utilisée à l&#39;exécution; il n&#39;y a ni outils d&#39;analyse, ni polices ou images d&#39;autres sites, ni témoins.</li>
+<li>Les essais automatisés font échouer la compilation si le code client utilise une interface réseau ou de témoins, ou si la politique de sécurité du contenu est affaiblie. Un essai dans le navigateur confirme que <code>fetch</code> est bloqué.</li>
+</ul>
+<h3>3.2 Chiffrement au repos</h3>
+<ul>
+<li><strong>Algorithme :</strong> AES-256 en mode GCM (chiffrement authentifié), avec un nouveau vecteur d&#39;initialisation aléatoire de 96 bits à chaque enregistrement.</li>
+<li><strong>Dérivation de clé :</strong> PBKDF2-HMAC-SHA-256, 600 000 itérations, sel aléatoire de 128 bits. Les enveloppes de moins de 100 000 itérations sont refusées.</li>
+<li>AES et SHA-256 figurent parmi les algorithmes approuvés par l&#39;ITSP.40.111 pour l&#39;information Protégé B. PBKDF2 est la fonction de dérivation de clé à partir d&#39;un mot de passe décrite dans la publication NIST SP 800-132.</li>
+<li>Les clés sont créées comme clés Web Crypto <strong>non extractibles</strong> et n&#39;existent qu&#39;en mémoire pendant le déverrouillage. La phrase de passe n&#39;est jamais stockée.</li>
+<li>La cote de sécurité et les paramètres de dérivation de clé sont liés au texte chiffré à titre de données authentifiées; ils ne peuvent donc pas être modifiés sans que ce soit détecté.</li>
+<li><strong>Application de la politique dans le code :</strong> la couche de stockage refuse d&#39;écrire une évaluation Protégé A ou Protégé B sans chiffrement dans le stockage du navigateur. Des essais unitaires le vérifient.</li>
+<li>Choisir <strong>Non enregistré</strong> garde l&#39;évaluation uniquement dans la mémoire de l&#39;onglet.</li>
+</ul>
+<h3>3.3 Accès à l&#39;évaluation stockée</h3>
+<ul>
+<li>Le déverrouillage exige la phrase de passe (au moins 15 caractères). Les gestionnaires de mots de passe et le collage sont pris en charge, comme l&#39;exige le critère 3.3.8 des WCAG 2.2.</li>
+<li><strong>Verrouillage automatique</strong> après 15 minutes d&#39;inactivité par défaut, réglable de 15 minutes à 8 heures ou désactivé. Le bouton <strong>Verrouiller</strong> est toujours offert dans l&#39;en-tête. Le verrouillage efface l&#39;évaluation déchiffrée de la page.</li>
+<li>L&#39;application refuse de fonctionner dans un cadre (iframe), ce qui empêche d&#39;autres pages de l&#39;intégrer pour lire le contenu déchiffré.</li>
+</ul>
+<h3>3.4 Marquage</h3>
+<ul>
+<li>Un bandeau en haut de chaque écran indique la cote (par exemple <strong>PROTÉGÉ B</strong>), le mode de stockage et « Les données restent sur cet appareil ».</li>
+<li>Les rapports affichent la cote en haut et en bas. Les impressions la répètent en haut à droite et en bas de <strong>chaque page</strong>.</li>
+<li>Le nom des fichiers téléchargés comprend la cote (par exemple <code>…-PROTECTED-B-fr.md</code>). Les fichiers Markdown et CSV commencent par la cote, et les fichiers chiffrés la portent dans leur en-tête authentifié.</li>
+</ul>
+<h3>3.5 Exportation et déplacement de l&#39;information</h3>
+<ul>
+<li>L&#39;<strong>exportation chiffrée</strong> utilise une phrase de passe distincte que vous choisissez, de sorte que le fichier peut être déplacé sans révéler la phrase de passe du navigateur. Transmettez la phrase de passe par une autre voie que le fichier.</li>
+<li>Les rapports Markdown ou CSV et les exportations JSON non chiffrées ne peuvent pas être chiffrés par l&#39;application. Lorsque la cote est Protégé, l&#39;application vous demande de confirmer avant le téléchargement et vous rappelle de ne stocker le fichier que sur des systèmes approuvés.</li>
+</ul>
+<h3>3.6 Élimination</h3>
+<ul>
+<li><strong>Données et sécurité → Effacer toutes les données de ce navigateur</strong> supprime tout ce que l&#39;application stocke.</li>
+<li>Comme les évaluations stockées sont chiffrées, la suppression des données chiffrées et l&#39;oubli de la clé rendent illisibles les résidus éventuels sur le disque (effacement cryptographique).</li>
+</ul>
+<h2>4. Correspondance avec les mesures de l&#39;ITSG-33 (mesures de l&#39;application elle-même)</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 3, scrollable"><table>
+<thead>
+<tr>
+<th>Mesure</th>
+<th>Mise en œuvre dans l&#39;application</th>
+<th>État</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC-4 Application du contrôle du flux d&#39;information</td>
+<td>La politique de sécurité du contenu bloque toutes les connexions sortantes et les soumissions de formulaires</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>AC-11 Verrouillage de session</td>
+<td>Verrouillage automatique (réglable) et manuel; contenu déchiffré retiré de la page</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>AC-12 Fin de session</td>
+<td>Le verrouillage supprime la clé en mémoire; un rechargement exige la phrase de passe</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>AU-2 / AU-12 Événements vérifiables</td>
+<td>Aucune journalisation des accès à l&#39;évaluation</td>
+<td><strong>Non mise en œuvre</strong> (5.7)</td>
+</tr>
+<tr>
+<td>CM-7 Fonctionnalité minimale</td>
+<td>Aucun serveur, réseau, témoin, code de tiers ni script intégré</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>IA-5 Gestion des authentifiants</td>
+<td>Longueur minimale de la phrase de passe; phrase jamais stockée; phrases distinctes pour les exportations</td>
+<td>Partielle : aucune récupération, aucune vérification de complexité au-delà de la longueur (5.4)</td>
+</tr>
+<tr>
+<td>IA-7 / SC-13 Protection cryptographique</td>
+<td>Algorithmes approuvés par l&#39;ITSP.40.111 au moyen de Web Crypto</td>
+<td>Partielle : la validation du module dépend du navigateur et de la plateforme (5.3)</td>
+</tr>
+<tr>
+<td>MP-6 Nettoyage des supports</td>
+<td>Fonction d&#39;effacement et effacement cryptographique</td>
+<td>Partielle : l&#39;assainissement des appareils relève du ministère (5.5)</td>
+</tr>
+<tr>
+<td>SC-8 Confidentialité des transmissions</td>
+<td>Aucune transmission; fichiers d&#39;exportation chiffrés</td>
+<td>Mise en œuvre; les voies de transmission des fichiers relèvent du ministère (5.6)</td>
+</tr>
+<tr>
+<td>SC-12 Gestion des clés</td>
+<td>Sels et vecteurs aléatoires; clés non extractibles; clé conservée seulement en mémoire</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>SC-18 Code mobile</td>
+<td>Seuls les scripts de la même origine peuvent s&#39;exécuter (<code>script-src &#39;self&#39;</code>)</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>SC-28 Protection au repos</td>
+<td>AES-256-GCM; stockage non chiffré refusé pour l&#39;information protégée</td>
+<td>Mise en œuvre, comme défense en profondeur (5.1)</td>
+</tr>
+<tr>
+<td>SI-10 Validation des entrées</td>
+<td>Tout contenu saisi est échappé avant l&#39;affichage; les fichiers importés sont validés</td>
+<td>Mise en œuvre</td>
+</tr>
+<tr>
+<td>SI-12 Conservation de l&#39;information</td>
+<td>Les données restent jusqu&#39;à ce que vous les effaciez; rien n&#39;est conservé ailleurs</td>
+<td>Mise en œuvre; le calendrier de conservation relève du ministère</td>
+</tr>
+</tbody></table></div>
+<h2>5. Mises en garde et dépendances</h2>
+<p>Ces conditions sont <strong>nécessaires</strong> pour que les mesures ci-dessus aient un sens. Plusieurs dépendent de la façon et de l&#39;endroit où l&#39;application est déployée, ou d&#39;autorisations que l&#39;application ne peut contrôler.</p>
+<h3>5.1 L&#39;appareil</h3>
+<p>N&#39;utilisez l&#39;application que sur un <strong>appareil géré par le gouvernement du Canada et autorisé pour l&#39;information Protégé B</strong>, doté du chiffrement intégral du disque, de correctifs à jour, d&#39;une protection des terminaux et d&#39;un verrouillage d&#39;écran imposé. N&#39;utilisez pas d&#39;appareils personnels ou partagés. Le stockage du navigateur réside sur le disque, dans le profil du navigateur de l&#39;utilisateur. Le chiffrement de l&#39;application est une défense en profondeur et <strong>ne remplace pas le chiffrement de l&#39;appareil</strong>.</p>
+<p>Les <strong>extensions de navigateur</strong> peuvent lire le contenu de n&#39;importe quelle page, y compris les évaluations déchiffrées. Les ministères devraient restreindre les extensions sur les appareils utilisés pour l&#39;information Protégé B.</p>
+<h3>5.2 Provenance du code (hébergement et origine)</h3>
+<ul>
+<li><strong>GitHub Pages n&#39;est pas un service ministériel.</strong> Il ne sert que le code de l&#39;application et ne reçoit jamais le contenu des évaluations. Toutefois, quiconque contrôle le dépôt contrôle le code qu&#39;exécute votre navigateur. Une modification compromise ou malveillante pourrait supprimer ces protections. Utilisez une version examinée.</li>
+<li>Sur <code>github.io</code>, <strong>tous les sites GitHub Pages d&#39;un même compte partagent une même origine</strong> (par exemple <code>https://numbap.github.io</code>) et donc le même stockage de navigateur. Les autres sites de ce compte pourraient lire les données chiffrées (sans pouvoir les déchiffrer), les supprimer ou les remplacer. L&#39;authentification GCM détecte le remplacement.</li>
+<li>GitHub Pages ne peut pas envoyer d&#39;en-têtes de sécurité HTTP personnalisés (comme <code>frame-ancestors</code>, <code>X-Content-Type-Options</code> ou une politique de sécurité du contenu transmise par en-tête). L&#39;application compense par une politique <code>&lt;meta&gt;</code> et une vérification de cadre dans le code, qui offrent une protection moindre.</li>
+<li><strong>Recommandation pour l&#39;utilisation avec de l&#39;information Protégé B :</strong> le ministère devrait héberger une copie examinée et figée à une version donnée sur sa propre infrastructure ou un hébergement approuvé, sur une <strong>origine dédiée</strong> (son propre nom d&#39;hôte), avec des en-têtes de sécurité définis par le serveur. La commande <code>npm start</code> sert l&#39;application localement.</li>
+</ul>
+<h3>5.3 Validation du module cryptographique</h3>
+<p>L&#39;application utilise l&#39;implémentation Web Crypto intégrée au navigateur. La question de savoir s&#39;il s&#39;agit d&#39;un <strong>module validé par le PVMC (FIPS 140-2/140-3)</strong> dépend du navigateur, du système d&#39;exploitation et de la configuration, et <strong>ne peut généralement pas être garantie</strong>. Si les normes ministérielles exigent une cryptographie validée pour l&#39;information Protégé B au repos (ITSG-33 IA-7 et SC-13), fiez-vous au chiffrement intégral et validé du disque de l&#39;appareil comme mesure principale.</p>
+<h3>5.4 Phrases de passe</h3>
+<ul>
+<li>La protection n&#39;est pas plus forte que la phrase de passe. La longueur minimale est imposée; la robustesse au-delà n&#39;est pas mesurée.</li>
+<li>Il n&#39;y a <strong>aucune récupération de la phrase de passe</strong>. Une phrase oubliée signifie que l&#39;évaluation stockée est perdue; conservez des exportations chiffrées comme copies de sauvegarde.</li>
+<li>Il n&#39;y a pas de blocage après des tentatives infructueuses. Une personne disposant d&#39;une copie du profil du navigateur peut essayer des phrases de passe hors ligne; la dérivation de clé à 600 000 itérations la ralentit sans pouvoir l&#39;empêcher.</li>
+</ul>
+<h3>5.5 Mémoire et résidus</h3>
+<p>JavaScript ne peut pas effacer la mémoire de façon fiable. Pendant qu&#39;une évaluation est déverrouillée, et un certain temps après, du contenu déchiffré peut subsister en mémoire, dans le fichier d&#39;échange, les fichiers de mise en veille prolongée ou les vidages sur incident. Le chiffrement intégral du disque et les procédures ministérielles d&#39;assainissement (ITSP.40.006) visent ces copies. Les sauvegardes du navigateur, les profils itinérants ou les dossiers synchronisés peuvent copier les données chiffrées; vérifiez la configuration ministérielle.</p>
+<h3>5.6 Fichiers que vous créez</h3>
+<p>Les rapports Markdown et CSV, les exportations JSON non chiffrées, les impressions et les PDF produits par le navigateur ne sont <strong>pas chiffrés</strong>. Stockez-les uniquement dans des dépôts approuvés pour l&#39;information Protégé B, marquez-les et transmettez-les uniquement par des voies approuvées (par exemple des systèmes de collaboration ministériels approuvés pour Protégé B ou un courriel chiffré). Vérifiez que le dossier de téléchargement du navigateur n&#39;est pas synchronisé avec un service infonuagique non approuvé. Le contenu copié dans le presse-papiers peut être visible par d&#39;autres applications ou l&#39;historique du presse-papiers.</p>
+<h3>5.7 Aucune piste de vérification</h3>
+<p>L&#39;application ne consigne pas qui a ouvert ou modifié une évaluation; elle ne satisfait donc pas aux exigences de vérification de l&#39;ITSG-33 (famille AU) applicables aux systèmes de documents officiels. Utilisez-la comme outil de travail et conservez les documents officiels dans les systèmes ministériels.</p>
+<h3>5.8 Responsabilités des utilisateurs</h3>
+<p>La cote reflète ce que l&#39;utilisateur choisit. Le choix d&#39;une cote ne rend pas à lui seul le traitement conforme. Les utilisateurs doivent respecter les règles ministérielles sur le besoin de savoir, le stockage, la transmission et l&#39;élimination. <strong>L&#39;information Protégé C et classifiée n&#39;est pas prise en charge.</strong></p>
+<h3>5.9 Statut du présent énoncé</h3>
+<p>Cet énoncé a été préparé en même temps que le code de l&#39;application par un assistant d&#39;IA (Claude, Anthropic). Il s&#39;agit d&#39;un énoncé de conception appuyé par des essais automatisés, et <strong>non</strong> d&#39;une évaluation par une autorité ministérielle de sécurité. L&#39;application n&#39;a pas fait l&#39;objet d&#39;une évaluation de la sécurité et d&#39;une autorisation (EAS). Avant de l&#39;utiliser avec de l&#39;information Protégé B, obtenez une approbation au moyen du processus de sécurité de votre ministère. Ce processus peut traiter l&#39;application comme un outil utilisé sur un terminal déjà autorisé.</p>
+<h2>6. Éléments probants</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 4, scrollable"><table>
+<thead>
+<tr>
+<th>Élément probant</th>
+<th>Emplacement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Essais unitaires sur le chiffrement, la politique de stockage et l&#39;absence de réseau</td>
+<td><code>tests/storage.test.mjs</code></td>
+</tr>
+<tr>
+<td>Vérifications de sécurité dans le navigateur (la politique bloque le réseau; seul du texte chiffré est stocké; le verrouillage efface la page; l&#39;intégration dans un cadre est refusée; le stockage non chiffré d&#39;information protégée est refusé; cote sur les rapports et le nom des fichiers)</td>
+<td><code>tests/security/run.mjs</code></td>
+</tr>
+<tr>
+<td>Implémentation du chiffrement</td>
+<td><code>js/vault.js</code></td>
+</tr>
+<tr>
+<td>Application de la politique de stockage</td>
+<td><code>js/storage.js</code></td>
+</tr>
+<tr>
+<td>Politique de sécurité du contenu</td>
+<td><code>index.html</code> et chaque page de documentation</td>
+</tr>
+</tbody></table></div>
+<p>Tous ces éléments s&#39;exécutent à chaque validation dans le flux d&#39;intégration continue du projet.</p>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="privacy-fr.html">Politique de confidentialité</a>
+  <a href="protected-b-fr.html">Traitement de l'information Protégé B</a>
+  <a href="../accessibility/declaration.html">Déclaration d'accessibilité, VPAT et preuves</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Signaler un problème d'accessibilité</a>
+  <a href="../index.html">Retour à l'application</a></p>
+  <p lang="en">Generated by <code>scripts/build-vpat.mjs</code>. Source: <code>policies/protected-b-fr.md</code>.</p>
+</footer>
+</body>
+</html>

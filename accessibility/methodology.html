@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Test methodology · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html">Test report</a></li><li><a href="strategy.html">Strategy and conformance policy</a></li><li><a href="scope.html">Scope and context</a></li><li><a href="methodology.html" aria-current="page">Methodology</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="remediation-log.html">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Test methodology</h1>
+<p>This document explains how each conformance judgement in the VPAT was reached, so that a third party can reproduce or challenge it.</p>
+<h2>1. Overview</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Code in evaluation data</th>
+<th>What it provides</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Automated rules</td>
+<td><code>automated</code></td>
+<td>axe-core run on every page state, in light and dark themes</td>
+</tr>
+<tr>
+<td>Scripted checks</td>
+<td><code>scripted</code></td>
+<td>Playwright scripts that test criteria rule engines cannot (keyboard, focus, reflow, spacing, target size, ARIA patterns, live regions)</td>
+</tr>
+<tr>
+<td>Code review</td>
+<td><code>code-review</code></td>
+<td>Inspection of HTML templates (<code>index.html</code>, <code>js/app.js</code>, <code>js/report.js</code>), CSS (<code>css/styles.css</code>) and event handling</td>
+</tr>
+<tr>
+<td>Visual inspection</td>
+<td><code>visual</code></td>
+<td>Review of rendered screenshots: light and dark themes, 320 px and 1280 px widths, forced-colours mode, focus states</td>
+</tr>
+<tr>
+<td>Accessibility tree</td>
+<td><code>aria-tree</code></td>
+<td>Review of the accessibility tree Chromium exposes for each state (<code>results/aria/*.yml</code>)</td>
+</tr>
+</tbody></table></div>
+<p>Each criterion in <code>accessibility/evaluation/criteria.mjs</code> lists the methods its judgement relies on. The VPAT&#39;s remarks also cite the automated rules and scripted checks mapped to that criterion in the current run.</p>
+<h2>2. Automated rules (axe-core)</h2>
+<ul>
+<li>Runs with tags <code>wcag2a</code>, <code>wcag2aa</code>, <code>wcag21a</code>, <code>wcag21aa</code>, <code>wcag22a</code>, <code>wcag22aa</code> and <code>best-practice</code>.</li>
+<li>Rules are mapped to success criteria through axe&#39;s <code>wcagNNN</code> tags.</li>
+<li>A violation of any WCAG-tagged rule fails the build and downgrades the mapped criterion in the VPAT.</li>
+<li>Best-practice violations are reported as advisory and do not affect conformance.</li>
+<li>“Incomplete” results (where axe needs human review) are listed in the test report for the reviewer.</li>
+</ul>
+<h2>3. Scripted checks</h2>
+<p>Implemented in <code>tests/a11y/checks.mjs</code>:</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 2, scrollable"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>WCAG</th>
+<th>Procedure</th>
+<th>Pass condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>keyboard-reach</td>
+<td>2.1.1</td>
+<td>Start at the top of the document and press Tab until focus leaves the page; compare the stops with every visible, enabled focusable element</td>
+<td>Every element is reached. For radio groups one member suffices; roving-tabindex tabs are covered by tabs-pattern.</td>
+</tr>
+<tr>
+<td>no-keyboard-trap</td>
+<td>2.1.2</td>
+<td>Same traversal</td>
+<td>Focus leaves the page within 900 presses</td>
+</tr>
+<tr>
+<td>focus-visible</td>
+<td>2.4.7, 1.4.11</td>
+<td>At each stop, read the computed outline or box-shadow of the element, or of its visible label for visually hidden inputs</td>
+<td>An indicator is present, and an outline has at least 3:1 contrast with the adjacent background</td>
+</tr>
+<tr>
+<td>focus-not-obscured</td>
+<td>2.4.11</td>
+<td>At each stop, hit-test the centre and two corners of the focused element</td>
+<td>At least one point hits the element itself</td>
+</tr>
+<tr>
+<td>lookalike-controls</td>
+<td>2.1.1, 4.1.2</td>
+<td>Find elements styled as buttons, tabs or choices</td>
+<td>Each is focusable or contains a focusable control</td>
+</tr>
+<tr>
+<td>target-size</td>
+<td>2.5.8</td>
+<td>Measure every focusable target (the visible label for hidden inputs)</td>
+<td>At least 24 by 24 CSS px, except inline links in sentences</td>
+</tr>
+<tr>
+<td>non-text-contrast</td>
+<td>1.4.11</td>
+<td>Compare the border colour of fields, selects and choice controls with the surrounding background</td>
+<td>At least 3:1 (or the fill contrasts at least 3:1)</td>
+</tr>
+<tr>
+<td>reflow-320</td>
+<td>1.4.10</td>
+<td>Load at a 320 CSS px wide viewport</td>
+<td>Document does not scroll horizontally (content inside scroll containers for data tables is exempt)</td>
+</tr>
+<tr>
+<td>reflow-640</td>
+<td>1.4.4</td>
+<td>Load at 640 CSS px (200% zoom)</td>
+<td>Same as above</td>
+</tr>
+<tr>
+<td>text-spacing</td>
+<td>1.4.12</td>
+<td>Inject the WCAG text-spacing overrides at 1280 and 320 px</td>
+<td>No clipped text in overflow-restricted elements; no horizontal scrolling</td>
+</tr>
+<tr>
+<td>route-focus</td>
+<td>2.4.3, 2.4.2, 4.1.2</td>
+<td>Use the main navigation with the keyboard</td>
+<td>Focus moves to the new page&#39;s h1; title is unique; link has <code>aria-current=&quot;page&quot;</code></td>
+</tr>
+<tr>
+<td>tabs-pattern</td>
+<td>2.1.1, 4.1.2</td>
+<td>Arrow and End keys on the requirement lens tabs</td>
+<td>Focus and selection move; <code>aria-selected</code>, <code>aria-controls</code> and <code>aria-labelledby</code> are set; single tab stop</td>
+</tr>
+<tr>
+<td>language-switch</td>
+<td>3.1.1, 3.1.2, 4.1.3</td>
+<td>Press Enter on the language toggle, then again</td>
+<td><code>html lang</code> becomes <code>fr</code> then <code>en</code>; focus stays on the toggle; the toggle is marked with the language it offers; the change is announced; content is translated</td>
+</tr>
+<tr>
+<td>status-messages</td>
+<td>4.1.3, 2.1.1</td>
+<td>Select an answer with Space, run Analyze with Enter, type in the library search</td>
+<td>Each action produces live-region text; search keeps focus</td>
+</tr>
+</tbody></table></div>
+<h2>4. Manual procedures</h2>
+<p><strong>Code review.</strong> For each criterion marked <code>code-review</code>, the evaluator inspected the relevant templates and handlers: semantics of each component, error messages, confirmation before destructive actions, change-of-context behaviour, language, and timing.</p>
+<p><strong>Visual inspection.</strong> Screenshots were reviewed for: legibility and contrast in both themes; layout at 320 px; visible focus indicators; selected-state cues that do not depend on colour (check marks); and forced-colours rendering (selection uses system Highlight colours, focus uses an outline).</p>
+<p><strong>Accessibility tree.</strong> The YAML snapshots in <code>results/aria/</code> show each state&#39;s roles, names and states as exposed to assistive technology. They were reviewed for meaningful names (for example, “Apply: Where does it run?” instead of repeated “Apply”) and correct roles (tablist, tab, tabpanel, radio, status).</p>
+<h2>5. Reproducing the results</h2>
+<pre><code class="language-sh">npm ci
+npx playwright install chromium   # unless a Chromium is already available
+npm run a11y                      # build docs, run the suite, rebuild the VPAT in strict mode
+</code></pre>
+<p>The results are written to <code>accessibility/results/automated-results.json</code>. Given the same code, tool versions and environment, runs are deterministic: the fixture data and viewports are fixed and no timestamps are recorded.</p>
+<p><strong>Reference environment.</strong> The GitHub-hosted Ubuntu runner used by the CI workflow is the reference environment, and its results are the ones committed. Font availability differs between machines and can change layout slightly, which in turn changes which axe-core rules apply (for example, whether a region is wide enough to scroll). A local run can therefore list a slightly different set of passing rules. Failures are not environment-dependent in this way: any failure in any environment fails the build.</p>
+<h2>6. Limitations</h2>
+<p>The following were <strong>not</strong> performed. A third party should weigh them when relying on this report:</p>
+<ol>
+<li><strong>No testing with assistive technology.</strong> No testing was done with JAWS, NVDA, VoiceOver, TalkBack, Dragon or switch access, or by people with disabilities. The accessibility tree snapshots show what is exposed to assistive technology, but not how a particular screen reader announces it.</li>
+<li><strong>Single browser engine.</strong> Testing used Chromium only. Firefox and Safari were not tested.</li>
+<li><strong>Rendering-dependent checks are heuristic.</strong> The focus-obscured and clipping checks sample points and overflow properties; they can miss partial overlaps.</li>
+<li><strong>Emulated zoom.</strong> Reflow and resize were tested with narrow viewports rather than real browser zoom or text-only zoom.</li>
+<li><strong>Judgement criteria.</strong> Criteria such as 2.4.6 and 3.3.3 depend on human judgement. They are re-reviewed when the user interface changes (see the strategy, section 4), but are not re-verified automatically on each commit.</li>
+</ol>
+<p>An independent audit that includes assistive technology testing is recommended before relying on this VPAT for procurement decisions.</p>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

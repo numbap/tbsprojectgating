@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Accessibility strategy and conformance policy · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html">Test report</a></li><li><a href="strategy.html" aria-current="page">Strategy and conformance policy</a></li><li><a href="scope.html">Scope and context</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="remediation-log.html">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Accessibility strategy and conformance policy</h1>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Product</td>
+<td>Project Gating Navigator (web application, English and French)</td>
+</tr>
+<tr>
+<td>Document owner</td>
+<td>Product maintainers, <code>numbap/tbsprojectgating</code> repository</td>
+</tr>
+<tr>
+<td>Applies from</td>
+<td>Version 1.0.0</td>
+</tr>
+<tr>
+<td>Last revised</td>
+<td>2026-10-15</td>
+</tr>
+</tbody></table></div>
+<h2>1. Conformance target</h2>
+<p>The product&#39;s web interface and its accessibility documentation pages target:</p>
+<ul>
+<li><strong>WCAG 2.2 Level A and AA</strong> (W3C Recommendation). This also meets WCAG 2.1 and 2.0 A and AA, which WCAG 2.2 is backwards compatible with (4.1.1 Parsing is reported separately).</li>
+<li><strong>EN 301 549 v3.2.1</strong>, the standard used in Canadian and European ICT procurement. Its Canadian adoption is CAN/ASC-EN 301 549:2024. Chapter 9 of EN 301 549 incorporates WCAG 2.1 A and AA for web content.</li>
+</ul>
+<p>WCAG Level AAA is not targeted, though several AAA practices are followed (for example, reduced motion support). Government of Canada teams should confirm which policy instruments apply to their use of the product at the time of procurement.</p>
+<h2>2. Principles</h2>
+<ol>
+<li><strong>Native first.</strong> Use native HTML elements (buttons, links, radio buttons, <code>details</code>/<code>summary</code>, tables) before ARIA. ARIA is used only for patterns HTML lacks (tabs, live regions, <code>aria-current</code>, <code>aria-pressed</code>).</li>
+<li><strong>Shift left.</strong> Accessibility is a definition-of-done criterion for every change, not a pre-release audit.</li>
+<li><strong>Automate what is reliably automatable; review the rest.</strong> Automated checks block regressions on every commit. Criteria that need human judgement are evaluated manually and re-reviewed whenever the user interface changes (section 4).</li>
+<li><strong>Honest reporting.</strong> The VPAT reports what the evidence supports. When automated evidence contradicts a manual judgement, the generator automatically downgrades that criterion. Limitations of the evaluation are disclosed (see <code>expertise.html</code>).</li>
+</ol>
+<h2>3. Continuous compliance pipeline</h2>
+<p>Every push and pull request runs <code>.github/workflows/accessibility.yml</code>:</p>
+<ol>
+<li>Unit tests (<code>npm test</code>).</li>
+<li>The accessibility test suite (<code>tests/a11y/run.mjs</code>): axe-core across every page state in light and dark themes, plus scripted checks for keyboard access, focus visibility, focus obscuring, reflow, text spacing, target size, non-text contrast, the ARIA tabs pattern, focus management and status messages.</li>
+<li><strong>VPAT recompilation</strong> (<code>scripts/build-vpat.mjs</code>): the VPAT, accessibility statement and test report are regenerated from the evaluation data (<code>accessibility/evaluation/criteria.mjs</code>) and the new test results.</li>
+<li>On pushes, regenerated documentation that differs from the committed copy is committed back to the branch automatically, so the VPAT in the repository always matches the code it describes.</li>
+<li>The workflow <strong>fails</strong> if any automated check fails. The recompiled VPAT will then show the affected criteria as “Partially Supports” with the failure in the remarks. To block merging non-conformant changes, make this check required in branch protection.</li>
+</ol>
+<p>The run&#39;s documentation and raw results are attached to every workflow run as an artifact named <code>accessibility-vpat</code>.</p>
+<h2>4. Manual review and drift detection</h2>
+<p>Some criteria cannot be decided by tools (for example 1.3.3, 2.4.6, 3.3.3). The manual evaluation is recorded in <code>accessibility/evaluation/manual-review.json</code>, together with a fingerprint (SHA-256 hash) of the user-interface source files it covered.</p>
+<p>When any of those files changes, the generator marks the VPAT with <strong>“Manual review pending”</strong> and names the changed files. The automated results stay current, but the manual judgements must be confirmed by a reviewer, who then runs:</p>
+<pre><code class="language-sh">npm run a11y:attest -- --reviewer &quot;Name, role/credential&quot; --notes &quot;What was reviewed&quot;
+</code></pre>
+<p>This records the review against the new fingerprint. Required cadence: before each release, and at least every six months.</p>
+<h2>5. Roles</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 2, scrollable"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Contributors</td>
+<td>Meet the definition of done; run <code>npm run a11y</code> locally for UI changes</td>
+</tr>
+<tr>
+<td>Maintainers</td>
+<td>Keep the CI gate required; triage accessibility issues as defects of the same severity as functional bugs</td>
+</tr>
+<tr>
+<td>Accessibility reviewer</td>
+<td>Perform and attest manual reviews; recommended to hold IAAP CPACC/WAS or equivalent (see <code>expertise.html</code>)</td>
+</tr>
+</tbody></table></div>
+<h2>6. Definition of done for UI changes</h2>
+<ul>
+<li><code>npm run a11y</code> passes locally or in CI.</li>
+<li>New interactive patterns use native elements or a documented ARIA pattern, and have a scripted check if they are custom.</li>
+<li>New colours are added as tokens in both themes and pass contrast checks.</li>
+<li>Any new page state is added to <code>APP_STATES</code> in <code>tests/a11y/run.mjs</code>.</li>
+<li>A manual review is attested if the change affects criteria marked <code>code-review</code> or <code>visual</code> in the evaluation data.</li>
+</ul>
+<h2>7. Defect handling</h2>
+<p>Accessibility problems are reported through the repository&#39;s issue tracker (linked in the footer of every page). They are prioritized as follows:</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 3, scrollable"><table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Example</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Blocker</td>
+<td>A task cannot be completed with keyboard or screen reader</td>
+<td>Fix before next release</td>
+</tr>
+<tr>
+<td>Serious</td>
+<td>WCAG A/AA failure with a workaround</td>
+<td>Within 30 days</td>
+</tr>
+<tr>
+<td>Moderate</td>
+<td>Best-practice issue or AAA improvement</td>
+<td>Planned in backlog</td>
+</tr>
+</tbody></table></div>
+<p>Any known non-conformance is disclosed in the VPAT remarks until fixed.</p>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

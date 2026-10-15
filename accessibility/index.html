@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Accessibility statement · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span> <a class="alt-lang" href="declaration.html" lang="fr">Français</a></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html" aria-current="page">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html">Test report</a></li><li><a href="strategy.html">Strategy and conformance policy</a></li><li><a href="scope.html">Scope and context</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="remediation-log.html">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+
+<h1>Accessibility statement</h1>
+<p class="lead">The Project Gating Navigator aims to be usable by everyone, including people who use assistive technologies. We target WCAG 2.2 Level AA and EN 301 549 v3.2.1.</p>
+
+<h2>Conformance status</h2>
+<p class="notice ok">Version 1.0.0 is evaluated as conforming to WCAG 2.2 Level AA: 45 criteria supported and 11 not applicable. EN 301 549: chapter 9 supported; 4.2.10 (usage with limited cognition, language or learning) is partially supported; 10 (non-web documents) is not evaluated.</p>
+<p class="notice ok">Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint <code>ecdea3043859abf4</code>).</p>
+<p>This is a self-assessment. It has <strong>not yet been verified with assistive technology or by an independent auditor</strong>; see the <a href="expertise.html">expertise and independence statement</a>.</p>
+
+<h2>Documents</h2>
+<ul class="doclist">
+<li><a href="vpat.html">Accessibility Conformance Report (VPAT 2.5Rev, WCAG 2.2 and EN 301 549)</a>, also available as <a href="VPAT.md" download>Markdown</a></li>
+<li><a href="test-report.html">Automated test report</a> with raw <a href="results/automated-results.json">JSON results</a></li>
+<li><a href="strategy.html">Accessibility strategy and conformance policy</a></li>
+<li><a href="scope.html">Evaluation scope and context</a></li>
+<li><a href="methodology.html">Test methodology</a></li>
+<li><a href="expertise.html">Evaluator expertise and independence</a></li>
+<li><a href="remediation-log.html">Baseline audit and remediation log</a></li>
+</ul>
+
+<h2>Accessibility features</h2>
+<ul>
+<li>Fully operable with a keyboard. A skip link bypasses the navigation, and focus moves to the page heading after navigation.</li>
+<li>Works with screen readers through native HTML semantics. Status changes (answer status, analysis results, search counts, confirmations) are announced.</li>
+<li>Available in English and French; the page language is set accordingly, and reports are produced in the selected language.</li>
+<li>Follows your system's dark mode, with a manual toggle. Supports Windows high contrast (forced colours) and reduced motion settings.</li>
+<li>Reflows to a single column down to 320 CSS px (400% zoom) without horizontal scrolling. Report tables scroll within their own area.</li>
+<li>No time limits, no flashing content, and confirmation before data is deleted or replaced.</li>
+</ul>
+
+<h2>Known limitations</h2>
+<ul>
+<li>The subject matter uses specialized governance terminology and acronyms; there is no glossary yet (EN 301 549 4.2.10).</li>
+<li>The French text was drafted with machine assistance and has not yet been reviewed by a certified translator. The VPAT, test report and evidence documents are in English only.</li>
+<li>Downloaded files (Markdown, CSV, JSON) and printed PDFs have not been evaluated for accessibility.</li>
+<li>Testing has used Chromium only. Firefox and Safari have not yet been tested.</li>
+</ul>
+
+<h2>Compatibility</h2>
+<p>Designed for current versions of Chrome, Edge, Firefox and Safari with JavaScript enabled. It relies on HTML, CSS, JavaScript and WAI-ARIA.</p>
+
+<h2>Feedback</h2>
+<p>If you find a barrier, please <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">report an accessibility problem</a>. Include the page, what you were trying to do, and the browser and assistive technology you use. Problems that block a task are fixed before the next release.</p>
+
+<h2>How this statement is maintained</h2>
+<p>An automated accessibility suite runs on every commit, and this statement, the VPAT and the test report are recompiled from its results. If a check fails, the build fails and the affected criteria are downgraded. When the user interface changes, the manual review is flagged as pending until a reviewer re-confirms it. See the <a href="strategy.html">strategy</a>.</p>
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

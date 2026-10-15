@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Evaluator expertise and independence · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html">Test report</a></li><li><a href="strategy.html">Strategy and conformance policy</a></li><li><a href="scope.html">Scope and context</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="expertise.html" aria-current="page">Expertise</a></li><li><a href="remediation-log.html">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Evaluator expertise and independence</h1>
+<p>A VPAT is only as credible as the people and process behind it. This section discloses both plainly.</p>
+<h2>1. Who performed the evaluation</h2>
+<p>The initial evaluation (version 1.1.0, 2026-10-15) was carried out by <strong>Claude, an AI coding assistant made by Anthropic</strong>, working in the project repository at the request of the product owner. In the same session Claude:</p>
+<ul>
+<li>designed and wrote the automated accessibility test suite</li>
+<li>ran a baseline audit, fixed the issues found, and re-ran the suite (see <code>remediation-log.html</code>)</li>
+<li>performed the code review, visual inspection and accessibility tree review described in <code>methodology.html</code></li>
+<li>wrote the evaluation data, this evidence pack and the VPAT generator.</li>
+</ul>
+<h2>2. Relevant expertise</h2>
+<ul>
+<li>The evaluation applies the published WCAG 2.2 success criteria and their Understanding documents, the WAI-ARIA Authoring Practices patterns (tabs, live regions), and EN 301 549 v3.2.1.</li>
+<li>The evaluator holds <strong>no professional accessibility certification</strong>: not IAAP CPACC, WAS or CPWA, Trusted Tester, or equivalent. An AI system cannot hold these credentials.</li>
+<li>The evaluator <strong>cannot operate assistive technology</strong> or bring the lived experience of a person with a disability. Findings about the experience of screen reader, magnification, voice-control or switch users are inferred from conformance and from the accessibility tree, not observed.</li>
+</ul>
+<h2>3. Independence</h2>
+<p>The evaluation is <strong>not independent</strong>. The same agent built the features, wrote the tests and judged conformance. This is a self-assessment and should be treated with the same caution as any vendor&#39;s first-party VPAT.</p>
+<p>Safeguards that reduce this risk:</p>
+<ul>
+<li><strong>Machine-checkable claims are verified by tools</strong> (axe-core and scripted checks) on every commit, and the VPAT is generated from those results rather than written by hand. A failing check automatically downgrades the claim.</li>
+<li><strong>The baseline audit is kept</strong> (<code>baseline-results.json</code>) so a reviewer can see that the tests found real defects before fixes and were not written to pass.</li>
+<li><strong>Manual judgements are tied to a code fingerprint.</strong> The VPAT flags them as pending re-review when the user interface changes.</li>
+<li><strong>Limitations are stated explicitly</strong> in the VPAT notes and in <code>methodology.html</code>.</li>
+</ul>
+<h2>4. Recommended independent verification</h2>
+<p>Before relying on this VPAT for a procurement or compliance decision, a qualified, independent reviewer should:</p>
+<ol>
+<li>Test the key tasks (scope, gate readiness questionnaire, report, language switch) in both languages with at least NVDA + Firefox, JAWS + Chrome, VoiceOver + Safari (macOS and iOS), and Windows high contrast mode.</li>
+<li>Spot-check this report&#39;s judgement criteria (1.3.1, 1.3.3, 2.4.6, 3.3.x).</li>
+<li>Include users with disabilities in usability testing.</li>
+<li>Record the review with <code>npm run a11y:attest -- --reviewer &quot;Name, credential, organization&quot; --notes &quot;Scope of review&quot;</code>. The reviewer&#39;s name then appears in the VPAT.</li>
+</ol>
+<h2>5. Review record</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Reviewer</th>
+<th>Type</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2026-10-15</td>
+<td>Claude (Anthropic AI assistant)</td>
+<td>Self-assessment: automated, scripted and code review</td>
+<td>Version 1.0.0, all page states in <code>scope.html</code></td>
+</tr>
+</tbody></table></div>
+<p>The current attested review is recorded in <code>accessibility/evaluation/manual-review.json</code> and shown in the VPAT header.</p>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

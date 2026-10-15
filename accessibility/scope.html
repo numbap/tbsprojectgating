@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Evaluation scope and context · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html">Test report</a></li><li><a href="strategy.html">Strategy and conformance policy</a></li><li><a href="scope.html" aria-current="page">Scope and context</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="remediation-log.html">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Evaluation scope and context</h1>
+<h2>1. Product context</h2>
+<p>The Project Gating Navigator is a bilingual (English and French) client-side web application. Federal employees (project managers, sponsors, project management office staff, gatekeepers and reviewers) use it to scope a project, determine its complexity, approval authority and oversight, check readiness for its next gate against the Directive on the Management of Projects and Programmes and TBS gating guidance, and generate a gate readiness report.</p>
+<ul>
+<li><strong>Users:</strong> Government of Canada employees in project, program, finance, IT and oversight roles, in either official language. Users may rely on keyboards, screen readers, magnification, high contrast or dark modes, or voice control.</li>
+<li><strong>Technology:</strong> HTML, CSS and JavaScript ES modules with no third-party runtime libraries. The application runs entirely in the browser and keeps its data in the browser&#39;s local storage, encrypted by default. There is no server-side processing or third-party content. A passphrase unlocks encrypted assessments.</li>
+<li><strong>Accessibility-supported technologies relied upon:</strong> HTML, CSS, JavaScript and WAI-ARIA 1.2.</li>
+</ul>
+<h2>2. In scope</h2>
+<p>The whole web interface of the version under evaluation, in every view and in the states listed below. The automated suite runs every listed state. The full list with URLs is in the generated test report (<code>test-report.html</code>).</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>Area</th>
+<th>States evaluated</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Start page</td>
+<td>Default, with an assessment in progress</td>
+</tr>
+<tr>
+<td>1. Scope</td>
+<td>Full profile interview with the governance summary panel and the indicative complexity estimator, in English and French</td>
+</tr>
+<tr>
+<td>2. Review documents</td>
+<td>With analysis results and scope suggestions; with the confirmation message showing</td>
+</tr>
+<tr>
+<td>3. Gate readiness</td>
+<td>Gate with a required requirement expanded (questions, lens tabs, fields), in English and French; gate with a departmental requirement expanded</td>
+</tr>
+<tr>
+<td>Requirement page</td>
+<td>Single requirement detail</td>
+</tr>
+<tr>
+<td>Requirements library</td>
+<td>Full list (search and filter interaction are covered by scripted checks)</td>
+</tr>
+<tr>
+<td>Gate guide</td>
+<td>Overview of gating models and gates; single gate page</td>
+</tr>
+<tr>
+<td>Governance path</td>
+<td>Decision tree at its first decision; an activity with the whole tree expanded</td>
+</tr>
+<tr>
+<td>4. Report</td>
+<td>Full generated report, including tables, in English and French</td>
+</tr>
+<tr>
+<td>Data protection</td>
+<td>First-run storage setup (with and without a validation error), lock screen, Data and security page (unencrypted and encrypted modes), start page with the Protected B marking banner</td>
+</tr>
+<tr>
+<td>Accessibility documentation</td>
+<td>Statement, VPAT, test report and evidence pages</td>
+</tr>
+<tr>
+<td>Policies</td>
+<td>Privacy policy and Protected B handling, each in English and French; French accessibility statement</td>
+</tr>
+</tbody></table></div>
+<p>Each state is evaluated in:</p>
+<ul>
+<li>light and dark themes at 1280 by 900 CSS px</li>
+<li>320 CSS px wide (equivalent to 400% zoom on a 1280 px display)</li>
+<li>640 CSS px wide (200% zoom)</li>
+<li>WCAG text-spacing overrides at 1280 px and 320 px.</li>
+</ul>
+<p>Browser storage is seeded before each load: most states use an Unclassified assessment stored unencrypted, and the lock and unlocked Protected B states use an encrypted assessment that the harness unlocks with a fixture passphrase. A realistic, deterministic sample assessment is loaded so that every view renders with content: answered, partial, unknown and gap states, notes, document review results and a remediation plan (<code>fixtureState()</code> in <code>tests/a11y/run.mjs</code>).</p>
+<h2>3. Out of scope</h2>
+<ul>
+<li><strong>Files the product generates</strong> (Markdown, CSV and JSON downloads, and PDFs printed by the browser). These are reported under EN 301 549 chapter 10 as Not Evaluated.</li>
+<li><strong>Browser-provided user interface:</strong> native file pickers, confirmation dialogs, date pickers and title tooltips.</li>
+<li><strong>Third-party sites linked from the product</strong> (for example the GitHub issue tracker).</li>
+<li><strong>WCAG Level AAA.</strong></li>
+</ul>
+<h2>4. Evaluation environment</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 2, scrollable"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Browser engine</td>
+<td>Chromium, through Playwright (version recorded in <code>results/automated-results.json</code>)</td>
+</tr>
+<tr>
+<td>Rule engine</td>
+<td>axe-core (version recorded in results), tags <code>wcag2a</code>, <code>wcag2aa</code>, <code>wcag21a</code>, <code>wcag21aa</code>, <code>wcag22a</code>, <code>wcag22aa</code>, <code>best-practice</code></td>
+</tr>
+<tr>
+<td>Operating system</td>
+<td>Linux container (local evaluation) and GitHub-hosted Ubuntu runners (continuous runs)</td>
+</tr>
+<tr>
+<td>Emulated user settings</td>
+<td><code>prefers-color-scheme</code> light and dark, <code>prefers-reduced-motion: reduce</code>, <code>forced-colors: active</code> (visual inspection only)</td>
+</tr>
+</tbody></table></div>
+<p><strong>Not used:</strong> Firefox, Safari or WebKit, Windows or macOS platform accessibility APIs, and screen readers (JAWS, NVDA, VoiceOver, TalkBack) or other assistive technology. See the limitations in <code>methodology.html</code>.</p>
+<h2>5. Assumptions</h2>
+<ul>
+<li>Users have a current evergreen browser with JavaScript enabled (the application cannot work without JavaScript).</li>
+<li>Conformance claims apply to the version and commit recorded in the VPAT and test results. Each commit is re-tested by the CI pipeline.</li>
+</ul>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

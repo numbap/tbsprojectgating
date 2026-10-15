@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Baseline audit and remediation log · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html">Test report</a></li><li><a href="strategy.html">Strategy and conformance policy</a></li><li><a href="scope.html">Scope and context</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="remediation-log.html" aria-current="page">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Baseline audit and remediation log</h1>
+<p>The Project Gating Navigator is built on the user-interface framework, test suite and documentation pipeline of the <a href="https://github.com/numbap/Itsg33">ITSG-33 Compliance Navigator</a>, a sister tool by the same maintainers. Sections 1 to 5 record the audit and remediation of that framework (its baseline results are kept in <code>baseline-results.json</code>, in an earlier schema of the results format); those fixes carry over to this product. Section 6 records what the suite found when it was first run against this product.</p>
+<p>The framework&#39;s suite was first run before any accessibility work on 2026-10-15. Out of 131 scripted checks, 90 passed; axe-core reported 8 WCAG violations and 4 best-practice issues across 16 runs.</p>
+<p>The tables below record each finding, its cause, the fix and how it was verified. Every fix was verified by re-running the full suite. The final run passed with no WCAG violations and every scripted check passing.</p>
+<h2>1. Findings from automated and scripted checks</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>WCAG</th>
+<th>Finding (baseline)</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1.4.3</td>
+<td>Insufficient contrast in dark theme: active navigation item, primary buttons, active sidebar link, selected choices</td>
+<td>Dark-theme accent <code>#e0505c</code> was used both as text on dark surfaces and as a button fill behind white text</td>
+<td>Split the colour into <code>--accent</code> (text and lines; <code>#ff8a94</code> in dark) and <code>--accent-strong</code> (fills behind white text, <code>#b8202f</code>)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.4.11</td>
+<td>Field, select and choice boundaries at about 1.4:1 in both themes</td>
+<td>Controls used the decorative <code>--border</code> colour</td>
+<td>Added a <code>--control-border</code> token at 3:1 or more in both themes for fields, selects, segmented answers and choices</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2.1.1</td>
+<td>“Import assessment” and “Load text file” could not be reached by keyboard</td>
+<td>File inputs were hidden with the <code>hidden</code> attribute (display: none) inside button-styled labels</td>
+<td>File inputs are visually hidden (<code>.sr-only</code>) but focusable; the label shows the focus ring with <code>:focus-within</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2.4.7</td>
+<td>No visible focus on the fourth Tab stop of the date field</td>
+<td>Chromium&#39;s calendar button inside the date input matches <code>:focus-within</code>, not <code>:focus</code></td>
+<td>Added an <code>input[type=&quot;date&quot;]:focus-within</code> outline; text fields always show focus</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2.5.8</td>
+<td>Skip link 23 px tall; “Show controls removed or shared” 22 px; control links in review findings 23 px; footer link 15 px</td>
+<td>Small padding</td>
+<td>Increased padding to at least 24 px targets</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1.4.10, 1.4.12</td>
+<td>Horizontal scrolling at 320 px: header (31 px), questionnaire pages (220 px; 327 px with text spacing)</td>
+<td>Header navigation would not wrap; a grid column with an <code>auto</code> minimum; inline applicability selector; tab strip</td>
+<td>Navigation and brand wrap; grid columns use <code>minmax(0, 1fr)</code>; applicability label and tabs wrap; header is no longer sticky on narrow screens</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2.4.3, 4.1.2</td>
+<td>After in-app navigation focus stayed on the old link; no <code>aria-current</code></td>
+<td>Single-page app re-rendered without focus management</td>
+<td>Focus moves to the new page&#39;s h1 (or the requested control); <code>aria-current=&quot;page&quot;</code> set; re-renders after actions return focus to the triggering control</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2.1.1, 4.1.2</td>
+<td>Gemba tabs did not follow the ARIA tabs pattern</td>
+<td>No <code>aria-controls</code>/<code>aria-labelledby</code>, no arrow-key support, every tab was a tab stop</td>
+<td>Implemented the pattern: roving tabindex, ArrowLeft/Right/Home/End, <code>aria-controls</code>, labelled tab panels</td>
+</tr>
+<tr>
+<td>9</td>
+<td>4.1.3</td>
+<td>Answering a question did not announce the new status</td>
+<td>No live region for status changes</td>
+<td>Added a polite live region; status, scope, analysis, search-count and confirmation messages are announced</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Best practice</td>
+<td>Heading levels skipped (h1 to h4 in the questionnaire, h1 to h3 in the library)</td>
+<td>Heading levels chosen for size</td>
+<td>Corrected levels; size is controlled by CSS classes</td>
+</tr>
+</tbody></table></div>
+<h2>2. Findings from manual review</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 2, scrollable"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>WCAG</th>
+<th>Finding</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>11</td>
+<td>1.3.3</td>
+<td>The scope page referred to “the right-hand panel”, which sits below the form on narrow screens</td>
+<td>Refers to the panel by its name</td>
+</tr>
+<tr>
+<td>12</td>
+<td>2.2.1</td>
+<td>The confirmation message hid itself after 2.4 s; some confirmations appear nowhere else</td>
+<td>The message stays until dismissed (button or Escape) and closes on navigation</td>
+</tr>
+<tr>
+<td>13</td>
+<td>3.2.6</td>
+<td>No consistent help mechanism</td>
+<td>Footer on every page links to the accessibility statement and a problem-reporting page</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1.4.1</td>
+<td>Selected answers were distinguished mainly by colour and weight</td>
+<td>Added a check mark to selected options</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Forced colours</td>
+<td>Selection and focus were indistinguishable in Windows high contrast</td>
+<td>Selection uses system Highlight colours; focus keeps the outline</td>
+</tr>
+<tr>
+<td>16</td>
+<td>1.3.1</td>
+<td>Report tables lacked captions and <code>th</code> scope</td>
+<td>Added captions and scope attributes</td>
+</tr>
+<tr>
+<td>17</td>
+<td>4.1.3 / 2.4.3</td>
+<td>Library search re-rendered the whole page on each keystroke, so the result count was never announced and focus had to be restored by script</td>
+<td>Only the results region updates; the result count is announced</td>
+</tr>
+</tbody></table></div>
+<h2>3. Findings from extending the test scope</h2>
+<p>Adding a page state with the confirmation message visible, adding an axe-core run at 320 px, and testing the generated documentation pages found more issues, all fixed:</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 3, scrollable"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Rule / WCAG</th>
+<th>Finding</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>18</td>
+<td>region (best practice)</td>
+<td>Message content outside any landmark</td>
+<td>The message is an <code>aside</code> labelled “Notification”</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2.4.7 / 1.4.11</td>
+<td>Dismiss button focus outline at 2.5:1 (light) and 1.85:1 (dark) against the message background</td>
+<td>Outline uses the inverse colour inside the message</td>
+</tr>
+<tr>
+<td>20</td>
+<td>2.1.1</td>
+<td>(Added an axe run at 320 px.) Code blocks in the documentation pages scrolled horizontally but could not be scrolled by keyboard</td>
+<td>Code blocks wrap; report and documentation tables are in labelled, focusable scroll regions</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Best practice</td>
+<td>(Documentation pages) A metadata table had empty header cells</td>
+<td>Headers added</td>
+</tr>
+<tr>
+<td>22</td>
+<td>2.5.8</td>
+<td>(Documentation pages) Stand-alone list links in the test report were 20 px tall</td>
+<td>Stand-alone list links get a 24 px target</td>
+</tr>
+</tbody></table></div>
+<h2>4. Corrections to the test harness</h2>
+<p>Two baseline failures were caused by the harness rather than the product. The corrections are recorded here for transparency:</p>
+<ul>
+<li><strong>Links inside a collapsed <code>&lt;details&gt;</code> were counted as unreachable.</strong> Chromium still reports layout boxes for them. The visibility test now excludes content of closed <code>details</code> elements (except the summary).</li>
+<li><strong>On deep-linked pages, keyboard traversal started mid-page.</strong> The browser&#39;s sequential-focus starting point followed the scrolled-to control. Traversal now starts from a temporary element at the top of the document, as a user arriving on the page would.</li>
+</ul>
+<p>After the tabs pattern was implemented, the reachability check was also changed to skip elements with <code>tabindex=&quot;-1&quot;</code>. Inactive tabs are intentionally outside the Tab sequence, and their arrow-key access is verified separately by the tabs-pattern check.</p>
+<h2>5. Data protection screens (framework version 1.2.0)</h2>
+<p>Framework version 1.2.0 added a storage setup screen, a lock screen, a Data and security page and the security marking banner. Adding these as page states found the following, all fixed before release:</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 4, scrollable"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>WCAG</th>
+<th>Finding</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>23</td>
+<td>2.5.8, 1.4.11</td>
+<td>Password and file inputs were not styled like other fields: 21 px tall with low-contrast default borders</td>
+<td>Password and file inputs use the standard field style (3:1 border, 24 px or more); the non-text contrast check now covers them</td>
+</tr>
+<tr>
+<td>24</td>
+<td>2.5.8</td>
+<td>“Show passphrase” checkboxes were 18 by 18 px</td>
+<td>Enlarged to 24 by 24 px</td>
+</tr>
+<tr>
+<td>25</td>
+<td>1.4.10, 1.4.12</td>
+<td>The file input overflowed by 24 px at 320 px with text spacing</td>
+<td>Field style constrains its width</td>
+</tr>
+<tr>
+<td>26</td>
+<td>4.1.2 (visual)</td>
+<td>The Lock button showed on the setup and lock screens because a component display rule overrode the <code>hidden</code> attribute</td>
+<td>A global <code>[hidden]</code> rule; the security tests check button visibility in every state</td>
+</tr>
+</tbody></table></div>
+<p>The harness was also adjusted: it injects axe-core with the Content Security Policy bypassed in test contexts only (the CSP is verified separately by <code>tests/security/run.mjs</code>), and every page load starts from <code>about:blank</code> so that hash URLs reload fully.</p>
+<h2>6. Project Gating Navigator 1.0.0: first run</h2>
+<p>The suite was extended with this product&#39;s views (gate readiness, requirement pages, gate guide, governance path), French versions of the scope, gate readiness and report views, French policy pages and the French accessibility statement, and a new scripted check for the language switch. The first run, on 2026-10-15, covered 105 axe-core runs and 564 scripted checks. It found 4 WCAG violations, 6 best-practice issues and 5 failed checks, all fixed before release:</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 5, scrollable"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Rule / WCAG</th>
+<th>Finding</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>27</td>
+<td>2.5.8</td>
+<td>“See the full governance profile in the report” link was 17 px tall (scope summary)</td>
+<td>Inline link in small text</td>
+<td>The link gets 4 px vertical padding (24 px or more)</td>
+</tr>
+<tr>
+<td>28</td>
+<td>2.5.8</td>
+<td>“N items still open from earlier gates” disclosure summary was 23 px tall, in English and French</td>
+<td>Summary inherited compact callout padding</td>
+<td>Summary padding raised to give a 24 px or larger target</td>
+</tr>
+<tr>
+<td>29</td>
+<td>1.4.10, 1.4.12</td>
+<td>Library filter selects overflowed by 28 px at 320 px (109 px with text spacing)</td>
+<td>Selects kept their intrinsic width of the longest option</td>
+<td>Selects can shrink to the container (<code>max-width: 100%; min-width: 0</code>)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>2.1.1 (axe scrollable-region-focusable)</td>
+<td>At 320 px the lists inside the governance profile table became scrollable regions that could not be reached by keyboard</td>
+<td>A shared list style limits height and scrolls</td>
+<td>Lists inside the report and the governance summary are not height-limited</td>
+</tr>
+<tr>
+<td>31</td>
+<td>heading-order (best practice)</td>
+<td>The complexity estimator&#39;s category headings jumped from h1 to h3</td>
+<td>Heading level chosen for size</td>
+<td>Category headings are h2, styled small</td>
+</tr>
+</tbody></table></div>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Politique de confidentialité · Navigateur des points de contrôle de projet</title>
+<link rel="stylesheet" href="../accessibility/assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Passer au contenu</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Navigateur des points de contrôle de projet</a> <span>Politiques</span> <a class="alt-lang" href="privacy.html" lang="en">English</a></p>
+  <nav aria-label="Politiques"><ul><li><a href="privacy-fr.html" aria-current="page">Politique de confidentialité</a></li><li><a href="protected-b-fr.html">Traitement de l&#39;information Protégé B</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Politique de confidentialité</h1>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 1, scrollable"><table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Application</td>
+<td>Navigateur des points de contrôle de projet, version 1.0.0 et suivantes</td>
+</tr>
+<tr>
+<td>Date d&#39;entrée en vigueur</td>
+<td>2026-10-15</td>
+</tr>
+<tr>
+<td>Code source</td>
+<td><a href="https://github.com/numbap/tbsprojectgating">github.com/numbap/tbsprojectgating</a>, licence MIT</td>
+</tr>
+</tbody></table></div>
+<p><em>La version anglaise de cette politique fait foi. La présente traduction a été rédigée avec l&#39;aide d&#39;outils de traduction automatique et n&#39;a pas encore été révisée par un traducteur agréé.</em></p>
+<h2>Résumé</h2>
+<ul>
+<li>Le Navigateur des points de contrôle de projet est une application à <strong>code source ouvert</strong> qui fonctionne <strong>entièrement dans votre navigateur Web</strong> (côté client).</li>
+<li><strong>Elle n&#39;envoie rien de ce que vous saisissez à un serveur</strong> : ni au projet, ni à GitHub, ni à un tiers. Il n&#39;y a ni comptes, ni outils d&#39;analyse, ni publicité, ni pixels de suivi, ni scripts ou polices de tiers.</li>
+<li><strong>Ce que vous enregistrez reste dans le stockage local de votre navigateur, sur votre appareil</strong>, chiffré à moins que vous ne choisissiez autrement pour du travail non classifié. <strong>L&#39;application ne crée ni ne lit de témoins (cookies).</strong></li>
+<li>Vous pouvez effacer en tout temps tout ce que l&#39;application a stocké.</li>
+</ul>
+<h2>Comment nous nous assurons que rien n&#39;est transmis</h2>
+<ul>
+<li>L&#39;application est constituée de fichiers statiques (HTML, CSS et JavaScript). Une fois que votre navigateur les a téléchargés, tout le traitement (portée, estimation de la complexité, analyse des documents, notation, production des rapports et chiffrement) se fait sur votre appareil.</li>
+<li>Chaque page déclare une <strong>politique de sécurité du contenu</strong> avec <code>connect-src &#39;none&#39;</code> et <code>form-action &#39;none&#39;</code>. Votre navigateur bloque ainsi toute connexion réseau et toute soumission de formulaire, même si le code était modifié pour tenter de le faire. Les pages définissent aussi <code>referrer</code> à <code>no-referrer</code>.</li>
+<li>Les essais automatisés du projet font échouer la compilation si le code de l&#39;application contient une interface réseau ou de témoins (<code>fetch</code>, <code>XMLHttpRequest</code>, <code>WebSocket</code>, <code>sendBeacon</code>, <code>document.cookie</code> et autres), ou si la politique de sécurité du contenu est affaiblie.</li>
+</ul>
+<h2>Ce qui est stocké sur votre appareil</h2>
+<p>Tout est stocké au moyen du <code>localStorage</code> du navigateur pour l&#39;adresse d&#39;où l&#39;application est servie. Rien n&#39;est stocké dans des témoins, le <code>sessionStorage</code> ou IndexedDB.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table 2, scrollable"><table>
+<thead>
+<tr>
+<th>Clé de stockage</th>
+<th>Contenu</th>
+<th>Moment de l&#39;écriture</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>gating-navigator-settings</code></td>
+<td>Vos choix : cote de sécurité, mode de stockage, délai de verrouillage. Aucun contenu d&#39;évaluation.</td>
+<td>À la configuration ou lors d&#39;un changement de paramètres</td>
+</tr>
+<tr>
+<td><code>gating-navigator-vault</code></td>
+<td>Votre évaluation, <strong>chiffrée</strong> (AES-256-GCM) avec une clé dérivée de votre phrase de passe. Illisible sans la phrase de passe.</td>
+<td>Mode chiffré (par défaut)</td>
+</tr>
+<tr>
+<td><code>gating-navigator-state</code></td>
+<td>Votre évaluation, <strong>non chiffrée</strong>.</td>
+<td>Seulement si vous choisissez le stockage non chiffré, permis uniquement pour les évaluations non classifiées</td>
+</tr>
+<tr>
+<td><code>gating-theme</code></td>
+<td>Préférence de thème clair ou sombre</td>
+<td>Lorsque vous utilisez le bouton de thème</td>
+</tr>
+<tr>
+<td><code>gating-lang</code></td>
+<td>Langue de l&#39;interface (français ou anglais)</td>
+<td>Lorsque vous utilisez le bouton de langue</td>
+</tr>
+</tbody></table></div>
+<p>Si vous choisissez <strong>Non enregistré</strong>, l&#39;application n&#39;écrit que vos paramètres; l&#39;évaluation n&#39;existe que dans l&#39;onglet ouvert.</p>
+<p>L&#39;évaluation peut contenir des détails sur le projet (coûts, financement, approche d&#39;approvisionnement, risques), vos réponses au questionnaire, vos notes, vos plans d&#39;action et tout texte de document collé pour examen. Votre phrase de passe n&#39;est jamais stockée. La clé de chiffrement n&#39;est conservée qu&#39;en mémoire pendant que l&#39;évaluation est déverrouillée.</p>
+<h2>Fichiers téléchargés</h2>
+<p>Les rapports (Markdown, CSV, impressions) et les fichiers d&#39;évaluation exportés sont créés sur votre appareil et enregistrés à l&#39;endroit où votre navigateur enregistre les téléchargements. Vous contrôlez ces fichiers. Les exportations chiffrées ne peuvent être ouvertes qu&#39;avec la phrase de passe que vous choisissez pour elles.</p>
+<h2>L&#39;hébergeur</h2>
+<p>Lorsque l&#39;application est utilisée à partir de GitHub Pages, votre navigateur télécharge les fichiers de l&#39;application à partir de GitHub. Comme tout serveur Web, GitHub reçoit les renseignements habituels d&#39;une requête (votre adresse IP, l&#39;agent utilisateur du navigateur, les fichiers demandés et l&#39;heure) et peut les consigner conformément à la <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">déclaration générale de confidentialité de GitHub</a>. GitHub ne reçoit <strong>rien</strong> de ce que vous tapez, collez, téléversez ou enregistrez dans l&#39;application.</p>
+<p>Les organisations qui ne veulent aucune requête externe peuvent héberger leur propre copie de l&#39;application (voir le fichier README); l&#39;application ne fait alors aucune requête à l&#39;extérieur de cet hôte.</p>
+<h2>Liens vers d&#39;autres sites</h2>
+<p>Le pied de page renvoie au système de suivi des problèmes du projet sur GitHub pour signaler les problèmes d&#39;accessibilité. Ce lien vous amène sur GitHub, dont la propre déclaration de confidentialité s&#39;applique. Les signalements peuvent être publics : <strong>n&#39;y incluez aucun contenu d&#39;évaluation ni aucune information protégée ou sensible.</strong></p>
+<h2>Effacer vos données</h2>
+<ul>
+<li>Dans l&#39;application : <strong>Données et sécurité → Effacer toutes les données de ce navigateur</strong> supprime toutes les clés énumérées ci-dessus.</li>
+<li>Dans votre navigateur : effacer les données du site pour l&#39;adresse de l&#39;application les supprime aussi.</li>
+<li>Les fichiers téléchargés doivent être supprimés séparément.</li>
+</ul>
+<p>Pour l&#39;information protégée, suivez aussi les procédures de votre ministère relatives à l&#39;élimination de l&#39;information et à l&#39;assainissement des appareils.</p>
+<h2>Renseignements personnels</h2>
+<p>L&#39;application ne recueille pas de renseignements personnels. Tout renseignement personnel que vous saisissez dans une évaluation (par exemple le nom des responsables) reste sur votre appareil, sous votre contrôle. Si un ministère déploie ou modifie l&#39;application, il lui incombe d&#39;évaluer ses propres obligations en matière de protection de la vie privée, par exemple en vertu de la <em>Loi sur la protection des renseignements personnels</em>.</p>
+<h2>Modifications de la présente politique</h2>
+<p>Les modifications sont apportées dans le dépôt public du code source; l&#39;historique de la politique peut donc y être consulté. La date d&#39;entrée en vigueur ci-dessus est mise à jour lorsque la politique change.</p>
+<h2>Coordonnées</h2>
+<p>Les questions sur la présente politique peuvent être soumises au moyen du <a href="https://github.com/numbap/tbsprojectgating/issues">système de suivi des problèmes</a> du projet. N&#39;y incluez aucune information sensible.</p>
+
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="privacy-fr.html">Politique de confidentialité</a>
+  <a href="protected-b-fr.html">Traitement de l'information Protégé B</a>
+  <a href="../accessibility/declaration.html">Déclaration d'accessibilité, VPAT et preuves</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Signaler un problème d'accessibilité</a>
+  <a href="../index.html">Retour à l'application</a></p>
+  <p lang="en">Generated by <code>scripts/build-vpat.mjs</code>. Source: <code>policies/privacy-fr.md</code>.</p>
+</footer>
+</body>
+</html>

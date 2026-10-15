@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+# Written by CI for the uploaded artifact only; not committed so recompiled output stays deterministic.
+accessibility/results/build-info.json

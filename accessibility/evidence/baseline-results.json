@@ -1,0 +1,6339 @@
+{
+  "schema": 1,
+  "tools": {
+    "axe-core": "4.14.0",
+    "playwright": "1.56.1",
+    "browser": "Chromium (Playwright 1.56.1)"
+  },
+  "axeTags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22a",
+    "wcag22aa",
+    "best-practice"
+  ],
+  "states": [
+    {
+      "id": "home",
+      "name": "Start page",
+      "url": "/#/"
+    },
+    {
+      "id": "profile",
+      "name": "1. Scope (profile interview)",
+      "url": "/#/profile"
+    },
+    {
+      "id": "review",
+      "name": "2. Review documents, with findings",
+      "url": "/#/review"
+    },
+    {
+      "id": "assess",
+      "name": "3. Questionnaire, AC family with AC-2 expanded",
+      "url": "/#/assess/AC/AC-2"
+    },
+    {
+      "id": "assess-pe",
+      "name": "3. Questionnaire, PE family (inherited controls) with PE-3 expanded",
+      "url": "/#/assess/PE/PE-3"
+    },
+    {
+      "id": "control",
+      "name": "Gemba page for a control (SC-28)",
+      "url": "/#/control/SC-28"
+    },
+    {
+      "id": "library",
+      "name": "Gemba library",
+      "url": "/#/library"
+    },
+    {
+      "id": "report",
+      "name": "4. Compliance report",
+      "url": "/#/report"
+    }
+  ],
+  "variants": [
+    "light theme 1280px",
+    "dark theme 1280px",
+    "320px",
+    "640px",
+    "text-spacing overrides"
+  ],
+  "summary": {
+    "pageStates": 8,
+    "axeRuns": 16,
+    "wcagViolations": 8,
+    "advisoryViolations": 4,
+    "checksRun": 131,
+    "checksFailed": 41,
+    "pageErrors": 0,
+    "pass": false
+  },
+  "axe": [
+    {
+      "state": "home",
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "avoid-inline-spacing",
+          "sc": [
+            "1.4.12"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "home",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            ".active",
+            ".primary"
+          ],
+          "count": 2,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 5
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "avoid-inline-spacing",
+          "sc": [
+            "1.4.12"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "profile",
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "duplicate-id-aria",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "summary-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "profile",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            ".active",
+            "div[aria-labelledby=\"l-classification\"] > .choice:nth-child(3) > span",
+            "div[aria-labelledby=\"l-integrity\"] > .choice:nth-child(2) > span",
+            "div[aria-labelledby=\"l-availability\"] > .choice:nth-child(2) > span",
+            "div[aria-labelledby=\"l-operator\"] > .choice:nth-child(1) > span",
+            "div[aria-labelledby=\"l-hosting\"] > .choice:nth-child(1) > span",
+            "div[aria-labelledby=\"l-development\"] > .choice:nth-child(3) > span",
+            "div[aria-labelledby=\"l-identity\"] > .choice:nth-child(1) > span",
+            "div[aria-labelledby=\"l-userBase\"] > .choice:nth-child(1) > span",
+            "div[aria-labelledby=\"l-internetFacing\"] > .choice:nth-child(1) > span"
+          ],
+          "count": 17,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 2
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "duplicate-id-aria",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "summary-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "duplicate-id-aria",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            ".active",
+            ".primary"
+          ],
+          "count": 2,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 2
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "duplicate-id-aria",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "assess",
+      "theme": "light",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "nodes": [
+            "h4"
+          ],
+          "count": 1,
+          "sc": [],
+          "wcag": false
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-children",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-required-parent",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "avoid-inline-spacing",
+          "sc": [
+            "1.4.12"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "sc": [
+            "2.1.1",
+            "2.1.3"
+          ]
+        },
+        {
+          "id": "select-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "summary-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "assess",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            "a[href$=\"#/assess\"]",
+            "a[href$=\"#/assess/AC\"] > span:nth-child(1)",
+            "a[href$=\"#/assess/AC\"] > span:nth-child(1) > b",
+            ".on",
+            "fieldset:nth-child(6) > .seg > .seg-unknown.seg-opt > span",
+            ".primary"
+          ],
+          "count": 6,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "nodes": [
+            "h4"
+          ],
+          "count": 1,
+          "sc": [],
+          "wcag": false
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 2
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-children",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-required-parent",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "avoid-inline-spacing",
+          "sc": [
+            "1.4.12"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "sc": [
+            "2.1.1",
+            "2.1.3"
+          ]
+        },
+        {
+          "id": "select-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "summary-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "assess-pe",
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-children",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-required-parent",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "avoid-inline-spacing",
+          "sc": [
+            "1.4.12"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "sc": [
+            "2.1.1",
+            "2.1.3"
+          ]
+        },
+        {
+          "id": "select-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "summary-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "assess-pe",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            "a[href$=\"#/assess\"]",
+            "a[href$=\"#/assess/PE\"] > span:nth-child(1)",
+            "a[href$=\"#/assess/PE\"] > span:nth-child(1) > b",
+            ".on",
+            ".primary"
+          ],
+          "count": 5,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 2
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-children",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-required-parent",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "avoid-inline-spacing",
+          "sc": [
+            "1.4.12"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "sc": [
+            "2.1.1",
+            "2.1.3"
+          ]
+        },
+        {
+          "id": "select-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "summary-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "control",
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-in-text-block",
+          "sc": [
+            "1.4.1"
+          ]
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "control",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            ".active",
+            ".primary"
+          ],
+          "count": 2,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-in-text-block",
+          "sc": [
+            "1.4.1"
+          ]
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "library",
+      "theme": "light",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "nodes": [
+            "a[href$=\"#/control/AC-1\"] > h3"
+          ],
+          "count": 1,
+          "sc": [],
+          "wcag": false
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "select-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "library",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            ".active"
+          ],
+          "count": 1,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "nodes": [
+            "a[href$=\"#/control/AC-1\"] > h3"
+          ],
+          "count": 1,
+          "sc": [],
+          "wcag": false
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "sc": [
+            "3.3.2"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "label-title-only",
+          "sc": []
+        },
+        {
+          "id": "label",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "select-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "report",
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 1
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "empty-table-header",
+          "sc": []
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "table-duplicate-name",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        },
+        {
+          "id": "td-headers-attr",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "th-has-data-cells",
+          "sc": [
+            "1.3.1"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "report",
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            ".active",
+            ".primary"
+          ],
+          "count": 2,
+          "sc": [
+            "1.4.3"
+          ],
+          "wcag": true
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "sc": [
+            "1.4.3"
+          ],
+          "count": 2
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "sc": [
+            "2.5.3"
+          ],
+          "count": 1
+        }
+      ],
+      "passes": [
+        {
+          "id": "aria-allowed-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-allowed-role",
+          "sc": []
+        },
+        {
+          "id": "aria-conditional-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-deprecated-role",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-body",
+          "sc": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-hidden-focus",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-required-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-roles",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "aria-valid-attr",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "button-name",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "bypass",
+          "sc": [
+            "2.4.1"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "sc": [
+            "1.4.3"
+          ]
+        },
+        {
+          "id": "document-title",
+          "sc": [
+            "2.4.2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "sc": []
+        },
+        {
+          "id": "empty-table-header",
+          "sc": []
+        },
+        {
+          "id": "heading-order",
+          "sc": []
+        },
+        {
+          "id": "html-has-lang",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "html-lang-valid",
+          "sc": [
+            "3.1.1"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-contentinfo-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-contentinfo",
+          "sc": []
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-one-main",
+          "sc": []
+        },
+        {
+          "id": "landmark-unique",
+          "sc": []
+        },
+        {
+          "id": "link-name",
+          "sc": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "list",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "listitem",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "meta-viewport-large",
+          "sc": []
+        },
+        {
+          "id": "meta-viewport",
+          "sc": [
+            "1.4.4"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "sc": [
+            "4.1.2"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "sc": []
+        },
+        {
+          "id": "region",
+          "sc": []
+        },
+        {
+          "id": "role-img-alt",
+          "sc": [
+            "1.1.1"
+          ]
+        },
+        {
+          "id": "skip-link",
+          "sc": []
+        },
+        {
+          "id": "tabindex",
+          "sc": []
+        },
+        {
+          "id": "table-duplicate-name",
+          "sc": []
+        },
+        {
+          "id": "target-size",
+          "sc": [
+            "2.5.8"
+          ]
+        },
+        {
+          "id": "td-headers-attr",
+          "sc": [
+            "1.3.1"
+          ]
+        },
+        {
+          "id": "th-has-data-cells",
+          "sc": [
+            "1.3.1"
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "label \"Import assessment\": looks interactive but cannot receive keyboard focus"
+      ]
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "home",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "home",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "home",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "home",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "home",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "home",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "home",
+      "variant": "320px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "home",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "home",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "home",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 31px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"AC-7\"",
+        "a \"AC-8\"",
+        "a \"AC-18\"",
+        "a \"AC-19\"",
+        "a \"AC-22\"",
+        "a \"AU-8\"",
+        "a \"CM-11\"",
+        "a \"CP-6\"",
+        "a \"CP-7\"",
+        "a \"IA-4\"",
+        "a \"IA-6\"",
+        "a \"IA-8\"",
+        "a \"MA-2\"",
+        "a \"MA-5\"",
+        "a \"MP-2\"",
+        "a \"MP-4\"",
+        "a \"MP-5\"",
+        "a \"MP-6\"",
+        "a \"MP-7\"",
+        "a \"PE-2\"",
+        "a \"PE-3\"",
+        "a \"PE-6\"",
+        "a \"PE-8\"",
+        "a \"PE-11\"",
+        "a \"PE-13\""
+      ]
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "input#p-productName: boundary contrast 1.38:1",
+        "input#p-org: boundary contrast 1.38:1",
+        "textarea#p-description \"Cloud case management for departmental p\": boundary contrast 1.38:1",
+        "span \"Unclassified\": boundary contrast 1.38:1",
+        "span \"Protected A\": boundary contrast 1.38:1",
+        "span \"Protected C or classified\": boundary contrast 1.38:1",
+        "span \"Low\": boundary contrast 1.38:1",
+        "span \"High\": boundary contrast 1.38:1",
+        "span \"We operate it ourselves\": boundary contrast 1.38:1",
+        "span \"Other cloud (not assessed, or outside Ca\": boundary contrast 1.38:1",
+        "span \"Government / departmental data centre\": boundary contrast 1.38:1",
+        "span \"Vendor's own data centre\": boundary contrast 1.38:1",
+        "span \"Installed on end-user devices only\": boundary contrast 1.38:1",
+        "span \"We develop it\": boundary contrast 1.38:1",
+        "span \"Vendor builds it to our requirements\": boundary contrast 1.38:1",
+        "span \"Open source we deploy\": boundary contrast 1.38:1",
+        "span \"Product's own usernames and passwords\": boundary contrast 1.38:1",
+        "span \"Both: SSO for staff, local accounts for \": boundary contrast 1.38:1",
+        "span \"No interactive users (service / batch on\": boundary contrast 1.38:1",
+        "span \"Public or partners only\": boundary contrast 1.38:1",
+        "span \"Both staff and external users\": boundary contrast 1.38:1",
+        "span \"No\": boundary contrast 1.38:1",
+        "span \"Yes\": boundary contrast 1.38:1"
+      ]
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "profile",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px",
+        "summary \"Show controls removed or shared (33)\": 298×22 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "profile",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"AC-7\"",
+        "a \"AC-8\"",
+        "a \"AC-18\"",
+        "a \"AC-19\"",
+        "a \"AC-22\"",
+        "a \"AU-8\"",
+        "a \"CM-11\"",
+        "a \"CP-6\"",
+        "a \"CP-7\"",
+        "a \"IA-4\"",
+        "a \"IA-6\"",
+        "a \"IA-8\"",
+        "a \"MA-2\"",
+        "a \"MA-5\"",
+        "a \"MP-2\"",
+        "a \"MP-4\"",
+        "a \"MP-5\"",
+        "a \"MP-6\"",
+        "a \"MP-7\"",
+        "a \"PE-2\"",
+        "a \"PE-3\"",
+        "a \"PE-6\"",
+        "a \"PE-8\"",
+        "a \"PE-11\"",
+        "a \"PE-13\""
+      ]
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "profile",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "profile",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "profile",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "profile",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "input#p-productName: boundary contrast 1.40:1",
+        "input#p-org: boundary contrast 1.40:1",
+        "textarea#p-description \"Cloud case management for departmental p\": boundary contrast 1.40:1",
+        "span \"Unclassified\": boundary contrast 1.40:1",
+        "span \"Protected A\": boundary contrast 1.40:1",
+        "span \"Protected C or classified\": boundary contrast 1.40:1",
+        "span \"Low\": boundary contrast 1.40:1",
+        "span \"High\": boundary contrast 1.40:1",
+        "span \"We operate it ourselves\": boundary contrast 1.40:1",
+        "span \"Other cloud (not assessed, or outside Ca\": boundary contrast 1.40:1",
+        "span \"Government / departmental data centre\": boundary contrast 1.40:1",
+        "span \"Vendor's own data centre\": boundary contrast 1.40:1",
+        "span \"Installed on end-user devices only\": boundary contrast 1.40:1",
+        "span \"We develop it\": boundary contrast 1.40:1",
+        "span \"Vendor builds it to our requirements\": boundary contrast 1.40:1",
+        "span \"Open source we deploy\": boundary contrast 1.40:1",
+        "span \"Product's own usernames and passwords\": boundary contrast 1.40:1",
+        "span \"Both: SSO for staff, local accounts for \": boundary contrast 1.40:1",
+        "span \"No interactive users (service / batch on\": boundary contrast 1.40:1",
+        "span \"Public or partners only\": boundary contrast 1.40:1",
+        "span \"Both staff and external users\": boundary contrast 1.40:1",
+        "span \"No\": boundary contrast 1.40:1",
+        "span \"Yes\": boundary contrast 1.40:1"
+      ]
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "profile",
+      "variant": "320px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "profile",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "profile",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "profile",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 31px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "textarea#review-text \"CaseTrack Online is a software as a serv\": boundary contrast 1.38:1"
+      ]
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "label \"Load text file\": looks interactive but cannot receive keyboard focus"
+      ]
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "review",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px",
+        "a \"AC-3 Access Enforcement\": 189×23 px",
+        "a \"AC-6 Least Privilege\": 147×23 px",
+        "a \"AC-17 Remote Access\": 158×23 px",
+        "a \"AC-19 Access Control for Mobile Devices\": 294×23 px",
+        "a \"AU-4 Audit Storage Capacity\": 207×23 px",
+        "a \"AU-6 Audit Review, Analysis and Reportin\": 305×23 px",
+        "a \"AU-11 Audit Record Retention\": 209×23 px",
+        "a \"CA-2 Security Assessments\": 199×23 px",
+        "a \"CM-2 Baseline Configuration\": 206×23 px",
+        "a \"CM-3 Configuration Change Control\": 258×23 px",
+        "a \"CP-2 Contingency Plan\": 165×23 px",
+        "a \"CP-4 Contingency Plan Testing\": 222×23 px",
+        "a \"CP-6 Alternate Storage Site\": 196×23 px",
+        "a \"CP-9 Information System Backup\": 236×23 px",
+        "a \"CP-10 Information System Recovery and Re\": 393×23 px",
+        "a \"IA-2 Identification and Authentication (\": 428×23 px",
+        "a \"IA-5 Authenticator Management\": 229×23 px",
+        "a \"IR-4 Incident Handling\": 159×23 px",
+        "a \"MA-4 Non-Local Maintenance\": 216×23 px",
+        "a \"PE-2 Physical Access Authorizations\": 261×23 px",
+        "a \"PS-3 Personnel Screening\": 187×23 px",
+        "a \"PS-6 Access Agreements\": 183×23 px",
+        "a \"PS-7 Third-Party Personnel Security\": 259×23 px",
+        "a \"RA-5 Vulnerability Scanning\": 200×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "review",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "review",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "review",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "review",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "review",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "textarea#review-text \"CaseTrack Online is a software as a serv\": boundary contrast 1.40:1"
+      ]
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "review",
+      "variant": "320px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "review",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "review",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "review",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 31px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\"",
+        "a \"Start\"",
+        "a \"1 Scope\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "a \"4 Report\"",
+        "a \"Gemba library\"",
+        "button#theme-toggle \"Toggle dark mode\"",
+        "a \"AC Access Control 1/11\"",
+        "a \"AU Audit and Accountability 0/10\"",
+        "a \"IA Identification and Authentication 1/6\"",
+        "a \"SC System and Communications Protection \"",
+        "a \"AT Awareness and Training 0/4\"",
+        "a \"CM Configuration Management 0/11\"",
+        "a \"CP Contingency Planning 1/8\"",
+        "a \"IR Incident Response 0/7\"",
+        "a \"MA Maintenance 0/4\"",
+        "a \"MP Media Protection 0/1\"",
+        "a \"PE Physical and Environmental Protection\"",
+        "a \"PS Personnel Security 0/7\"",
+        "a \"SI System and Information Integrity 0/9\"",
+        "a \"CA Security Assessment and Authorization\"",
+        "a \"PL Planning 0/4\"",
+        "a \"RA Risk Assessment 0/4\"",
+        "a \"SA System and Services Acquisition 0/9\""
+      ]
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "input: no visible focus indicator"
+      ]
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "select \"Automatic (Applicable) ApplicableSharedI\": boundary contrast 1.38:1",
+        "div \"YesPartlyNoDon't knowN/A\": boundary contrast 1.38:1",
+        "span \"Yes\": boundary contrast 1.38:1",
+        "span \"Partly\": boundary contrast 1.38:1",
+        "span \"No\": boundary contrast 1.38:1",
+        "span \"Don't know\": boundary contrast 1.38:1",
+        "textarea \"Reviewed the admin console export.\": boundary contrast 1.38:1",
+        "textarea \"Monthly reconciliation against HR depart\": boundary contrast 1.38:1",
+        "textarea \"Enable SCIM provisioning\": boundary contrast 1.38:1",
+        "input: boundary contrast 1.38:1",
+        "select \"Derive from answers ImplementedPartially\": boundary contrast 1.38:1",
+        "textarea: boundary contrast 1.38:1"
+      ]
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "assess",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\"",
+        "a \"Start\"",
+        "a \"1 Scope\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "a \"4 Report\"",
+        "a \"Gemba library\"",
+        "button#theme-toggle \"Toggle dark mode\"",
+        "a \"AC Access Control 1/11\"",
+        "a \"AU Audit and Accountability 0/10\"",
+        "a \"IA Identification and Authentication 1/6\"",
+        "a \"SC System and Communications Protection \"",
+        "a \"AT Awareness and Training 0/4\"",
+        "a \"CM Configuration Management 0/11\"",
+        "a \"CP Contingency Planning 1/8\"",
+        "a \"IR Incident Response 0/7\"",
+        "a \"MA Maintenance 0/4\"",
+        "a \"MP Media Protection 0/1\"",
+        "a \"PE Physical and Environmental Protection\"",
+        "a \"PS Personnel Security 0/7\"",
+        "a \"SI System and Information Integrity 0/9\"",
+        "a \"CA Security Assessment and Authorization\"",
+        "a \"PL Planning 0/4\"",
+        "a \"RA Risk Assessment 0/4\"",
+        "a \"SA System and Services Acquisition 0/9\""
+      ]
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "assess",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "assess",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "input: no visible focus indicator"
+      ]
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "assess",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "assess",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "select \"Automatic (Applicable) ApplicableSharedI\": boundary contrast 1.40:1",
+        "div \"YesPartlyNoDon't knowN/A\": boundary contrast 1.40:1",
+        "span \"Yes\": boundary contrast 1.40:1",
+        "span \"Partly\": boundary contrast 1.40:1",
+        "span \"No\": boundary contrast 1.40:1",
+        "span \"Don't know\": boundary contrast 1.40:1",
+        "textarea \"Reviewed the admin console export.\": boundary contrast 1.40:1",
+        "textarea \"Monthly reconciliation against HR depart\": boundary contrast 1.40:1",
+        "textarea \"Enable SCIM provisioning\": boundary contrast 1.40:1",
+        "input: boundary contrast 1.40:1",
+        "select \"Derive from answers ImplementedPartially\": boundary contrast 1.40:1",
+        "textarea: boundary contrast 1.40:1"
+      ]
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "assess",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 220px",
+        "a \"3 Questionnaire\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\"",
+        "aside \"Technical AC Access Control 1/11 AU Audi\"",
+        "nav \"Control families\"",
+        "div \"Technical\"",
+        "a \"AU Audit and Accountability 0/10\"",
+        "span \"AU Audit and Accountability\""
+      ]
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "assess",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "assess",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "assess",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 327px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\"",
+        "a \"Start\"",
+        "a \"1 Scope\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "a \"4 Report\"",
+        "a \"Gemba library\"",
+        "button#theme-toggle \"Toggle dark mode\"",
+        "a \"AC Access Control 1/11\"",
+        "a \"AU Audit and Accountability 0/10\"",
+        "a \"IA Identification and Authentication 1/6\"",
+        "a \"SC System and Communications Protection \"",
+        "a \"AT Awareness and Training 0/4\"",
+        "a \"CM Configuration Management 0/11\"",
+        "a \"CP Contingency Planning 1/8\"",
+        "a \"IR Incident Response 0/7\"",
+        "a \"MA Maintenance 0/4\"",
+        "a \"MP Media Protection 0/1\"",
+        "a \"PE Physical and Environmental Protection\"",
+        "a \"PS Personnel Security 0/7\"",
+        "a \"SI System and Information Integrity 0/9\"",
+        "a \"CA Security Assessment and Authorization\"",
+        "a \"PL Planning 0/4\"",
+        "a \"RA Risk Assessment 0/4\"",
+        "a \"SA System and Services Acquisition 0/9\""
+      ]
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "select \"Automatic (Inherited) ApplicableSharedIn\": boundary contrast 1.38:1",
+        "textarea: boundary contrast 1.38:1"
+      ]
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "assess-pe",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "assess-pe",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\"",
+        "a \"Start\"",
+        "a \"1 Scope\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "a \"4 Report\"",
+        "a \"Gemba library\"",
+        "button#theme-toggle \"Toggle dark mode\"",
+        "a \"AC Access Control 1/11\"",
+        "a \"AU Audit and Accountability 0/10\"",
+        "a \"IA Identification and Authentication 1/6\"",
+        "a \"SC System and Communications Protection \"",
+        "a \"AT Awareness and Training 0/4\"",
+        "a \"CM Configuration Management 0/11\"",
+        "a \"CP Contingency Planning 1/8\"",
+        "a \"IR Incident Response 0/7\"",
+        "a \"MA Maintenance 0/4\"",
+        "a \"MP Media Protection 0/1\"",
+        "a \"PE Physical and Environmental Protection\"",
+        "a \"PS Personnel Security 0/7\"",
+        "a \"SI System and Information Integrity 0/9\"",
+        "a \"CA Security Assessment and Authorization\"",
+        "a \"PL Planning 0/4\"",
+        "a \"RA Risk Assessment 0/4\"",
+        "a \"SA System and Services Acquisition 0/9\""
+      ]
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "assess-pe",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "assess-pe",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "assess-pe",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "assess-pe",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "select \"Automatic (Inherited) ApplicableSharedIn\": boundary contrast 1.40:1",
+        "textarea: boundary contrast 1.40:1"
+      ]
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "assess-pe",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 220px",
+        "a \"3 Questionnaire\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\"",
+        "aside \"Technical AC Access Control 1/11 AU Audi\"",
+        "nav \"Control families\"",
+        "div \"Technical\"",
+        "a \"AU Audit and Accountability 0/10\"",
+        "span \"AU Audit and Accountability\""
+      ]
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "assess-pe",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "assess-pe",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "assess-pe",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 327px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "control",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "control",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "control",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "control",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "control",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "control",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "control",
+      "variant": "320px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "control",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "control",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "control",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 31px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "input#lib-q \"Search controls\": boundary contrast 1.38:1",
+        "select#lib-cls \"Filter by class\": boundary contrast 1.38:1"
+      ]
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "library",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "library",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "library",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "library",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "library",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "library",
+      "variant": "dark",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "input#lib-q \"Search controls\": boundary contrast 1.40:1",
+        "select#lib-cls \"Filter by class\": boundary contrast 1.40:1"
+      ]
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "library",
+      "variant": "320px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "library",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "library",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "library",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 31px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "lookalike-controls",
+      "title": "Controls that look interactive are keyboard operable",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "target-size",
+      "title": "Pointer targets are at least 24 by 24 CSS px",
+      "sc": [
+        "2.5.8"
+      ],
+      "state": "report",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "a \"Skip to content\": 107×23 px"
+      ]
+    },
+    {
+      "id": "keyboard-reach",
+      "title": "Every focusable control can be reached with Tab",
+      "sc": [
+        "2.1.1"
+      ],
+      "state": "report",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "no-keyboard-trap",
+      "title": "Focus can move through and out of the page",
+      "sc": [
+        "2.1.2"
+      ],
+      "state": "report",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-visible",
+      "title": "Visible focus indicator with at least 3:1 contrast at every stop",
+      "sc": [
+        "2.4.7",
+        "1.4.11"
+      ],
+      "state": "report",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "focus-not-obscured",
+      "title": "Focused element is not hidden behind sticky content",
+      "sc": [
+        "2.4.11"
+      ],
+      "state": "report",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "non-text-contrast",
+      "title": "Form field and choice boundaries have at least 3:1 contrast",
+      "sc": [
+        "1.4.11"
+      ],
+      "state": "report",
+      "variant": "dark",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-320",
+      "title": "No horizontal scrolling at 320 CSS px (400% zoom)",
+      "sc": [
+        "1.4.10"
+      ],
+      "state": "report",
+      "variant": "320px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "reflow-640",
+      "title": "No loss of content at 640 CSS px (200% zoom)",
+      "sc": [
+        "1.4.4"
+      ],
+      "state": "report",
+      "variant": "640px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "report",
+      "variant": "1280px",
+      "advisory": false,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "text-spacing",
+      "title": "No clipped content with WCAG text-spacing overrides",
+      "sc": [
+        "1.4.12"
+      ],
+      "state": "report",
+      "variant": "320px",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Page scrolls horizontally by 31px",
+        "div \"ITSG-33 Compliance Navigator\"",
+        "span \"ITSG-33 Compliance Navigator\"",
+        "strong \"Compliance Navigator\"",
+        "a \"2 Review docs\"",
+        "a \"3 Questionnaire\"",
+        "b \"3\"",
+        "a \"4 Report\"",
+        "b \"4\"",
+        "a \"Gemba library\""
+      ]
+    },
+    {
+      "id": "route-focus",
+      "title": "Navigation moves focus to the new page heading and updates title",
+      "sc": [
+        "2.4.3",
+        "2.4.2",
+        "4.1.2"
+      ],
+      "state": "app",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "profile: focus after navigation is on A, expected the page h1",
+        "profile: navigation link not marked aria-current=\"page\"",
+        "review: focus after navigation is on A, expected the page h1",
+        "review: navigation link not marked aria-current=\"page\"",
+        "assess: focus after navigation is on A, expected the page h1",
+        "assess: navigation link not marked aria-current=\"page\"",
+        "report: focus after navigation is on A, expected the page h1",
+        "report: navigation link not marked aria-current=\"page\"",
+        "library: focus after navigation is on A, expected the page h1",
+        "library: navigation link not marked aria-current=\"page\"",
+        "home: focus after navigation is on A, expected the page h1",
+        "home: navigation link not marked aria-current=\"page\""
+      ]
+    },
+    {
+      "id": "tabs-pattern",
+      "title": "Gemba tabs follow the ARIA tabs pattern with arrow keys",
+      "sc": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "state": "assess",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "ArrowRight did not move focus to the next tab",
+        "Selected tab does not control a visible role=tabpanel",
+        "Tab panel is not labelled by its tab",
+        "Tabs do not use a single tab stop (roving tabindex)",
+        "End key did not move to the last tab"
+      ]
+    },
+    {
+      "id": "status-messages",
+      "title": "Results of actions are announced without moving focus",
+      "sc": [
+        "4.1.3",
+        "2.1.1"
+      ],
+      "state": "app",
+      "variant": "light",
+      "advisory": false,
+      "pass": false,
+      "failures": [
+        "Answering a question did not announce the control's new status"
+      ]
+    }
+  ],
+  "pageErrors": []
+}

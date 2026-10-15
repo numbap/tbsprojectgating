@@ -1,0 +1,22 @@
+{
+  "name": "project-gating-navigator",
+  "version": "1.0.0",
+  "description": "Navigate Government of Canada project governance (TBS gating, Directive on the Management of Projects and Programmes): complexity and risk, approval authority, gate readiness and a bilingual report.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "a11y:test": "node tests/a11y/run.mjs",
+    "vpat": "node scripts/build-vpat.mjs",
+    "a11y": "node scripts/build-vpat.mjs && node tests/a11y/run.mjs && node scripts/build-vpat.mjs --strict",
+    "a11y:attest": "node scripts/attest-manual-review.mjs",
+    "test:security": "node tests/security/run.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "axe-core": "4.14.0",
+    "marked": "18.1.1",
+    "playwright": "1.56.1"
+  }
+}

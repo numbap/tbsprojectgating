@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Automated test report · Project Gating Navigator</title>
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <p class="brand"><a href="../index.html">Project Gating Navigator</a> <span>Accessibility</span></p>
+  <nav aria-label="Accessibility documentation"><ul><li><a href="index.html">Accessibility statement</a></li><li><a href="vpat.html">VPAT</a></li><li><a href="test-report.html" aria-current="page">Test report</a></li><li><a href="strategy.html">Strategy and conformance policy</a></li><li><a href="scope.html">Scope and context</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="expertise.html">Expertise</a></li><li><a href="remediation-log.html">Remediation log</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+
+<h1>Automated test report</h1>
+<p class="notice ok">Passed: 105 axe-core runs (0 WCAG violations, 0 best-practice issues), 564 of 564 scripted checks passed, 0 JavaScript errors.</p>
+
+<h2>Tools</h2>
+<ul><li>axe-core: 4.14.0</li><li>playwright: 1.56.1</li><li>browser: Chromium (Playwright 1.56.1)</li><li>axe-core tags: <code>wcag2a</code> <code>wcag2aa</code> <code>wcag21a</code> <code>wcag21aa</code> <code>wcag22a</code> <code>wcag22aa</code> <code>best-practice</code></li></ul>
+
+<h2>Page states tested</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Page states"><table><caption>Page states</caption>
+<thead><tr><th scope="col">ID</th><th scope="col">Description</th><th scope="col">URL</th></tr></thead>
+<tbody><tr><th scope="row"><code>home</code></th><td>Start page</td><td><code>/#/</code></td></tr>
+<tr><th scope="row"><code>profile</code></th><td>1. Scope, with the indicative complexity estimator</td><td><code>/#/profile</code></td></tr>
+<tr><th scope="row"><code>review</code></th><td>2. Review documents, with findings</td><td><code>/#/review</code></td></tr>
+<tr><th scope="row"><code>review-toast</code></th><td>2. Review documents, confirmation message showing<br><span class="meta">Setup: <code>(page) =&gt; page.click(&#39;[data-action=&quot;copy-evidence&quot;]&#39;)</code></span></td><td><code>/#/review</code></td></tr>
+<tr><th scope="row"><code>assess</code></th><td>3. Gate readiness, Gate 3 with INV-4 expanded</td><td><code>/#/assess/G3/INV-4</code></td></tr>
+<tr><th scope="row"><code>assess-dept</code></th><td>3. Gate readiness, Gate 2 with a departmental requirement (CAP-2) expanded</td><td><code>/#/assess/G2/CAP-2</code></td></tr>
+<tr><th scope="row"><code>req</code></th><td>Requirement page (CAP-1)</td><td><code>/#/req/CAP-1</code></td></tr>
+<tr><th scope="row"><code>library</code></th><td>Requirements library</td><td><code>/#/library</code></td></tr>
+<tr><th scope="row"><code>gates</code></th><td>Gate guide</td><td><code>/#/gates</code></td></tr>
+<tr><th scope="row"><code>gate</code></th><td>Gate page (Gate 5)</td><td><code>/#/gate/G5</code></td></tr>
+<tr><th scope="row"><code>report</code></th><td>4. Gate readiness report</td><td><code>/#/report</code></td></tr>
+<tr><th scope="row"><code>process</code></th><td>Governance path, first decision</td><td><code>/#/process</code></td></tr>
+<tr><th scope="row"><code>process-step</code></th><td>Governance path, activity after one decision, with the whole tree expanded<br><span class="meta">Setup: <code>async (page) =&gt; { await page.click(&#39;a.proc-opt[data-choice=&quot;1&quot;]&#39;); await page.waitForSelector(&quot;#proc-node.kind-step&quot;); await page.click(&quot;.proc-map &gt; summary&quot;); }</code></span></td><td><code>/#/process</code></td></tr>
+<tr><th scope="row"><code>fr-profile</code></th><td>French interface: 1. Scope</td><td><code>/#/profile</code></td></tr>
+<tr><th scope="row"><code>fr-report</code></th><td>French interface: 4. Gate readiness report</td><td><code>/#/report</code></td></tr>
+<tr><th scope="row"><code>fr-assess</code></th><td>French interface: 3. Gate readiness, Gate 3 with INV-4 expanded</td><td><code>/#/assess/G3/INV-4</code></td></tr>
+<tr><th scope="row"><code>security</code></th><td>Data and security, unencrypted Unclassified storage</td><td><code>/#/security</code></td></tr>
+<tr><th scope="row"><code>setup</code></th><td>First-run storage setup</td><td><code>/</code></td></tr>
+<tr><th scope="row"><code>setup-error</code></th><td>First-run storage setup, with a validation error<br><span class="meta">Setup: <code>(page) =&gt; page.click(&quot;#setup-form button[type=submit]&quot;)</code></span></td><td><code>/</code></td></tr>
+<tr><th scope="row"><code>locked</code></th><td>Lock screen (encrypted Protected B assessment)</td><td><code>/</code></td></tr>
+<tr><th scope="row"><code>pb-home</code></th><td>Start page, unlocked Protected B assessment (marking banner, lock button)<br><span class="meta">Setup: <code>unlock with the fixture passphrase</code></span></td><td><code>/</code></td></tr>
+<tr><th scope="row"><code>security-encrypted</code></th><td>Data and security, encrypted Protected B storage<br><span class="meta">Setup: <code>unlock with the fixture passphrase</code></span></td><td><code>/#/security</code></td></tr>
+<tr><th scope="row"><code>docs/declaration</code></th><td>Accessibility documentation: declaration.html</td><td><code>/accessibility/declaration.html</code></td></tr>
+<tr><th scope="row"><code>docs/expertise</code></th><td>Accessibility documentation: expertise.html</td><td><code>/accessibility/expertise.html</code></td></tr>
+<tr><th scope="row"><code>docs/index</code></th><td>Accessibility documentation: index.html</td><td><code>/accessibility/index.html</code></td></tr>
+<tr><th scope="row"><code>docs/methodology</code></th><td>Accessibility documentation: methodology.html</td><td><code>/accessibility/methodology.html</code></td></tr>
+<tr><th scope="row"><code>docs/remediation-log</code></th><td>Accessibility documentation: remediation-log.html</td><td><code>/accessibility/remediation-log.html</code></td></tr>
+<tr><th scope="row"><code>docs/scope</code></th><td>Accessibility documentation: scope.html</td><td><code>/accessibility/scope.html</code></td></tr>
+<tr><th scope="row"><code>docs/strategy</code></th><td>Accessibility documentation: strategy.html</td><td><code>/accessibility/strategy.html</code></td></tr>
+<tr><th scope="row"><code>docs/test-report</code></th><td>Accessibility documentation: test-report.html</td><td><code>/accessibility/test-report.html</code></td></tr>
+<tr><th scope="row"><code>docs/vpat</code></th><td>Accessibility documentation: vpat.html</td><td><code>/accessibility/vpat.html</code></td></tr>
+<tr><th scope="row"><code>policies/privacy-fr</code></th><td>Policy page: privacy-fr.html</td><td><code>/policies/privacy-fr.html</code></td></tr>
+<tr><th scope="row"><code>policies/privacy</code></th><td>Policy page: privacy.html</td><td><code>/policies/privacy.html</code></td></tr>
+<tr><th scope="row"><code>policies/protected-b-fr</code></th><td>Policy page: protected-b-fr.html</td><td><code>/policies/protected-b-fr.html</code></td></tr>
+<tr><th scope="row"><code>policies/protected-b</code></th><td>Policy page: protected-b.html</td><td><code>/policies/protected-b.html</code></td></tr></tbody></table></div>
+<p>Each state was tested in: light theme 1280px; dark theme 1280px; 320px; 640px; text-spacing overrides.</p>
+
+<h2>Scripted checks</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Scripted check results"><table><caption>Scripted check results</caption>
+<thead><tr><th scope="col">Check</th><th scope="col">WCAG</th><th scope="col">Runs</th><th scope="col">Result</th></tr></thead>
+<tbody><tr><th scope="row"><code>keyboard-reach</code><br>Every focusable control can be reached with Tab</th><td>2.1.1</td><td>70</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>no-keyboard-trap</code><br>Focus can move through and out of the page</th><td>2.1.2</td><td>70</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>focus-visible</code><br>Visible focus indicator with at least 3:1 contrast at every stop</th><td>2.4.7, 1.4.11</td><td>70</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>focus-not-obscured</code><br>Focused element is not hidden behind sticky content</th><td>2.4.11</td><td>70</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>non-text-contrast</code><br>Form field and choice boundaries have at least 3:1 contrast</th><td>1.4.11</td><td>70</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>lookalike-controls</code><br>Controls that look interactive are keyboard operable</th><td>2.1.1, 4.1.2</td><td>35</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>target-size</code><br>Pointer targets are at least 24 by 24 CSS px</th><td>2.5.8</td><td>35</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>reflow-320</code><br>No horizontal scrolling at 320 CSS px (400% zoom)</th><td>1.4.10</td><td>35</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>reflow-640</code><br>No loss of content at 640 CSS px (200% zoom)</th><td>1.4.4</td><td>35</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>text-spacing</code><br>No clipped content with WCAG text-spacing overrides</th><td>1.4.12</td><td>70</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>route-focus</code><br>Navigation moves focus to the new page heading and updates title</th><td>2.4.3, 2.4.2, 4.1.2</td><td>1</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>tabs-pattern</code><br>Requirement lens tabs follow the ARIA tabs pattern with arrow keys</th><td>2.1.1, 4.1.2</td><td>1</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>language-switch</code><br>Switching language updates the page language, keeps focus and announces the change</th><td>3.1.1, 3.1.2, 4.1.3</td><td>1</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr>
+<tr><th scope="row"><code>status-messages</code><br>Results of actions are announced without moving focus</th><td>4.1.3, 2.1.1</td><td>1</td>
+<td><span class="lvl lvl-S">All passed</span></td></tr></tbody></table></div>
+
+<h2>axe-core violations</h2>
+<p>None.</p>
+
+<h2>Items axe-core could not decide</h2>
+<p>axe-core marks some results “incomplete” when a human must decide, for example text over a gradient. These were reviewed visually.</p>
+<ul><li><code>color-contrast</code> (Elements must meet minimum color contrast ratio thresholds): home/light, home/dark, home/light 320px, profile/light, profile/dark, profile/light 320px, review/light, review/dark, review/light 320px, review-toast/light, review-toast/dark, review-toast/light 320px, assess/light, assess/dark, assess/light 320px, assess-dept/light, assess-dept/dark, assess-dept/light 320px, req/light, req/dark, req/light 320px, library/light, library/dark, library/light 320px, gates/light, gates/dark, gates/light 320px, gate/light, gate/dark, gate/light 320px, report/light, report/dark, report/light 320px, process/light, process/dark, process/light 320px, process-step/light, process-step/dark, process-step/light 320px, fr-profile/light, fr-profile/dark, fr-profile/light 320px, fr-report/light, fr-report/dark, fr-report/light 320px, fr-assess/light, fr-assess/dark, fr-assess/light 320px, security/light, security/dark, security/light 320px, setup/light, setup/dark, setup/light 320px, setup-error/light, setup-error/dark, setup-error/light 320px, locked/light, locked/dark, locked/light 320px, pb-home/light, pb-home/dark, pb-home/light 320px, security-encrypted/light, security-encrypted/dark, security-encrypted/light 320px, docs/methodology/light 320px</li><li><code>label-content-name-mismatch</code> (Elements must have their visible text as part of their accessible name): home/light, home/dark, home/light 320px, profile/light, profile/dark, profile/light 320px, review/light, review/dark, review/light 320px, review-toast/light, review-toast/dark, review-toast/light 320px, assess/light, assess/dark, assess/light 320px, assess-dept/light, assess-dept/dark, assess-dept/light 320px, req/light, req/dark, req/light 320px, library/light, library/dark, library/light 320px, gates/light, gates/dark, gates/light 320px, gate/light, gate/dark, gate/light 320px, report/light, report/dark, report/light 320px, process/light, process/dark, process/light 320px, process-step/light, process-step/dark, process-step/light 320px, fr-profile/light, fr-profile/dark, fr-profile/light 320px, fr-report/light, fr-report/dark, fr-report/light 320px, fr-assess/light, fr-assess/dark, fr-assess/light 320px, security/light, security/dark, security/light 320px, setup/light, setup/dark, setup/light 320px, setup-error/light, setup-error/dark, setup-error/light 320px, locked/light, locked/dark, locked/light 320px, pb-home/light, pb-home/dark, pb-home/light 320px, security-encrypted/light, security-encrypted/dark, security-encrypted/light 320px</li></ul>
+
+<h2>axe-core rules applied, by success criterion</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="axe-core rules by WCAG success criterion"><table><caption>axe-core rules by WCAG success criterion</caption>
+<thead><tr><th scope="col">WCAG</th><th scope="col">Rules</th></tr></thead>
+<tbody><tr><th scope="row">1.1.1</th><td><code>role-img-alt</code></td></tr>
+<tr><th scope="row">1.3.1</th><td><code>aria-hidden-body</code> <code>aria-required-children</code> <code>aria-required-parent</code> <code>definition-list</code> <code>dlitem</code> <code>list</code> <code>listitem</code> <code>td-headers-attr</code> <code>th-has-data-cells</code></td></tr>
+<tr><th scope="row">1.3.5</th><td><code>autocomplete-valid</code></td></tr>
+<tr><th scope="row">1.4.1</th><td><code>link-in-text-block</code></td></tr>
+<tr><th scope="row">1.4.3</th><td><code>color-contrast</code></td></tr>
+<tr><th scope="row">1.4.4</th><td><code>meta-viewport</code></td></tr>
+<tr><th scope="row">1.4.12</th><td><code>avoid-inline-spacing</code></td></tr>
+<tr><th scope="row">2.1.1</th><td><code>scrollable-region-focusable</code></td></tr>
+<tr><th scope="row">2.1.3</th><td><code>scrollable-region-focusable</code></td></tr>
+<tr><th scope="row">2.4.1</th><td><code>bypass</code></td></tr>
+<tr><th scope="row">2.4.2</th><td><code>document-title</code></td></tr>
+<tr><th scope="row">2.4.4</th><td><code>link-name</code></td></tr>
+<tr><th scope="row">2.5.3</th><td><code>label-content-name-mismatch</code></td></tr>
+<tr><th scope="row">2.5.8</th><td><code>target-size</code></td></tr>
+<tr><th scope="row">3.1.1</th><td><code>html-has-lang</code> <code>html-lang-valid</code></td></tr>
+<tr><th scope="row">3.1.2</th><td><code>valid-lang</code></td></tr>
+<tr><th scope="row">3.3.2</th><td><code>form-field-multiple-labels</code></td></tr>
+<tr><th scope="row">4.1.2</th><td><code>aria-allowed-attr</code> <code>aria-conditional-attr</code> <code>aria-deprecated-role</code> <code>aria-hidden-body</code> <code>aria-hidden-focus</code> <code>aria-prohibited-attr</code> <code>aria-required-attr</code> <code>aria-roles</code> <code>aria-valid-attr</code> <code>aria-valid-attr-value</code> <code>button-name</code> <code>duplicate-id-aria</code> <code>label</code> <code>link-name</code> <code>nested-interactive</code> <code>select-name</code> <code>summary-name</code></td></tr></tbody></table></div>
+
+<h2>Accessibility tree snapshots</h2>
+<p>The accessibility tree Chromium exposes to assistive technology for each application state (Playwright aria snapshots, YAML):</p>
+<ul><li><a href="results/aria/home.yml">Start page</a></li><li><a href="results/aria/profile.yml">1. Scope, with the indicative complexity estimator</a></li><li><a href="results/aria/review.yml">2. Review documents, with findings</a></li><li><a href="results/aria/review-toast.yml">2. Review documents, confirmation message showing</a></li><li><a href="results/aria/assess.yml">3. Gate readiness, Gate 3 with INV-4 expanded</a></li><li><a href="results/aria/assess-dept.yml">3. Gate readiness, Gate 2 with a departmental requirement (CAP-2) expanded</a></li><li><a href="results/aria/req.yml">Requirement page (CAP-1)</a></li><li><a href="results/aria/library.yml">Requirements library</a></li><li><a href="results/aria/gates.yml">Gate guide</a></li><li><a href="results/aria/gate.yml">Gate page (Gate 5)</a></li><li><a href="results/aria/report.yml">4. Gate readiness report</a></li><li><a href="results/aria/process.yml">Governance path, first decision</a></li><li><a href="results/aria/process-step.yml">Governance path, activity after one decision, with the whole tree expanded</a></li><li><a href="results/aria/fr-profile.yml">French interface: 1. Scope</a></li><li><a href="results/aria/fr-report.yml">French interface: 4. Gate readiness report</a></li><li><a href="results/aria/fr-assess.yml">French interface: 3. Gate readiness, Gate 3 with INV-4 expanded</a></li><li><a href="results/aria/security.yml">Data and security, unencrypted Unclassified storage</a></li><li><a href="results/aria/setup.yml">First-run storage setup</a></li><li><a href="results/aria/setup-error.yml">First-run storage setup, with a validation error</a></li><li><a href="results/aria/locked.yml">Lock screen (encrypted Protected B assessment)</a></li><li><a href="results/aria/pb-home.yml">Start page, unlocked Protected B assessment (marking banner, lock button)</a></li><li><a href="results/aria/security-encrypted.yml">Data and security, encrypted Protected B storage</a></li><li><a href="results/aria/policies/privacy-fr.yml">Policy page: privacy-fr.html</a></li><li><a href="results/aria/policies/privacy.yml">Policy page: privacy.html</a></li><li><a href="results/aria/policies/protected-b-fr.yml">Policy page: protected-b-fr.html</a></li><li><a href="results/aria/policies/protected-b.yml">Policy page: protected-b.html</a></li></ul>
+
+<h2>Baseline</h2>
+<p>The audit before remediation is kept as <a href="evidence/baseline-results.json">evidence/baseline-results.json</a> and summarized in the <a href="remediation-log.html">remediation log</a>.</p>
+</main>
+<footer class="foot">
+  <p class="foot-links"><a href="../policies/privacy.html">Privacy policy</a>
+  <a href="../policies/protected-b.html">Protected B handling</a>
+  <a href="index.html">Accessibility statement, VPAT and evidence</a>
+  <a href="https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20">Report an accessibility problem</a>
+  <a href="../index.html">Back to the application</a></p>
+  <p>Generated by <code>scripts/build-vpat.mjs</code>. Compiled from <code>accessibility/evaluation/criteria.mjs</code> and the automated test results; recompiled on every commit by the accessibility workflow.</p>
+</footer>
+</body>
+</html>

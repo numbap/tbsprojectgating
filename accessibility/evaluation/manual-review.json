@@ -1,0 +1,25 @@
+{
+  "reviewedAt": "2026-10-15",
+  "reviewer": "Claude (AI assistant, Anthropic). Self-assessment; no accessibility certification; not independent",
+  "notes": "Version 1.0.0: review of all WCAG 2.2 A/AA criteria in criteria.mjs for the Project Gating Navigator; code review of templates, styles, language switching and event handling; visual inspection in light and dark at 360 and 1280 px, in English and French",
+  "fingerprint": {
+    "files": {
+      "index.html": "bb41dea5e6b822fe",
+      "css/styles.css": "81c8fd8afa77a738",
+      "js/app.js": "a19b4478a0915944",
+      "js/report.js": "0bfde6ac5b47489d",
+      "js/strings.js": "88538a43f9fc978c",
+      "scripts/build-vpat.mjs": "599d33c5a7463d4a",
+      "accessibility/assets/docs.css": "5c8b73bd2f873c73"
+    },
+    "combined": "ecdea3043859abf4"
+  },
+  "history": [
+    {
+      "reviewedAt": "2026-10-15",
+      "reviewer": "Claude (AI assistant, Anthropic). Self-assessment; no accessibility certification; not independent",
+      "notes": "Version 1.0.0: review of all WCAG 2.2 A/AA criteria in criteria.mjs for the Project Gating Navigator; code review of templates, styles, language switching and event handling; visual inspection in light and dark at 360 and 1280 px, in English and French",
+      "fingerprint": "ecdea3043859abf4"
+    }
+  ]
+}
