@@ -11,7 +11,7 @@ Based on VPAT® Version 2.5Rev (EU edition: WCAG and EN 301 549)
 
 ## Build status
 
-- Automated suite passed: 105 axe-core runs with no WCAG violations, and 564 scripted checks passed across 35 page states (axe-core 4.14.0, Chromium (Playwright 1.56.1)).
+- Automated suite failed: 0 WCAG violation(s) and 3 failed scripted check(s). Affected criteria are downgraded below.
 - Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint 5a7a10a86dcec001).
 
 ## Notes
