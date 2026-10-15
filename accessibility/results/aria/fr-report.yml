@@ -40,8 +40,8 @@
     - 'heading "Rapport sur l''état de préparation : ClaimPath Online" [level=1]'
     - paragraph: "Ministère : Department of Example Services · Produit le 2026-10-15 · Modèle de points de contrôle : Points de contrôle complets (sept)"
     - heading "1. Sommaire" [level=2]
-    - text: 37 % État de préparation pour G3 26 % Progression de l'évaluation 3 Lacunes à risque élevé Requise Approbation du Conseil du Trésor
-    - paragraph: Pas prêt pour G3 Analyse de rentabilisation et état de préparation général. Il reste beaucoup de travail; présenter maintenant risque d'entraîner une suspension ou un arrêt.
+    - text: 31 % État de préparation pour G3 25 % Progression de l'évaluation 3 Lacunes à risque élevé Requise Approbation du Conseil du Trésor
+    - paragraph: Évaluation incomplète. Moins de la moitié des exigences dues au plus tard à G3 Analyse de rentabilisation et état de préparation général ont été évaluées; l'état de préparation n'est donc pas encore significatif.
     - strong: Avertissements liés à la portée
     - list:
       - listitem: Le niveau de complexité et de risque est une estimation indicative. Réalisez l'ECRP officielle avec l'outil du SCT avant de vous y fier pour les décisions d'approbation.
@@ -68,9 +68,6 @@
           - 'row "Catégorie approuvée de capacité organisationnelle de gestion de projets de votre ministère (ECOGP) Catégorie 2 : Tactique"':
             - rowheader "Catégorie approuvée de capacité organisationnelle de gestion de projets de votre ministère (ECOGP)"
             - 'cell "Catégorie 2 : Tactique"'
-          - row "Limite d'approbation des projets de votre ministère 10 M$":
-            - rowheader "Limite d'approbation des projets de votre ministère"
-            - cell "10 M$"
           - 'row "Niveau de l''évaluation de la complexité et des risques du projet (ECRP) Pas encore réalisée : l''estimer ci-dessous"':
             - rowheader "Niveau de l'évaluation de la complexité et des risques du projet (ECRP)"
             - 'cell "Pas encore réalisée : l''estimer ci-dessous"'
@@ -98,8 +95,8 @@
           - row "Renseignements les plus sensibles que traitera la solution Protégé B":
             - rowheader "Renseignements les plus sensibles que traitera la solution"
             - cell "Protégé B"
-          - row "Utilise-t-il une technologie émergente (p. ex. IA, chaîne de blocs) ou nécessite-t-il une exception à la politique numérique? Non":
-            - rowheader "Utilise-t-il une technologie émergente (p. ex. IA, chaîne de blocs) ou nécessite-t-il une exception à la politique numérique?"
+          - row "Utilise-t-il une technologie émergente (p. ex. IA), nécessite-t-il une exception à la politique numérique, héberge-t-il de l'information Protégé B ou moins ailleurs que dans le nuage public, ou prolonge-t-il le soutien d'une technologie non soutenue? Non":
+            - rowheader "Utilise-t-il une technologie émergente (p. ex. IA), nécessite-t-il une exception à la politique numérique, héberge-t-il de l'information Protégé B ou moins ailleurs que dans le nuage public, ou prolonge-t-il le soutien d'une technologie non soutenue?"
             - cell "Non"
           - row "Offrira-t-il un service au public? Oui":
             - rowheader "Offrira-t-il un service au public?"
@@ -125,16 +122,21 @@
           - row "Coût total estimatif De 25 M$ à 50 M$":
             - rowheader "Coût total estimatif"
             - cell "De 25 M$ à 50 M$"
-          - row "Limite d'approbation des projets appliquée 10 M$":
-            - rowheader "Limite d'approbation des projets appliquée"
-            - cell "10 M$"
-          - row "Pouvoir d'approbation L'approbation du projet par le Conseil du Trésor est requise. Le coût estimatif dépasse la limite d'approbation des projets de 10 M$. Le niveau d'ECRP 3 dépasse la catégorie de capacité 2 du ministère.":
+          - 'row "ECRP requise Oui : le coût est égal ou supérieur au seuil de 10 M$ pour la catégorie du ministère"':
+            - rowheader "ECRP requise"
+            - 'cell "Oui : le coût est égal ou supérieur au seuil de 10 M$ pour la catégorie du ministère"'
+          - row "Pouvoir d'approbation L'approbation du projet par le Conseil du Trésor est requise. Le niveau d'ECRP 3 dépasse la catégorie de capacité 2 du ministère.":
             - rowheader "Pouvoir d'approbation"
-            - cell "L'approbation du projet par le Conseil du Trésor est requise. Le coût estimatif dépasse la limite d'approbation des projets de 10 M$. Le niveau d'ECRP 3 dépasse la catégorie de capacité 2 du ministère.":
+            - cell "L'approbation du projet par le Conseil du Trésor est requise. Le niveau d'ECRP 3 dépasse la catégorie de capacité 2 du ministère.":
               - text: L'approbation du projet par le Conseil du Trésor est requise.
               - list:
-                - listitem: Le coût estimatif dépasse la limite d'approbation des projets de 10 M$.
                 - listitem: Le niveau d'ECRP 3 dépasse la catégorie de capacité 2 du ministère.
+          - 'row "Approbations du Conseil du Trésor Deux étapes : pouvoir de dépenser pour commencer la définition, puis approbation du projet et pouvoir de dépenser pour commencer la mise en œuvre (annexe D). Seuls les travaux préalables à la définition (analyse des options, faisabilité, analyse du marché) peuvent avoir lieu avant la première. L''approbation du projet exige au moins une estimation indicative des coûts; le pouvoir de dépenser pour la mise en œuvre exige une estimation fondée."':
+            - rowheader "Approbations du Conseil du Trésor"
+            - 'cell "Deux étapes : pouvoir de dépenser pour commencer la définition, puis approbation du projet et pouvoir de dépenser pour commencer la mise en œuvre (annexe D). Seuls les travaux préalables à la définition (analyse des options, faisabilité, analyse du marché) peuvent avoir lieu avant la première. L''approbation du projet exige au moins une estimation indicative des coûts; le pouvoir de dépenser pour la mise en œuvre exige une estimation fondée."':
+              - text: "Deux étapes : pouvoir de dépenser pour commencer la définition, puis approbation du projet et pouvoir de dépenser pour commencer la mise en œuvre (annexe D). Seuls les travaux préalables à la définition (analyse des options, faisabilité, analyse du marché) peuvent avoir lieu avant la première."
+              - list:
+                - listitem: L'approbation du projet exige au moins une estimation indicative des coûts; le pouvoir de dépenser pour la mise en œuvre exige une estimation fondée.
           - 'row "Présentation au Conseil du Trésor pour le financement Probable : de nouveaux fonds ou de nouvelles autorisations sont nécessaires"':
             - rowheader "Présentation au Conseil du Trésor pour le financement"
             - 'cell "Probable : de nouveaux fonds ou de nouvelles autorisations sont nécessaires"'
@@ -156,6 +158,12 @@
                 - listitem: G5 Plan de projet détaillé et spécifications fonctionnelles
                 - listitem: G6 Construction terminée et état de préparation au déploiement
                 - listitem: G7 Examen postérieur à la mise en œuvre
+          - 'row "Cas conceptuel numérique Requis : cas conceptuel examiné par le DPI du GC (investissement de 5 M$ ou plus)"':
+            - rowheader "Cas conceptuel numérique"
+            - 'cell "Requis : cas conceptuel examiné par le DPI du GC (investissement de 5 M$ ou plus)"'
+          - 'row "Données de référence au Bureau du contrôleur général Requises (25 M$ ou plus) : données de référence sur la portée, le calendrier, les coûts et les risques après chaque approbation et à la clôture"':
+            - rowheader "Données de référence au Bureau du contrôleur général"
+            - 'cell "Requises (25 M$ ou plus) : données de référence sur la portée, le calendrier, les coûts et les risques après chaque approbation et à la clôture"'
           - row "Examen indépendant Attendu aux points de contrôle clés":
             - rowheader "Examen indépendant"
             - cell "Attendu aux points de contrôle clés"
@@ -177,21 +185,26 @@
             - cell "Approbation du concept (point de contrôle 1)":
               - strong: Approbation du concept (point de contrôle 1)
             - cell "Promoteur et comité ministériel des investissements ou des projets"
-          - row "G2 Approche du projet Point de contrôle 2 · Approche ECRP réalisée et approuvée Chef de projet, bureau de gestion de projet, promoteur":
+          - row "G1 Évaluation stratégique et concept Point de contrôle 1 · Concept Cas conceptuel approuvé par le responsable opérationnel, puis examiné par le DPI du GC Responsable opérationnel (SMA ou plus), organe ministériel de surveillance des investissements, Bureau du dirigeant principal de l'information du SCT":
+            - cell "G1 Évaluation stratégique et concept Point de contrôle 1 · Concept"
+            - cell "Cas conceptuel approuvé par le responsable opérationnel, puis examiné par le DPI du GC":
+              - strong: Cas conceptuel approuvé par le responsable opérationnel, puis examiné par le DPI du GC
+            - cell "Responsable opérationnel (SMA ou plus), organe ministériel de surveillance des investissements, Bureau du dirigeant principal de l'information du SCT"
+          - row "G2 Approche du projet Point de contrôle 2 · Approche ECRP soumise au SCT pour examen avant le début de la définition (15 jours ouvrables) Promoteur du projet, bureau de gestion de projet, Secrétariat du Conseil du Trésor":
             - cell "G2 Approche du projet Point de contrôle 2 · Approche"
-            - cell "ECRP réalisée et approuvée":
-              - strong: ECRP réalisée et approuvée
-            - cell "Chef de projet, bureau de gestion de projet, promoteur"
+            - cell "ECRP soumise au SCT pour examen avant le début de la définition (15 jours ouvrables)":
+              - strong: ECRP soumise au SCT pour examen avant le début de la définition (15 jours ouvrables)
+            - cell "Promoteur du projet, bureau de gestion de projet, Secrétariat du Conseil du Trésor"
           - row "G2 Approche du projet Point de contrôle 2 · Approche Examen de l'architecture ministérielle Conseil ministériel d'examen de l'architecture, DPI":
             - cell "G2 Approche du projet Point de contrôle 2 · Approche"
             - cell "Examen de l'architecture ministérielle":
               - strong: Examen de l'architecture ministérielle
             - cell "Conseil ministériel d'examen de l'architecture, DPI"
-          - row "G2 Approche du projet Point de contrôle 2 · Approche Examen par le CEAI du GC à l'étape du concept Conseil d'examen de l'architecture intégrée du GC (Bureau du dirigeant principal de l'information du SCT)":
+          - row "G2 Approche du projet Point de contrôle 2 · Approche Examen par le CEAI du GC, après le cas conceptuel et avant l'analyse de rentabilisation ou la présentation au Conseil du Trésor Conseil ministériel d'examen de l'architecture d'abord, puis Conseil d'examen de l'architecture intégrée du GC":
             - cell "G2 Approche du projet Point de contrôle 2 · Approche"
-            - cell "Examen par le CEAI du GC à l'étape du concept":
-              - strong: Examen par le CEAI du GC à l'étape du concept
-            - cell "Conseil d'examen de l'architecture intégrée du GC (Bureau du dirigeant principal de l'information du SCT)"
+            - cell "Examen par le CEAI du GC, après le cas conceptuel et avant l'analyse de rentabilisation ou la présentation au Conseil du Trésor":
+              - strong: Examen par le CEAI du GC, après le cas conceptuel et avant l'analyse de rentabilisation ou la présentation au Conseil du Trésor
+            - cell "Conseil ministériel d'examen de l'architecture d'abord, puis Conseil d'examen de l'architecture intégrée du GC"
           - row "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation Approbation de l'analyse de rentabilisation (point de contrôle 3) Promoteur, comité ministériel des investissements, DPF":
             - cell "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation"
             - cell "Approbation de l'analyse de rentabilisation (point de contrôle 3)":
@@ -202,21 +215,16 @@
             - cell "Budget ou mémoire au Cabinet, puis présentation au Conseil du Trésor pour le financement":
               - strong: Budget ou mémoire au Cabinet, puis présentation au Conseil du Trésor pour le financement
             - cell "Promoteur, DPF, Bureau du Conseil privé, ministère des Finances, Conseil du Trésor"
-          - row "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation Approbation du projet par le Conseil du Trésor Conseil du Trésor, par l'entremise du secteur de programme du SCT":
+          - row "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation Pouvoir de dépenser du Conseil du Trésor pour commencer la définition Conseil du Trésor, par l'entremise du secteur de programme du SCT (l'approbation du projet n'est pas encore requise)":
             - cell "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation"
-            - cell "Approbation du projet par le Conseil du Trésor":
-              - strong: Approbation du projet par le Conseil du Trésor
-            - cell "Conseil du Trésor, par l'entremise du secteur de programme du SCT"
+            - cell "Pouvoir de dépenser du Conseil du Trésor pour commencer la définition":
+              - strong: Pouvoir de dépenser du Conseil du Trésor pour commencer la définition
+            - cell "Conseil du Trésor, par l'entremise du secteur de programme du SCT (l'approbation du projet n'est pas encore requise)"
           - row "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation Examen indépendant par un tiers Examinateur indépendant relevant des responsables des points de contrôle":
             - cell "G3 Analyse de rentabilisation et état de préparation général Point de contrôle 3 · Analyse de rentabilisation"
             - cell "Examen indépendant par un tiers":
               - strong: Examen indépendant par un tiers
             - cell "Examinateur indépendant relevant des responsables des points de contrôle"
-          - row "G4 Charte de projet et plan de gestion de projet Point de contrôle 4 · Charte Examen par le CEAI du GC avant la finalisation de la conception détaillée Conseil d'examen de l'architecture intégrée du GC":
-            - cell "G4 Charte de projet et plan de gestion de projet Point de contrôle 4 · Charte"
-            - cell "Examen par le CEAI du GC avant la finalisation de la conception détaillée":
-              - strong: Examen par le CEAI du GC avant la finalisation de la conception détaillée
-            - cell "Conseil d'examen de l'architecture intégrée du GC"
           - row "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé Évaluation des facteurs relatifs à la vie privée approuvée Bureau de l'AIPRP, responsable délégué de la protection de la vie privée":
             - cell "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé"
             - cell "Évaluation des facteurs relatifs à la vie privée approuvée":
@@ -227,11 +235,16 @@
             - cell "Évaluation de l'incidence algorithmique publiée":
               - strong: Évaluation de l'incidence algorithmique publiée
             - cell "Équipe de projet, bureau ministériel de l'IA ou des données, examinateur par les pairs"
-          - row "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé Pouvoir de dépenser pour la mise en œuvre (point de contrôle 5) Promoteur, DPF, Conseil du Trésor s'il a approuvé le projet":
+          - row "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé Approbation du projet et pouvoir de dépenser du Conseil du Trésor pour commencer la mise en œuvre Conseil du Trésor, avec un sommaire de projet annexé à la présentation":
             - cell "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé"
-            - cell "Pouvoir de dépenser pour la mise en œuvre (point de contrôle 5)":
-              - strong: Pouvoir de dépenser pour la mise en œuvre (point de contrôle 5)
-            - cell "Promoteur, DPF, Conseil du Trésor s'il a approuvé le projet"
+            - cell "Approbation du projet et pouvoir de dépenser du Conseil du Trésor pour commencer la mise en œuvre":
+              - strong: Approbation du projet et pouvoir de dépenser du Conseil du Trésor pour commencer la mise en œuvre
+            - cell "Conseil du Trésor, avec un sommaire de projet annexé à la présentation"
+          - row "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé Données de référence du projet au Bureau du contrôleur général après chaque approbation Cadre supérieur désigné pour les projets et programmes":
+            - cell "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé"
+            - cell "Données de référence du projet au Bureau du contrôleur général après chaque approbation":
+              - strong: Données de référence du projet au Bureau du contrôleur général après chaque approbation
+            - cell "Cadre supérieur désigné pour les projets et programmes"
           - row "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé Examen indépendant par un tiers Examinateur indépendant relevant des responsables des points de contrôle":
             - cell "G5 Plan de projet détaillé et spécifications fonctionnelles Point de contrôle 5 · Plan détaillé"
             - cell "Examen indépendant par un tiers":
@@ -266,87 +279,87 @@
             - columnheader "Inconnues"
             - columnheader "État de préparation"
         - rowgroup:
-          - row "G1 Évaluation stratégique et concept 4 3 0 0 1 80 % prêt 80 %":
+          - row "G1 Évaluation stratégique et concept 6 3 0 0 3 57 % prêt 57 %":
             - cell "G1 Évaluation stratégique et concept":
               - strong: G1
               - text: Évaluation stratégique et concept
-            - cell "4"
+            - cell "6"
             - cell "3"
             - cell "0"
             - cell "0"
-            - cell "1"
-            - cell "80 % prêt 80 %":
-              - img "80 % prêt"
-              - text: 80 %
-          - row "G2 Approche du projet 11 0 4 2 5 25 % prêt 25 %":
+            - cell "3"
+            - cell "57 % prêt 57 %":
+              - img "57 % prêt"
+              - text: 57 %
+          - row "G2 Approche du projet 12 0 4 2 6 23 % prêt 23 %":
             - cell "G2 Approche du projet":
               - strong: G2
               - text: Approche du projet
-            - cell "11"
+            - cell "12"
             - cell "0"
             - cell "4"
             - cell "2"
-            - cell "5"
-            - cell "25 % prêt 25 %":
-              - img "25 % prêt"
-              - text: 25 %
-          - row "G3 Analyse de rentabilisation et état de préparation général prochain 10 1 4 0 5 30 % prêt 30 %":
+            - cell "6"
+            - cell "23 % prêt 23 %":
+              - img "23 % prêt"
+              - text: 23 %
+          - row "G3 Analyse de rentabilisation et état de préparation général prochain 12 1 4 0 7 25 % prêt 25 %":
             - cell "G3 Analyse de rentabilisation et état de préparation général prochain":
               - strong: G3
               - text: Analyse de rentabilisation et état de préparation général prochain
-            - cell "10"
+            - cell "12"
             - cell "1"
             - cell "4"
             - cell "0"
-            - cell "5"
-            - cell "30 % prêt 30 %":
-              - img "30 % prêt"
-              - text: 30 %
-          - row "G4 Charte de projet et plan de gestion de projet 12 0 0 0 12 0 % prêt 0 %":
+            - cell "7"
+            - cell "25 % prêt 25 %":
+              - img "25 % prêt"
+              - text: 25 %
+          - row "G4 Charte de projet et plan de gestion de projet 11 0 0 0 11 0 % prêt 0 %":
             - cell "G4 Charte de projet et plan de gestion de projet":
               - strong: G4
               - text: Charte de projet et plan de gestion de projet
-            - cell "12"
+            - cell "11"
             - cell "0"
             - cell "0"
             - cell "0"
-            - cell "12"
+            - cell "11"
             - cell "0 % prêt 0 %":
               - img "0 % prêt"
               - text: 0 %
-          - row "G5 Plan de projet détaillé et spécifications fonctionnelles 10 0 0 1 9 0 % prêt 0 %":
+          - row "G5 Plan de projet détaillé et spécifications fonctionnelles 11 0 0 1 10 0 % prêt 0 %":
             - cell "G5 Plan de projet détaillé et spécifications fonctionnelles":
               - strong: G5
               - text: Plan de projet détaillé et spécifications fonctionnelles
-            - cell "10"
+            - cell "11"
             - cell "0"
             - cell "0"
             - cell "1"
-            - cell "9"
+            - cell "10"
             - cell "0 % prêt 0 %":
               - img "0 % prêt"
               - text: 0 %
-          - row "G6 Construction terminée et état de préparation au déploiement 6 0 0 0 6 0 % prêt 0 %":
+          - row "G6 Construction terminée et état de préparation au déploiement 5 0 0 0 5 0 % prêt 0 %":
             - cell "G6 Construction terminée et état de préparation au déploiement":
               - strong: G6
               - text: Construction terminée et état de préparation au déploiement
-            - cell "6"
+            - cell "5"
             - cell "0"
             - cell "0"
             - cell "0"
-            - cell "6"
+            - cell "5"
             - cell "0 % prêt 0 %":
               - img "0 % prêt"
               - text: 0 %
-          - row "G7 Examen postérieur à la mise en œuvre 4 0 0 0 4 0 % prêt 0 %":
+          - row "G7 Examen postérieur à la mise en œuvre 3 0 0 0 3 0 % prêt 0 %":
             - cell "G7 Examen postérieur à la mise en œuvre":
               - strong: G7
               - text: Examen postérieur à la mise en œuvre
-            - cell "4"
+            - cell "3"
             - cell "0"
             - cell "0"
             - cell "0"
-            - cell "4"
+            - cell "3"
             - cell "0 % prêt 0 %":
               - img "0 % prêt"
               - text: 0 %
@@ -561,7 +574,7 @@
     - term: Point de contrôle
     - definition: G3 Analyse de rentabilisation et état de préparation général
     - term: État de préparation
-    - definition: 37 % · 14 exigences évaluées sur 25
+    - definition: 31 % · 14 exigences évaluées sur 30
     - term: Décision suggérée
     - definition:
       - strong: "Suspendre : retravailler et revenir au point de contrôle"
@@ -620,15 +633,15 @@
         - strong: APP-1
         - text: Approbation du projet demandée au Conseil du Trésor
         - list:
-          - listitem: L'attestation du DPF a-t-elle été planifiée?
+          - listitem: Seuls des travaux préalables à la définition sont-ils en cours jusqu'à l'obtention du pouvoir de dépenser pour la définition?
       - listitem:
         - strong: RSK-1
         - text: Registre des risques géré activement
         - list:
           - listitem: Le promoteur agit-il sur les principaux risques?
     - paragraph:
-      - strong: "Non encore évaluées (42) :"
-      - text: GOV-4, GOV-5, GOV-6, INV-7, APP-2, APP-3, APP-5, APP-6, GAT-1, GAT-2, GAT-3, PLN-1, PLN-2, PLN-3, PLN-4, PLN-5, PLN-6, PLN-7, PLN-8, PLN-9, BEN-2, BEN-3, RSK-2, PRO-1, PRO-2, PRO-4, DIG-1, DIG-2, DIG-4, DIG-5, DIG-6, DIG-7, OCM-1, OCM-2, OCM-3, OCM-4, OCM-5, MON-1, MON-2, MON-3, MON-4, MON-5. Elles ne sont pas comptées comme des lacunes, mais obtiennent zéro jusqu'à leur évaluation.
+      - strong: "Non encore évaluées (45) :"
+      - text: GOV-4, GOV-5, GOV-6, INV-7, APP-2, APP-3, APP-5, APP-6, APP-8, GAT-1, GAT-2, GAT-3, GAT-4, PLN-1, PLN-2, PLN-3, PLN-4, PLN-5, PLN-6, PLN-7, PLN-8, PLN-9, BEN-2, BEN-3, RSK-2, PRO-1, PRO-2, PRO-4, DIG-1, DIG-2, DIG-4, DIG-5, DIG-6, DIG-7, OCM-1, OCM-2, OCM-3, OCM-4, OCM-5, MON-1, MON-2, MON-3, MON-4, MON-5, MON-6. Elles ne sont pas comptées comme des lacunes, mais obtiennent zéro jusqu'à leur évaluation.
     - heading "10. Fourni par le cadre ministériel" [level=2]
     - paragraph: Faites référence au cadre ou à l'évaluation ministériels pour ces éléments plutôt que de les refaire pour le projet.
     - list:
@@ -639,7 +652,7 @@
         - strong: CAP-2
         - text: Catégorie de capacité ministérielle (ECOGP) à jour
     - heading "Couverture de l'examen des documents" [level=2]
-    - paragraph: L'examen des documents a trouvé des énoncés pertinents pour 23 exigences sur 62 dans 20 phrases. Les correspondances de mots clés sont des pistes, et non des preuves.
+    - paragraph: L'examen des documents a trouvé des énoncés pertinents pour 23 exigences sur 66 dans 20 phrases. Les correspondances de mots clés sont des pistes, et non des preuves.
     - heading "11. Énoncés pour la présentation au point de contrôle" [level=2]
     - paragraph: Les énoncés marqués Ébauche ont été générés à partir de modèles et doivent être revus pour décrire ce qui est réellement en place.
     - heading "G1 Évaluation stratégique et concept" [level=3]
@@ -661,6 +674,12 @@
     - strong: INV-2 Harmonisé avec le plan d'investissement ministériel
     - text: Obligatoire Satisfait Ébauche
     - paragraph: ClaimPath Online figure dans le plan d'investissement de Department of Example Services et a été priorisé par le comité ministériel des investissements.
+    - strong: APP-8 Cas conceptuel numérique examiné par le DPI du GC
+    - text: Obligatoire Non évalué Ébauche
+    - paragraph: Un cas conceptuel de ClaimPath Online a été approuvé par le responsable opérationnel, examiné par l'organe de surveillance des investissements de Department of Example Services et soumis au SCT pour examen par le dirigeant principal de l'information du gouvernement du Canada.
+    - strong: MON-3 Leçons apprises consignées et partagées
+    - text: Obligatoire Non évalué Ébauche
+    - paragraph: Les leçons apprises de ClaimPath Online ont été consignées à chaque point de contrôle et à la clôture, et partagées avec le bureau de gestion de projet de Department of Example Services.
     - heading "G2 Approche du projet" [level=3]
     - strong: GOV-2 Structure de gouvernance et pouvoirs décisionnels clairs
     - text: Obligatoire Partiellement satisfait Ébauche
@@ -685,7 +704,7 @@
     - paragraph: Fourni par le cadre ministériel. Department of Example Services dispose d'une évaluation approuvée de la capacité organisationnelle de gestion de projets, qui établit le pouvoir d'approbation des projets du ministère appliqué à ClaimPath Online.
     - strong: CAP-3 Pouvoir d'approbation déterminé
     - text: Obligatoire Partiellement satisfait Ébauche
-    - paragraph: Le pouvoir d'approbation de ClaimPath Online a été déterminé en comparant son coût estimatif et son niveau d'ECRP à la limite d'approbation des projets et à la catégorie de capacité de Department of Example Services. L'approbation du projet par le Conseil du Trésor est requise. Cet énoncé décrit l'état visé. Les lacunes actuelles et les mesures sont consignées dans le plan d'action.
+    - paragraph: Le pouvoir d'approbation de ClaimPath Online a été déterminé conformément à l'annexe C de la Directive sur la gestion des projets et programmes, à partir de son coût estimatif, de son niveau d'ECRP et de la catégorie de capacité de Department of Example Services. L'approbation du projet par le Conseil du Trésor est requise. Cet énoncé décrit l'état visé. Les lacunes actuelles et les mesures sont consignées dans le plan d'action.
     - strong: APP-3 Engagement précoce auprès du Secrétariat du Conseil du Trésor
     - text: Obligatoire Non évalué Ébauche
     - paragraph: ClaimPath Online collabore avec le secteur de programme du Secrétariat du Conseil du Trésor et le Bureau du dirigeant principal de l'information depuis l'étape de l'approche; leurs attentes sont intégrées au plan.
@@ -698,6 +717,9 @@
     - strong: GAT-1 Plan des points de contrôle défini
     - text: Obligatoire Non évalué Ébauche
     - paragraph: ClaimPath Online suit le modèle points de contrôle complets (sept). Le plan des points de contrôle désigne les responsables et les éléments probants attendus à chacun, et les dates font partie du calendrier intégré.
+    - strong: GAT-4 Analyse de rentabilisation et viabilité revalidées à chaque point de contrôle
+    - text: Obligatoire Non évalué Ébauche
+    - paragraph: À chaque point de contrôle, ClaimPath Online revalide son analyse de rentabilisation, confirme que les avantages visés demeurent pertinents et atteignables, et consigne une décision sur sa viabilité continue et sur le respect des exigences du point de contrôle.
     - strong: PLN-1 Portée générale et exigences de haut niveau
     - text: Obligatoire Non évalué Ébauche
     - paragraph: La portée de ClaimPath Online est définie, y compris les exclusions explicites, les exigences de haut niveau rattachées aux résultats ainsi que les principales hypothèses et contraintes.
@@ -732,12 +754,18 @@
     - strong: BEN-1 Avantages mesurables définis
     - text: Obligatoire Satisfait Ébauche
     - paragraph: Les avantages de ClaimPath Online sont définis avec un point de départ, une cible, une mesure et une date pour chacun, et sont liés aux résultats de l'analyse de rentabilisation.
+    - strong: BEN-2 Plan de réalisation des avantages avec responsables
+    - text: Obligatoire Non évalué Ébauche
+    - paragraph: Un plan de réalisation des avantages de ClaimPath Online attribue chaque avantage à un responsable opérationnel et précise comment et quand il est mesuré, y compris après la clôture du projet.
     - strong: PRO-1 Analyse du marché et stratégie d'approvisionnement
     - text: Obligatoire Non évalué Ébauche
     - paragraph: La stratégie d'approvisionnement de ClaimPath Online s'appuie sur une analyse du marché et a été convenue avec l'autorité contractante. Les jalons d'approvisionnement font partie du calendrier intégré.
     - strong: PRO-2 Autorité contractante et partenaires consultés tôt
     - text: Recommandé Non évalué Ébauche
     - paragraph: L'autorité contractante et, au besoin, Services partagés Canada ont été consultés lors de l'élaboration de l'analyse de rentabilisation de ClaimPath Online; leurs délais figurent au calendrier.
+    - strong: MON-6 Données de référence au Bureau du contrôleur général
+    - text: Obligatoire Non évalué Ébauche
+    - paragraph: Des données de référence sur la portée, le calendrier, les coûts et les risques de ClaimPath Online sont soumises au Bureau du contrôleur général après chaque approbation et à la clôture.
     - heading "G4 Charte de projet et plan de gestion de projet" [level=3]
     - strong: GOV-5 Gestionnaire de projet et équipe de base qualifiés
     - text: Obligatoire Non évalué Ébauche
@@ -757,9 +785,6 @@
     - strong: PLN-9 Réalisation itérative associée aux points de contrôle
     - text: Obligatoire Non évalué Ébauche
     - paragraph: ClaimPath Online est réalisé de façon itérative. Sa feuille de route des versions montre comment les incréments s'associent aux points de contrôle, et les responsables ont convenu des éléments probants (logiciel fonctionnel et résultats mesurés pour les utilisateurs) présentés à chacun.
-    - strong: BEN-2 Plan de réalisation des avantages avec responsables
-    - text: Obligatoire Non évalué Ébauche
-    - paragraph: Un plan de réalisation des avantages de ClaimPath Online attribue chaque avantage à un responsable opérationnel et précise comment et quand il est mesuré, y compris après la clôture du projet.
     - strong: RSK-2 Problèmes et décisions consignés
     - text: Recommandé Non évalué Ébauche
     - paragraph: Les problèmes et les décisions de ClaimPath Online sont consignés avec leurs responsables et leur justification, et examinés à chaque réunion d'équipe.
@@ -806,6 +831,9 @@
     - strong: DIG-7 Gestion de l'information et des données
     - text: Obligatoire Non évalué Ébauche
     - paragraph: L'information à valeur opérationnelle créée par ClaimPath Online est déterminée, et la conservation, la disposition et la propriété des données sont définies avec l'équipe de gestion de l'information de Department of Example Services.
+    - strong: OCM-3 Transition vers l'exploitation avec un responsable financé
+    - text: Obligatoire Non évalué Ébauche
+    - paragraph: ClaimPath Online passe à un responsable du service désigné, avec un modèle de soutien, des niveaux de service et un financement continu confirmés avant la mise en service.
     - heading "G6 Construction terminée et état de préparation au déploiement" [level=3]
     - strong: PRO-4 Rendement des fournisseurs géré
     - text: Recommandé Non évalué Ébauche
@@ -816,9 +844,6 @@
     - strong: OCM-2 Préparation des secteurs d'activité et formation
     - text: Obligatoire Non évalué Ébauche
     - paragraph: "L'état de préparation des secteurs d'activité pour ClaimPath Online a été confirmé par le responsable opérationnel : les processus et les procédures sont à jour, la dotation est en place et les utilisateurs sont formés."
-    - strong: OCM-3 Transition vers l'exploitation avec un responsable financé
-    - text: Obligatoire Non évalué Ébauche
-    - paragraph: ClaimPath Online passe à un responsable du service désigné, avec un modèle de soutien, des niveaux de service et un financement continu confirmés avant la mise en service.
     - strong: OCM-4 Critères de mise en service et plan de repli
     - text: Obligatoire Non évalué Ébauche
     - paragraph: La mise en service de ClaimPath Online est décidée selon des critères convenus à l'avance. Un plan de retour arrière et de contingence a été répété avant le déploiement.
@@ -829,9 +854,6 @@
     - strong: BEN-3 Avantages mesurés après la mise en œuvre
     - text: Obligatoire Non évalué Ébauche
     - paragraph: Les avantages de ClaimPath Online ont été mesurés par rapport à leurs points de départ et cibles après la mise en œuvre et communiqués à Assistant Deputy Minister, Service Delivery. Des mesures sont en place pour les avantages non encore réalisés.
-    - strong: MON-3 Leçons apprises consignées et partagées
-    - text: Obligatoire Non évalué Ébauche
-    - paragraph: Les leçons apprises de ClaimPath Online ont été consignées à chaque point de contrôle et à la clôture, et partagées avec le bureau de gestion de projet de Department of Example Services.
     - strong: MON-4 Clôture officielle
     - text: Obligatoire Non évalué Ébauche
     - paragraph: "ClaimPath Online a été officiellement clos : livrables acceptés, contrats et finances fermés, documentation archivée et rapport de clôture approuvé par Assistant Deputy Minister, Service Delivery."

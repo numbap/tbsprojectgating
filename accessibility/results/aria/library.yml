@@ -57,20 +57,20 @@
     - option "Gate 5 · Detailed plan"
     - option "Gate 6 · Deployment"
     - option "Gate 7 · Post-implementation"
-  - text: 62 requirements
-  - 'link "GOV-1 high Required Met Accountable project sponsor named A senior executive is designated as project sponsor and is accountable for the project from planning to close-out, including managing risk, defining expected benefits and seeking the approvals the project needs. Gate 1 · Concept · Right-size it: For small projects the sponsor can be a director general; what matters is authority over the budget and the business change."':
+  - text: 66 requirements
+  - 'link "GOV-1 high Required Met Accountable project sponsor named A sponsor is designated at the outset of the planning phase as the single point of accountability, and is responsible for the planning, definition, implementation, transition and close-out of the project, providing visible, active leadership to manage risks and resolve issues. Gate 1 · Concept · Right-size it: For small projects the sponsor can be a director general; what matters is authority over the budget and the business change."':
     - /url: "#/req/GOV-1"
     - text: GOV-1 high Required Met
     - heading "Accountable project sponsor named" [level=2]
-    - paragraph: A senior executive is designated as project sponsor and is accountable for the project from planning to close-out, including managing risk, defining expected benefits and seeking the approvals the project needs.
+    - paragraph: A sponsor is designated at the outset of the planning phase as the single point of accountability, and is responsible for the planning, definition, implementation, transition and close-out of the project, providing visible, active leadership to manage risks and resolve issues.
     - paragraph:
       - strong: Gate 1 · Concept
       - text: "· Right-size it: For small projects the sponsor can be a director general; what matters is authority over the budget and the business change."
-  - 'link "GOV-2 medium Required Partly met Governance structure with clear decision rights The project has a governance structure (for example a steering committee) with terms of reference that say who decides what, escalation paths and tolerances, proportionate to its complexity and risk. Gate 2 · Approach · Right-size it: Use an existing directors'' or DG committee rather than creating a new one for a small project."':
+  - 'link "GOV-2 medium Required Partly met Governance structure with clear decision rights Governance roles, responsibilities, accountability and authority are documented and communicated, decisions are documented and shared, and the seniority and meeting frequency of governance are commensurate with the project''s complexity and risk. The sponsor assesses governance for effectiveness and adjusts it. Gate 2 · Approach · Right-size it: Use an existing directors'' or DG committee rather than creating a new one for a small project."':
     - /url: "#/req/GOV-2"
     - text: GOV-2 medium Required Partly met
     - heading "Governance structure with clear decision rights" [level=2]
-    - paragraph: The project has a governance structure (for example a steering committee) with terms of reference that say who decides what, escalation paths and tolerances, proportionate to its complexity and risk.
+    - paragraph: Governance roles, responsibilities, accountability and authority are documented and communicated, decisions are documented and shared, and the seniority and meeting frequency of governance are commensurate with the project's complexity and risk. The sponsor assesses governance for effectiveness and adjusts it.
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Use an existing directors' or DG committee rather than creating a new one for a small project."
@@ -90,22 +90,30 @@
     - paragraph:
       - strong: Gate 1 · Concept
       - text: "· Right-size it: A one-page decision record is enough; this tool's report includes a draft."
-  - 'link "GOV-5 medium Required Not assessed Qualified project manager and core team The project manager and key team members have the competencies the project''s complexity calls for, consistent with the department''s approach to project management capacity. Gate 4 · Charter · Right-size it: Pair a less experienced PM with a mentor from the PMO rather than delaying the project."':
+  - 'link "GOV-5 medium Required Not assessed Qualified project manager and core team The sponsor exercises due care in assigning a project manager with the competencies and experience for the work and for the project''s complexity, risk, materiality and significance, and key team roles are filled. Gate 4 · Charter · Right-size it: Pair a less experienced PM with a mentor from the PMO rather than delaying the project."':
     - /url: "#/req/GOV-5"
     - text: GOV-5 medium Required Not assessed
     - heading "Qualified project manager and core team" [level=2]
-    - paragraph: The project manager and key team members have the competencies the project's complexity calls for, consistent with the department's approach to project management capacity.
+    - paragraph: The sponsor exercises due care in assigning a project manager with the competencies and experience for the work and for the project's complexity, risk, materiality and significance, and key team roles are filled.
     - paragraph:
       - strong: Gate 4 · Charter
       - text: "· Right-size it: Pair a less experienced PM with a mentor from the PMO rather than delaying the project."
-  - 'link "GOV-6 medium Required Not assessed Enabling functions engaged early Procurement, finance, IT, security, privacy, real property, human resources and communications are consulted early enough to shape the approach, not just to approve it. Gate 2 · Approach · Right-size it: Use one integrated review session with all functions instead of separate meetings."':
+  - 'link "GOV-6 medium Required Not assessed Enabling functions engaged early The sponsor collaborates with procurement, real property, IT, finance, legal and human resources (and security and privacy) early enough to shape the approach, not just to approve it, and maintains relationships with implicated departments and common service providers. Gate 2 · Approach · Right-size it: Use one integrated review session with all functions instead of separate meetings."':
     - /url: "#/req/GOV-6"
     - text: GOV-6 medium Required Not assessed
     - heading "Enabling functions engaged early" [level=2]
-    - paragraph: Procurement, finance, IT, security, privacy, real property, human resources and communications are consulted early enough to shape the approach, not just to approve it.
+    - paragraph: The sponsor collaborates with procurement, real property, IT, finance, legal and human resources (and security and privacy) early enough to shape the approach, not just to approve it, and maintains relationships with implicated departments and common service providers.
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Use one integrated review session with all functions instead of separate meetings."
+  - 'link "GOV-7 high Not applicable Not applicable Joint governance for horizontal projects For joint and enterprise projects, a common governance framework is set up with key stakeholders: a Senior Board of participating deputy heads, an ADM-level committee and a DG committee. The deputy heads on the Senior Board sign the sponsor''s appointment letter, each department''s roles, accountabilities and authorities are documented in signed agreements, and gate decisions consider the input of all affected stakeholders. Gate 1 · Concept · Right-size it: Reuse an existing interdepartmental committee structure where one already covers the same deputy heads."':
+    - /url: "#/req/GOV-7"
+    - text: GOV-7 high Not applicable Not applicable
+    - heading "Joint governance for horizontal projects" [level=2]
+    - paragraph: "For joint and enterprise projects, a common governance framework is set up with key stakeholders: a Senior Board of participating deputy heads, an ADM-level committee and a DG committee. The deputy heads on the Senior Board sign the sponsor's appointment letter, each department's roles, accountabilities and authorities are documented in signed agreements, and gate decisions consider the input of all affected stakeholders."
+    - paragraph:
+      - strong: Gate 1 · Concept
+      - text: "· Right-size it: Reuse an existing interdepartmental committee structure where one already covers the same deputy heads."
   - 'link "PGM-1 medium Not applicable Not applicable Programme alignment and interdependencies When the project is part of a programme, its contribution to programme outcomes, its dependencies on other projects and the programme''s governance are defined. Gate 1 · Concept · Right-size it: Let the programme board act as the project''s steering committee."':
     - /url: "#/req/PGM-1"
     - text: PGM-1 medium Not applicable Not applicable
@@ -122,11 +130,11 @@
     - paragraph:
       - strong: Gate 1 · Concept
       - text: "· Right-size it: A one-page concept note is enough at Gate 1; detail comes in the business case."
-  - 'link "INV-2 medium Required Met Aligned with the departmental investment plan The project is identified in, or consistent with, the department''s investment plan and priorities, so it competes for resources openly. Gate 1 · Concept · Right-size it: Small projects can be covered by a program-level line in the investment plan."':
+  - 'link "INV-2 medium Required Met Aligned with the departmental investment plan The department''s five-year investment plan lists planned and approved projects of $2.5 million or more with their procurement strategies, is submitted to TBS every three years, and the list is updated for TBS annually. The project is in it, or the deviation is explained. Gate 1 · Concept · Right-size it: Small projects can be covered by a program-level line in the investment plan."':
     - /url: "#/req/INV-2"
     - text: INV-2 medium Required Met
     - heading "Aligned with the departmental investment plan" [level=2]
-    - paragraph: The project is identified in, or consistent with, the department's investment plan and priorities, so it competes for resources openly.
+    - paragraph: The department's five-year investment plan lists planned and approved projects of $2.5 million or more with their procurement strategies, is submitted to TBS every three years, and the list is updated for TBS annually. The project is in it, or the deviation is explained.
     - paragraph:
       - strong: Gate 1 · Concept
       - text: "· Right-size it: Small projects can be covered by a program-level line in the investment plan."
@@ -138,11 +146,11 @@
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: For a light-gated project, a one-page comparison table is enough."
-  - 'link "INV-4 high Required Partly met Business case approved A business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization''s readiness, and is approved by the sponsor and the departmental investment authority. Gate 3 · Business case · Right-size it: Use the department''s short-form business case template for low-risk projects."':
+  - 'link "INV-4 high Required Partly met Business case approved Every project, including one within the minister''s authority, is supported by a business case and a documented project approval. The business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization''s readiness, and is revalidated at each later gate. Gate 3 · Business case · Right-size it: Use the department''s short-form business case template for low-risk projects."':
     - /url: "#/req/INV-4"
     - text: INV-4 high Required Partly met
     - heading "Business case approved" [level=2]
-    - paragraph: A business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization's readiness, and is approved by the sponsor and the departmental investment authority.
+    - paragraph: Every project, including one within the minister's authority, is supported by a business case and a documented project approval. The business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization's readiness, and is revalidated at each later gate.
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Use the department's short-form business case template for low-risk projects."
@@ -154,11 +162,11 @@
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Phase funding to gates: confirm funding to the next gate, with a plan for the rest."
-  - 'link "INV-6 high Required Partly met Full life-cycle cost estimate Costs are estimated over the asset''s whole life, including ongoing operations, support, licences, refresh and decommissioning, with the estimate''s class and assumptions stated and reviewed by the CFO. Gate 3 · Business case · Right-size it: SaaS options shift capital to operating costs; make sure ongoing funding exists rather than hiding it."':
+  - 'link "INV-6 high Required Partly met Full life-cycle cost estimate Costs are estimated over the asset''s whole life, including ongoing operations, support, licences, refresh and decommissioning, with the estimate''s class and assumptions stated and reviewed by the CFO. The gating guide expects about ±40% accuracy for the whole project at Gate 3 (an indicative estimate). Gate 3 · Business case · Right-size it: SaaS options shift capital to operating costs; make sure ongoing funding exists rather than hiding it."':
     - /url: "#/req/INV-6"
     - text: INV-6 high Required Partly met
     - heading "Full life-cycle cost estimate" [level=2]
-    - paragraph: Costs are estimated over the asset's whole life, including ongoing operations, support, licences, refresh and decommissioning, with the estimate's class and assumptions stated and reviewed by the CFO.
+    - paragraph: Costs are estimated over the asset's whole life, including ongoing operations, support, licences, refresh and decommissioning, with the estimate's class and assumptions stated and reviewed by the CFO. The gating guide expects about ±40% accuracy for the whole project at Gate 3 (an indicative estimate).
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: SaaS options shift capital to operating costs; make sure ongoing funding exists rather than hiding it."
@@ -170,35 +178,35 @@
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Reuse the program's existing GBA Plus and focus on what the project changes."
-  - 'link "CAP-1 high Required Not met Project Complexity and Risk Assessment (PCRA) completed The PCRA is completed with the official TBS tool, approved within the department and updated when the project changes materially. Its level (1 Sustaining to 4 Transformational) drives approval authority and the level of oversight. Gate 2 · Approach · Right-size it: Reducing real complexity (smaller releases, fewer integrations, proven technology) lowers the PCRA honestly; scoring it lower does not."':
+  - 'link "CAP-1 high Required Not met Project Complexity and Risk Assessment (PCRA) completed Above the threshold for the department''s class ($2.5M with no class or class 0, then $5M, $10M, $25M and $50M for classes 1 to 4), the PCRA is completed with the TBS tool over the project''s full scope and life cycle, and submitted to TBS with its supporting evidence before definition begins. TBS reviews it within 15 working days; it is reassessed if complexity or risk increases significantly. Its level (1 Sustaining to 4 Transformational) sets approval authority and oversight. Gate 2 · Approach · Right-size it: Reducing real complexity (smaller releases, fewer integrations, proven technology) lowers the PCRA honestly; scoring it lower does not."':
     - /url: "#/req/CAP-1"
     - text: CAP-1 high Required Not met
     - heading "Project Complexity and Risk Assessment (PCRA) completed" [level=2]
-    - paragraph: The PCRA is completed with the official TBS tool, approved within the department and updated when the project changes materially. Its level (1 Sustaining to 4 Transformational) drives approval authority and the level of oversight.
+    - paragraph: Above the threshold for the department's class ($2.5M with no class or class 0, then $5M, $10M, $25M and $50M for classes 1 to 4), the PCRA is completed with the TBS tool over the project's full scope and life cycle, and submitted to TBS with its supporting evidence before definition begins. TBS reviews it within 15 working days; it is reassessed if complexity or risk increases significantly. Its level (1 Sustaining to 4 Transformational) sets approval authority and oversight.
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Reducing real complexity (smaller releases, fewer integrations, proven technology) lowers the PCRA honestly; scoring it lower does not."
-  - 'link "CAP-2 medium Departmental Departmental Current departmental capacity class (OPMCA) The department has an Organizational Project Management Capacity Assessment approved within the last three years. Its class sets how complex a project the department may approve on its own. Gate 2 · Approach · Right-size it: Nothing to produce at project level: cite the departmental assessment."':
+  - 'link "CAP-2 medium Departmental Departmental Current departmental capacity class (OPMCA) A department seeking authority above the $2.5M base limit assesses its capacity with the OPMCA tool, with TBS review, and submits the resulting class to Treasury Board at least every three years. Once approved, the class sets the minister''s project approval authority: with class 1 or higher, the minister approves projects whose PCRA level does not exceed the class. Gate 2 · Approach · Right-size it: Nothing to produce at project level: cite the departmental assessment."':
     - /url: "#/req/CAP-2"
     - text: CAP-2 medium Departmental Departmental
     - heading "Current departmental capacity class (OPMCA)" [level=2]
-    - paragraph: The department has an Organizational Project Management Capacity Assessment approved within the last three years. Its class sets how complex a project the department may approve on its own.
+    - paragraph: "A department seeking authority above the $2.5M base limit assesses its capacity with the OPMCA tool, with TBS review, and submits the resulting class to Treasury Board at least every three years. Once approved, the class sets the minister's project approval authority: with class 1 or higher, the minister approves projects whose PCRA level does not exceed the class."
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Nothing to produce at project level: cite the departmental assessment."
-  - 'link "CAP-3 high Required Partly met Approval authority determined The project''s cost and PCRA level are compared with the department''s project approval limit and capacity class to decide whether the department can approve it or Treasury Board approval is required. Gate 2 · Approach · Right-size it: Splitting a project to stay under the limit is not allowed; delivering in genuinely independent phases with their own outcomes may be."':
+  - 'link "CAP-3 high Required Partly met Approval authority determined Without an approved OPMCA class of 1 or higher, every project over $2.5M (taxes included) needs Treasury Board approval. With class 1 or higher, authority depends on the relationship between the class and the project''s PCRA level: a level above the class needs Treasury Board approval. Treasury Board may call in any project, and no action is taken without the required authorities. Gate 2 · Approach · Right-size it: Splitting a project to stay under the limit is not allowed; delivering in genuinely independent phases with their own outcomes may be."':
     - /url: "#/req/CAP-3"
     - text: CAP-3 high Required Partly met
     - heading "Approval authority determined" [level=2]
-    - paragraph: The project's cost and PCRA level are compared with the department's project approval limit and capacity class to decide whether the department can approve it or Treasury Board approval is required.
+    - paragraph: "Without an approved OPMCA class of 1 or higher, every project over $2.5M (taxes included) needs Treasury Board approval. With class 1 or higher, authority depends on the relationship between the class and the project's PCRA level: a level above the class needs Treasury Board approval. Treasury Board may call in any project, and no action is taken without the required authorities."
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Splitting a project to stay under the limit is not allowed; delivering in genuinely independent phases with their own outcomes may be."
-  - 'link "APP-1 high Required Partly met Treasury Board project approval sought When the project exceeds the department''s authority, a Treasury Board submission seeks project approval, supported by the PCRA, the business case, costing, the procurement strategy and the CFO attestation. Historically this was done in two stages: preliminary project approval and effective project approval. Gate 3 · Business case · Right-size it: Combine project, procurement and real property authorities in one submission where possible."':
+  - 'link "APP-1 high Required Partly met Treasury Board project approval sought A project above the minister''s authority needs two distinct Treasury Board approvals: expenditure authority to begin definition (before then, only pre-definition work such as options analysis and feasibility studies may proceed), then project approval and expenditure authority to begin implementation. Each submission appends a Project Brief; TBS may request the business case, project management plan, gating plan, procurement plan and charter. Project, procurement and real property authorities should be sought together where possible. Gate 3 · Business case · Right-size it: Combine project, procurement and real property authorities in one submission where possible."':
     - /url: "#/req/APP-1"
     - text: APP-1 high Required Partly met
     - heading "Treasury Board project approval sought" [level=2]
-    - paragraph: "When the project exceeds the department's authority, a Treasury Board submission seeks project approval, supported by the PCRA, the business case, costing, the procurement strategy and the CFO attestation. Historically this was done in two stages: preliminary project approval and effective project approval."
+    - paragraph: "A project above the minister's authority needs two distinct Treasury Board approvals: expenditure authority to begin definition (before then, only pre-definition work such as options analysis and feasibility studies may proceed), then project approval and expenditure authority to begin implementation. Each submission appends a Project Brief; TBS may request the business case, project management plan, gating plan, procurement plan and charter. Project, procurement and real property authorities should be sought together where possible."
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Combine project, procurement and real property authorities in one submission where possible."
@@ -218,11 +226,11 @@
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: A single briefing at the approach stage often prevents months of back-and-forth later."
-  - 'link "APP-4 high Required Not met GC Enterprise Architecture Review Board (GC EARB) Digital initiatives above the department''s threshold (from $2.5M with no or a class 1 OPMCA, rising with capacity class), or that use emerging technology or need a policy exception, are presented to the GC EARB, normally at concept and again before detailed design is final. Gate 2 · Approach · Right-size it: Reusing GC enterprise solutions and cloud services simplifies the review."':
+  - 'link "APP-4 high Required Not met GC Enterprise Architecture Review Board (GC EARB) Digital initiatives at or above the department''s threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4, $15M for National Defence), or that involve emerging technology, need a policy exception, host Protected B or lower outside public cloud, or extend support for an unsupported technology, go to the GC EARB. Proposals are first assessed by the departmental architecture review board, and are submitted after the concept case is reviewed and before the business case or Treasury Board submission is developed. Gate 2 · Approach · Right-size it: Reusing GC enterprise solutions and cloud services simplifies the review."':
     - /url: "#/req/APP-4"
     - text: APP-4 high Required Not met
     - heading "GC Enterprise Architecture Review Board (GC EARB)" [level=2]
-    - paragraph: Digital initiatives above the department's threshold (from $2.5M with no or a class 1 OPMCA, rising with capacity class), or that use emerging technology or need a policy exception, are presented to the GC EARB, normally at concept and again before detailed design is final.
+    - paragraph: Digital initiatives at or above the department's threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4, $15M for National Defence), or that involve emerging technology, need a policy exception, host Protected B or lower outside public cloud, or extend support for an unsupported technology, go to the GC EARB. Proposals are first assessed by the departmental architecture review board, and are submitted after the concept case is reviewed and before the business case or Treasury Board submission is developed.
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Reusing GC enterprise solutions and cloud services simplifies the review."
@@ -250,19 +258,27 @@
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Combine real property and project authorities in one submission."
-  - 'link "GAT-1 medium Required Not assessed Gating plan defined The project knows which gates it will pass, using which model, who the gatekeepers are, the evidence expected at each, and roughly when each gate will occur. Gate 2 · Approach · Right-size it: Choose the lightest model your department permits for the PCRA level; this tool recommends one."':
+  - 'link "APP-8 high Required Not assessed Digital concept case reviewed by the GC CIO For a digitally enabled project at or above the department''s threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4, $15M for National Defence), a concept case is prepared with the Concept Case Template, approved by the business owner (ADM or above), reviewed by the departmental investment oversight body for inclusion in the investment plan, and submitted to TBS for review by the Chief Information Officer of the Government of Canada. Gate 1 · Concept · Right-size it: Write the concept case from the Gate 1 problem statement and options; it is short by design."':
+    - /url: "#/req/APP-8"
+    - text: APP-8 high Required Not assessed
+    - heading "Digital concept case reviewed by the GC CIO" [level=2]
+    - paragraph: For a digitally enabled project at or above the department's threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4, $15M for National Defence), a concept case is prepared with the Concept Case Template, approved by the business owner (ADM or above), reviewed by the departmental investment oversight body for inclusion in the investment plan, and submitted to TBS for review by the Chief Information Officer of the Government of Canada.
+    - paragraph:
+      - strong: Gate 1 · Concept
+      - text: "· Right-size it: Write the concept case from the Gate 1 problem statement and options; it is short by design."
+  - 'link "GAT-1 medium Required Not assessed Gating plan defined At the outset, consistent with the departmental framework, the sponsor establishes a gating plan that documents the decision at each gate, the evidence required, the criteria used to assess it and the gate governance, and that reflects the project''s specific risks, stakeholder input, procurement strategy, dependencies and constraints. Gate 2 · Approach · Right-size it: Choose the lightest model your department permits for the PCRA level; this tool recommends one."':
     - /url: "#/req/GAT-1"
     - text: GAT-1 medium Required Not assessed
     - heading "Gating plan defined" [level=2]
-    - paragraph: The project knows which gates it will pass, using which model, who the gatekeepers are, the evidence expected at each, and roughly when each gate will occur.
+    - paragraph: At the outset, consistent with the departmental framework, the sponsor establishes a gating plan that documents the decision at each gate, the evidence required, the criteria used to assess it and the gate governance, and that reflects the project's specific risks, stakeholder input, procurement strategy, dependencies and constraints.
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Choose the lightest model your department permits for the PCRA level; this tool recommends one."
-  - 'link "GAT-2 medium Required Not assessed Independent review at key gates High-risk or Treasury Board-approved projects get an independent third-party review at key gates, typically before the business case and before implementation, so that gatekeepers have a view not owned by the project team. Gate 3 · Business case · Right-size it: Internal audit or another department''s PMO can provide independence for medium-risk projects."':
+  - 'link "GAT-2 medium Required Not assessed Independent review at key gates Assurance activities and independent reviews are conducted as set out in the gating plan. The gating guide recommends independent reviews where an outside view helps, and at least one independent full review a year on large or long projects. For digital projects under its oversight, the Chief Information Officer of Canada can require or commission independent reviews at the department''s cost. Gate 3 · Business case · Right-size it: Internal audit or another department''s PMO can provide independence for medium-risk projects."':
     - /url: "#/req/GAT-2"
     - text: GAT-2 medium Required Not assessed
     - heading "Independent review at key gates" [level=2]
-    - paragraph: High-risk or Treasury Board-approved projects get an independent third-party review at key gates, typically before the business case and before implementation, so that gatekeepers have a view not owned by the project team.
+    - paragraph: Assurance activities and independent reviews are conducted as set out in the gating plan. The gating guide recommends independent reviews where an outside view helps, and at least one independent full review a year on large or long projects. For digital projects under its oversight, the Chief Information Officer of Canada can require or commission independent reviews at the department's cost.
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Internal audit or another department's PMO can provide independence for medium-risk projects."
@@ -274,6 +290,14 @@
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Track conditions in the same log as actions to avoid a separate document."
+  - 'link "GAT-4 high Required Not assessed Business case and viability revalidated at each gate Each gate includes a revalidation of the business case, confirmation that the intended benefits are still relevant and attainable, an overall determination of the project''s ongoing viability, and a determination of whether the project has met the gate''s requirements. Gate 2 · Approach · Right-size it: A one-page revalidation (what changed in costs, benefits and risks since the last gate) is enough when nothing material changed."':
+    - /url: "#/req/GAT-4"
+    - text: GAT-4 high Required Not assessed
+    - heading "Business case and viability revalidated at each gate" [level=2]
+    - paragraph: Each gate includes a revalidation of the business case, confirmation that the intended benefits are still relevant and attainable, an overall determination of the project's ongoing viability, and a determination of whether the project has met the gate's requirements.
+    - paragraph:
+      - strong: Gate 2 · Approach
+      - text: "· Right-size it: A one-page revalidation (what changed in costs, benefits and risks since the last gate) is enough when nothing material changed."
   - 'link "PLN-1 medium Required Not assessed High-level scope and requirements What is in and out of scope is stated, with high-level business requirements and the main constraints and assumptions. Gate 2 · Approach · Right-size it: Express scope as user outcomes and a first release, not a full feature list, if delivering iteratively."':
     - /url: "#/req/PLN-1"
     - text: PLN-1 medium Required Not assessed
@@ -282,11 +306,11 @@
     - paragraph:
       - strong: Gate 2 · Approach
       - text: "· Right-size it: Express scope as user outcomes and a first release, not a full feature list, if delivering iteratively."
-  - 'link "PLN-2 high Required Not assessed Project charter approved A charter approved by the sponsor sets out the project''s objectives, scope, deliverables, governance, roles, tolerances, budget and key milestones. Gate 4 · Charter · Right-size it: A two-page charter is fine for a light-gated project."':
+  - 'link "PLN-2 high Required Not assessed Project charter approved The sponsor documents roles and responsibilities and delegates authorities to the project manager through a project charter, which also sets out objectives, scope, deliverables, governance, tolerances, budget and key milestones. Gate 4 · Charter · Right-size it: A two-page charter is fine for a light-gated project."':
     - /url: "#/req/PLN-2"
     - text: PLN-2 high Required Not assessed
     - heading "Project charter approved" [level=2]
-    - paragraph: A charter approved by the sponsor sets out the project's objectives, scope, deliverables, governance, roles, tolerances, budget and key milestones.
+    - paragraph: The sponsor documents roles and responsibilities and delegates authorities to the project manager through a project charter, which also sets out objectives, scope, deliverables, governance, tolerances, budget and key milestones.
     - paragraph:
       - strong: Gate 4 · Charter
       - text: "· Right-size it: A two-page charter is fine for a light-gated project."
@@ -306,11 +330,11 @@
     - paragraph:
       - strong: Gate 5 · Detailed plan
       - text: "· Right-size it: For agile delivery, baseline a release roadmap and a fixed cadence instead of a detailed task plan."
-  - 'link "PLN-5 high Required Not assessed Substantive cost estimate and contingency By the time implementation is approved, the indicative estimate has matured into a substantive estimate with contingency sized to the identified risks. Gate 5 · Detailed plan · Right-size it: Use actual bid prices where procurement is complete rather than re-estimating."':
+  - 'link "PLN-5 high Required Not assessed Substantive cost estimate and contingency By Gate 5 the estimate for the whole project is within about ±15% and contingency is sized to the identified risks (the gating guide notes it should never fall below 10 to 15%). Treasury Board expenditure authority for implementation needs a substantive estimate (at least indicative for PCRA level 4), with a cost estimate range. Gate 5 · Detailed plan · Right-size it: Use actual bid prices where procurement is complete rather than re-estimating."':
     - /url: "#/req/PLN-5"
     - text: PLN-5 high Required Not assessed
     - heading "Substantive cost estimate and contingency" [level=2]
-    - paragraph: By the time implementation is approved, the indicative estimate has matured into a substantive estimate with contingency sized to the identified risks.
+    - paragraph: By Gate 5 the estimate for the whole project is within about ±15% and contingency is sized to the identified risks (the gating guide notes it should never fall below 10 to 15%). Treasury Board expenditure authority for implementation needs a substantive estimate (at least indicative for PCRA level 4), with a cost estimate range.
     - paragraph:
       - strong: Gate 5 · Detailed plan
       - text: "· Right-size it: Use actual bid prices where procurement is complete rather than re-estimating."
@@ -322,11 +346,11 @@
     - paragraph:
       - strong: Gate 5 · Detailed plan
       - text: "· Right-size it: For agile delivery, agree the product vision, a prioritized backlog for the first releases and the definition of done instead of full specifications."
-  - 'link "PLN-7 medium Required Not assessed Change control and rebaselining rules Changes to scope, schedule and cost go through a controlled process, and changes beyond tolerance are returned to the approving authority (including Treasury Board where it approved the project). Gate 4 · Charter · Right-size it: Let the product owner reprioritize the backlog freely within fixed cost and time; control only changes to outcomes, budget and dates."':
+  - 'link "PLN-7 medium Required Not assessed Change control and rebaselining rules Changes to scope, schedule and cost go through a controlled process. Where Treasury Board approved the project, amended approval or expenditure authority is sought in a timely way when the total estimated cost will exceed the expenditure authority, or the expected outcomes and benefits or the project baseline change significantly. Gate 4 · Charter · Right-size it: Let the product owner reprioritize the backlog freely within fixed cost and time; control only changes to outcomes, budget and dates."':
     - /url: "#/req/PLN-7"
     - text: PLN-7 medium Required Not assessed
     - heading "Change control and rebaselining rules" [level=2]
-    - paragraph: Changes to scope, schedule and cost go through a controlled process, and changes beyond tolerance are returned to the approving authority (including Treasury Board where it approved the project).
+    - paragraph: Changes to scope, schedule and cost go through a controlled process. Where Treasury Board approved the project, amended approval or expenditure authority is sought in a timely way when the total estimated cost will exceed the expenditure authority, or the expected outcomes and benefits or the project baseline change significantly.
     - paragraph:
       - strong: Gate 4 · Charter
       - text: "· Right-size it: Let the product owner reprioritize the backlog freely within fixed cost and time; control only changes to outcomes, budget and dates."
@@ -354,13 +378,13 @@
     - paragraph:
       - strong: Gate 3 · Business case
       - text: "· Right-size it: Three well-measured benefits beat fifteen vague ones."
-  - 'link "BEN-2 medium Required Not assessed Benefits realization plan with owners A benefits realization plan assigns each benefit to a business owner who will still be there after the project ends, and says how and when it will be measured. Gate 4 · Charter · Right-size it: Use the program''s existing performance measurement framework where it already measures the outcome."':
+  - 'link "BEN-2 medium Required Not assessed Benefits realization plan with owners A benefits realization plan is in place at the time of project approval, identifies the business owner responsible for realizing each benefit, says how and when it will be measured, and is monitored and updated throughout the project. Gate 3 · Business case · Right-size it: Use the program''s existing performance measurement framework where it already measures the outcome."':
     - /url: "#/req/BEN-2"
     - text: BEN-2 medium Required Not assessed
     - heading "Benefits realization plan with owners" [level=2]
-    - paragraph: A benefits realization plan assigns each benefit to a business owner who will still be there after the project ends, and says how and when it will be measured.
+    - paragraph: A benefits realization plan is in place at the time of project approval, identifies the business owner responsible for realizing each benefit, says how and when it will be measured, and is monitored and updated throughout the project.
     - paragraph:
-      - strong: Gate 4 · Charter
+      - strong: Gate 3 · Business case
       - text: "· Right-size it: Use the program's existing performance measurement framework where it already measures the outcome."
   - 'link "BEN-3 high Required Not assessed Benefits measured after implementation After go-live, benefits are measured against their baselines and targets and reported to the sponsor, with actions where they fall short. Gate 7 · Post-implementation · Right-size it: Schedule the measurement when benefits can realistically appear (often 6 to 18 months after go-live)."':
     - /url: "#/req/BEN-3"
@@ -482,21 +506,21 @@
     - paragraph:
       - strong: Gate 4 · Charter
       - text: "· Right-size it: Use the department's change network and communications channels rather than building new ones."
-  - 'link "OCM-2 high Required Not assessed Business readiness and training Business processes, procedures, staffing and training are ready for go-live, confirmed by the business owner. Gate 6 · Deployment · Right-size it: Train just in time and in the tool itself; short guides beat long courses."':
+  - 'link "OCM-2 high Required Not assessed Business readiness and training Business processes, procedures, staffing and training are ready for go-live, confirmed by the business owner. For operational readiness and deployment decisions, input from the stakeholders affected is sought and documented. Gate 6 · Deployment · Right-size it: Train just in time and in the tool itself; short guides beat long courses."':
     - /url: "#/req/OCM-2"
     - text: OCM-2 high Required Not assessed
     - heading "Business readiness and training" [level=2]
-    - paragraph: Business processes, procedures, staffing and training are ready for go-live, confirmed by the business owner.
+    - paragraph: Business processes, procedures, staffing and training are ready for go-live, confirmed by the business owner. For operational readiness and deployment decisions, input from the stakeholders affected is sought and documented.
     - paragraph:
       - strong: Gate 6 · Deployment
       - text: "· Right-size it: Train just in time and in the tool itself; short guides beat long courses."
-  - 'link "OCM-3 high Required Not assessed Transition to operations with a funded owner A service owner, support model, service levels and ongoing funding are in place so the solution can be run and improved after the project ends. Gate 6 · Deployment · Right-size it: Keep a small product team in place after the project instead of a hand-off."':
+  - 'link "OCM-3 high Required Not assessed Transition to operations with a funded owner A transition plan is developed before implementation begins and updated throughout the project, so that by go-live a service owner, support model, service levels and ongoing funding are in place to run and improve the solution after the project ends. Gate 5 · Detailed plan · Right-size it: Keep a small product team in place after the project instead of a hand-off."':
     - /url: "#/req/OCM-3"
     - text: OCM-3 high Required Not assessed
     - heading "Transition to operations with a funded owner" [level=2]
-    - paragraph: A service owner, support model, service levels and ongoing funding are in place so the solution can be run and improved after the project ends.
+    - paragraph: A transition plan is developed before implementation begins and updated throughout the project, so that by go-live a service owner, support model, service levels and ongoing funding are in place to run and improve the solution after the project ends.
     - paragraph:
-      - strong: Gate 6 · Deployment
+      - strong: Gate 5 · Detailed plan
       - text: "· Right-size it: Keep a small product team in place after the project instead of a hand-off."
   - 'link "OCM-4 high Required Not assessed Go-live criteria and fallback plan Objective go-live criteria are agreed in advance, and there is a tested plan to roll back or operate in contingency mode if the deployment fails. Gate 6 · Deployment · Right-size it: Release small and often so each rollback is small."':
     - /url: "#/req/OCM-4"
@@ -530,30 +554,38 @@
     - paragraph:
       - strong: Gate 4 · Charter
       - text: "· Right-size it: Reuse the same dashboard for steering committee, PMO and TBS."
-  - 'link "MON-3 medium Required Not assessed Lessons learned captured and shared Lessons learned are collected throughout the project, not only at the end, and shared with the PMO so future projects benefit. Gate 7 · Post-implementation · Right-size it: Hold a short retrospective at each gate rather than one long session at the end."':
+  - 'link "MON-3 medium Required Not assessed Lessons learned captured and shared Lessons learned from similar projects are reviewed when the project starts, and the project''s own lessons are documented at the end of each phase and shared with key stakeholders and the senior designated official. Gate 1 · Concept · Right-size it: Hold a short retrospective at each gate rather than one long session at the end."':
     - /url: "#/req/MON-3"
     - text: MON-3 medium Required Not assessed
     - heading "Lessons learned captured and shared" [level=2]
-    - paragraph: Lessons learned are collected throughout the project, not only at the end, and shared with the PMO so future projects benefit.
+    - paragraph: Lessons learned from similar projects are reviewed when the project starts, and the project's own lessons are documented at the end of each phase and shared with key stakeholders and the senior designated official.
     - paragraph:
-      - strong: Gate 7 · Post-implementation
+      - strong: Gate 1 · Concept
       - text: "· Right-size it: Hold a short retrospective at each gate rather than one long session at the end."
-  - 'link "MON-4 high Required Not assessed Formal close-out The project is formally closed: deliverables are accepted, contracts and finances are closed, documentation is archived, resources are released and a close-out report is approved by the sponsor. Gate 7 · Post-implementation · Right-size it: Use the PMO''s close-out checklist; combine with the post-implementation review for small projects."':
+  - 'link "MON-4 high Required Not assessed Formal close-out The project is formally closed: deliverables are accepted, contracts and finances are closed, documentation is archived and resources released. The close-out report is shared with the departmental committee that approved the project and with the senior designated official. Gate 7 · Post-implementation · Right-size it: Use the PMO''s close-out checklist; combine with the post-implementation review for small projects."':
     - /url: "#/req/MON-4"
     - text: MON-4 high Required Not assessed
     - heading "Formal close-out" [level=2]
-    - paragraph: "The project is formally closed: deliverables are accepted, contracts and finances are closed, documentation is archived, resources are released and a close-out report is approved by the sponsor."
+    - paragraph: "The project is formally closed: deliverables are accepted, contracts and finances are closed, documentation is archived and resources released. The close-out report is shared with the departmental committee that approved the project and with the senior designated official."
     - paragraph:
       - strong: Gate 7 · Post-implementation
       - text: "· Right-size it: Use the PMO's close-out checklist; combine with the post-implementation review for small projects."
-  - 'link "MON-5 medium Required Not assessed Post-implementation review A review some months after go-live assesses whether the solution is working as intended, whether outcomes are being achieved and what should change. Gate 7 · Post-implementation · Right-size it: Combine with the benefits measurement for small projects."':
+  - 'link "MON-5 medium Required Not assessed Post-implementation review About six months after completion, a review confirms whether the project delivered as planned, whether business outcomes are being realized, how well the transition to an ongoing service went, and what the department should learn from it. Gate 7 · Post-implementation · Right-size it: Combine with the benefits measurement for small projects."':
     - /url: "#/req/MON-5"
     - text: MON-5 medium Required Not assessed
     - heading "Post-implementation review" [level=2]
-    - paragraph: A review some months after go-live assesses whether the solution is working as intended, whether outcomes are being achieved and what should change.
+    - paragraph: About six months after completion, a review confirms whether the project delivered as planned, whether business outcomes are being realized, how well the transition to an ongoing service went, and what the department should learn from it.
     - paragraph:
       - strong: Gate 7 · Post-implementation
       - text: "· Right-size it: Combine with the benefits measurement for small projects."
+  - 'link "MON-6 medium Required Not assessed Baseline information to the Office of the Comptroller General For every project with a total cost of $25 million or more, the senior designated official submits baseline project information on scope, schedule, costs and risks to the Office of the Comptroller General after project approval, expenditure authority, any amended approval or authority, and project close-out. Gate 3 · Business case · Right-size it: Reuse the baseline already prepared for the approval; no separate analysis is needed."':
+    - /url: "#/req/MON-6"
+    - text: MON-6 medium Required Not assessed
+    - heading "Baseline information to the Office of the Comptroller General" [level=2]
+    - paragraph: For every project with a total cost of $25 million or more, the senior designated official submits baseline project information on scope, schedule, costs and risks to the Office of the Comptroller General after project approval, expenditure authority, any amended approval or authority, and project close-out.
+    - paragraph:
+      - strong: Gate 3 · Business case
+      - text: "· Right-size it: Reuse the baseline already prepared for the approval; no separate analysis is needed."
 - contentinfo:
   - paragraph: "Self-assessment aid based on paraphrased Treasury Board of Canada Secretariat policy instruments and guidance. Not an official Government of Canada tool. Open source. Runs entirely in your browser: nothing you enter is sent to any server."
   - paragraph:

@@ -40,8 +40,8 @@
     - 'heading "Gate readiness report: ClaimPath Online" [level=1]'
     - paragraph: "Department: Department of Example Services · Generated 2026-10-15 · Gating model: Full gating (seven gates)"
     - heading "1. Executive summary" [level=2]
-    - text: 37% Readiness for G3 26% Assessment progress 3 High-risk gaps Required Treasury Board approval
-    - paragraph: Not ready for G3 Business case and general readiness. Major work remains; presenting now risks a hold or a stop decision.
+    - text: 31% Readiness for G3 25% Assessment progress 3 High-risk gaps Required Treasury Board approval
+    - paragraph: Assessment incomplete. Fewer than half of the requirements due by G3 Business case and general readiness have been assessed, so readiness is not yet meaningful.
     - strong: Scoping warnings
     - list:
       - listitem: The complexity and risk level is an indicative estimate. Complete the official PCRA with the TBS tool before relying on it for approval decisions.
@@ -68,9 +68,6 @@
           - 'row "Your department''s approved Organizational Project Management Capacity class (OPMCA) Class 2: Tactical"':
             - rowheader "Your department's approved Organizational Project Management Capacity class (OPMCA)"
             - 'cell "Class 2: Tactical"'
-          - row "Your department's project approval limit $10M":
-            - rowheader "Your department's project approval limit"
-            - cell "$10M"
           - 'row "Project Complexity and Risk Assessment (PCRA) level Not done yet: estimate it below"':
             - rowheader "Project Complexity and Risk Assessment (PCRA) level"
             - 'cell "Not done yet: estimate it below"'
@@ -98,8 +95,8 @@
           - row "Most sensitive information the solution will handle Protected B":
             - rowheader "Most sensitive information the solution will handle"
             - cell "Protected B"
-          - row "Does it use emerging technology (for example AI, blockchain) or need an exception to digital policy? No":
-            - rowheader "Does it use emerging technology (for example AI, blockchain) or need an exception to digital policy?"
+          - row "Does it use emerging technology (for example AI), need an exception to digital policy, host Protected B or lower information outside public cloud, or extend support for an unsupported technology? No":
+            - rowheader "Does it use emerging technology (for example AI), need an exception to digital policy, host Protected B or lower information outside public cloud, or extend support for an unsupported technology?"
             - cell "No"
           - row "Will it deliver a service to the public? Yes":
             - rowheader "Will it deliver a service to the public?"
@@ -125,16 +122,21 @@
           - row "Estimated total cost $25M to $50M":
             - rowheader "Estimated total cost"
             - cell "$25M to $50M"
-          - row "Project approval limit applied $10M":
-            - rowheader "Project approval limit applied"
-            - cell "$10M"
-          - row "Approval authority Treasury Board project approval is required. Estimated cost exceeds the project approval limit of $10M. PCRA level 3 exceeds the department's capacity class 2.":
+          - 'row "PCRA required Yes: the cost is at or above the threshold of $10M for the department''s class"':
+            - rowheader "PCRA required"
+            - 'cell "Yes: the cost is at or above the threshold of $10M for the department''s class"'
+          - row "Approval authority Treasury Board project approval is required. PCRA level 3 exceeds the department's capacity class 2.":
             - rowheader "Approval authority"
-            - cell "Treasury Board project approval is required. Estimated cost exceeds the project approval limit of $10M. PCRA level 3 exceeds the department's capacity class 2.":
+            - cell "Treasury Board project approval is required. PCRA level 3 exceeds the department's capacity class 2.":
               - text: Treasury Board project approval is required.
               - list:
-                - listitem: Estimated cost exceeds the project approval limit of $10M.
                 - listitem: PCRA level 3 exceeds the department's capacity class 2.
+          - 'row "Treasury Board approvals Two stages: expenditure authority to begin definition, then project approval and expenditure authority to begin implementation (Appendix D). Only pre-definition work (options analysis, feasibility, market analysis) may proceed before the first. Project approval needs at least an indicative cost estimate; expenditure authority for implementation needs a substantive estimate."':
+            - rowheader "Treasury Board approvals"
+            - 'cell "Two stages: expenditure authority to begin definition, then project approval and expenditure authority to begin implementation (Appendix D). Only pre-definition work (options analysis, feasibility, market analysis) may proceed before the first. Project approval needs at least an indicative cost estimate; expenditure authority for implementation needs a substantive estimate."':
+              - text: "Two stages: expenditure authority to begin definition, then project approval and expenditure authority to begin implementation (Appendix D). Only pre-definition work (options analysis, feasibility, market analysis) may proceed before the first."
+              - list:
+                - listitem: Project approval needs at least an indicative cost estimate; expenditure authority for implementation needs a substantive estimate.
           - 'row "Treasury Board submission for funding Likely: new funding or authorities are needed"':
             - rowheader "Treasury Board submission for funding"
             - 'cell "Likely: new funding or authorities are needed"'
@@ -156,6 +158,12 @@
                 - listitem: G5 Detailed project plan and functional specifications
                 - listitem: G6 Construction complete and deployment readiness
                 - listitem: G7 Post-implementation review
+          - 'row "Digital concept case Required: concept case reviewed by the GC CIO (investment of $5M or more)"':
+            - rowheader "Digital concept case"
+            - 'cell "Required: concept case reviewed by the GC CIO (investment of $5M or more)"'
+          - 'row "Baseline reporting to the Office of the Comptroller General Required ($25M or more): scope, schedule, cost and risk baselines after each approval and at close-out"':
+            - rowheader "Baseline reporting to the Office of the Comptroller General"
+            - 'cell "Required ($25M or more): scope, schedule, cost and risk baselines after each approval and at close-out"'
           - row "Independent review Expected at key gates":
             - rowheader "Independent review"
             - cell "Expected at key gates"
@@ -177,21 +185,26 @@
             - cell "Concept approval (Gate 1)":
               - strong: Concept approval (Gate 1)
             - cell "Sponsor and departmental investment or project committee"
-          - row "G2 Project approach Gate 2 · Approach PCRA completed and approved Project lead, project management office, sponsor":
+          - row "G1 Strategic assessment and concept Gate 1 · Concept Concept case approved by the business owner, then reviewed by the GC CIO Business owner (ADM or above), departmental investment oversight body, TBS Office of the Chief Information Officer":
+            - cell "G1 Strategic assessment and concept Gate 1 · Concept"
+            - cell "Concept case approved by the business owner, then reviewed by the GC CIO":
+              - strong: Concept case approved by the business owner, then reviewed by the GC CIO
+            - cell "Business owner (ADM or above), departmental investment oversight body, TBS Office of the Chief Information Officer"
+          - row "G2 Project approach Gate 2 · Approach PCRA submitted to TBS for review before definition begins (15 working days) Project sponsor, project management office, Treasury Board Secretariat":
             - cell "G2 Project approach Gate 2 · Approach"
-            - cell "PCRA completed and approved":
-              - strong: PCRA completed and approved
-            - cell "Project lead, project management office, sponsor"
+            - cell "PCRA submitted to TBS for review before definition begins (15 working days)":
+              - strong: PCRA submitted to TBS for review before definition begins (15 working days)
+            - cell "Project sponsor, project management office, Treasury Board Secretariat"
           - row "G2 Project approach Gate 2 · Approach Departmental architecture review Departmental architecture review board, CIO":
             - cell "G2 Project approach Gate 2 · Approach"
             - cell "Departmental architecture review":
               - strong: Departmental architecture review
             - cell "Departmental architecture review board, CIO"
-          - row "G2 Project approach Gate 2 · Approach GC EARB review at concept GC Enterprise Architecture Review Board (TBS Office of the Chief Information Officer)":
+          - row "G2 Project approach Gate 2 · Approach GC EARB review, after the concept case and before the business case or Treasury Board submission Departmental architecture review board first, then the GC Enterprise Architecture Review Board":
             - cell "G2 Project approach Gate 2 · Approach"
-            - cell "GC EARB review at concept":
-              - strong: GC EARB review at concept
-            - cell "GC Enterprise Architecture Review Board (TBS Office of the Chief Information Officer)"
+            - cell "GC EARB review, after the concept case and before the business case or Treasury Board submission":
+              - strong: GC EARB review, after the concept case and before the business case or Treasury Board submission
+            - cell "Departmental architecture review board first, then the GC Enterprise Architecture Review Board"
           - row "G3 Business case and general readiness Gate 3 · Business case Business case approval (Gate 3) Sponsor, departmental investment committee, CFO":
             - cell "G3 Business case and general readiness Gate 3 · Business case"
             - cell "Business case approval (Gate 3)":
@@ -202,21 +215,16 @@
             - cell "Budget or Memorandum to Cabinet, then Treasury Board submission for funding":
               - strong: Budget or Memorandum to Cabinet, then Treasury Board submission for funding
             - cell "Sponsor, CFO, Privy Council Office, Department of Finance, Treasury Board"
-          - row "G3 Business case and general readiness Gate 3 · Business case Treasury Board project approval Treasury Board, through the TBS program sector":
+          - row "G3 Business case and general readiness Gate 3 · Business case Treasury Board expenditure authority to begin definition Treasury Board, through the TBS program sector (project approval not yet required)":
             - cell "G3 Business case and general readiness Gate 3 · Business case"
-            - cell "Treasury Board project approval":
-              - strong: Treasury Board project approval
-            - cell "Treasury Board, through the TBS program sector"
+            - cell "Treasury Board expenditure authority to begin definition":
+              - strong: Treasury Board expenditure authority to begin definition
+            - cell "Treasury Board, through the TBS program sector (project approval not yet required)"
           - row "G3 Business case and general readiness Gate 3 · Business case Independent third-party review Independent reviewer reporting to the gatekeepers":
             - cell "G3 Business case and general readiness Gate 3 · Business case"
             - cell "Independent third-party review":
               - strong: Independent third-party review
             - cell "Independent reviewer reporting to the gatekeepers"
-          - row "G4 Project charter and project management plan Gate 4 · Charter GC EARB review before detailed design is final GC Enterprise Architecture Review Board":
-            - cell "G4 Project charter and project management plan Gate 4 · Charter"
-            - cell "GC EARB review before detailed design is final":
-              - strong: GC EARB review before detailed design is final
-            - cell "GC Enterprise Architecture Review Board"
           - row "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan Privacy impact assessment approved ATIP office, delegated privacy official":
             - cell "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan"
             - cell "Privacy impact assessment approved":
@@ -227,11 +235,16 @@
             - cell "Algorithmic Impact Assessment published":
               - strong: Algorithmic Impact Assessment published
             - cell "Project team, departmental AI or data office, peer reviewer"
-          - row "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan Expenditure authority for implementation (Gate 5) Sponsor, CFO, Treasury Board where it approved the project":
+          - row "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan Treasury Board project approval and expenditure authority to begin implementation Treasury Board, with a Project Brief appended to the submission":
             - cell "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan"
-            - cell "Expenditure authority for implementation (Gate 5)":
-              - strong: Expenditure authority for implementation (Gate 5)
-            - cell "Sponsor, CFO, Treasury Board where it approved the project"
+            - cell "Treasury Board project approval and expenditure authority to begin implementation":
+              - strong: Treasury Board project approval and expenditure authority to begin implementation
+            - cell "Treasury Board, with a Project Brief appended to the submission"
+          - row "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan Baseline project information to the Office of the Comptroller General after each approval Senior designated official for projects and programmes":
+            - cell "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan"
+            - cell "Baseline project information to the Office of the Comptroller General after each approval":
+              - strong: Baseline project information to the Office of the Comptroller General after each approval
+            - cell "Senior designated official for projects and programmes"
           - row "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan Independent third-party review Independent reviewer reporting to the gatekeepers":
             - cell "G5 Detailed project plan and functional specifications Gate 5 · Detailed plan"
             - cell "Independent third-party review":
@@ -266,87 +279,87 @@
             - columnheader "Unknown"
             - columnheader "Readiness"
         - rowgroup:
-          - row "G1 Strategic assessment and concept 4 3 0 0 1 80% ready 80%":
+          - row "G1 Strategic assessment and concept 6 3 0 0 3 57% ready 57%":
             - cell "G1 Strategic assessment and concept":
               - strong: G1
               - text: Strategic assessment and concept
-            - cell "4"
+            - cell "6"
             - cell "3"
             - cell "0"
             - cell "0"
-            - cell "1"
-            - cell "80% ready 80%":
-              - img "80% ready"
-              - text: 80%
-          - row "G2 Project approach 11 0 4 2 5 25% ready 25%":
+            - cell "3"
+            - cell "57% ready 57%":
+              - img "57% ready"
+              - text: 57%
+          - row "G2 Project approach 12 0 4 2 6 23% ready 23%":
             - cell "G2 Project approach":
               - strong: G2
               - text: Project approach
-            - cell "11"
+            - cell "12"
             - cell "0"
             - cell "4"
             - cell "2"
-            - cell "5"
-            - cell "25% ready 25%":
-              - img "25% ready"
-              - text: 25%
-          - row "G3 Business case and general readiness next 10 1 4 0 5 30% ready 30%":
+            - cell "6"
+            - cell "23% ready 23%":
+              - img "23% ready"
+              - text: 23%
+          - row "G3 Business case and general readiness next 12 1 4 0 7 25% ready 25%":
             - cell "G3 Business case and general readiness next":
               - strong: G3
               - text: Business case and general readiness next
-            - cell "10"
+            - cell "12"
             - cell "1"
             - cell "4"
             - cell "0"
-            - cell "5"
-            - cell "30% ready 30%":
-              - img "30% ready"
-              - text: 30%
-          - row "G4 Project charter and project management plan 12 0 0 0 12 0% ready 0%":
+            - cell "7"
+            - cell "25% ready 25%":
+              - img "25% ready"
+              - text: 25%
+          - row "G4 Project charter and project management plan 11 0 0 0 11 0% ready 0%":
             - cell "G4 Project charter and project management plan":
               - strong: G4
               - text: Project charter and project management plan
-            - cell "12"
+            - cell "11"
             - cell "0"
             - cell "0"
             - cell "0"
-            - cell "12"
+            - cell "11"
             - cell "0% ready 0%":
               - img "0% ready"
               - text: 0%
-          - row "G5 Detailed project plan and functional specifications 10 0 0 1 9 0% ready 0%":
+          - row "G5 Detailed project plan and functional specifications 11 0 0 1 10 0% ready 0%":
             - cell "G5 Detailed project plan and functional specifications":
               - strong: G5
               - text: Detailed project plan and functional specifications
-            - cell "10"
+            - cell "11"
             - cell "0"
             - cell "0"
             - cell "1"
-            - cell "9"
+            - cell "10"
             - cell "0% ready 0%":
               - img "0% ready"
               - text: 0%
-          - row "G6 Construction complete and deployment readiness 6 0 0 0 6 0% ready 0%":
+          - row "G6 Construction complete and deployment readiness 5 0 0 0 5 0% ready 0%":
             - cell "G6 Construction complete and deployment readiness":
               - strong: G6
               - text: Construction complete and deployment readiness
-            - cell "6"
+            - cell "5"
             - cell "0"
             - cell "0"
             - cell "0"
-            - cell "6"
+            - cell "5"
             - cell "0% ready 0%":
               - img "0% ready"
               - text: 0%
-          - row "G7 Post-implementation review 4 0 0 0 4 0% ready 0%":
+          - row "G7 Post-implementation review 3 0 0 0 3 0% ready 0%":
             - cell "G7 Post-implementation review":
               - strong: G7
               - text: Post-implementation review
-            - cell "4"
+            - cell "3"
             - cell "0"
             - cell "0"
             - cell "0"
-            - cell "4"
+            - cell "3"
             - cell "0% ready 0%":
               - img "0% ready"
               - text: 0%
@@ -561,7 +574,7 @@
     - term: Gate
     - definition: G3 Business case and general readiness
     - term: Readiness
-    - definition: 37% · 14 of 25 requirements assessed
+    - definition: 31% · 14 of 30 requirements assessed
     - term: Suggested decision
     - definition:
       - strong: "Hold: rework and return to the gate"
@@ -620,15 +633,15 @@
         - strong: APP-1
         - text: Treasury Board project approval sought
         - list:
-          - listitem: Has the CFO attestation been planned?
+          - listitem: Is only pre-definition work under way until expenditure authority for definition is granted?
       - listitem:
         - strong: RSK-1
         - text: Risk register actively managed
         - list:
           - listitem: Does the sponsor act on the top risks?
     - paragraph:
-      - strong: "Not yet assessed (42):"
-      - text: GOV-4, GOV-5, GOV-6, INV-7, APP-2, APP-3, APP-5, APP-6, GAT-1, GAT-2, GAT-3, PLN-1, PLN-2, PLN-3, PLN-4, PLN-5, PLN-6, PLN-7, PLN-8, PLN-9, BEN-2, BEN-3, RSK-2, PRO-1, PRO-2, PRO-4, DIG-1, DIG-2, DIG-4, DIG-5, DIG-6, DIG-7, OCM-1, OCM-2, OCM-3, OCM-4, OCM-5, MON-1, MON-2, MON-3, MON-4, MON-5. These are not counted as gaps but score zero until assessed.
+      - strong: "Not yet assessed (45):"
+      - text: GOV-4, GOV-5, GOV-6, INV-7, APP-2, APP-3, APP-5, APP-6, APP-8, GAT-1, GAT-2, GAT-3, GAT-4, PLN-1, PLN-2, PLN-3, PLN-4, PLN-5, PLN-6, PLN-7, PLN-8, PLN-9, BEN-2, BEN-3, RSK-2, PRO-1, PRO-2, PRO-4, DIG-1, DIG-2, DIG-4, DIG-5, DIG-6, DIG-7, OCM-1, OCM-2, OCM-3, OCM-4, OCM-5, MON-1, MON-2, MON-3, MON-4, MON-5, MON-6. These are not counted as gaps but score zero until assessed.
     - heading "10. Provided by the departmental framework" [level=2]
     - paragraph: Reference the departmental framework or assessment for these rather than redoing them for the project.
     - list:
@@ -639,7 +652,7 @@
         - strong: CAP-2
         - text: Current departmental capacity class (OPMCA)
     - heading "Document review coverage" [level=2]
-    - paragraph: The document review found statements relevant to 23 of 62 requirements across 20 sentences. Keyword matches are leads, not proof.
+    - paragraph: The document review found statements relevant to 23 of 66 requirements across 20 sentences. Keyword matches are leads, not proof.
     - heading "11. Statements for the gate submission" [level=2]
     - paragraph: Statements marked Draft were generated from templates and must be reviewed to describe what is actually in place.
     - heading "G1 Strategic assessment and concept" [level=3]
@@ -661,6 +674,12 @@
     - strong: INV-2 Aligned with the departmental investment plan
     - text: Required Met Draft
     - paragraph: ClaimPath Online is included in the Department of Example Services investment plan and has been prioritized by the departmental investment committee.
+    - strong: APP-8 Digital concept case reviewed by the GC CIO
+    - text: Required Not assessed Draft
+    - paragraph: A concept case for ClaimPath Online was approved by the business owner, reviewed by the Department of Example Services investment oversight body and submitted to TBS for review by the Chief Information Officer of the Government of Canada.
+    - strong: MON-3 Lessons learned captured and shared
+    - text: Required Not assessed Draft
+    - paragraph: Lessons learned from ClaimPath Online were captured at each gate and at close-out, and shared with the Department of Example Services project management office.
     - heading "G2 Project approach" [level=3]
     - strong: GOV-2 Governance structure with clear decision rights
     - text: Required Partly met Draft
@@ -685,7 +704,7 @@
     - paragraph: Provided by the departmental framework. Department of Example Services holds an approved Organizational Project Management Capacity Assessment, which sets the department's project approval authority applied to ClaimPath Online.
     - strong: CAP-3 Approval authority determined
     - text: Required Partly met Draft
-    - paragraph: The approval authority for ClaimPath Online was determined by comparing its estimated cost and PCRA level with the Department of Example Services project approval limit and capacity class. Treasury Board project approval is required. This statement describes the target state. Current gaps and actions are recorded in the action plan.
+    - paragraph: The approval authority for ClaimPath Online was determined under Appendix C of the Directive on the Management of Projects and Programmes, from its estimated cost, its PCRA level and the Department of Example Services capacity class. Treasury Board project approval is required. This statement describes the target state. Current gaps and actions are recorded in the action plan.
     - strong: APP-3 Early engagement with the Treasury Board Secretariat
     - text: Required Not assessed Draft
     - paragraph: ClaimPath Online has engaged the Treasury Board Secretariat program sector and the Office of the Chief Information Officer since the approach stage; their expectations are reflected in the plan.
@@ -698,6 +717,9 @@
     - strong: GAT-1 Gating plan defined
     - text: Required Not assessed Draft
     - paragraph: ClaimPath Online follows the full gating (seven gates) model. The gating plan names the gatekeepers and evidence expected at each gate, and gate dates are part of the integrated schedule.
+    - strong: GAT-4 Business case and viability revalidated at each gate
+    - text: Required Not assessed Draft
+    - paragraph: At each gate, ClaimPath Online revalidates its business case, confirms that the intended benefits remain relevant and attainable, and records a determination of its ongoing viability and of whether the gate's requirements were met.
     - strong: PLN-1 High-level scope and requirements
     - text: Required Not assessed Draft
     - paragraph: The scope of ClaimPath Online is defined, including explicit exclusions, high-level requirements traced to outcomes, and the main assumptions and constraints.
@@ -732,12 +754,18 @@
     - strong: BEN-1 Measurable benefits defined
     - text: Required Met Draft
     - paragraph: The benefits of ClaimPath Online are defined with a baseline, target, measure and date for each, and are linked to the outcomes in the business case.
+    - strong: BEN-2 Benefits realization plan with owners
+    - text: Required Not assessed Draft
+    - paragraph: A benefits realization plan for ClaimPath Online assigns each benefit to a business owner and sets how and when it is measured, including after the project closes.
     - strong: PRO-1 Market analysis and procurement strategy
     - text: Required Not assessed Draft
     - paragraph: The procurement strategy for ClaimPath Online is informed by market analysis and agreed with the contracting authority. Procurement milestones are part of the integrated schedule.
     - strong: PRO-2 Contracting authority and partners engaged early
     - text: Recommended Not assessed Draft
     - paragraph: The contracting authority and, where needed, Shared Services Canada were engaged during business case development for ClaimPath Online; their lead times are in the schedule.
+    - strong: MON-6 Baseline information to the Office of the Comptroller General
+    - text: Required Not assessed Draft
+    - paragraph: Baseline information on the scope, schedule, costs and risks of ClaimPath Online is submitted to the Office of the Comptroller General after each approval and at close-out.
     - heading "G4 Project charter and project management plan" [level=3]
     - strong: GOV-5 Qualified project manager and core team
     - text: Required Not assessed Draft
@@ -757,9 +785,6 @@
     - strong: PLN-9 Iterative delivery mapped to gates
     - text: Required Not assessed Draft
     - paragraph: ClaimPath Online is delivered iteratively. Its release roadmap shows how increments map to gates, and gatekeepers have agreed the evidence (working software and measured user outcomes) presented at each gate.
-    - strong: BEN-2 Benefits realization plan with owners
-    - text: Required Not assessed Draft
-    - paragraph: A benefits realization plan for ClaimPath Online assigns each benefit to a business owner and sets how and when it is measured, including after the project closes.
     - strong: RSK-2 Issues and decisions logged
     - text: Recommended Not assessed Draft
     - paragraph: Issues and decisions for ClaimPath Online are logged with owners and rationale and reviewed at each team meeting.
@@ -806,6 +831,9 @@
     - strong: DIG-7 Information and data management
     - text: Required Not assessed Draft
     - paragraph: Information of business value created by ClaimPath Online is identified, with retention, disposition and data ownership defined with the Department of Example Services information management team.
+    - strong: OCM-3 Transition to operations with a funded owner
+    - text: Required Not assessed Draft
+    - paragraph: ClaimPath Online transitions to a named service owner with a support model, service levels and ongoing funding confirmed before go-live.
     - heading "G6 Construction complete and deployment readiness" [level=3]
     - strong: PRO-4 Vendor performance managed
     - text: Recommended Not assessed Draft
@@ -816,9 +844,6 @@
     - strong: OCM-2 Business readiness and training
     - text: Required Not assessed Draft
     - paragraph: "Business readiness for ClaimPath Online was confirmed by the business owner: processes and procedures are updated, staffing is in place, and users are trained."
-    - strong: OCM-3 Transition to operations with a funded owner
-    - text: Required Not assessed Draft
-    - paragraph: ClaimPath Online transitions to a named service owner with a support model, service levels and ongoing funding confirmed before go-live.
     - strong: OCM-4 Go-live criteria and fallback plan
     - text: Required Not assessed Draft
     - paragraph: Go-live of ClaimPath Online is decided against criteria agreed in advance. A rollback and contingency plan was rehearsed before deployment.
@@ -829,9 +854,6 @@
     - strong: BEN-3 Benefits measured after implementation
     - text: Required Not assessed Draft
     - paragraph: Benefits of ClaimPath Online were measured against their baselines and targets after implementation and reported to Assistant Deputy Minister, Service Delivery. Actions are in place for benefits not yet realized.
-    - strong: MON-3 Lessons learned captured and shared
-    - text: Required Not assessed Draft
-    - paragraph: Lessons learned from ClaimPath Online were captured at each gate and at close-out, and shared with the Department of Example Services project management office.
     - strong: MON-4 Formal close-out
     - text: Required Not assessed Draft
     - paragraph: "ClaimPath Online was formally closed: deliverables accepted, contracts and finances closed, documentation archived and a close-out report approved by Assistant Deputy Minister, Service Delivery."

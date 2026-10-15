@@ -35,10 +35,10 @@
   - text: / Complexity, risk and capacity
   - 'heading "CAP-1: Project Complexity and Risk Assessment (PCRA) completed" [level=1]'
   - text: Required Not met high
-  - paragraph: The PCRA is completed with the official TBS tool, approved within the department and updated when the project changes materially. Its level (1 Sustaining to 4 Transformational) drives approval authority and the level of oversight.
+  - paragraph: Above the threshold for the department's class ($2.5M with no class or class 0, then $5M, $10M, $25M and $50M for classes 1 to 4), the PCRA is completed with the TBS tool over the project's full scope and life cycle, and submitted to TBS with its supporting evidence before definition begins. TBS reviews it within 15 working days; it is reassessed if complexity or risk increases significantly. Its level (1 Sustaining to 4 Transformational) sets approval authority and oversight.
   - paragraph:
     - strong: "Source:"
-    - text: Directive on the Management of Projects and Programmes; mandatory procedures for project complexity and risk assessment
+    - text: DMPP 4.2.24, Appendix B, Appendix C (thresholds)
   - paragraph:
     - strong: "Expected at:"
     - link "Gate 2 · Approach":
@@ -78,8 +78,8 @@
   - paragraph: Questions to find out whether, and how, the requirement is met.
   - list:
     - listitem: Has the PCRA been completed with the official TBS tool?
-    - listitem: Has it been reviewed and approved within the department?
-    - listitem: Has it been updated since the last major change to the project?
+    - listitem: Has it been submitted to TBS for review before the definition phase?
+    - listitem: Has it been updated since the last significant change to the project?
   - paragraph:
     - text: "Words to look for in project documents:"
     - code: PCRA

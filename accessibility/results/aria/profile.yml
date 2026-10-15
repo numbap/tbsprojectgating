@@ -85,14 +85,14 @@
       - text: $100M to $1B
       - radio "Over $1B"
       - text: Over $1B
-    - paragraph: "Why we ask: Compared with your department's project approval limit to decide whether Treasury Board approval is needed, and with the GC EARB thresholds for digital projects."
+    - paragraph: "Why we ask: Without an approved capacity class, projects over $2.5M need Treasury Board approval. Cost also sets whether a PCRA is required, whether a digital project needs a concept case and GC EARB review, and whether baseline information goes to the Office of the Comptroller General ($25M or more)."
     - text: Does the project need new funding or new authorities (not just existing reference levels)?
     - radiogroup "Does the project need new funding or new authorities (not just existing reference levels)?":
       - radio "Yes" [checked]
       - text: "Yes"
       - radio "No"
       - text: "No"
-    - paragraph: "Why we ask: New funding usually means a Budget or Memorandum to Cabinet process followed by a Treasury Board submission, whatever the project approval limit."
+    - paragraph: "Why we ask: New funding usually means a Budget or Memorandum to Cabinet process followed by a Treasury Board submission, even when the project itself is within departmental approval authority."
     - text: Is it horizontal (several departments, agencies or jurisdictions)?
     - radiogroup "Is it horizontal (several departments, agencies or jurisdictions)?":
       - radio "Yes"
@@ -112,6 +112,8 @@
     - radiogroup "Your department's approved Organizational Project Management Capacity class (OPMCA)":
       - radio "No approved class"
       - text: No approved class
+      - radio "Class 0"
+      - text: Class 0
       - 'radio "Class 1: Sustaining"'
       - text: "Class 1: Sustaining"
       - 'radio "Class 2: Tactical" [checked]'
@@ -122,22 +124,7 @@
       - text: "Class 4: Transformational"
       - radio "Don't know"
       - text: Don't know
-    - paragraph: "Why we ask: A project whose complexity and risk level exceeds the department's capacity class needs Treasury Board approval. Ask your project management office; the assessment is refreshed at least every three years."
-    - text: Your department's project approval limit
-    - radiogroup "Your department's project approval limit":
-      - radio "$2.5M (base limit)"
-      - text: $2.5M (base limit)
-      - radio "$5M"
-      - text: $5M
-      - radio "$10M" [checked]
-      - text: $10M
-      - radio "$25M"
-      - text: $25M
-      - radio "$50M"
-      - text: $50M
-      - radio "$100M or more"
-      - text: $100M or more
-    - paragraph: "Why we ask: Every department has a base limit of $2.5M. A higher limit comes with an approved OPMCA; your project management office or CFO can confirm it."
+    - paragraph: "Why we ask: The Treasury Board-approved class sets the minister's project approval authority (Directive on the Management of Projects and Programmes, Appendix C). With class 1 or higher, the department approves projects whose PCRA level does not exceed its class, whatever their cost. Ask your project management office; the class is resubmitted at least every three years."
     - text: Project Complexity and Risk Assessment (PCRA) level
     - radiogroup "Project Complexity and Risk Assessment (PCRA) level":
       - 'radio "Not done yet: estimate it below" [checked]'
@@ -337,13 +324,13 @@
       - radio "Protected C or classified"
       - text: Protected C or classified
     - paragraph: "Why we ask: Sets the depth of the security assessment and authorization needed before go-live, and the security requirements in contracts."
-    - text: Does it use emerging technology (for example AI, blockchain) or need an exception to digital policy?
-    - radiogroup "Does it use emerging technology (for example AI, blockchain) or need an exception to digital policy?":
+    - text: Does it use emerging technology (for example AI), need an exception to digital policy, host Protected B or lower information outside public cloud, or extend support for an unsupported technology?
+    - radiogroup "Does it use emerging technology (for example AI), need an exception to digital policy, host Protected B or lower information outside public cloud, or extend support for an unsupported technology?":
       - radio "Yes"
       - text: "Yes"
       - radio "No" [checked]
       - text: "No"
-    - paragraph: "Why we ask: These trigger review by the GC Enterprise Architecture Review Board regardless of cost."
+    - paragraph: "Why we ask: Any of these sends a digital initiative to the GC Enterprise Architecture Review Board regardless of cost (Directive on Service and Digital, 4.3.2)."
     - text: Will it deliver a service to the public?
     - radiogroup "Will it deliver a service to the public?":
       - radio "Yes" [checked]
@@ -361,18 +348,20 @@
     - definition: 3 (Evolutionary) (estimate)
     - term: Approval authority
     - definition: Treasury Board approval
+    - term: PCRA required
+    - definition: "Yes: the cost is at or above the threshold of $10M for the department's class"
     - term: GC Enterprise Architecture Review Board
     - definition: Required
     - term: Gating model
     - definition: Full gating (seven gates)
     - term: Independent review
     - definition: Expected at key gates
-    - text: 54 Required 3 Recommended 2 Departmental 3 Not applicable
+    - text: 57 Required 3 Recommended 2 Departmental 4 Not applicable
     - list:
       - listitem: The complexity and risk level is an indicative estimate. Complete the official PCRA with the TBS tool before relying on it for approval decisions.
       - listitem: "PCRA level 3 exceeds the department's capacity class 2: Treasury Board approval is required regardless of cost."
       - listitem: Agree with your gatekeepers early what evidence replaces up-front documents for an agile project (see PLN-9).
-    - group: Show requirements that do not apply (3)
+    - group: Show requirements that do not apply (4)
     - paragraph:
       - link "See the full governance profile in the report":
         - /url: "#/report"

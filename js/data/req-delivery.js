@@ -1,8 +1,11 @@
 // Requirements: planning and baselines, benefits, risks and procurement.
-// Paraphrased guidance, not official text.
+// Paraphrased, with section references checked against the Directive on the
+// Management of Projects and Programmes (DMPP) and the 2010 gating guide.
+// Not official text.
 
 const DMPP = { en: "Directive on the Management of Projects and Programmes", fr: "Directive sur la gestion des projets et programmes" };
 const GUIDE = { en: "A Guide to Project Gating for IT-Enabled Projects (TBS)", fr: "Guide sur le contrôle des projets de TI par points de contrôle (SCT)" };
+const cite = (en, fr) => ({ en, fr });
 const src = (...parts) => ({ en: parts.map((p) => p.en).join("; "), fr: parts.map((p) => p.fr).join("; ") });
 
 export const DELIVERY = [
@@ -37,9 +40,9 @@ export const DELIVERY = [
   },
   {
     id: "PLN-2", gate: "G4", sev: "high", base: "required",
-    source: GUIDE,
+    source: src(cite("DMPP 4.2.12", "DGPP 4.2.12"), GUIDE),
     title: { en: "Project charter approved", fr: "Charte de projet approuvée" },
-    summary: { en: "A charter approved by the sponsor sets out the project's objectives, scope, deliverables, governance, roles, tolerances, budget and key milestones.", fr: "Une charte approuvée par le promoteur énonce les objectifs, la portée, les livrables, la gouvernance, les rôles, les tolérances, le budget et les principaux jalons du projet." },
+    summary: { en: "The sponsor documents roles and responsibilities and delegates authorities to the project manager through a project charter, which also sets out objectives, scope, deliverables, governance, tolerances, budget and key milestones.", fr: "Le promoteur documente les rôles et responsabilités et délègue des pouvoirs au gestionnaire de projet au moyen d'une charte de projet, qui énonce aussi les objectifs, la portée, les livrables, la gouvernance, les tolérances, le budget et les principaux jalons." },
     look: {
       en: ["The signed charter.", "Consistency between the charter and the approved business case."],
       fr: ["La charte signée.", "La cohérence entre la charte et l'analyse de rentabilisation approuvée."],
@@ -121,9 +124,9 @@ export const DELIVERY = [
   },
   {
     id: "PLN-5", gate: "G5", sev: "high", base: "required",
-    source: src({ en: "Guide to Cost Estimating (TBS)", fr: "Guide de l'estimation des coûts (SCT)" }, DMPP),
+    source: src(cite("DMPP Appendix D (D.2)", "DGPP annexe D (D.2)"), GUIDE),
     title: { en: "Substantive cost estimate and contingency", fr: "Estimation fondée des coûts et provision pour éventualités" },
-    summary: { en: "By the time implementation is approved, the indicative estimate has matured into a substantive estimate with contingency sized to the identified risks.", fr: "Au moment de l'approbation de la mise en œuvre, l'estimation indicative est devenue une estimation fondée avec une provision pour éventualités proportionnée aux risques déterminés." },
+    summary: { en: "By Gate 5 the estimate for the whole project is within about ±15% and contingency is sized to the identified risks (the gating guide notes it should never fall below 10 to 15%). Treasury Board expenditure authority for implementation needs a substantive estimate (at least indicative for PCRA level 4), with a cost estimate range.", fr: "Au point de contrôle 5, l'estimation de l'ensemble du projet se situe à environ ±15 % et la provision pour éventualités est proportionnée aux risques déterminés (le guide précise qu'elle ne devrait jamais être inférieure à 10 à 15 %). Le pouvoir de dépenser du Conseil du Trésor pour la mise en œuvre exige une estimation fondée (au moins indicative pour une ECRP de niveau 4), avec une fourchette d'estimation des coûts." },
     look: {
       en: ["The substantive estimate and its basis (quotes, bids, comparable projects).", "How contingency was calculated and who controls it."],
       fr: ["L'estimation fondée et son fondement (soumissions, propositions, projets comparables).", "La façon dont la provision pour éventualités a été calculée et qui la contrôle."],
@@ -177,9 +180,9 @@ export const DELIVERY = [
   },
   {
     id: "PLN-7", gate: "G4", sev: "medium", base: "required",
-    source: src(DMPP, GUIDE),
+    source: src(cite("DMPP Appendix D (D.2.3)", "DGPP annexe D (D.2.3)"), GUIDE),
     title: { en: "Change control and rebaselining rules", fr: "Contrôle des changements et règles de rétablissement des données de référence" },
-    summary: { en: "Changes to scope, schedule and cost go through a controlled process, and changes beyond tolerance are returned to the approving authority (including Treasury Board where it approved the project).", fr: "Les changements à la portée, au calendrier et aux coûts passent par un processus contrôlé, et ceux qui dépassent les tolérances sont renvoyés à l'autorité d'approbation (y compris le Conseil du Trésor lorsqu'il a approuvé le projet)." },
+    summary: { en: "Changes to scope, schedule and cost go through a controlled process. Where Treasury Board approved the project, amended approval or expenditure authority is sought in a timely way when the total estimated cost will exceed the expenditure authority, or the expected outcomes and benefits or the project baseline change significantly.", fr: "Les changements à la portée, au calendrier et aux coûts passent par un processus contrôlé. Lorsque le Conseil du Trésor a approuvé le projet, une approbation ou un pouvoir de dépenser modifié est demandé en temps opportun lorsque le coût total estimatif dépassera le pouvoir de dépenser, ou que les résultats et avantages attendus ou les données de référence du projet changent considérablement." },
     look: {
       en: ["The change log and recent change decisions.", "The thresholds that trigger a return to the approving authority."],
       fr: ["Le registre des changements et les décisions récentes.", "Les seuils qui déclenchent un renvoi à l'autorité d'approbation."],
@@ -233,7 +236,7 @@ export const DELIVERY = [
   },
   {
     id: "PLN-9", gate: "G4", sev: "medium", base: "required",
-    source: { en: "TBS guidance on agile and iterative delivery within gating", fr: "Orientation du SCT sur la réalisation agile et itérative dans le cadre des points de contrôle" },
+    source: src(cite("DMPP 4.2.8", "DGPP 4.2.8"), { en: "A Guide to Project Gating for IT-Enabled Projects (notes on Gate 6)", fr: "Guide sur le contrôle des projets de TI par points de contrôle (notes sur le point de contrôle 6)" }),
     title: { en: "Iterative delivery mapped to gates", fr: "Réalisation itérative associée aux points de contrôle" },
     summary: { en: "For agile or hybrid delivery, the project shows how increments map to gates: a minimum viable product, a release roadmap, and the evidence (working software, user outcomes) gatekeepers will see at each gate.", fr: "Pour une réalisation agile ou hybride, le projet montre comment les incréments s'associent aux points de contrôle : un produit minimal viable, une feuille de route des versions et les éléments probants (logiciel fonctionnel, résultats pour les utilisateurs) que les responsables verront à chaque point de contrôle." },
     look: {
@@ -266,7 +269,7 @@ export const DELIVERY = [
   // ---------------------------------------------------------------- BEN
   {
     id: "BEN-1", gate: "G3", sev: "high", base: "required",
-    source: src(DMPP, { en: "project sponsor: expected benefits clearly defined", fr: "promoteur de projet : avantages attendus clairement définis" }),
+    source: src(cite("DMPP 4.2.27", "DGPP 4.2.27")),
     title: { en: "Measurable benefits defined", fr: "Avantages mesurables définis" },
     summary: { en: "Expected benefits are clearly defined with a baseline, a target, a measure and a date, so they can be tracked and their realization demonstrated.", fr: "Les avantages attendus sont clairement définis avec un point de départ, une cible, une mesure et une date, afin de pouvoir les suivre et démontrer leur réalisation." },
     look: {
@@ -293,10 +296,10 @@ export const DELIVERY = [
     keywords: { en: ["benefit*", "baseline", "target", "measure*", "KPI", "performance indicator*"], fr: ["avantage*", "point de départ", "cible", "mesure*", "indicateur* de rendement"] },
   },
   {
-    id: "BEN-2", gate: "G4", sev: "medium", base: "required",
-    source: src(DMPP, GUIDE),
+    id: "BEN-2", gate: "G3", revisit: ["G5"], sev: "medium", base: "required",
+    source: src(cite("DMPP 4.2.28, 4.2.29", "DGPP 4.2.28, 4.2.29")),
     title: { en: "Benefits realization plan with owners", fr: "Plan de réalisation des avantages avec responsables" },
-    summary: { en: "A benefits realization plan assigns each benefit to a business owner who will still be there after the project ends, and says how and when it will be measured.", fr: "Un plan de réalisation des avantages attribue chaque avantage à un responsable opérationnel qui sera toujours là après la fin du projet, et précise comment et quand il sera mesuré." },
+    summary: { en: "A benefits realization plan is in place at the time of project approval, identifies the business owner responsible for realizing each benefit, says how and when it will be measured, and is monitored and updated throughout the project.", fr: "Un plan de réalisation des avantages est en place au moment de l'approbation du projet; il désigne le responsable opérationnel de la réalisation de chaque avantage, précise comment et quand chacun sera mesuré, et il est suivi et mis à jour tout au long du projet." },
     look: {
       en: ["The benefits realization plan.", "Business owners' acceptance of their benefits."],
       fr: ["Le plan de réalisation des avantages.", "L'acceptation de leurs avantages par les responsables opérationnels."],
@@ -352,7 +355,7 @@ export const DELIVERY = [
   // ---------------------------------------------------------------- RSK
   {
     id: "RSK-1", gate: "G2", revisit: ["G3", "G5", "G6"], sev: "high", base: "required",
-    source: src(DMPP, { en: "project sponsor: active leadership in managing risk", fr: "promoteur de projet : leadership actif dans la gestion des risques" }),
+    source: src(cite("DMPP 4.2.2, Appendix E (E.2.8)", "DGPP 4.2.2, annexe E (E.2.8)")),
     title: { en: "Risk register actively managed", fr: "Registre des risques géré activement" },
     summary: { en: "Risks are identified, assessed, owned and treated, reviewed regularly by governance, with the sponsor providing active leadership on the most serious ones.", fr: "Les risques sont déterminés, évalués, attribués et traités, et examinés régulièrement par la gouvernance, le promoteur exerçant un leadership actif sur les plus graves." },
     look: {
@@ -410,7 +413,7 @@ export const DELIVERY = [
   // ---------------------------------------------------------------- PRO
   {
     id: "PRO-1", gate: "G3", sev: "high", base: "required",
-    source: src(DMPP, { en: "requests for approval include market analysis and procurement strategy", fr: "les demandes d'approbation comprennent l'analyse du marché et la stratégie d'approvisionnement" }),
+    source: src(cite("DMPP 4.2.26, Appendix E (E.2.7)", "DGPP 4.2.26, annexe E (E.2.7)")),
     title: { en: "Market analysis and procurement strategy", fr: "Analyse du marché et stratégie d'approvisionnement" },
     summary: { en: "Requests for project approval include an analysis of the market and a procurement strategy suited to the project: contracting approach, vehicles, timelines, evaluation and risk sharing.", fr: "Les demandes d'approbation de projet comprennent une analyse du marché et une stratégie d'approvisionnement adaptée au projet : approche contractuelle, instruments, échéanciers, évaluation et partage des risques." },
     look: {

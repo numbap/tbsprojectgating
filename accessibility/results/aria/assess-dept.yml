@@ -33,19 +33,19 @@
   - complementary:
     - navigation "Gates":
       - text: Full gating (seven gates)
-      - link "G1 Strategic assessment and concept 3/4":
+      - link "G1 Strategic assessment and concept 3/6":
         - /url: "#/assess/G1"
-      - link "G2 Project approach 6/11":
+      - link "G2 Project approach 6/12":
         - /url: "#/assess/G2"
-      - link "G3 Business case and general readiness next 5/10":
+      - link "G3 Business case and general readiness next 5/12":
         - /url: "#/assess/G3"
-      - link "G4 Project charter and project management plan 0/12":
+      - link "G4 Project charter and project management plan 0/11":
         - /url: "#/assess/G4"
-      - link "G5 Detailed project plan and functional specifications 1/10":
+      - link "G5 Detailed project plan and functional specifications 1/11":
         - /url: "#/assess/G5"
-      - link "G6 Construction complete and deployment readiness 0/6":
+      - link "G6 Construction complete and deployment readiness 0/5":
         - /url: "#/assess/G6"
-      - link "G7 Post-implementation review 0/4":
+      - link "G7 Post-implementation review 0/3":
         - /url: "#/assess/G7"
       - paragraph:
         - link "Change the gating model in the scope":
@@ -59,8 +59,8 @@
     - text: "Confirms how the objectives will be achieved: the options considered, the preferred delivery approach (build, buy, partner, configure), the high-level scope, a rough cost range, the initial complexity and risk assessment and the governance that will oversee the work."
     - link "Read the gate guide":
       - /url: "#/gate/G2"
-  - img "Gate readiness 25%": 25%
-  - text: 6 of 11 assessed
+  - img "Gate readiness 23%": 23%
+  - text: 6 of 12 assessed
   - button "Expand all"
   - button "Collapse all"
   - group: GOV-2 Governance structure with clear decision rights medium Required Partly met
@@ -69,10 +69,10 @@
   - group: CAP-1 Project Complexity and Risk Assessment (PCRA) completed high Required Not met
   - group:
     - text: CAP-2 Current departmental capacity class (OPMCA) medium Departmental Departmental
-    - paragraph: The department has an Organizational Project Management Capacity Assessment approved within the last three years. Its class sets how complex a project the department may approve on its own.
+    - paragraph: "A department seeking authority above the $2.5M base limit assesses its capacity with the OPMCA tool, with TBS review, and submits the resulting class to Treasury Board at least every three years. Once approved, the class sets the minister's project approval authority: with class 1 or higher, the minister approves projects whose PCRA level does not exceed the class."
     - paragraph:
       - strong: "Source:"
-      - text: Directive on the Management of Projects and Programmes; mandatory procedures for organizational project management capacity assessments
+      - text: DMPP 4.1.10, Appendix A; PPMI 4.1.9
     - text: Applicability
     - combobox "Applicability":
       - option "Automatic (Departmental)" [selected]
@@ -105,6 +105,7 @@
   - group: APP-4 GC Enterprise Architecture Review Board (GC EARB) high Required Not met
   - group: APP-5 Departmental architecture review and CIO endorsement medium Required Not assessed
   - group: GAT-1 Gating plan defined medium Required Not assessed
+  - group: GAT-4 Business case and viability revalidated at each gate high Required Not assessed
   - group: PLN-1 High-level scope and requirements medium Required Not assessed
   - group: RSK-1 Risk register actively managed high Required Partly met
   - link "G1 Strategic assessment and concept":

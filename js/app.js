@@ -25,7 +25,7 @@ import { buildReportModel, esc, reportToCSV, reportToHTML, reportToMarkdown } fr
 import { SAMPLE_TEXT, sampleState } from "./sample.js";
 import { KEYS, LOCK_OPTIONS, MARKINGS, MODES, PolicyError, Store, modeAllowed } from "./storage.js";
 import { MIN_PASSPHRASE } from "./vault.js";
-import { L, fmtPct, getLang, otherLang, setLang, t, tn } from "./i18n.js";
+import { L, fmtMoney, fmtPct, getLang, otherLang, setLang, t, tn } from "./i18n.js";
 
 const app = document.getElementById("app");
 
@@ -271,6 +271,7 @@ function scopeSummary() {
     <dl class="gov-list">
       <div><dt>${esc(t("gov.pcra"))}</dt><dd>${esc(pcraLabel(g.pcra))}${g.pcraSource === "estimate" ? ` <span class="muted small">(${esc(t("gov.estimatedShort"))})</span>` : ""}</dd></div>
       <div><dt>${esc(t("gov.authority"))}</dt><dd><span class="tone tone-${tone(g.tb)}">${esc(t(`gov.tbShort.${g.tb}`))}</span></dd></div>
+      <div><dt>${esc(t("gov.pcraRequiredLabel"))}</dt><dd>${esc(t(`gov.pcraRequired.${g.pcraRequired}`, { threshold: fmtMoney(g.pcraThreshold) }))}</dd></div>
       <div><dt>${esc(t("gov.earbLabel"))}</dt><dd><span class="tone tone-${tone(g.earb)}">${esc(t(`gov.earb.${g.earb}`))}</span></dd></div>
       <div><dt>${esc(t("gov.model"))}</dt><dd>${esc(L(MODELS[g.model].name))}</dd></div>
       <div><dt>${esc(t("gov.independent"))}</dt><dd>${esc(g.independentReview ? t("gov.independentYes") : t("gov.independentNo"))}</dd></div>
@@ -289,7 +290,7 @@ function viewProfile() {
   const groups = [
     ["grp.project", ["projectName", "dept", "sponsor", "description"]],
     ["grp.size", ["projectType", "cost", "newFunding", "horizontal", "programme"]],
-    ["grp.authority", ["opmca", "limit", "pcra"]],
+    ["grp.authority", ["opmca", "pcra"]],
     ["grp.delivery", ["procurement", "delivery", "nextGate", "model"]],
     ["grp.policy", ["personalInfo", "automatedDecision", "security", "emergingTech", "publicFacing"]],
   ];
@@ -620,6 +621,7 @@ function viewGate(id) {
   </div>
   <div class="card"><div class="proc-grid">
     ${block(t("gate.decision"), `<p>${esc(L(x.decision))}</p>`, "wide")}
+    ${x.estimate ? block(t("gate.estimate"), `<p>${esc(L(x.estimate))}</p>`, "wide") : ""}
     ${block(t("gate.gatekeepers"), list(L(x.gatekeepers)))}
     ${block(t("gate.deliverables"), list(L(x.deliverables)))}
     ${block(t("gate.topics"), list(x.topics.map((k) => L(TOPICS[k]))))}

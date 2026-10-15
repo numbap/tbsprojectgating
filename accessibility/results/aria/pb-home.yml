@@ -52,10 +52,10 @@
   - link "Read the gate guide":
     - /url: "#/gates"
   - heading "ClaimPath Online" [level=2]
-  - img "Readiness 37%": 37%
+  - img "Readiness 31%": 31%
   - strong: Readiness for G3 Business case and general readiness
-  - text: 14 of 25 requirements assessed
-  - img "Overall progress 26%": 26%
+  - text: 14 of 30 requirements assessed
+  - img "Overall progress 25%": 25%
   - strong: Overall progress
   - text: across all gates
   - paragraph: Treasury Board approval required
@@ -69,11 +69,11 @@
     - text: "2"
     - heading "Review its documents" [level=3]
     - paragraph: Paste a charter, concept note or business case draft. The review maps statements to requirements, flags "TBD" and "planned", and suggests scope answers.
-  - link "3 Check gate readiness Plain-language questions for each of the 62 requirements, organized by gate, with the five lenses alongside.":
+  - link "3 Check gate readiness Plain-language questions for each of the 66 requirements, organized by gate, with the five lenses alongside.":
     - /url: "#/assess"
     - text: "3"
     - heading "Check gate readiness" [level=3]
-    - paragraph: Plain-language questions for each of the 62 requirements, organized by gate, with the five lenses alongside.
+    - paragraph: Plain-language questions for each of the 66 requirements, organized by gate, with the five lenses alongside.
   - link "4 Produce the report Governance profile, approvals roadmap, readiness by gate, risk-ranked gaps and actions, a draft gate decision record and statements for your gate submission.":
     - /url: "#/report"
     - text: "4"

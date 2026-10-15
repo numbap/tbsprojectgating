@@ -85,14 +85,14 @@
       - text: De 100 M$ à 1 G$
       - radio "Plus de 1 G$"
       - text: Plus de 1 G$
-    - paragraph: "Pourquoi nous le demandons : Comparé à la limite d'approbation des projets de votre ministère pour déterminer si l'approbation du Conseil du Trésor est nécessaire, et aux seuils du CEAI du GC pour les projets numériques."
+    - paragraph: "Pourquoi nous le demandons : Sans catégorie de capacité approuvée, les projets de plus de 2,5 M$ doivent être approuvés par le Conseil du Trésor. Le coût détermine aussi si une ECRP est requise, si un projet numérique exige un cas conceptuel et un examen par le CEAI du GC, et si des données de référence doivent être transmises au Bureau du contrôleur général (25 M$ ou plus)."
     - text: Le projet a-t-il besoin de nouveaux fonds ou de nouvelles autorisations (au-delà des niveaux de référence existants)?
     - radiogroup "Le projet a-t-il besoin de nouveaux fonds ou de nouvelles autorisations (au-delà des niveaux de référence existants)?":
       - radio "Oui" [checked]
       - text: Oui
       - radio "Non"
       - text: Non
-    - paragraph: "Pourquoi nous le demandons : De nouveaux fonds signifient habituellement un processus budgétaire ou un mémoire au Cabinet suivi d'une présentation au Conseil du Trésor, quelle que soit la limite d'approbation des projets."
+    - paragraph: "Pourquoi nous le demandons : De nouveaux fonds signifient habituellement un processus budgétaire ou un mémoire au Cabinet suivi d'une présentation au Conseil du Trésor, même lorsque le projet relève du pouvoir d'approbation ministériel."
     - text: Est-il horizontal (plusieurs ministères, organismes ou administrations)?
     - radiogroup "Est-il horizontal (plusieurs ministères, organismes ou administrations)?":
       - radio "Oui"
@@ -112,6 +112,8 @@
     - radiogroup "Catégorie approuvée de capacité organisationnelle de gestion de projets de votre ministère (ECOGP)":
       - radio "Aucune catégorie approuvée"
       - text: Aucune catégorie approuvée
+      - radio "Catégorie 0"
+      - text: Catégorie 0
       - 'radio "Catégorie 1 : Maintien"'
       - text: "Catégorie 1 : Maintien"
       - 'radio "Catégorie 2 : Tactique" [checked]'
@@ -122,22 +124,7 @@
       - text: "Catégorie 4 : Transformation"
       - radio "Je ne sais pas"
       - text: Je ne sais pas
-    - paragraph: "Pourquoi nous le demandons : Un projet dont le niveau de complexité et de risque dépasse la catégorie de capacité du ministère doit être approuvé par le Conseil du Trésor. Renseignez-vous auprès de votre bureau de gestion de projet; l'évaluation est mise à jour au moins tous les trois ans."
-    - text: Limite d'approbation des projets de votre ministère
-    - radiogroup "Limite d'approbation des projets de votre ministère":
-      - radio "2,5 M$ (limite de base)"
-      - text: 2,5 M$ (limite de base)
-      - radio "5 M$"
-      - text: 5 M$
-      - radio "10 M$" [checked]
-      - text: 10 M$
-      - radio "25 M$"
-      - text: 25 M$
-      - radio "50 M$"
-      - text: 50 M$
-      - radio "100 M$ ou plus"
-      - text: 100 M$ ou plus
-    - paragraph: "Pourquoi nous le demandons : Chaque ministère a une limite de base de 2,5 M$. Une limite plus élevée découle d'une ECOGP approuvée; votre bureau de gestion de projet ou votre DPF peut la confirmer."
+    - paragraph: "Pourquoi nous le demandons : La catégorie approuvée par le Conseil du Trésor détermine le pouvoir d'approbation des projets du ministre (Directive sur la gestion des projets et programmes, annexe C). Avec une catégorie 1 ou plus, le ministère approuve les projets dont le niveau d'ECRP ne dépasse pas sa catégorie, quel que soit leur coût. Renseignez-vous auprès de votre bureau de gestion de projet; la catégorie est soumise de nouveau au moins tous les trois ans."
     - text: Niveau de l'évaluation de la complexité et des risques du projet (ECRP)
     - radiogroup "Niveau de l'évaluation de la complexité et des risques du projet (ECRP)":
       - 'radio "Pas encore réalisée : l''estimer ci-dessous" [checked]'
@@ -337,13 +324,13 @@
       - radio "Protégé C ou classifié"
       - text: Protégé C ou classifié
     - paragraph: "Pourquoi nous le demandons : Détermine la profondeur de l'évaluation de la sécurité et de l'autorisation requises avant la mise en service, ainsi que les exigences de sécurité des contrats."
-    - text: Utilise-t-il une technologie émergente (p. ex. IA, chaîne de blocs) ou nécessite-t-il une exception à la politique numérique?
-    - radiogroup "Utilise-t-il une technologie émergente (p. ex. IA, chaîne de blocs) ou nécessite-t-il une exception à la politique numérique?":
+    - text: Utilise-t-il une technologie émergente (p. ex. IA), nécessite-t-il une exception à la politique numérique, héberge-t-il de l'information Protégé B ou moins ailleurs que dans le nuage public, ou prolonge-t-il le soutien d'une technologie non soutenue?
+    - radiogroup "Utilise-t-il une technologie émergente (p. ex. IA), nécessite-t-il une exception à la politique numérique, héberge-t-il de l'information Protégé B ou moins ailleurs que dans le nuage public, ou prolonge-t-il le soutien d'une technologie non soutenue?":
       - radio "Oui"
       - text: Oui
       - radio "Non" [checked]
       - text: Non
-    - paragraph: "Pourquoi nous le demandons : Ces éléments entraînent un examen par le Conseil d'examen de l'architecture intégrée du GC, quel que soit le coût."
+    - paragraph: "Pourquoi nous le demandons : Chacun de ces éléments entraîne l'examen d'une initiative numérique par le Conseil d'examen de l'architecture intégrée du GC, quel que soit le coût (Directive sur les services et le numérique, 4.3.2)."
     - text: Offrira-t-il un service au public?
     - radiogroup "Offrira-t-il un service au public?":
       - radio "Oui" [checked]
@@ -361,18 +348,20 @@
     - definition: 3 (Évolution) (estimation)
     - term: Pouvoir d'approbation
     - definition: Approbation du Conseil du Trésor
+    - term: ECRP requise
+    - definition: "Oui : le coût est égal ou supérieur au seuil de 10 M$ pour la catégorie du ministère"
     - term: Conseil d'examen de l'architecture intégrée du GC
     - definition: Requis
     - term: Modèle de points de contrôle
     - definition: Points de contrôle complets (sept)
     - term: Examen indépendant
     - definition: Attendu aux points de contrôle clés
-    - text: 54 Obligatoire 3 Recommandé 2 Ministériel 3 Sans objet
+    - text: 57 Obligatoire 3 Recommandé 2 Ministériel 4 Sans objet
     - list:
       - listitem: Le niveau de complexité et de risque est une estimation indicative. Réalisez l'ECRP officielle avec l'outil du SCT avant de vous y fier pour les décisions d'approbation.
       - listitem: "Le niveau d'ECRP 3 dépasse la catégorie de capacité 2 du ministère : l'approbation du Conseil du Trésor est requise, quel que soit le coût."
       - listitem: Convenez tôt avec vos responsables des points de contrôle des éléments probants qui remplacent les documents préalables pour un projet agile (voir PLN-9).
-    - group: Afficher les exigences qui ne s'appliquent pas (3)
+    - group: Afficher les exigences qui ne s'appliquent pas (4)
     - paragraph:
       - link "Voir le profil de gouvernance complet dans le rapport":
         - /url: "#/report"

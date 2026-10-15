@@ -57,6 +57,7 @@ export const GATES = [
       en: ["Options analysis", "Initial Project Complexity and Risk Assessment (PCRA)", "High-level scope and rough order of magnitude cost", "Governance structure", "Gating plan"],
       fr: ["Analyse des options", "Évaluation initiale de la complexité et des risques du projet (ECRP)", "Portée générale et coût approximatif", "Structure de gouvernance", "Plan des points de contrôle"],
     },
+    estimate: { en: "Order of magnitude, about ±100% for the whole project; ±10% for the work to the next gate.", fr: "Ordre de grandeur, environ ±100 % pour l'ensemble du projet; ±10 % pour les travaux jusqu'au prochain point de contrôle." },
     topics: ["concept", "sponsorship", "risk", "technology"],
     pitfalls: {
       en: ["A single \"option\" with straw men around it.", "Under-scoring the PCRA to stay inside departmental authority.", "Choosing a delivery approach before talking to procurement and the CIO."],
@@ -70,8 +71,8 @@ export const GATES = [
     stage: "planning",
     question: { en: "Is the investment justified, funded and is the organization ready to commit?", fr: "L'investissement est-il justifié et financé, et l'organisation est-elle prête à s'engager?" },
     purpose: {
-      en: "Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above departmental authority, this is typically when Treasury Board project approval is sought.",
-      fr: "Confirme l'analyse de rentabilisation : l'option recommandée, ses coûts sur tout le cycle de vie, ses avantages, ses risques et sa source de financement, et que l'organisation est prête à commencer. Pour les projets qui dépassent le pouvoir ministériel, c'est généralement à ce moment qu'on demande l'approbation du projet au Conseil du Trésor.",
+      en: "Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above the minister's authority, this is typically when Treasury Board expenditure authority to begin definition is sought.",
+      fr: "Confirme l'analyse de rentabilisation : l'option recommandée, ses coûts sur tout le cycle de vie, ses avantages, ses risques et sa source de financement, et que l'organisation est prête à commencer. Pour les projets qui dépassent le pouvoir du ministre, c'est généralement à ce moment qu'on demande au Conseil du Trésor le pouvoir de dépenser pour commencer la définition.",
     },
     decision: {
       en: "Approve the business case and commit resources to plan and define the project (including any Treasury Board submission), or stop.",
@@ -85,6 +86,7 @@ export const GATES = [
       en: ["Business case", "Updated PCRA", "Indicative cost estimate and funding strategy", "Benefits and outcomes", "Procurement strategy and market analysis", "Risk register", "Treasury Board submission (if required)"],
       fr: ["Analyse de rentabilisation", "ECRP mise à jour", "Estimation indicative des coûts et stratégie de financement", "Avantages et résultats", "Stratégie d'approvisionnement et analyse du marché", "Registre des risques", "Présentation au Conseil du Trésor (si requise)"],
     },
+    estimate: { en: "Indicative, about ±40% for the whole project.", fr: "Indicative, environ ±40 % pour l'ensemble du projet." },
     topics: ["business", "readiness", "funding", "procurement", "risk"],
     pitfalls: {
       en: ["Benefits that cannot be measured or have no owner.", "Costing only the build, not ongoing operations.", "Funding \"to be identified\"."],
@@ -113,6 +115,7 @@ export const GATES = [
       en: ["Project charter", "Project management plan", "Resource plan", "Change control process", "Benefits realization plan", "Organizational change management plan", "Reporting plan"],
       fr: ["Charte de projet", "Plan de gestion de projet", "Plan des ressources", "Processus de contrôle des changements", "Plan de réalisation des avantages", "Plan de gestion du changement organisationnel", "Plan de production de rapports"],
     },
+    estimate: { en: "About ±25% for the whole project.", fr: "Environ ±25 % pour l'ensemble du projet." },
     topics: ["structure", "sponsorship", "human", "readiness"],
     pitfalls: {
       en: ["A charter copied from a template with no project-specific tolerances.", "A team that exists only on the org chart.", "Change management deferred to \"deployment\"."],
@@ -126,8 +129,8 @@ export const GATES = [
     stage: "definition",
     question: { en: "Do we know enough to commit to build, at a cost and schedule we can hold?", fr: "En savons-nous assez pour nous engager à construire, à un coût et selon un calendrier que nous pouvons respecter?" },
     purpose: {
-      en: "Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, contract award or construction, and typically where full expenditure authority is confirmed.",
-      fr: "Confirme que les exigences et les spécifications sont assez complètes pour construire, et que la portée, le calendrier et les coûts sont établis en référence avec une estimation fondée. C'est le dernier point de contrôle avant les dépenses importantes, l'attribution du contrat ou la construction, et généralement le moment où le pouvoir de dépenser complet est confirmé.",
+      en: "Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, issuing requests for proposals, contract award or construction. For projects above the minister's authority, this is when Treasury Board project approval and expenditure authority for implementation are sought.",
+      fr: "Confirme que les exigences et les spécifications sont assez complètes pour construire, et que la portée, le calendrier et les coûts sont établis en référence avec une estimation fondée. C'est le dernier point de contrôle avant les dépenses importantes, la publication des demandes de propositions, l'attribution du contrat ou la construction. Pour les projets qui dépassent le pouvoir du ministre, c'est à ce moment qu'on demande au Conseil du Trésor l'approbation du projet et le pouvoir de dépenser pour la mise en œuvre.",
     },
     decision: {
       en: "Approve the baseline and authorize implementation spending and contract award, or re-plan.",
@@ -141,6 +144,7 @@ export const GATES = [
       en: ["Functional and non-functional requirements", "Baselined integrated schedule and work breakdown", "Substantive cost estimate with contingency", "Privacy, security and accessibility assessments under way or done", "Contract award readiness"],
       fr: ["Exigences fonctionnelles et non fonctionnelles", "Calendrier intégré et structure de répartition du travail de référence", "Estimation fondée des coûts avec provision pour éventualités", "Évaluations de la vie privée, de la sécurité et de l'accessibilité en cours ou terminées", "Préparation à l'attribution du contrat"],
     },
+    estimate: { en: "Substantive, about ±15% for the whole project; contingency should never fall below 10 to 15%.", fr: "Fondée, environ ±15 % pour l'ensemble du projet; la provision pour éventualités ne devrait jamais être inférieure à 10 à 15 %." },
     topics: ["requirements", "technology", "funding", "procurement", "structure"],
     pitfalls: {
       en: ["Baselining a schedule the team does not believe.", "Contingency removed to make the number fit.", "Privacy and security assessments left until just before go-live."],
@@ -182,8 +186,8 @@ export const GATES = [
     stage: "closeout",
     question: { en: "Did we get what we paid for, and what did we learn?", fr: "Avons-nous obtenu ce que nous avons payé, et qu'avons-nous appris?" },
     purpose: {
-      en: "Confirms whether the project delivered the expected outcomes and benefits, records lessons learned, and formally closes the project, handing ongoing benefits tracking to the business owner.",
-      fr: "Confirme si le projet a produit les résultats et les avantages attendus, consigne les leçons apprises et clôt officiellement le projet, en confiant le suivi continu des avantages au responsable opérationnel.",
+      en: "Confirms whether the project delivered the expected outcomes and benefits, records lessons learned, and formally closes the project, handing ongoing benefits tracking to the business owner. It typically takes place about six months after the project is completed.",
+      fr: "Confirme si le projet a produit les résultats et les avantages attendus, consigne les leçons apprises et clôt officiellement le projet, en confiant le suivi continu des avantages au responsable opérationnel. Il a habituellement lieu environ six mois après l'achèvement du projet.",
     },
     decision: {
       en: "Close the project, and decide on follow-up actions for benefits not yet realized.",
@@ -211,7 +215,7 @@ export const GATE_MAP = Object.fromEntries(GATES.map((g) => [g.id, g]));
 export const MODELS = {
   full: {
     name: { en: "Full gating (seven gates)", fr: "Points de contrôle complets (sept)" },
-    when: { en: "Very large, highly complex or high-risk projects.", fr: "Projets très importants, très complexes ou à risque élevé." },
+    when: { en: "Very large, highly complex or high-risk projects. The guide's best practice is that all projects go through all seven gates; for smaller projects Gates 1 and 2 may be combined.", fr: "Projets très importants, très complexes ou à risque élevé. Selon la pratique exemplaire du guide, tous les projets franchissent les sept points de contrôle; pour les petits projets, les points 1 et 2 peuvent être regroupés." },
     gates: GATES.map((g) => ({ id: g.id, name: g.name, includes: [g.id] })),
   },
   streamlined: {
@@ -229,8 +233,8 @@ export const MODELS = {
     name: { en: "Light gating (three gates)", fr: "Points de contrôle allégés (trois)" },
     when: { en: "Small, low-risk projects with little complexity.", fr: "Petits projets à faible risque et peu complexes." },
     note: {
-      en: "Deployment readiness is not a formal gate in this model: the project board confirms it before go-live, and it is reviewed at the post-implementation gate.",
-      fr: "L'état de préparation au déploiement n'est pas un point de contrôle officiel dans ce modèle : le conseil de projet le confirme avant la mise en service, et il est examiné au point de contrôle postérieur à la mise en œuvre.",
+      en: "The guide's light model has no deployment gate. This tool groups deployment readiness with the post-implementation gate so its items stay visible; the project board should still confirm readiness before go-live, with input from the stakeholders affected (DMPP 4.2.20).",
+      fr: "Le modèle allégé du guide ne comporte pas de point de contrôle de déploiement. Cet outil regroupe l'état de préparation au déploiement avec le point de contrôle postérieur à la mise en œuvre pour que ces éléments restent visibles; le conseil de projet doit tout de même confirmer l'état de préparation avant la mise en service, avec l'apport des intervenants touchés (DGPP 4.2.20).",
     },
     gates: [
       { id: "L1", name: { en: "Business case", fr: "Analyse de rentabilisation" }, includes: ["G1", "G2", "G3"] },

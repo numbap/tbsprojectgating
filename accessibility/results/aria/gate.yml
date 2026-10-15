@@ -36,9 +36,11 @@
   - 'heading "Gate 5: Detailed project plan and functional specifications" [level=1]'
   - paragraph:
     - emphasis: Do we know enough to commit to build, at a cost and schedule we can hold?
-  - paragraph: Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, contract award or construction, and typically where full expenditure authority is confirmed.
+  - paragraph: Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, issuing requests for proposals, contract award or construction. For projects above the minister's authority, this is when Treasury Board project approval and expenditure authority for implementation are sought.
   - heading "Decision sought" [level=2]
   - paragraph: Approve the baseline and authorize implementation spending and contract award, or re-plan.
+  - heading "Expected cost and schedule estimate accuracy" [level=2]
+  - paragraph: Substantive, about ±15% for the whole project; contingency should never fall below 10 to 15%.
   - heading "Typical gatekeepers" [level=2]
   - list:
     - listitem: Project sponsor
@@ -110,6 +112,10 @@
       - link "DIG-7 Information and data management":
         - /url: "#/req/DIG-7"
       - text: Required Not assessed
+    - listitem:
+      - link "OCM-3 Transition to operations with a funded owner":
+        - /url: "#/req/OCM-3"
+      - text: Required Not assessed
   - heading "Requirements revisited at this gate" [level=2]
   - list:
     - listitem:
@@ -129,12 +135,24 @@
         - /url: "#/req/CAP-1"
       - text: Required Not met
     - listitem:
+      - link "APP-1 Treasury Board project approval sought":
+        - /url: "#/req/APP-1"
+      - text: Required Partly met
+    - listitem:
       - link "GAT-2 Independent review at key gates":
         - /url: "#/req/GAT-2"
       - text: Required Not assessed
     - listitem:
       - link "GAT-3 Conditions from earlier gates resolved":
         - /url: "#/req/GAT-3"
+      - text: Required Not assessed
+    - listitem:
+      - link "GAT-4 Business case and viability revalidated at each gate":
+        - /url: "#/req/GAT-4"
+      - text: Required Not assessed
+    - listitem:
+      - link "BEN-2 Benefits realization plan with owners":
+        - /url: "#/req/BEN-2"
       - text: Required Not assessed
     - listitem:
       - link "RSK-1 Risk register actively managed":
@@ -147,6 +165,14 @@
     - listitem:
       - link "MON-1 Regular status reporting against tolerances":
         - /url: "#/req/MON-1"
+      - text: Required Not assessed
+    - listitem:
+      - link "MON-3 Lessons learned captured and shared":
+        - /url: "#/req/MON-3"
+      - text: Required Not assessed
+    - listitem:
+      - link "MON-6 Baseline information to the Office of the Comptroller General":
+        - /url: "#/req/MON-6"
       - text: Required Not assessed
   - link "Gate 4":
     - /url: "#/gate/G4"

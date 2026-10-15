@@ -35,7 +35,7 @@ test("requirements: unique IDs, known areas and gates, complete bilingual conten
 });
 
 test("requirements: scope rules use real profile fields or derived values, with bilingual reasons", () => {
-  const derived = { tb: ["yes", "no"], earb: ["yes", "no"], highRisk: ["yes", "no"], digital: ["yes", "no"], pcraLevel: ["1", "2", "3", "4", "unknown"] };
+  const derived = { tb: ["yes", "no"], earb: ["yes", "no"], highRisk: ["yes", "no"], digital: ["yes", "no"], pcraLevel: ["1", "2", "3", "4", "unknown"], pcraRequired: ["yes", "no"], conceptCase: ["yes", "no"], ocg: ["yes", "no"] };
   for (const r of REQUIREMENTS) {
     for (const rule of r.scope) {
       assert.ok(APPLICABILITY[rule.status], `${r.id} rule status ${rule.status}`);
@@ -97,7 +97,9 @@ test("every interface key used in the code exists", async () => {
   assert.deepEqual(missing, []);
   // Keys built dynamically.
   for (const tb of ["yes", "no", "check"]) for (const p of ["home.tb", "r.kpi.tb", "gov.tbShort", "gov.earb"]) assert.ok(STRINGS.en[`${p}.${tb}`], `${p}.${tb}`);
-  for (const r of ["cost", "costStraddles", "pcra", "noOpmca", "pcraUnknown"]) assert.ok(STRINGS.en[`gov.reason.${r}`]);
+  for (const r of ["pcra", "noOpmca", "pcraUnknown"]) assert.ok(STRINGS.en[`gov.reason.${r}`]);
+  for (const b of ["base", "class", "belowThreshold"]) assert.ok(STRINGS.en[`gov.tbNo.${b}`]);
+  for (const v of ["yes", "no", "check"]) for (const p of ["gov.pcraRequired", "gov.conceptCase", "gov.ocg"]) assert.ok(STRINGS.en[`${p}.${v}`], `${p}.${v}`);
 });
 
 // ------------------------------------------------------------------ governance rules
@@ -111,30 +113,48 @@ test("PCRA estimate follows the official score bands and floors horizontal proje
   assert.equal(pcraEstimate(all(0), { horizontal: "yes" }).level, 4);
 });
 
-test("authority: base limit without an OPMCA class, cost over limit, PCRA over capacity", () => {
-  // No class: anything from $2.5M needs Treasury Board, whatever limit was selected.
-  let g = governance({ ...PROFILE_DEFAULTS, opmca: "none", limit: "50", cost: "5-10", pcra: "1" });
-  assert.equal(g.tb, "yes");
-  assert.ok(g.tbReasons.includes("noOpmca"));
-  assert.equal(g.limitIgnored, true);
-  // Small project without a class stays departmental.
-  g = governance({ ...PROFILE_DEFAULTS, opmca: "none", cost: "1-2.5", pcra: "1" });
-  assert.equal(g.tb, "no");
-  // Within limit and capacity.
-  g = governance({ ...PROFILE_DEFAULTS, opmca: "3", limit: "25", cost: "10-25", pcra: "2" });
-  assert.equal(g.tb, "no");
-  // PCRA above capacity class.
-  g = governance({ ...PROFILE_DEFAULTS, opmca: "2", limit: "25", cost: "5-10", pcra: "3" });
-  assert.equal(g.tb, "yes");
-  assert.deepEqual(g.tbReasons, ["pcra"]);
-  // Cost above limit.
-  g = governance({ ...PROFILE_DEFAULTS, opmca: "4", limit: "25", cost: "25-50", pcra: "2" });
-  assert.deepEqual(g.tbReasons, ["cost"]);
-  // Cost band straddling a $50M limit needs confirmation.
-  g = governance({ ...PROFILE_DEFAULTS, opmca: "4", limit: "50", cost: "25-50", pcra: "2" });
-  assert.equal(g.tb, "no");
-  g = governance({ ...PROFILE_DEFAULTS, opmca: "4", limit: "50", cost: "50-100", pcra: "2" });
-  assert.equal(g.tb, "yes");
+// Directive on the Management of Projects and Programmes, Appendix C.
+test("authority: $2.5M base limit without a class of 1 or higher; PCRA level against class otherwise", () => {
+  const g = (p) => governance({ ...PROFILE_DEFAULTS, ...p });
+  // No class, or class 0: anything over $2.5M goes to Treasury Board, whatever the PCRA.
+  for (const opmca of ["none", "0", "unknown"]) {
+    assert.equal(g({ opmca, cost: "2.5-5", pcra: "1" }).tb, "yes", opmca);
+    assert.deepEqual(g({ opmca, cost: "2.5-5", pcra: "1" }).tbReasons, ["noOpmca"]);
+    assert.equal(g({ opmca, cost: "1-2.5", pcra: "4" }).tb, "no", opmca);
+  }
+  // Class 1 or higher: cost does not matter, only PCRA level against class.
+  assert.equal(g({ opmca: "2", cost: "gt1000", pcra: "2" }).tb, "no");
+  assert.equal(g({ opmca: "2", cost: "gt1000", pcra: "2" }).tbBasis, "class");
+  assert.equal(g({ opmca: "2", cost: "10-25", pcra: "3" }).tb, "yes");
+  assert.deepEqual(g({ opmca: "2", cost: "10-25", pcra: "3" }).tbReasons, ["pcra"]);
+  assert.equal(g({ opmca: "4", cost: "100-1000", pcra: "4" }).tb, "no");
+  // Unknown PCRA above the PCRA threshold: confirm. Below it: within authority.
+  assert.equal(g({ opmca: "3", cost: "25-50", pcra: "estimate" }).tb, "check");
+  const below = g({ opmca: "3", cost: "10-25", pcra: "estimate" });
+  assert.equal(below.tb, "no");
+  assert.equal(below.tbBasis, "belowThreshold");
+});
+
+test("PCRA thresholds follow Appendix C; OCG baseline from $25M", () => {
+  const g = (p) => governance({ ...PROFILE_DEFAULTS, ...p });
+  const req = (opmca, cost) => g({ opmca, cost }).pcraRequired;
+  assert.equal(req("none", "2.5-5"), "yes");
+  assert.equal(req("none", "1-2.5"), "no");
+  assert.equal(req("1", "2.5-5"), "no");
+  assert.equal(req("1", "5-10"), "yes");
+  assert.equal(req("2", "5-10"), "no");
+  assert.equal(req("2", "10-25"), "yes");
+  assert.equal(req("3", "10-25"), "no");
+  assert.equal(req("3", "25-50"), "yes");
+  assert.equal(req("4", "25-50"), "no");
+  assert.equal(req("4", "50-100"), "yes");
+  assert.equal(g({ cost: "10-25" }).ocg, "no");
+  assert.equal(g({ cost: "25-50" }).ocg, "yes");
+  const status = (p, id) => evaluateReq(REQ_MAP[id], withProfile(p)).applicability.status;
+  assert.equal(status({ opmca: "3", cost: "10-25" }, "CAP-1"), "recommended");
+  assert.equal(status({ opmca: "3", cost: "25-50" }, "CAP-1"), "required");
+  assert.equal(status({ cost: "10-25" }, "MON-6"), "na");
+  assert.equal(status({ cost: "25-50" }, "MON-6"), "required");
 });
 
 test("GC EARB thresholds follow the OPMCA class; emerging technology always triggers review", () => {
@@ -147,10 +167,13 @@ test("GC EARB thresholds follow the OPMCA class; emerging technology always trig
   assert.equal(e("4", "25-50"), "yes");
   assert.equal(e("4", "lt1", { emergingTech: "yes" }), "yes");
   assert.equal(e("1", "25-50", { projectType: "realproperty" }), "no");
+  // Concept cases use the same thresholds (Policy on the Planning and Management of Investments, Appendix B).
+  assert.equal(governance({ ...PROFILE_DEFAULTS, projectType: "digital", opmca: "2", cost: "5-10" }).conceptCase, "yes");
+  assert.equal(governance({ ...PROFILE_DEFAULTS, projectType: "digital", opmca: "3", cost: "5-10" }).conceptCase, "no");
 });
 
 test("gating model is recommended from complexity and can be overridden", () => {
-  const m = (p) => governance({ ...PROFILE_DEFAULTS, opmca: "4", limit: "100", ...p });
+  const m = (p) => governance({ ...PROFILE_DEFAULTS, opmca: "4", ...p });
   assert.equal(m({ pcra: "1", cost: "lt1" }).model, "light");
   assert.equal(m({ pcra: "2", cost: "5-10" }).model, "streamlined");
   assert.equal(m({ pcra: "3", cost: "5-10" }).model, "full");
@@ -159,13 +182,15 @@ test("gating model is recommended from complexity and can be overridden", () => 
 });
 
 test("applicability follows the profile", () => {
-  const small = withProfile({ opmca: "4", limit: "100", cost: "lt1", pcra: "1", procurement: "none", personalInfo: "no", automatedDecision: "no", projectType: "business", delivery: "waterfall", newFunding: "no" });
+  const small = withProfile({ opmca: "4", cost: "lt1", pcra: "1", procurement: "none", personalInfo: "no", automatedDecision: "no", projectType: "business", delivery: "waterfall", newFunding: "no" });
   const status = (s, id) => evaluateReq(REQ_MAP[id], s).applicability.status;
   for (const id of ["APP-1", "APP-4", "APP-5", "APP-6", "PRO-1", "DIG-1", "DIG-2", "DIG-3", "PLN-9"]) assert.equal(status(small, id), "na", id);
   assert.equal(status(small, "GAT-2"), "recommended");
   assert.equal(status(small, "INV-7"), "recommended");
-  const big = withProfile({ opmca: "2", limit: "10", cost: "25-50", pcra: "3", projectType: "digital" });
-  for (const id of ["APP-1", "APP-3", "APP-4", "GAT-2", "MON-2", "INV-7"]) assert.equal(status(big, id), "required", id);
+  const big = withProfile({ opmca: "2", cost: "25-50", pcra: "3", projectType: "digital" });
+  for (const id of ["APP-1", "APP-3", "APP-4", "APP-8", "GAT-2", "MON-2", "MON-6", "INV-7", "CAP-1"]) assert.equal(status(big, id), "required", id);
+  assert.equal(status(big, "GOV-7"), "na");
+  assert.equal(status(withProfile({ horizontal: "yes" }), "GOV-7"), "required");
   assert.equal(status(big, "CAP-2"), "departmental");
 });
 
@@ -199,14 +224,15 @@ test("scoring, readiness for the next gate and risk ranking", () => {
   assert.equal(suggestedDecision({ progress: 1, score: 0.75 }, [{ risk: { level: "High" } }]), "conditional");
 });
 
-test("the sample project needs Treasury Board approval for cost and complexity", () => {
+test("the sample project needs Treasury Board approval because its PCRA level exceeds its class", () => {
   const g = governance(sampleState().profile, sampleState().pcraAnswers);
   assert.equal(g.pcra, 3);
   assert.equal(g.tb, "yes");
-  assert.deepEqual(g.tbReasons.sort(), ["cost", "pcra"]);
+  assert.deepEqual(g.tbReasons, ["pcra"]);
   assert.equal(g.earb, "yes");
   const keys = approvalsRoadmap(sampleState(), g).map((a) => a.key);
-  for (const k of ["tbProject", "funding", "earbConcept", "pia", "aia", "ato"]) assert.ok(keys.includes(k), k);
+  for (const k of ["conceptCase", "pcra", "earb", "tbDefinition", "tbImplementation", "ocg", "funding", "pia", "aia", "ato"]) assert.ok(keys.includes(k), k);
+  assert.ok(!keys.includes("expenditure"), "departmental expenditure step replaced by the Treasury Board one");
   assert.ok(rightSizing(sampleState()).length > 0);
 });
 

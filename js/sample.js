@@ -35,7 +35,6 @@ export function sampleState() {
     projectType: "digital",
     cost: "25-50",
     opmca: "2",
-    limit: "10",
     pcra: "estimate",
     newFunding: "yes",
     horizontal: "no",

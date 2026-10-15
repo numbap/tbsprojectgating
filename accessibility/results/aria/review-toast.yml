@@ -43,7 +43,7 @@
   - button "Clear results"
   - paragraph: Text is processed in your browser and never uploaded. For PDF or Word documents, copy and paste the text.
   - heading "Findings" [level=2]
-  - paragraph: Read 20 sentences. Found statements relevant to 23 of 62 requirements. Matches are leads to verify, not proof.
+  - paragraph: Read 20 sentences. Found statements relevant to 23 of 66 requirements. Matches are leads to verify, not proof.
   - heading "Suggested scope answers" [level=3]
   - list:
     - listitem:
@@ -199,14 +199,14 @@
   - text: "Only caveated mentions Matched: training"
   - blockquote "Contains wording such as 'not', 'planned', 'TBD' or 'draft'": Change management and training plans are not yet developed.
   - link "OCM-3 Transition to operations with a funded owner":
-    - /url: "#/assess/G6/OCM-3"
+    - /url: "#/assess/G5/OCM-3"
     - strong: OCM-3
     - text: Transition to operations with a funded owner
   - text: "Evidence found Matched: operations"
   - blockquote: The estimated total cost is $38 million over four years, including ongoing operations for the first two years.
   - heading "Monitoring, reporting and close-out" [level=3]
   - link "MON-3 Lessons learned captured and shared":
-    - /url: "#/assess/G7/MON-3"
+    - /url: "#/assess/G1/MON-3"
     - strong: MON-3
     - text: Lessons learned captured and shared
   - text: "Evidence found Matched: lessons learned"
@@ -243,6 +243,9 @@
     - link "APP-6":
       - /url: "#/req/APP-6"
     - text: ·
+    - link "APP-8":
+      - /url: "#/req/APP-8"
+    - text: ·
     - link "GAT-1":
       - /url: "#/req/GAT-1"
     - text: ·
@@ -251,6 +254,9 @@
     - text: ·
     - link "GAT-3":
       - /url: "#/req/GAT-3"
+    - text: ·
+    - link "GAT-4":
+      - /url: "#/req/GAT-4"
     - text: ·
     - link "PLN-1":
       - /url: "#/req/PLN-1"
@@ -320,6 +326,9 @@
     - text: ·
     - link "MON-5":
       - /url: "#/req/MON-5"
+    - text: ·
+    - link "MON-6":
+      - /url: "#/req/MON-6"
   - paragraph: Ask the project team specifically about these. Each requirement's library page has suggested questions.
 - contentinfo:
   - paragraph: "Self-assessment aid based on paraphrased Treasury Board of Canada Secretariat policy instruments and guidance. Not an official Government of Canada tool. Open source. Runs entirely in your browser: nothing you enter is sent to any server."

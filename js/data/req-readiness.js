@@ -1,9 +1,11 @@
 // Requirements: digital, security, privacy and inclusion; readiness and
-// transition; monitoring, reporting and close-out. Paraphrased guidance, not
-// official text.
+// transition; monitoring, reporting and close-out. Paraphrased, with section
+// references checked against the Directive on the Management of Projects and
+// Programmes (DMPP) and the 2010 gating guide. Not official text.
 
 const DMPP = { en: "Directive on the Management of Projects and Programmes", fr: "Directive sur la gestion des projets et programmes" };
 const GUIDE = { en: "A Guide to Project Gating for IT-Enabled Projects (TBS)", fr: "Guide sur le contrôle des projets de TI par points de contrôle (SCT)" };
+const cite = (en, fr) => ({ en, fr });
 const src = (...parts) => ({ en: parts.map((p) => p.en).join("; "), fr: parts.map((p) => p.fr).join("; ") });
 const NOT_DIGITAL = { when: { digital: "no" }, status: "na", reason: { en: "Not a digital or IT-enabled project.", fr: "Il ne s'agit pas d'un projet numérique ou habilité par la TI." } };
 
@@ -222,7 +224,7 @@ export const READINESS = [
   // ---------------------------------------------------------------- OCM
   {
     id: "OCM-1", gate: "G4", sev: "medium", base: "required",
-    source: GUIDE,
+    source: src(cite("DMPP 4.2.6", "DGPP 4.2.6"), GUIDE),
     title: { en: "Organizational change and stakeholder engagement plan", fr: "Plan de gestion du changement et de mobilisation des intervenants" },
     summary: { en: "The people affected by the change are identified, and a plan engages them, prepares them and addresses resistance from early on, not just at deployment.", fr: "Les personnes touchées par le changement sont déterminées, et un plan les mobilise, les prépare et traite la résistance dès le début, et pas seulement au déploiement." },
     look: {
@@ -250,9 +252,9 @@ export const READINESS = [
   },
   {
     id: "OCM-2", gate: "G6", sev: "high", base: "required",
-    source: GUIDE,
+    source: src(cite("DMPP 4.2.20", "DGPP 4.2.20"), GUIDE),
     title: { en: "Business readiness and training", fr: "Préparation des secteurs d'activité et formation" },
-    summary: { en: "Business processes, procedures, staffing and training are ready for go-live, confirmed by the business owner.", fr: "Les processus opérationnels, les procédures, la dotation et la formation sont prêts pour la mise en service, ce que confirme le responsable opérationnel." },
+    summary: { en: "Business processes, procedures, staffing and training are ready for go-live, confirmed by the business owner. For operational readiness and deployment decisions, input from the stakeholders affected is sought and documented.", fr: "Les processus opérationnels, les procédures, la dotation et la formation sont prêts pour la mise en service, ce que confirme le responsable opérationnel. Pour les décisions sur l'état de préparation opérationnelle et le déploiement, l'apport des intervenants touchés est sollicité et consigné." },
     look: {
       en: ["The business readiness checklist signed by the business owner.", "Training completion rates for users."],
       fr: ["La liste de vérification de l'état de préparation signée par le responsable opérationnel.", "Les taux d'achèvement de la formation des utilisateurs."],
@@ -277,10 +279,10 @@ export const READINESS = [
     keywords: { en: ["business readiness", "training", "procedures", "go-live readiness"], fr: ["préparation des secteurs d'activité", "formation", "procédures", "préparation à la mise en service"] },
   },
   {
-    id: "OCM-3", gate: "G6", sev: "high", base: "required",
-    source: src(GUIDE, DMPP),
+    id: "OCM-3", gate: "G5", revisit: ["G6"], sev: "high", base: "required",
+    source: src(cite("DMPP 4.2.30", "DGPP 4.2.30"), GUIDE),
     title: { en: "Transition to operations with a funded owner", fr: "Transition vers l'exploitation avec un responsable financé" },
-    summary: { en: "A service owner, support model, service levels and ongoing funding are in place so the solution can be run and improved after the project ends.", fr: "Un responsable du service, un modèle de soutien, des niveaux de service et un financement continu sont en place afin que la solution puisse être exploitée et améliorée après la fin du projet." },
+    summary: { en: "A transition plan is developed before implementation begins and updated throughout the project, so that by go-live a service owner, support model, service levels and ongoing funding are in place to run and improve the solution after the project ends.", fr: "Un plan de transition est élaboré avant le début de la mise en œuvre et mis à jour tout au long du projet, de sorte qu'à la mise en service, un responsable du service, un modèle de soutien, des niveaux de service et un financement continu soient en place pour exploiter et améliorer la solution après la fin du projet." },
     look: {
       en: ["The transition plan and the receiving organization's acceptance.", "Ongoing funding confirmed in reference levels.", "Support processes (service desk, incident, change)."],
       fr: ["Le plan de transition et l'acceptation par l'organisation qui reçoit la solution.", "Le financement continu confirmé dans les niveaux de référence.", "Les processus de soutien (centre de services, incidents, changements)."],
@@ -364,7 +366,7 @@ export const READINESS = [
   // ---------------------------------------------------------------- MON
   {
     id: "MON-1", gate: "G4", revisit: ["G5", "G6"], sev: "medium", base: "required",
-    source: src(DMPP, { en: "monitoring and reporting", fr: "surveillance et production de rapports" }),
+    source: src(cite("DMPP 4.1.5, 4.2.10", "DGPP 4.1.5, 4.2.10")),
     title: { en: "Regular status reporting against tolerances", fr: "Rapports d'étape réguliers par rapport aux tolérances" },
     summary: { en: "Progress on scope, schedule, cost, risks and benefits is reported regularly to governance against the baseline and tolerances, with honest status.", fr: "Les progrès en matière de portée, de calendrier, de coûts, de risques et d'avantages sont communiqués régulièrement à la gouvernance par rapport aux données de référence et aux tolérances, avec un état honnête." },
     look: {
@@ -392,7 +394,7 @@ export const READINESS = [
   },
   {
     id: "MON-2", gate: "G4", sev: "medium", base: "recommended",
-    source: src(DMPP, { en: "reporting to TBS on projects under oversight", fr: "rapports au SCT sur les projets sous surveillance" }),
+    source: src(cite("DMPP 4.5.1 (digital investment oversight by the Chief Information Officer of Canada)", "DGPP 4.5.1 (surveillance des investissements numériques par le dirigeant principal de l'information du Canada)")),
     title: { en: "Portfolio and central reporting", fr: "Rapports sur le portefeuille et rapports centraux" },
     summary: { en: "The project reports to the departmental portfolio, and projects approved by Treasury Board or under central oversight report to TBS (including the Office of the Chief Information Officer for digital projects) as required.", fr: "Le projet rend compte au portefeuille ministériel, et les projets approuvés par le Conseil du Trésor ou faisant l'objet d'une surveillance centrale rendent compte au SCT (y compris au Bureau du dirigeant principal de l'information pour les projets numériques) au besoin." },
     look: {
@@ -422,10 +424,10 @@ export const READINESS = [
     ],
   },
   {
-    id: "MON-3", gate: "G7", sev: "medium", base: "required",
-    source: src(DMPP, GUIDE),
+    id: "MON-3", gate: "G1", revisit: ["G3", "G5", "G6", "G7"], sev: "medium", base: "required",
+    source: src(cite("DMPP 4.2.32, 4.2.33, 4.1.9", "DGPP 4.2.32, 4.2.33, 4.1.9")),
     title: { en: "Lessons learned captured and shared", fr: "Leçons apprises consignées et partagées" },
-    summary: { en: "Lessons learned are collected throughout the project, not only at the end, and shared with the PMO so future projects benefit.", fr: "Les leçons apprises sont recueillies tout au long du projet, et pas seulement à la fin, et partagées avec le BGP afin que les projets futurs en profitent." },
+    summary: { en: "Lessons learned from similar projects are reviewed when the project starts, and the project's own lessons are documented at the end of each phase and shared with key stakeholders and the senior designated official.", fr: "Les leçons apprises de projets semblables sont examinées au démarrage du projet, et les leçons du projet sont consignées à la fin de chaque phase et communiquées aux principaux intervenants et au cadre supérieur désigné." },
     look: {
       en: ["The lessons learned log.", "Evidence that the PMO has received and used them."],
       fr: ["Le registre des leçons apprises.", "La preuve que le BGP les a reçues et utilisées."],
@@ -444,16 +446,16 @@ export const READINESS = [
     },
     describe: { en: "Lessons learned from {project} were captured at each gate and at close-out, and shared with the {dept} project management office.", fr: "Les leçons apprises de {project} ont été consignées à chaque point de contrôle et à la clôture, et partagées avec le bureau de gestion de projet de {dept}." },
     questions: {
-      en: ["Have lessons learned been captured?", "Have they been shared with the PMO?"],
-      fr: ["Les leçons apprises ont-elles été consignées?", "Ont-elles été partagées avec le BGP?"],
+      en: ["Were lessons from similar projects reviewed at the start?", "Are lessons documented at the end of each phase?", "Are they shared with the senior designated official?"],
+      fr: ["Les leçons de projets semblables ont-elles été examinées au démarrage?", "Les leçons sont-elles consignées à la fin de chaque phase?", "Sont-elles communiquées au cadre supérieur désigné?"],
     },
     keywords: { en: ["lessons learned", "retrospective"], fr: ["leçons apprises", "rétrospective"] },
   },
   {
     id: "MON-4", gate: "G7", sev: "high", base: "required",
-    source: src(DMPP, GUIDE),
+    source: src(cite("DMPP 4.2.34", "DGPP 4.2.34"), GUIDE),
     title: { en: "Formal close-out", fr: "Clôture officielle" },
-    summary: { en: "The project is formally closed: deliverables are accepted, contracts and finances are closed, documentation is archived, resources are released and a close-out report is approved by the sponsor.", fr: "Le projet est officiellement clos : les livrables sont acceptés, les contrats et les finances sont fermés, la documentation est archivée, les ressources sont libérées et un rapport de clôture est approuvé par le promoteur." },
+    summary: { en: "The project is formally closed: deliverables are accepted, contracts and finances are closed, documentation is archived and resources released. The close-out report is shared with the departmental committee that approved the project and with the senior designated official.", fr: "Le projet est officiellement clos : les livrables sont acceptés, les contrats et les finances sont fermés, la documentation est archivée et les ressources sont libérées. Le rapport de clôture est communiqué au comité ministériel qui a approuvé le projet et au cadre supérieur désigné." },
     look: {
       en: ["The close-out report and the sponsor's approval.", "Final financial position compared with the approved budget.", "Contract close-out records."],
       fr: ["Le rapport de clôture et l'approbation du promoteur.", "La situation financière finale comparée au budget approuvé.", "Les comptes rendus de clôture des contrats."],
@@ -481,7 +483,7 @@ export const READINESS = [
     id: "MON-5", gate: "G7", sev: "medium", base: "recommended",
     source: src(GUIDE, { en: "The Independent Reviewer's Handbook (TBS)", fr: "Guide de l'examinateur indépendant (SCT)" }),
     title: { en: "Post-implementation review", fr: "Examen postérieur à la mise en œuvre" },
-    summary: { en: "A review some months after go-live assesses whether the solution is working as intended, whether outcomes are being achieved and what should change.", fr: "Un examen quelques mois après la mise en service évalue si la solution fonctionne comme prévu, si les résultats sont atteints et ce qui devrait changer." },
+    summary: { en: "About six months after completion, a review confirms whether the project delivered as planned, whether business outcomes are being realized, how well the transition to an ongoing service went, and what the department should learn from it.", fr: "Environ six mois après l'achèvement, un examen confirme si le projet a été réalisé comme prévu, si les résultats opérationnels sont obtenus, si la transition vers un service continu s'est bien déroulée et ce que le ministère devrait en retenir." },
     look: {
       en: ["The post-implementation review report and the management response."],
       fr: ["Le rapport d'examen postérieur à la mise en œuvre et la réponse de la direction."],
@@ -506,6 +508,37 @@ export const READINESS = [
     keywords: { en: ["post-implementation review", "PIR"], fr: ["examen postérieur à la mise en œuvre", "EPMO"] },
     scope: [
       { when: { highRisk: "yes" }, status: "required", reason: { en: "High-risk projects are expected to have a formal post-implementation review.", fr: "Les projets à risque élevé doivent faire l'objet d'un examen officiel postérieur à la mise en œuvre." } },
+    ],
+  },
+  {
+    id: "MON-6", gate: "G3", revisit: ["G5", "G7"], sev: "medium", base: "required",
+    source: src(cite("DMPP 4.1.6", "DGPP 4.1.6")),
+    title: { en: "Baseline information to the Office of the Comptroller General", fr: "Données de référence au Bureau du contrôleur général" },
+    summary: { en: "For every project with a total cost of $25 million or more, the senior designated official submits baseline project information on scope, schedule, costs and risks to the Office of the Comptroller General after project approval, expenditure authority, any amended approval or authority, and project close-out.", fr: "Pour tout projet dont le coût total est de 25 M$ ou plus, le cadre supérieur désigné soumet au Bureau du contrôleur général des données de référence sur la portée, le calendrier, les coûts et les risques après l'approbation du projet, le pouvoir de dépenser, toute approbation ou tout pouvoir modifié, et la clôture du projet." },
+    look: {
+      en: ["Confirmation from the senior designated official's office that each baseline was submitted.", "The baseline figures, consistent with the approved scope, schedule and cost."],
+      fr: ["La confirmation du bureau du cadre supérieur désigné que chaque donnée de référence a été soumise.", "Les données de référence, conformes à la portée, au calendrier et aux coûts approuvés."],
+    },
+    rightsize: {
+      en: ["Reuse the baseline already prepared for the approval; no separate analysis is needed."],
+      fr: ["Réutiliser les données de référence préparées pour l'approbation; aucune analyse distincte n'est nécessaire."],
+    },
+    consequences: {
+      en: ["Non-compliance with the directive; the Comptroller General cannot track the project against its baseline."],
+      fr: ["Non-conformité à la directive; le contrôleur général ne peut suivre le projet par rapport à ses données de référence."],
+    },
+    mitigations: {
+      en: ["Send the current baseline to the senior designated official's office after the next approval."],
+      fr: ["Transmettre les données de référence actuelles au bureau du cadre supérieur désigné après la prochaine approbation."],
+    },
+    describe: { en: "Baseline information on the scope, schedule, costs and risks of {project} is submitted to the Office of the Comptroller General after each approval and at close-out.", fr: "Des données de référence sur la portée, le calendrier, les coûts et les risques de {project} sont soumises au Bureau du contrôleur général après chaque approbation et à la clôture." },
+    questions: {
+      en: ["Has baseline information been submitted to the Office of the Comptroller General after each approval so far?", "Is submission planned after future approvals and at close-out?"],
+      fr: ["Des données de référence ont-elles été soumises au Bureau du contrôleur général après chaque approbation jusqu'ici?", "La soumission est-elle prévue après les approbations futures et à la clôture?"],
+    },
+    keywords: { en: ["Comptroller General", "OCG", "baseline information"], fr: ["contrôleur général", "BCG", "données de référence"] },
+    scope: [
+      { when: { ocg: "no" }, status: "na", reason: { en: "The total cost is under $25 million.", fr: "Le coût total est inférieur à 25 M$." } },
     ],
   },
 ];

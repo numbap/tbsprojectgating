@@ -33,19 +33,19 @@
   - complementary:
     - navigation "Points de contrôle":
       - text: Points de contrôle complets (sept)
-      - link "G1 Évaluation stratégique et concept 3/4":
+      - link "G1 Évaluation stratégique et concept 3/6":
         - /url: "#/assess/G1"
-      - link "G2 Approche du projet 6/11":
+      - link "G2 Approche du projet 6/12":
         - /url: "#/assess/G2"
-      - link "G3 Analyse de rentabilisation et état de préparation général prochain 5/10":
+      - link "G3 Analyse de rentabilisation et état de préparation général prochain 5/12":
         - /url: "#/assess/G3"
-      - link "G4 Charte de projet et plan de gestion de projet 0/12":
+      - link "G4 Charte de projet et plan de gestion de projet 0/11":
         - /url: "#/assess/G4"
-      - link "G5 Plan de projet détaillé et spécifications fonctionnelles 1/10":
+      - link "G5 Plan de projet détaillé et spécifications fonctionnelles 1/11":
         - /url: "#/assess/G5"
-      - link "G6 Construction terminée et état de préparation au déploiement 0/6":
+      - link "G6 Construction terminée et état de préparation au déploiement 0/5":
         - /url: "#/assess/G6"
-      - link "G7 Examen postérieur à la mise en œuvre 0/4":
+      - link "G7 Examen postérieur à la mise en œuvre 0/3":
         - /url: "#/assess/G7"
       - paragraph:
         - link "Changer le modèle de points de contrôle dans la portée":
@@ -56,20 +56,20 @@
     - strong: Point de contrôle 3
     - text: L'investissement est-il justifié et financé, et l'organisation est-elle prête à s'engager?
   - paragraph:
-    - text: "Confirme l'analyse de rentabilisation : l'option recommandée, ses coûts sur tout le cycle de vie, ses avantages, ses risques et sa source de financement, et que l'organisation est prête à commencer. Pour les projets qui dépassent le pouvoir ministériel, c'est généralement à ce moment qu'on demande l'approbation du projet au Conseil du Trésor."
+    - text: "Confirme l'analyse de rentabilisation : l'option recommandée, ses coûts sur tout le cycle de vie, ses avantages, ses risques et sa source de financement, et que l'organisation est prête à commencer. Pour les projets qui dépassent le pouvoir du ministre, c'est généralement à ce moment qu'on demande au Conseil du Trésor le pouvoir de dépenser pour commencer la définition."
     - link "Lire le guide du point de contrôle":
       - /url: "#/gate/G3"
-  - img "État de préparation 30 %": 30 %
-  - text: 5 évaluées sur 10
+  - img "État de préparation 25 %": 25 %
+  - text: 5 évaluées sur 12
   - group: 6 éléments encore ouverts des points de contrôle antérieurs
   - button "Tout développer"
   - button "Tout réduire"
   - group:
     - text: INV-4 Analyse de rentabilisation approuvée élevée Obligatoire Partiellement satisfait
-    - paragraph: Une analyse de rentabilisation présente l'option recommandée, ses coûts, ses avantages, ses risques, son calendrier, son financement et l'état de préparation de l'organisation, et est approuvée par le promoteur et l'instance ministérielle des investissements.
+    - paragraph: Tout projet, y compris celui qui relève du pouvoir du ministre, est appuyé par une analyse de rentabilisation et une approbation consignée. L'analyse de rentabilisation présente l'option recommandée, ses coûts, ses avantages, ses risques, son calendrier, son financement et l'état de préparation de l'organisation, et elle est revalidée à chaque point de contrôle ultérieur.
     - paragraph:
       - strong: "Source :"
-      - text: Politique sur la planification et la gestion des investissements; Guide sur le contrôle des projets de TI par points de contrôle (SCT)
+      - text: DGPP annexe D (D.1), 4.2.19; Guide sur le contrôle des projets de TI par points de contrôle (SCT)
     - text: Applicabilité
     - combobox "Applicabilité":
       - option "Automatique (Obligatoire)" [selected]
@@ -152,8 +152,10 @@
   - group: GAT-2 Examen indépendant aux points de contrôle clés moyenne Obligatoire Non évalué
   - group: GAT-3 Conditions des points de contrôle antérieurs levées moyenne Obligatoire Non évalué
   - group: BEN-1 Avantages mesurables définis élevée Obligatoire Satisfait
+  - group: BEN-2 Plan de réalisation des avantages avec responsables moyenne Obligatoire Non évalué
   - group: PRO-1 Analyse du marché et stratégie d'approvisionnement élevée Obligatoire Non évalué
   - group: PRO-2 Autorité contractante et partenaires consultés tôt moyenne Recommandé Non évalué
+  - group: MON-6 Données de référence au Bureau du contrôleur général moyenne Obligatoire Non évalué
   - link "G2 Approche du projet":
     - /url: "#/assess/G2"
   - link "G4 Charte de projet et plan de gestion de projet":

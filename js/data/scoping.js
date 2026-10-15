@@ -54,29 +54,19 @@ export const PROFILE_FIELDS = [
     ] },
   { id: "cost", type: "choice", default: "5-10",
     label: { en: "Estimated total project cost (taxes included)", fr: "Coût total estimatif du projet (taxes comprises)" },
-    why: { en: "Compared with your department's project approval limit to decide whether Treasury Board approval is needed, and with the GC EARB thresholds for digital projects.", fr: "Comparé à la limite d'approbation des projets de votre ministère pour déterminer si l'approbation du Conseil du Trésor est nécessaire, et aux seuils du CEAI du GC pour les projets numériques." },
+    why: { en: "Without an approved capacity class, projects over $2.5M need Treasury Board approval. Cost also sets whether a PCRA is required, whether a digital project needs a concept case and GC EARB review, and whether baseline information goes to the Office of the Comptroller General ($25M or more).", fr: "Sans catégorie de capacité approuvée, les projets de plus de 2,5 M$ doivent être approuvés par le Conseil du Trésor. Le coût détermine aussi si une ECRP est requise, si un projet numérique exige un cas conceptuel et un examen par le CEAI du GC, et si des données de référence doivent être transmises au Bureau du contrôleur général (25 M$ ou plus)." },
     options: COST_BANDS.map(({ value, label }) => ({ value, label })) },
   { id: "opmca", type: "choice", default: "unknown",
     label: { en: "Your department's approved Organizational Project Management Capacity class (OPMCA)", fr: "Catégorie approuvée de capacité organisationnelle de gestion de projets de votre ministère (ECOGP)" },
-    why: { en: "A project whose complexity and risk level exceeds the department's capacity class needs Treasury Board approval. Ask your project management office; the assessment is refreshed at least every three years.", fr: "Un projet dont le niveau de complexité et de risque dépasse la catégorie de capacité du ministère doit être approuvé par le Conseil du Trésor. Renseignez-vous auprès de votre bureau de gestion de projet; l'évaluation est mise à jour au moins tous les trois ans." },
+    why: { en: "The Treasury Board-approved class sets the minister's project approval authority (Directive on the Management of Projects and Programmes, Appendix C). With class 1 or higher, the department approves projects whose PCRA level does not exceed its class, whatever their cost. Ask your project management office; the class is resubmitted at least every three years.", fr: "La catégorie approuvée par le Conseil du Trésor détermine le pouvoir d'approbation des projets du ministre (Directive sur la gestion des projets et programmes, annexe C). Avec une catégorie 1 ou plus, le ministère approuve les projets dont le niveau d'ECRP ne dépasse pas sa catégorie, quel que soit leur coût. Renseignez-vous auprès de votre bureau de gestion de projet; la catégorie est soumise de nouveau au moins tous les trois ans." },
     options: [
       { value: "none", label: { en: "No approved class", fr: "Aucune catégorie approuvée" } },
+      { value: "0", label: { en: "Class 0", fr: "Catégorie 0" } },
       { value: "1", label: { en: "Class 1: Sustaining", fr: "Catégorie 1 : Maintien" } },
       { value: "2", label: { en: "Class 2: Tactical", fr: "Catégorie 2 : Tactique" } },
       { value: "3", label: { en: "Class 3: Evolutionary", fr: "Catégorie 3 : Évolution" } },
       { value: "4", label: { en: "Class 4: Transformational", fr: "Catégorie 4 : Transformation" } },
       { value: "unknown", label: { en: "Don't know", fr: "Je ne sais pas" } },
-    ] },
-  { id: "limit", type: "choice", default: "2.5",
-    label: { en: "Your department's project approval limit", fr: "Limite d'approbation des projets de votre ministère" },
-    why: { en: "Every department has a base limit of $2.5M. A higher limit comes with an approved OPMCA; your project management office or CFO can confirm it.", fr: "Chaque ministère a une limite de base de 2,5 M$. Une limite plus élevée découle d'une ECOGP approuvée; votre bureau de gestion de projet ou votre DPF peut la confirmer." },
-    options: [
-      { value: "2.5", label: { en: "$2.5M (base limit)", fr: "2,5 M$ (limite de base)" } },
-      { value: "5", label: { en: "$5M", fr: "5 M$" } },
-      { value: "10", label: { en: "$10M", fr: "10 M$" } },
-      { value: "25", label: { en: "$25M", fr: "25 M$" } },
-      { value: "50", label: { en: "$50M", fr: "50 M$" } },
-      { value: "100", label: { en: "$100M or more", fr: "100 M$ ou plus" } },
     ] },
   { id: "pcra", type: "choice", default: "estimate",
     label: { en: "Project Complexity and Risk Assessment (PCRA) level", fr: "Niveau de l'évaluation de la complexité et des risques du projet (ECRP)" },
@@ -90,7 +80,7 @@ export const PROFILE_FIELDS = [
     ] },
   { id: "newFunding", type: "yesno", default: "no",
     label: { en: "Does the project need new funding or new authorities (not just existing reference levels)?", fr: "Le projet a-t-il besoin de nouveaux fonds ou de nouvelles autorisations (au-delà des niveaux de référence existants)?" },
-    why: { en: "New funding usually means a Budget or Memorandum to Cabinet process followed by a Treasury Board submission, whatever the project approval limit.", fr: "De nouveaux fonds signifient habituellement un processus budgétaire ou un mémoire au Cabinet suivi d'une présentation au Conseil du Trésor, quelle que soit la limite d'approbation des projets." } },
+    why: { en: "New funding usually means a Budget or Memorandum to Cabinet process followed by a Treasury Board submission, even when the project itself is within departmental approval authority.", fr: "De nouveaux fonds signifient habituellement un processus budgétaire ou un mémoire au Cabinet suivi d'une présentation au Conseil du Trésor, même lorsque le projet relève du pouvoir d'approbation ministériel." } },
   { id: "horizontal", type: "yesno", default: "no",
     label: { en: "Is it horizontal (several departments, agencies or jurisdictions)?", fr: "Est-il horizontal (plusieurs ministères, organismes ou administrations)?" },
     why: { en: "Horizontal projects are transformational by nature in the PCRA guidance, and their governance must work across organizations.", fr: "Selon le guide de l'ECRP, les projets horizontaux sont transformationnels par nature, et leur gouvernance doit fonctionner entre organisations." } },
@@ -131,8 +121,8 @@ export const PROFILE_FIELDS = [
       { value: "higher", label: { en: "Protected C or classified", fr: "Protégé C ou classifié" } },
     ] },
   { id: "emergingTech", type: "yesno", default: "no",
-    label: { en: "Does it use emerging technology (for example AI, blockchain) or need an exception to digital policy?", fr: "Utilise-t-il une technologie émergente (p. ex. IA, chaîne de blocs) ou nécessite-t-il une exception à la politique numérique?" },
-    why: { en: "These trigger review by the GC Enterprise Architecture Review Board regardless of cost.", fr: "Ces éléments entraînent un examen par le Conseil d'examen de l'architecture intégrée du GC, quel que soit le coût." } },
+    label: { en: "Does it use emerging technology (for example AI), need an exception to digital policy, host Protected B or lower information outside public cloud, or extend support for an unsupported technology?", fr: "Utilise-t-il une technologie émergente (p. ex. IA), nécessite-t-il une exception à la politique numérique, héberge-t-il de l'information Protégé B ou moins ailleurs que dans le nuage public, ou prolonge-t-il le soutien d'une technologie non soutenue?" },
+    why: { en: "Any of these sends a digital initiative to the GC Enterprise Architecture Review Board regardless of cost (Directive on Service and Digital, 4.3.2).", fr: "Chacun de ces éléments entraîne l'examen d'une initiative numérique par le Conseil d'examen de l'architecture intégrée du GC, quel que soit le coût (Directive sur les services et le numérique, 4.3.2)." } },
   { id: "publicFacing", type: "yesno", default: "yes",
     label: { en: "Will it deliver a service to the public?", fr: "Offrira-t-il un service au public?" },
     why: { en: "Public services bring official languages, accessibility, service standards and client feedback requirements into scope.", fr: "Les services au public font intervenir les exigences en matière de langues officielles, d'accessibilité, de normes de service et de rétroaction de la clientèle." } },
@@ -244,7 +234,7 @@ export function profileWarnings(profile, gov) {
   if (profile.opmca === "unknown") w.push(t("warn.opmcaUnknown"));
   if (profile.pcra === "estimate") w.push(t("warn.pcraEstimate"));
   if (gov?.pcraFloor) w.push(t("warn.horizontal"));
-  if (gov && gov.pcra && gov.opmcaClass !== null && gov.pcra > gov.opmcaClass) w.push(t("warn.pcraExceeds", { pcra: gov.pcra, opmca: gov.opmcaClass }));
+  if (gov && gov.pcra && gov.opmcaClass >= 1 && gov.pcra > gov.opmcaClass) w.push(t("warn.pcraExceeds", { pcra: gov.pcra, opmca: gov.opmcaClass }));
   if (profile.security === "higher") w.push(t("warn.classified"));
   if (profile.delivery === "agile") w.push(t("warn.agile"));
   if (profile.cost === "gt1000") w.push(t("warn.mega"));

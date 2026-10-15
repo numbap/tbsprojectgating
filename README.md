@@ -8,9 +8,11 @@ Each requirement comes with five lenses: **where to look** for evidence, how to 
 
 ## Workflow
 
-1. **Scope**: a short interview (project type, cost, OPMCA class and approval limit, PCRA level, new funding, horizontality, procurement, delivery approach, personal information, automated decisions, security, emerging technology, public service, next gate). If no official PCRA exists yet, twelve **indicative complexity and risk questions** sampling the seven PCRA categories give an estimated level using the official score bands. A live **governance summary** shows:
-   - **Approval authority**: Treasury Board project approval is flagged when the cost exceeds the department's project approval limit (the $2.5M base limit applies without an approved OPMCA class), when the PCRA level exceeds the OPMCA class, or when the cost range straddles the limit (confirm). New funding flags a Treasury Board submission for funding.
-   - **GC Enterprise Architecture Review Board**: digital initiatives at or above the department's threshold ($2.5M with no or a class 1 OPMCA, $5M class 2, $10M class 3, $25M class 4; National Defence $15M is noted) or using emerging technology.
+1. **Scope**: a short interview (project type, cost, OPMCA class, PCRA level, new funding, horizontality, procurement, delivery approach, personal information, automated decisions, security, emerging technology, public service, next gate). If no official PCRA exists yet, twelve **indicative complexity and risk questions** sampling the seven PCRA categories give an estimated level using the official score bands. A live **governance summary** shows:
+   - **Approval authority** (Directive on the Management of Projects and Programmes, Appendix C): without an approved OPMCA class of 1 or higher, every project over the $2.5M base limit needs Treasury Board approval; with class 1 or higher, a project needs it when its PCRA level exceeds the class, whatever its cost. When Treasury Board approval is needed, the tool shows the two stages of Appendix D (expenditure authority for definition, then project approval and expenditure authority for implementation) and the cost estimate each needs. New funding flags a Treasury Board submission for funding.
+   - **PCRA required**: above the Appendix C threshold for the class ($2.5M with no class or class 0; $5M, $10M, $25M, $50M for classes 1 to 4), submitted to TBS before definition.
+   - **Digital oversight**: a concept case reviewed by the GC CIO and a GC Enterprise Architecture Review Board review at or above the department's threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4; National Defence $15M is noted), or for emerging technology, policy exceptions, Protected B or lower hosting outside public cloud, or extended support for unsupported technology.
+   - **Baseline reporting** to the Office of the Comptroller General for projects of $25M or more.
    - **Gating model**: full (seven gates), streamlined (five) or light (three), recommended from complexity, authority and cost, and overridable.
    - **Independent review** expectation and the related assessments (PIA, AIA, SA&A, GBA Plus).
 2. **Review documents**: paste a concept note, charter, business case draft or briefing note, in English or French. The review maps sentences to requirements, flags caveats (“TBD”, “planned”, “draft”, « à déterminer », « prévu »), and suggests scope answers (cost from dollar amounts, PCRA level, OPMCA class, personal information, agile delivery, new funding, and so on). It runs locally and nothing is uploaded.
@@ -19,20 +21,20 @@ Each requirement comes with five lenses: **where to look** for evidence, how to 
 
 Also:
 
-- **Requirements library**: all 62 requirements across 12 areas, searchable and filterable by area and gate.
+- **Requirements library**: all 66 requirements across 12 areas, searchable and filterable by area and gate.
 - **Gate guide**: the three gating models and a page per gate (question, purpose, decision, gatekeepers, deliverables, review topics, pitfalls, requirements first due and revisited).
 - **Governance path**: an interactive decision tree from the departmental framework and OPMCA through each gate to close-out, including approval authority, GC EARB, agile delivery, failed gates, tolerance breaches and rebaselining, and stopping a project.
 
 ## Sources
 
-Content is paraphrased from, and should be checked against:
+Content is paraphrased from the following, and should be checked against their current versions:
 
 - Directive on the Management of Projects and Programmes, and Policy on the Planning and Management of Investments (Treasury Board)
 - A Guide to Project Gating for IT-Enabled Projects (TBS, 2010); The Independent Reviewer's Handbook; Review Topics for Enquiry
 - Guide to Using the Project Complexity and Risk Assessment Tool; Organizational Project Management Capacity Assessment guidance
 - Directive on Service and Digital (GC EARB thresholds), Directive on Privacy Impact Assessment, Directive on Automated Decision-Making, Policy on Government Security / Directive on Security Management, Directive on the Management of Procurement, Directive on the Management of Real Property, Official Languages Act, Accessible Canada Act, GBA Plus guidance
 
-The environment this tool was built in could not reach canada.ca directly; dollar thresholds and section references were cross-checked through search results only. **Verify thresholds and approval limits against the current instruments and your department's approved limits before relying on them.**
+**Verification status (October 2026).** The approval rules, thresholds and section references for the Directive on the Management of Projects and Programmes (including Appendices A to E), the Policy on the Planning and Management of Investments and the Directive on Service and Digital were checked against the text on tbs-sct.canada.ca, and the gates, gating models and estimate accuracy against the 2010 gating guide. Requirement sources cite the sections they paraphrase. The PCRA score bands (under 45, 45–63, 64–82, 83 and up) and the other instruments listed above were confirmed through secondary sources only, because www.canada.ca could not be reached from the build environment.
 
 ## Running
 
@@ -123,7 +125,7 @@ Met and departmental requirements count as 1, partial 0.5, planned 0.25, everyth
 
 ## Limitations
 
-- Requirements are **paraphrased** and do not reproduce the instruments. Section numbers are deliberately not cited.
+- Requirements are **paraphrased** and do not reproduce the instruments. Section references point to where to read the authoritative text.
 - The complexity estimate is **indicative**; the official TBS PCRA tool is still required. The approval determination is a guide based on the inputs you give; confirm it with your PMO, CFO and the TBS program sector.
 - Departments define their own gates and evidence; map this tool's gates to your framework.
 - The document review is keyword-based. Treat its matches as leads, not proof.

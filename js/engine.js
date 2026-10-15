@@ -57,19 +57,33 @@ export function getAnswer(state, id) {
 
 // ------------------------------------------------------------------ governance profile
 
-// Thresholds above which digital initiatives go to the GC Enterprise
-// Architecture Review Board, by OPMCA class (Directive on Service and Digital).
-// National Defence has its own threshold ($15M), noted in the interface.
-export const EARB_THRESHOLDS = { none: 2.5, unknown: 2.5, 1: 2.5, 2: 5, 3: 10, 4: 25 };
+// Thresholds from the source instruments, in millions of dollars:
+// - GC EARB review and digital concept cases, by OPMCA class (Directive on
+//   Service and Digital 4.3.2.1; Policy on the Planning and Management of
+//   Investments, Appendix B). National Defence ($15M) is noted in the interface.
+// - Completing a PCRA, by OPMCA class (Directive on the Management of Projects
+//   and Programmes, Appendix C).
+export const EARB_THRESHOLDS = { none: 2.5, unknown: 2.5, 0: 2.5, 1: 2.5, 2: 5, 3: 10, 4: 25 };
+export const PCRA_THRESHOLDS = { none: 2.5, unknown: 2.5, 0: 2.5, 1: 5, 2: 10, 3: 25, 4: 50 };
 export const BASE_LIMIT = 2.5;
+export const OCG_THRESHOLD = 25;
 
 const compare = (band, limit) => (band.min >= limit ? "above" : band.max <= limit ? "within" : "straddles");
+const tri = (c) => (c === "above" ? "yes" : c === "within" ? "no" : "check");
 
 // Derives complexity, authority, oversight and gating model from the profile.
+//
+// Approval authority follows Appendix C of the Directive on the Management of
+// Projects and Programmes: departments without an approved OPMCA class (or with
+// class 0) need Treasury Board approval for every project over the $2.5M base
+// limit; with class 1 or higher, the minister may approve projects whose PCRA
+// level does not exceed the class, whatever their cost. Treasury Board may
+// still call in any project.
 export function governance(profile, pcraAnswers = {}) {
   const p = { ...PROFILE_DEFAULTS, ...profile };
   const band = COST_MAP[p.cost] ?? COST_MAP["5-10"];
-  const opmcaClass = ["1", "2", "3", "4"].includes(p.opmca) ? Number(p.opmca) : null;
+  const opmcaClass = ["0", "1", "2", "3", "4"].includes(p.opmca) ? Number(p.opmca) : null;
+  const hasClass = opmcaClass >= 1;
 
   // Complexity and risk.
   let pcra = null;
@@ -88,30 +102,36 @@ export function governance(profile, pcraAnswers = {}) {
       pcraFloor = est.floors.includes("horizontal");
     }
   }
+  const pcraThreshold = PCRA_THRESHOLDS[p.opmca] ?? BASE_LIMIT;
+  const pcraRequired = tri(compare(band, pcraThreshold));
 
-  // Project approval authority.
-  const selectedLimit = Number(p.limit) || BASE_LIMIT;
-  const limit = opmcaClass ? selectedLimit : BASE_LIMIT;
+  // Project approval authority (Appendix C).
   const reasons = [];
-  const costVsLimit = compare(band, limit);
-  if (costVsLimit === "above") reasons.push("cost");
-  if (costVsLimit === "straddles") reasons.push("costStraddles");
-  if (pcra && opmcaClass && pcra > opmcaClass) reasons.push("pcra");
-  if (!opmcaClass && band.min >= BASE_LIMIT) reasons.push("noOpmca");
-  let tb = "no";
-  if (reasons.some((r) => ["cost", "pcra", "noOpmca"].includes(r))) tb = "yes";
-  else if (reasons.includes("costStraddles") || (!pcra && opmcaClass && opmcaClass < 4)) tb = "check";
-  if (tb === "check" && !reasons.length) reasons.push("pcraUnknown");
-  const limitIgnored = !opmcaClass && selectedLimit > BASE_LIMIT;
+  let tb;
+  let tbBasis;
+  if (!hasClass) {
+    tbBasis = "base";
+    tb = tri(compare(band, BASE_LIMIT));
+    if (tb !== "no") reasons.push("noOpmca");
+  } else {
+    tbBasis = "class";
+    if (pcra && pcra > opmcaClass) { tb = "yes"; reasons.push("pcra"); }
+    else if (pcra) tb = "no";
+    else if (pcraRequired === "no") { tb = "no"; tbBasis = "belowThreshold"; }
+    else { tb = "check"; reasons.push("pcraUnknown"); }
+  }
 
   // Oversight.
   const digital = ["digital", "mixed"].includes(p.projectType);
-  const earbThreshold = EARB_THRESHOLDS[p.opmca] ?? 2.5;
+  const earbThreshold = EARB_THRESHOLDS[p.opmca] ?? BASE_LIMIT;
+  const earbCost = digital ? compare(band, earbThreshold) : "within";
   const earbReasons = [];
-  if (digital && band.min >= earbThreshold) earbReasons.push("cost");
-  if (digital && compare(band, earbThreshold) === "straddles") earbReasons.push("costStraddles");
+  if (earbCost === "above") earbReasons.push("cost");
+  if (earbCost === "straddles") earbReasons.push("costStraddles");
   if (digital && p.emergingTech === "yes") earbReasons.push("emerging");
   const earb = earbReasons.some((r) => r !== "costStraddles") ? "yes" : earbReasons.length ? "check" : "no";
+  const conceptCase = tri(earbCost);
+  const ocg = tri(compare(band, OCG_THRESHOLD));
 
   const highRisk = (pcra ?? 0) >= 3 || tb === "yes";
   const submission = tb !== "no" || p.newFunding === "yes";
@@ -125,10 +145,10 @@ export function governance(profile, pcraAnswers = {}) {
   const model = MODELS[p.model] ? p.model : recommended;
 
   return {
-    band, opmcaClass, pcra, pcraSource, pcraScore, pcraFloor,
-    limit, selectedLimit, limitIgnored, costVsLimit, tb, tbReasons: reasons,
+    band, opmcaClass, hasClass, pcra, pcraSource, pcraScore, pcraFloor, pcraThreshold, pcraRequired,
+    tb, tbBasis, tbReasons: reasons,
     newFunding: p.newFunding === "yes", submission,
-    digital, earb, earbReasons, earbThreshold,
+    digital, earb, earbReasons, earbThreshold, conceptCase, ocg,
     highRisk, independentReview: highRisk,
     model, recommendedModel: recommended,
     nextGate: GATE_MAP[p.nextGate] ? p.nextGate : "G3",
@@ -144,6 +164,9 @@ export function scopeContext(state, gov = governance(state.profile, state.pcraAn
     highRisk: gov.highRisk ? "yes" : "no",
     digital: gov.digital ? "yes" : "no",
     pcraLevel: gov.pcra ? String(gov.pcra) : "unknown",
+    pcraRequired: gov.pcraRequired === "no" ? "no" : "yes",
+    conceptCase: gov.conceptCase === "no" ? "no" : "yes",
+    ocg: gov.ocg === "no" ? "no" : "yes",
   };
 }
 
@@ -295,7 +318,7 @@ export const pcraLabel = (level, lang = getLang()) => (level ? `${level} (${L(PC
 export function authoritySentence(gov, lang = getLang()) {
   if (gov.tb === "yes") return t("gov.tbYesSentence", {}, lang);
   if (gov.tb === "check") return t("gov.tbCheckSentence", {}, lang);
-  return t("gov.tbNoSentence", { limit: fmtMoney(gov.limit, lang) }, lang);
+  return t(`gov.tbNo.${gov.tbBasis}`, { pcra: gov.pcra, opmca: gov.opmcaClass, threshold: fmtMoney(gov.pcraThreshold, lang), base: fmtMoney(BASE_LIMIT, lang) }, lang);
 }
 
 export function fillTemplate(template, state, lang = getLang(), gov = governance(state.profile, state.pcraAnswers)) {
@@ -516,18 +539,20 @@ export function approvalsRoadmap(state, gov = governance(state.profile, state.pc
   const p = { ...PROFILE_DEFAULTS, ...state.profile };
   const items = [
     { gate: "G1", key: "concept" },
-    { gate: "G2", key: "pcra" },
+    gov.conceptCase !== "no" && { gate: "G1", key: "conceptCase" },
+    gov.pcraRequired !== "no" && { gate: "G2", key: "pcra" },
     gov.digital && { gate: "G2", key: "darb" },
-    gov.earb !== "no" && { gate: "G2", key: "earbConcept" },
+    gov.earb !== "no" && { gate: "G2", key: "earb" },
     { gate: "G3", key: "businessCase" },
     gov.newFunding && { gate: "G3", key: "funding" },
-    gov.tb !== "no" && { gate: "G3", key: gov.tb === "yes" ? "tbProject" : "tbCheck" },
+    gov.tb === "yes" && { gate: "G3", key: "tbDefinition" },
+    gov.tb === "check" && { gate: "G3", key: "tbCheck" },
     gov.independentReview && { gate: "G3", key: "independent" },
-    gov.earb !== "no" && { gate: "G4", key: "earbDesign" },
     p.personalInfo === "yes" && { gate: "G5", key: "pia" },
     p.automatedDecision === "yes" && { gate: "G5", key: "aia" },
     p.procurement === "complex" && { gate: "G5", key: "contract" },
-    { gate: "G5", key: "expenditure" },
+    gov.tb === "yes" ? { gate: "G5", key: "tbImplementation" } : { gate: "G5", key: "expenditure" },
+    gov.ocg !== "no" && { gate: "G5", key: "ocg" },
     gov.independentReview && { gate: "G5", key: "independent" },
     gov.digital && { gate: "G6", key: "ato" },
     { gate: "G6", key: "golive" },

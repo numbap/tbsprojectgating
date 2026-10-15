@@ -2534,7 +2534,7 @@
       "incomplete": [
         {
           "id": "color-contrast",
-          "count": 119
+          "count": 120
         },
         {
           "id": "label-content-name-mismatch",
@@ -3276,7 +3276,7 @@
       "incomplete": [
         {
           "id": "color-contrast",
-          "count": 128
+          "count": 129
         },
         {
           "id": "label-content-name-mismatch",

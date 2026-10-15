@@ -33,19 +33,19 @@
   - complementary:
     - navigation "Gates":
       - text: Full gating (seven gates)
-      - link "G1 Strategic assessment and concept 3/4":
+      - link "G1 Strategic assessment and concept 3/6":
         - /url: "#/assess/G1"
-      - link "G2 Project approach 6/11":
+      - link "G2 Project approach 6/12":
         - /url: "#/assess/G2"
-      - link "G3 Business case and general readiness next 5/10":
+      - link "G3 Business case and general readiness next 5/12":
         - /url: "#/assess/G3"
-      - link "G4 Project charter and project management plan 0/12":
+      - link "G4 Project charter and project management plan 0/11":
         - /url: "#/assess/G4"
-      - link "G5 Detailed project plan and functional specifications 1/10":
+      - link "G5 Detailed project plan and functional specifications 1/11":
         - /url: "#/assess/G5"
-      - link "G6 Construction complete and deployment readiness 0/6":
+      - link "G6 Construction complete and deployment readiness 0/5":
         - /url: "#/assess/G6"
-      - link "G7 Post-implementation review 0/4":
+      - link "G7 Post-implementation review 0/3":
         - /url: "#/assess/G7"
       - paragraph:
         - link "Change the gating model in the scope":
@@ -56,20 +56,20 @@
     - strong: Gate 3
     - text: Is the investment justified, funded and is the organization ready to commit?
   - paragraph:
-    - text: "Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above departmental authority, this is typically when Treasury Board project approval is sought."
+    - text: "Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above the minister's authority, this is typically when Treasury Board expenditure authority to begin definition is sought."
     - link "Read the gate guide":
       - /url: "#/gate/G3"
-  - img "Gate readiness 30%": 30%
-  - text: 5 of 10 assessed
+  - img "Gate readiness 25%": 25%
+  - text: 5 of 12 assessed
   - group: 6 items still open from earlier gates
   - button "Expand all"
   - button "Collapse all"
   - group:
     - text: INV-4 Business case approved high Required Partly met
-    - paragraph: A business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization's readiness, and is approved by the sponsor and the departmental investment authority.
+    - paragraph: Every project, including one within the minister's authority, is supported by a business case and a documented project approval. The business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization's readiness, and is revalidated at each later gate.
     - paragraph:
       - strong: "Source:"
-      - text: Policy on the Planning and Management of Investments; A Guide to Project Gating for IT-Enabled Projects (TBS)
+      - text: DMPP Appendix D (D.1), 4.2.19; A Guide to Project Gating for IT-Enabled Projects (TBS)
     - text: Applicability
     - combobox "Applicability":
       - option "Automatic (Required)" [selected]
@@ -152,8 +152,10 @@
   - group: GAT-2 Independent review at key gates medium Required Not assessed
   - group: GAT-3 Conditions from earlier gates resolved medium Required Not assessed
   - group: BEN-1 Measurable benefits defined high Required Met
+  - group: BEN-2 Benefits realization plan with owners medium Required Not assessed
   - group: PRO-1 Market analysis and procurement strategy high Required Not assessed
   - group: PRO-2 Contracting authority and partners engaged early medium Recommended Not assessed
+  - group: MON-6 Baseline information to the Office of the Comptroller General medium Required Not assessed
   - link "G2 Project approach":
     - /url: "#/assess/G2"
   - link "G4 Project charter and project management plan":

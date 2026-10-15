@@ -88,7 +88,7 @@ function verdict(m) {
 
 export function governanceRows(m) {
   const g = m.gov;
-  const reasons = g.tbReasons.map((r) => tl(m, `gov.reason.${r}`, { pcra: g.pcra, opmca: g.opmcaClass, limit: fmtMoney(g.limit, m.lang) }));
+  const reasons = g.tbReasons.map((r) => tl(m, `gov.reason.${r}`, { pcra: g.pcra, opmca: g.opmcaClass, limit: fmtMoney(2.5, m.lang) }));
   const earbReasons = g.earbReasons.map((r) => tl(m, `gov.earb.${r}`, { threshold: fmtMoney(g.earbThreshold, m.lang) }));
   const assessments = [
     m.profile.personalInfo === "yes" && tl(m, "gov.assess.pia"),
@@ -100,11 +100,14 @@ export function governanceRows(m) {
     { label: tl(m, "gov.pcra"), value: `${pcraLabel(g.pcra, m.lang)}${g.pcraSource === "estimate" ? ` · ${tl(m, "gov.estimated", { score: g.pcraScore })}` : g.pcraSource === "official" ? ` · ${tl(m, "gov.official")}` : ""}` },
     { label: tl(m, "gov.opmca"), value: g.opmcaClass ? tl(m, "gov.classN", { n: g.opmcaClass }) : tl(m, "gov.noClass") },
     { label: tl(m, "gov.cost"), value: ll(m, g.band.label) },
-    { label: tl(m, "gov.limit"), value: `${fmtMoney(g.limit, m.lang)}${g.limitIgnored ? ` · ${tl(m, "gov.limitIgnored")}` : ""}` },
+    { label: tl(m, "gov.pcraRequiredLabel"), value: tl(m, `gov.pcraRequired.${g.pcraRequired}`, { threshold: fmtMoney(g.pcraThreshold, m.lang) }) },
     { label: tl(m, "gov.authority"), value: authoritySentence(g, m.lang), list: reasons, tone: g.tb === "yes" ? "warn" : g.tb === "check" ? "check" : "ok" },
+    ...(g.tb === "yes" ? [{ label: tl(m, "gov.tbStages"), value: tl(m, "gov.tbStagesText"), list: [tl(m, `gov.estimateFor.${g.pcra === 4 ? "l4" : "l13"}`)] }] : []),
     { label: tl(m, "gov.funding"), value: g.newFunding ? tl(m, "gov.fundingYes") : tl(m, "gov.fundingNo") },
     { label: tl(m, "gov.earbLabel"), value: tl(m, `gov.earb.${g.earb}`), list: earbReasons, tone: g.earb === "yes" ? "warn" : g.earb === "check" ? "check" : "ok" },
     { label: tl(m, "gov.model"), value: `${ll(m, MODELS[g.model].name)}${g.model === g.recommendedModel ? ` · ${tl(m, "gov.recommended")}` : ` · ${tl(m, "gov.recommendedIs", { model: ll(m, MODELS[g.recommendedModel].name) })}`}`, list: m.model.gates.map((mg) => (mg.includes.length > 1 ? `${modelGateLabel(m, mg)}${colon(m)}${mg.includes.map((id) => ll(m, GATE_MAP[id].name)).join(" + ")}` : modelGateLabel(m, mg))) },
+    ...(g.digital ? [{ label: tl(m, "gov.conceptCase"), value: tl(m, `gov.conceptCase.${g.conceptCase}`, { threshold: fmtMoney(g.earbThreshold, m.lang) }) }] : []),
+    { label: tl(m, "gov.ocg"), value: tl(m, `gov.ocg.${g.ocg}`) },
     { label: tl(m, "gov.independent"), value: g.independentReview ? tl(m, "gov.independentYes") : tl(m, "gov.independentNo") },
     { label: tl(m, "gov.assessments"), value: assessments.length ? assessments.join("; ") : tl(m, "gov.none") },
   ];

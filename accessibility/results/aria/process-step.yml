@@ -225,11 +225,11 @@
           - /url: "#/process/plan-q-authority"
         - list:
           - listitem:
-            - text: "Yes: within the limit and capacity class →"
+            - text: "Yes: within the base limit, or PCRA level within the class →"
             - link "Is it a digital initiative above the GC EARB threshold, or does it use emerging technology?":
               - /url: "#/process/plan-q-digital"
           - listitem:
-            - text: "No: cost or complexity exceeds departmental authority →"
+            - text: "No: over $2.5M without a class, or PCRA level above the class →"
             - link "Plan Treasury Board project approval":
               - /url: "#/process/plan-tb"
           - listitem:
@@ -256,7 +256,7 @@
         - list:
           - listitem:
             - text: Yes →
-            - 'link "Architecture review: departmental board, then GC EARB"':
+            - link "Concept case, then architecture review":
               - /url: "#/process/plan-earb"
           - listitem:
             - text: Digital, but below the threshold →
@@ -267,7 +267,7 @@
             - 'link "Gate 3: business case and general readiness"':
               - /url: "#/process/plan-business-case"
       - listitem:
-        - 'link "Architecture review: departmental board, then GC EARB , activity"':
+        - link "Concept case, then architecture review , activity":
           - /url: "#/process/plan-earb"
         - paragraph:
           - text: Then →

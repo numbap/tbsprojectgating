@@ -1,6 +1,6 @@
 {
   "name": "project-gating-navigator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Navigate Government of Canada project governance (TBS gating, Directive on the Management of Projects and Programmes): complexity and risk, approval authority, gate readiness and a bilingual report.",
   "type": "module",
   "private": true,

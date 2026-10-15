@@ -35,7 +35,7 @@
   - heading "Scale the gating to the project" [level=2]
   - paragraph: Not every project needs seven gates. The streamlined and light models combine gates for smaller or less risky projects. Your departmental framework decides which models are available.
   - heading "Full gating (seven gates) recommended" [level=3]
-  - paragraph: Very large, highly complex or high-risk projects.
+  - paragraph: Very large, highly complex or high-risk projects. The guide's best practice is that all projects go through all seven gates; for smaller projects Gates 1 and 2 may be combined.
   - list:
     - listitem:
       - strong: G1
@@ -88,7 +88,7 @@
     - listitem:
       - strong: L3
       - text: Post-implementation (6 + 7)
-  - paragraph: "Deployment readiness is not a formal gate in this model: the project board confirms it before go-live, and it is reviewed at the post-implementation gate."
+  - paragraph: The guide's light model has no deployment gate. This tool groups deployment readiness with the post-implementation gate so its items stay visible; the project board should still confirm readiness before go-live, with input from the stakeholders affected (DMPP 4.2.20).
   - 'link "Gate 1 Strategic assessment and concept Is there a real need, and is it worth pursuing? Confirms what is to be done and why: the business problem or opportunity, the outcomes sought, alignment with the department''s mandate and investment plan, and the key stakeholders. No solution is chosen yet."':
     - /url: "#/gate/G1"
     - text: Gate 1
@@ -103,13 +103,13 @@
     - paragraph:
       - emphasis: How will we achieve the outcomes, and what kind of project is this?
     - paragraph: "Confirms how the objectives will be achieved: the options considered, the preferred delivery approach (build, buy, partner, configure), the high-level scope, a rough cost range, the initial complexity and risk assessment and the governance that will oversee the work."
-  - 'link "Gate 3 Business case and general readiness Is the investment justified, funded and is the organization ready to commit? Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above departmental authority, this is typically when Treasury Board project approval is sought."':
+  - 'link "Gate 3 Business case and general readiness Is the investment justified, funded and is the organization ready to commit? Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above the minister''s authority, this is typically when Treasury Board expenditure authority to begin definition is sought."':
     - /url: "#/gate/G3"
     - text: Gate 3
     - heading "Business case and general readiness" [level=2]
     - paragraph:
       - emphasis: Is the investment justified, funded and is the organization ready to commit?
-    - paragraph: "Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above departmental authority, this is typically when Treasury Board project approval is sought."
+    - paragraph: "Confirms the business case: the recommended option, its full life-cycle costs, benefits, risks and funding source, and that the organization is ready to start. For projects above the minister's authority, this is typically when Treasury Board expenditure authority to begin definition is sought."
   - 'link "Gate 4 Project charter and project management plan Is the project set up to succeed? Confirms the project is properly organized: an approved charter, a project management plan, the team and its capacity, governance in operation, change control, reporting, the benefits realization plan and the organizational change approach."':
     - /url: "#/gate/G4"
     - text: Gate 4
@@ -117,13 +117,13 @@
     - paragraph:
       - emphasis: Is the project set up to succeed?
     - paragraph: "Confirms the project is properly organized: an approved charter, a project management plan, the team and its capacity, governance in operation, change control, reporting, the benefits realization plan and the organizational change approach."
-  - link "Gate 5 Detailed project plan and functional specifications Do we know enough to commit to build, at a cost and schedule we can hold? Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, contract award or construction, and typically where full expenditure authority is confirmed.":
+  - link "Gate 5 Detailed project plan and functional specifications Do we know enough to commit to build, at a cost and schedule we can hold? Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, issuing requests for proposals, contract award or construction. For projects above the minister's authority, this is when Treasury Board project approval and expenditure authority for implementation are sought.":
     - /url: "#/gate/G5"
     - text: Gate 5
     - heading "Detailed project plan and functional specifications" [level=2]
     - paragraph:
       - emphasis: Do we know enough to commit to build, at a cost and schedule we can hold?
-    - paragraph: Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, contract award or construction, and typically where full expenditure authority is confirmed.
+    - paragraph: Confirms that requirements and specifications are complete enough to build, and that scope, schedule and cost are baselined with a substantive estimate. This is the last gate before major spending, issuing requests for proposals, contract award or construction. For projects above the minister's authority, this is when Treasury Board project approval and expenditure authority for implementation are sought.
   - link "Gate 6 Construction complete and deployment readiness Is the solution ready, and is the organization ready for it? Confirms that the solution is built and tested, authorized to operate, and that the business, users and support organization are ready to take it on, with go-live criteria and a fallback plan.":
     - /url: "#/gate/G6"
     - text: Gate 6
@@ -131,13 +131,13 @@
     - paragraph:
       - emphasis: Is the solution ready, and is the organization ready for it?
     - paragraph: Confirms that the solution is built and tested, authorized to operate, and that the business, users and support organization are ready to take it on, with go-live criteria and a fallback plan.
-  - link "Gate 7 Post-implementation review Did we get what we paid for, and what did we learn? Confirms whether the project delivered the expected outcomes and benefits, records lessons learned, and formally closes the project, handing ongoing benefits tracking to the business owner.":
+  - link "Gate 7 Post-implementation review Did we get what we paid for, and what did we learn? Confirms whether the project delivered the expected outcomes and benefits, records lessons learned, and formally closes the project, handing ongoing benefits tracking to the business owner. It typically takes place about six months after the project is completed.":
     - /url: "#/gate/G7"
     - text: Gate 7
     - heading "Post-implementation review" [level=2]
     - paragraph:
       - emphasis: Did we get what we paid for, and what did we learn?
-    - paragraph: Confirms whether the project delivered the expected outcomes and benefits, records lessons learned, and formally closes the project, handing ongoing benefits tracking to the business owner.
+    - paragraph: Confirms whether the project delivered the expected outcomes and benefits, records lessons learned, and formally closes the project, handing ongoing benefits tracking to the business owner. It typically takes place about six months after the project is completed.
   - paragraph: Based on A Guide to Project Gating for IT-Enabled Projects and The Independent Reviewer's Handbook (Treasury Board of Canada Secretariat). Paraphrased; your departmental framework takes precedence.
 - contentinfo:
   - paragraph: "Self-assessment aid based on paraphrased Treasury Board of Canada Secretariat policy instruments and guidance. Not an official Government of Canada tool. Open source. Runs entirely in your browser: nothing you enter is sent to any server."

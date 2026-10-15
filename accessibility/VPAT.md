@@ -2,7 +2,7 @@
 
 Based on VPAT® Version 2.5Rev (EU edition: WCAG and EN 301 549)
 
-**Name of product and version:** Project Gating Navigator (Navigateur des points de contrôle de projet) 1.0.0  
+**Name of product and version:** Project Gating Navigator (Navigateur des points de contrôle de projet) 1.0.1  
 **Report date:** 2026-10-15 (manual evaluation); automated results recompiled with each commit  
 **Product description:** A bilingual (English/French) browser-based tool that helps Government of Canada employees navigate project governance under the Directive on the Management of Projects and Programmes and TBS gating guidance: scoping interview with an indicative complexity and risk estimate, approval authority and oversight determination, document review, a gate readiness questionnaire with guidance for each requirement, a requirements library, a gate guide, a governance decision tree, and a generated gate readiness report. Runs entirely in the browser with no server-side processing or authentication.  
 **Contact information:** https://github.com/numbap/tbsprojectgating/issues/new?labels=accessibility&title=Accessibility%3A%20  
@@ -12,7 +12,7 @@ Based on VPAT® Version 2.5Rev (EU edition: WCAG and EN 301 549)
 ## Build status
 
 - Automated suite passed: 105 axe-core runs with no WCAG violations, and 564 scripted checks passed across 35 page states (axe-core 4.14.0, Chromium (Playwright 1.56.1)).
-- Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint ecdea3043859abf4).
+- Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint 5a7a10a86dcec001).
 
 ## Notes
 

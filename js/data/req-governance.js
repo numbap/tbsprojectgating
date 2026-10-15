@@ -1,23 +1,25 @@
 // Requirements: governance, investment case, complexity and capacity,
 // approvals and gating. Paraphrased from the Directive on the Management of
-// Projects and Programmes, the Policy on the Planning and Management of
-// Investments, the Directive on Service and Digital and TBS gating guidance.
-// Not official text: check the current instruments on canada.ca.
+// Projects and Programmes (DMPP), the Policy on the Planning and Management of
+// Investments (PPMI), the Directive on Service and Digital and TBS gating
+// guidance, with section references checked against the text published on
+// tbs-sct.canada.ca (October 2026). Not official text.
 //
 // Fields: see js/data/README in the project README ("Adding or editing a requirement").
 
 const DMPP = { en: "Directive on the Management of Projects and Programmes", fr: "Directive sur la gestion des projets et programmes" };
 const PPMI = { en: "Policy on the Planning and Management of Investments", fr: "Politique sur la planification et la gestion des investissements" };
 const GUIDE = { en: "A Guide to Project Gating for IT-Enabled Projects (TBS)", fr: "Guide sur le contrôle des projets de TI par points de contrôle (SCT)" };
+const cite = (en, fr) => ({ en, fr });
 const src = (...parts) => ({ en: parts.map((p) => p.en).join("; "), fr: parts.map((p) => p.fr).join("; ") });
 
 export const GOVERNANCE = [
   // ---------------------------------------------------------------- GOV
   {
     id: "GOV-1", gate: "G1", revisit: ["G3", "G5", "G6"], sev: "high", base: "required",
-    source: src(DMPP, { en: "project sponsor responsibilities", fr: "responsabilités du promoteur de projet" }),
+    source: src(cite("PPMI 4.1.12", "PPGI 4.1.12"), cite("DMPP 4.2.1, 4.2.2", "DGPP 4.2.1, 4.2.2")),
     title: { en: "Accountable project sponsor named", fr: "Promoteur de projet responsable désigné" },
-    summary: { en: "A senior executive is designated as project sponsor and is accountable for the project from planning to close-out, including managing risk, defining expected benefits and seeking the approvals the project needs.", fr: "Un cadre supérieur est désigné promoteur du projet et en est responsable de la planification à la clôture, y compris la gestion des risques, la définition des avantages attendus et l'obtention des approbations nécessaires." },
+    summary: { en: "A sponsor is designated at the outset of the planning phase as the single point of accountability, and is responsible for the planning, definition, implementation, transition and close-out of the project, providing visible, active leadership to manage risks and resolve issues.", fr: "Un promoteur est désigné dès le début de la phase de planification comme point unique de responsabilité; il est responsable de la planification, de la définition, de la mise en œuvre, de la transition et de la clôture du projet, et exerce un leadership visible et actif pour gérer les risques et régler les problèmes." },
     look: {
       en: ["The designation of the sponsor in writing (charter, committee record or deputy head decision).", "Sponsor's attendance at governance meetings over the last quarter.", "Decisions the sponsor has personally taken or escalated."],
       fr: ["La désignation écrite du promoteur (charte, compte rendu de comité ou décision de l'administrateur général).", "La présence du promoteur aux réunions de gouvernance au cours du dernier trimestre.", "Les décisions que le promoteur a prises personnellement ou fait remonter."],
@@ -43,9 +45,9 @@ export const GOVERNANCE = [
   },
   {
     id: "GOV-2", gate: "G2", revisit: ["G4"], sev: "medium", base: "required",
-    source: src(DMPP, PPMI),
+    source: src(cite("DMPP 4.2.9 to 4.2.15", "DGPP 4.2.9 à 4.2.15"), cite("PPMI 4.1.10", "PPGI 4.1.10")),
     title: { en: "Governance structure with clear decision rights", fr: "Structure de gouvernance et pouvoirs décisionnels clairs" },
-    summary: { en: "The project has a governance structure (for example a steering committee) with terms of reference that say who decides what, escalation paths and tolerances, proportionate to its complexity and risk.", fr: "Le projet dispose d'une structure de gouvernance (p. ex. un comité directeur) avec un mandat qui précise qui décide de quoi, les voies de remontée et les tolérances, proportionnée à sa complexité et à ses risques." },
+    summary: { en: "Governance roles, responsibilities, accountability and authority are documented and communicated, decisions are documented and shared, and the seniority and meeting frequency of governance are commensurate with the project's complexity and risk. The sponsor assesses governance for effectiveness and adjusts it.", fr: "Les rôles, responsabilités, obligations de rendre compte et pouvoirs en matière de gouvernance sont documentés et communiqués, les décisions sont consignées et diffusées, et le niveau hiérarchique et la fréquence des réunions de gouvernance sont proportionnés à la complexité et aux risques du projet. Le promoteur évalue l'efficacité de la gouvernance et l'ajuste." },
     look: {
       en: ["Terms of reference for the steering committee or project board.", "Records of decisions from recent meetings.", "Tolerances for cost, schedule and scope, and what happens when they are exceeded."],
       fr: ["Le mandat du comité directeur ou du conseil de projet.", "Les comptes rendus de décisions des dernières réunions.", "Les tolérances en matière de coûts, de calendrier et de portée, et ce qui se passe lorsqu'elles sont dépassées."],
@@ -71,7 +73,7 @@ export const GOVERNANCE = [
   },
   {
     id: "GOV-3", gate: "G1", sev: "medium", base: "departmental",
-    source: src(DMPP, { en: "senior designated official responsibilities", fr: "responsabilités du cadre supérieur désigné" }),
+    source: src(cite("DMPP 4.1.1 to 4.1.3 (departments with an approved OPMCA class of 1 or higher, 6.4)", "DGPP 4.1.1 à 4.1.3 (ministères ayant une catégorie d'ECOGP approuvée de 1 ou plus, 6.4)")),
     title: { en: "Departmental project management framework applied", fr: "Cadre ministériel de gestion de projet appliqué" },
     summary: { en: "The senior designated official maintains a department-wide framework for managing projects and programmes: the gates each project passes, the evidence each gate requires and how gate decisions are documented. The project follows it.", fr: "Le cadre supérieur désigné tient à jour un cadre ministériel de gestion des projets et programmes : les points de contrôle que chaque projet franchit, les éléments probants exigés à chacun et la façon de consigner les décisions. Le projet s'y conforme." },
     look: {
@@ -99,7 +101,7 @@ export const GOVERNANCE = [
   },
   {
     id: "GOV-4", gate: "G1", revisit: ["G2", "G3", "G4", "G5", "G6", "G7"], sev: "medium", base: "required",
-    source: src(DMPP, { en: "documenting gate decisions", fr: "consignation des décisions aux points de contrôle" }),
+    source: src(cite("DMPP 4.1.3.3, 4.2.13, 4.2.22", "DGPP 4.1.3.3, 4.2.13, 4.2.22")),
     title: { en: "Gate decisions documented", fr: "Décisions aux points de contrôle consignées" },
     summary: { en: "Each gate decision is recorded with the evidence considered, the decision taken, any conditions and who made it, as the departmental framework requires.", fr: "Chaque décision à un point de contrôle est consignée avec les éléments probants examinés, la décision prise, les conditions éventuelles et son auteur, comme l'exige le cadre ministériel." },
     look: {
@@ -127,9 +129,9 @@ export const GOVERNANCE = [
   },
   {
     id: "GOV-5", gate: "G4", sev: "medium", base: "required",
-    source: src(DMPP, { en: "project management competencies", fr: "compétences en gestion de projet" }),
+    source: src(cite("DMPP 4.2.11 (sponsor's due care in assigning the project manager), 4.1.8", "DGPP 4.2.11 (diligence du promoteur dans l'affectation du gestionnaire de projet), 4.1.8")),
     title: { en: "Qualified project manager and core team", fr: "Gestionnaire de projet et équipe de base qualifiés" },
-    summary: { en: "The project manager and key team members have the competencies the project's complexity calls for, consistent with the department's approach to project management capacity.", fr: "Le gestionnaire de projet et les principaux membres de l'équipe possèdent les compétences qu'exige la complexité du projet, conformément à l'approche du ministère en matière de capacité de gestion de projet." },
+    summary: { en: "The sponsor exercises due care in assigning a project manager with the competencies and experience for the work and for the project's complexity, risk, materiality and significance, and key team roles are filled.", fr: "Le promoteur fait preuve de diligence en affectant un gestionnaire de projet possédant les compétences et l'expérience nécessaires pour les travaux et pour la complexité, les risques, l'importance relative et la portée du projet, et les rôles clés de l'équipe sont pourvus." },
     look: {
       en: ["The project manager's experience with projects of this size and type.", "The org chart, with names, not vacancies, for key roles.", "Training or certification plans for gaps."],
       fr: ["L'expérience du gestionnaire de projet avec des projets de cette taille et de ce type.", "L'organigramme, avec des noms et non des postes vacants, pour les rôles clés.", "Les plans de formation ou de certification pour combler les lacunes."],
@@ -155,9 +157,9 @@ export const GOVERNANCE = [
   },
   {
     id: "GOV-6", gate: "G2", sev: "medium", base: "required",
-    source: src(DMPP, { en: "consulting internal enabling functions", fr: "consultation des fonctions habilitantes internes" }),
+    source: src(cite("DMPP 4.2.3, 4.2.5", "DGPP 4.2.3, 4.2.5")),
     title: { en: "Enabling functions engaged early", fr: "Fonctions habilitantes consultées tôt" },
-    summary: { en: "Procurement, finance, IT, security, privacy, real property, human resources and communications are consulted early enough to shape the approach, not just to approve it.", fr: "L'approvisionnement, les finances, la TI, la sécurité, la protection de la vie privée, les biens immobiliers, les ressources humaines et les communications sont consultés assez tôt pour influencer l'approche, et non seulement pour l'approuver." },
+    summary: { en: "The sponsor collaborates with procurement, real property, IT, finance, legal and human resources (and security and privacy) early enough to shape the approach, not just to approve it, and maintains relationships with implicated departments and common service providers.", fr: "Le promoteur collabore avec l'approvisionnement, les biens immobiliers, la TI, les finances, les services juridiques et les ressources humaines (ainsi que la sécurité et la protection de la vie privée) assez tôt pour influencer l'approche, et non seulement pour l'approuver, et entretient des relations avec les ministères concernés et les fournisseurs de services communs." },
     look: {
       en: ["A list of enabling functions consulted, with dates and what changed as a result.", "Named contacts in each function."],
       fr: ["Une liste des fonctions habilitantes consultées, avec les dates et ce qui a changé en conséquence.", "Des personnes-ressources désignées dans chaque fonction."],
@@ -185,7 +187,7 @@ export const GOVERNANCE = [
   // ---------------------------------------------------------------- INV
   {
     id: "INV-1", gate: "G1", revisit: ["G3"], sev: "high", base: "required",
-    source: src(PPMI, GUIDE),
+    source: src(GUIDE, cite("DMPP Appendix E (E.2.1)", "DGPP annexe E (E.2.1)")),
     title: { en: "Problem and outcomes defined", fr: "Problème et résultats définis" },
     summary: { en: "The business problem or opportunity is stated independently of any solution, along with the outcomes sought and how they contribute to the department's results.", fr: "Le problème ou la possibilité opérationnelle est énoncé indépendamment de toute solution, avec les résultats recherchés et leur contribution aux résultats du ministère." },
     look: {
@@ -213,9 +215,9 @@ export const GOVERNANCE = [
   },
   {
     id: "INV-2", gate: "G1", sev: "medium", base: "required",
-    source: src(PPMI, { en: "departmental investment plan", fr: "plan d'investissement ministériel" }),
+    source: src(cite("PPMI 4.1.5, 4.1.6", "PPGI 4.1.5, 4.1.6")),
     title: { en: "Aligned with the departmental investment plan", fr: "Harmonisé avec le plan d'investissement ministériel" },
-    summary: { en: "The project is identified in, or consistent with, the department's investment plan and priorities, so it competes for resources openly.", fr: "Le projet figure dans le plan d'investissement du ministère ou y est conforme, ainsi que dans ses priorités, de sorte qu'il est en concurrence ouverte pour les ressources." },
+    summary: { en: "The department's five-year investment plan lists planned and approved projects of $2.5 million or more with their procurement strategies, is submitted to TBS every three years, and the list is updated for TBS annually. The project is in it, or the deviation is explained.", fr: "Le plan d'investissement quinquennal du ministère énumère les projets prévus et approuvés de 2,5 M$ ou plus avec leurs stratégies d'approvisionnement; il est soumis au SCT tous les trois ans, et la liste est mise à jour annuellement pour le SCT. Le projet y figure, ou l'écart est expliqué." },
     look: {
       en: ["The entry for the project in the departmental investment plan.", "The investment committee's ranking or prioritization."],
       fr: ["L'inscription du projet dans le plan d'investissement ministériel.", "Le classement ou l'établissement des priorités par le comité des investissements."],
@@ -241,7 +243,7 @@ export const GOVERNANCE = [
   },
   {
     id: "INV-3", gate: "G2", sev: "high", base: "required",
-    source: src(GUIDE, { en: "Treasury Board submission guidance", fr: "orientation sur les présentations au Conseil du Trésor" }),
+    source: src(GUIDE, cite("DMPP Appendix E (E.2.4)", "DGPP annexe E (E.2.4)")),
     title: { en: "Options analysis", fr: "Analyse des options" },
     summary: { en: "Realistic options, including the status quo or a do-minimum option, are compared on cost, benefits, risk and fit, and the preferred approach is justified.", fr: "Des options réalistes, y compris le statu quo ou une option minimale, sont comparées sur les plans du coût, des avantages, du risque et de l'adéquation, et l'approche privilégiée est justifiée." },
     look: {
@@ -269,9 +271,9 @@ export const GOVERNANCE = [
   },
   {
     id: "INV-4", gate: "G3", sev: "high", base: "required",
-    source: src(PPMI, GUIDE),
+    source: src(cite("DMPP Appendix D (D.1), 4.2.19", "DGPP annexe D (D.1), 4.2.19"), GUIDE),
     title: { en: "Business case approved", fr: "Analyse de rentabilisation approuvée" },
-    summary: { en: "A business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization's readiness, and is approved by the sponsor and the departmental investment authority.", fr: "Une analyse de rentabilisation présente l'option recommandée, ses coûts, ses avantages, ses risques, son calendrier, son financement et l'état de préparation de l'organisation, et est approuvée par le promoteur et l'instance ministérielle des investissements." },
+    summary: { en: "Every project, including one within the minister's authority, is supported by a business case and a documented project approval. The business case sets out the recommended option, its costs, benefits, risks, schedule, funding and the organization's readiness, and is revalidated at each later gate.", fr: "Tout projet, y compris celui qui relève du pouvoir du ministre, est appuyé par une analyse de rentabilisation et une approbation consignée. L'analyse de rentabilisation présente l'option recommandée, ses coûts, ses avantages, ses risques, son calendrier, son financement et l'état de préparation de l'organisation, et elle est revalidée à chaque point de contrôle ultérieur." },
     look: {
       en: ["The approved business case and the approval record.", "Consistency between the business case, the PCRA and the cost estimate."],
       fr: ["L'analyse de rentabilisation approuvée et le compte rendu d'approbation.", "La cohérence entre l'analyse de rentabilisation, l'ECRP et l'estimation des coûts."],
@@ -327,7 +329,7 @@ export const GOVERNANCE = [
     id: "INV-6", gate: "G3", revisit: ["G5"], sev: "high", base: "required",
     source: src({ en: "Guide to Cost Estimating; Guide to Costing (TBS)", fr: "Guide de l'estimation des coûts; Guide d'établissement des coûts (SCT)" }, PPMI),
     title: { en: "Full life-cycle cost estimate", fr: "Estimation des coûts sur tout le cycle de vie" },
-    summary: { en: "Costs are estimated over the asset's whole life, including ongoing operations, support, licences, refresh and decommissioning, with the estimate's class and assumptions stated and reviewed by the CFO.", fr: "Les coûts sont estimés sur toute la durée de vie de l'actif, y compris l'exploitation, le soutien, les licences, le renouvellement et la mise hors service, avec la catégorie et les hypothèses de l'estimation énoncées et examinées par le DPF." },
+    summary: { en: "Costs are estimated over the asset's whole life, including ongoing operations, support, licences, refresh and decommissioning, with the estimate's class and assumptions stated and reviewed by the CFO. The gating guide expects about ±40% accuracy for the whole project at Gate 3 (an indicative estimate).", fr: "Les coûts sont estimés sur toute la durée de vie de l'actif, y compris l'exploitation, le soutien, les licences, le renouvellement et la mise hors service, avec la catégorie et les hypothèses de l'estimation énoncées et examinées par le DPF. Le guide sur les points de contrôle prévoit une exactitude d'environ ±40 % pour l'ensemble du projet au point de contrôle 3 (estimation indicative)." },
     look: {
       en: ["The costing model, including ongoing (post-project) costs.", "The estimate class (indicative or substantive) and its accuracy range.", "Evidence of CFO review."],
       fr: ["Le modèle d'établissement des coûts, y compris les coûts continus (après le projet).", "La catégorie de l'estimation (indicative ou fondée) et sa fourchette d'exactitude.", "La preuve de l'examen par le DPF."],
@@ -386,9 +388,9 @@ export const GOVERNANCE = [
   // ---------------------------------------------------------------- CAP
   {
     id: "CAP-1", gate: "G2", revisit: ["G3", "G5"], sev: "high", base: "required",
-    source: src(DMPP, { en: "mandatory procedures for project complexity and risk assessment", fr: "procédures obligatoires pour l'évaluation de la complexité et des risques des projets" }),
+    source: src(cite("DMPP 4.2.24, Appendix B, Appendix C (thresholds)", "DGPP 4.2.24, annexe B, annexe C (seuils)")),
     title: { en: "Project Complexity and Risk Assessment (PCRA) completed", fr: "Évaluation de la complexité et des risques du projet (ECRP) réalisée" },
-    summary: { en: "The PCRA is completed with the official TBS tool, approved within the department and updated when the project changes materially. Its level (1 Sustaining to 4 Transformational) drives approval authority and the level of oversight.", fr: "L'ECRP est réalisée avec l'outil officiel du SCT, approuvée au sein du ministère et mise à jour lorsque le projet change de façon importante. Son niveau (1 Maintien à 4 Transformation) détermine le pouvoir d'approbation et le niveau de surveillance." },
+    summary: { en: "Above the threshold for the department's class ($2.5M with no class or class 0, then $5M, $10M, $25M and $50M for classes 1 to 4), the PCRA is completed with the TBS tool over the project's full scope and life cycle, and submitted to TBS with its supporting evidence before definition begins. TBS reviews it within 15 working days; it is reassessed if complexity or risk increases significantly. Its level (1 Sustaining to 4 Transformational) sets approval authority and oversight.", fr: "Au-delà du seuil applicable à la catégorie du ministère (2,5 M$ sans catégorie ou en catégorie 0, puis 5 M$, 10 M$, 25 M$ et 50 M$ pour les catégories 1 à 4), l'ECRP est réalisée avec l'outil du SCT sur toute la portée et tout le cycle de vie du projet, et soumise au SCT avec les éléments probants avant le début de la définition. Le SCT l'examine dans un délai de 15 jours ouvrables; elle est refaite si la complexité ou les risques augmentent considérablement. Son niveau (1 Maintien à 4 Transformation) détermine le pouvoir d'approbation et la surveillance." },
     look: {
       en: ["The completed PCRA workbook and its approval.", "Who scored it, and whether the PMO challenged the scoring.", "The date of the last update compared with major project changes."],
       fr: ["Le classeur de l'ECRP rempli et son approbation.", "Qui l'a coté, et si le BGP a remis en question la cotation.", "La date de la dernière mise à jour comparée aux changements importants du projet."],
@@ -407,16 +409,19 @@ export const GOVERNANCE = [
     },
     describe: { en: "A Project Complexity and Risk Assessment of {project} was completed with the TBS tool and approved by the department. The project is assessed at level {pcra}. The assessment is updated at each major gate and whenever scope, cost or approach changes materially.", fr: "Une évaluation de la complexité et des risques de {project} a été réalisée avec l'outil du SCT et approuvée par le ministère. Le projet est évalué au niveau {pcra}. L'évaluation est mise à jour à chaque point de contrôle important et chaque fois que la portée, le coût ou l'approche change de façon importante." },
     questions: {
-      en: ["Has the PCRA been completed with the official TBS tool?", "Has it been reviewed and approved within the department?", "Has it been updated since the last major change to the project?"],
-      fr: ["L'ECRP a-t-elle été réalisée avec l'outil officiel du SCT?", "A-t-elle été examinée et approuvée au sein du ministère?", "A-t-elle été mise à jour depuis le dernier changement important au projet?"],
+      en: ["Has the PCRA been completed with the official TBS tool?", "Has it been submitted to TBS for review before the definition phase?", "Has it been updated since the last significant change to the project?"],
+      fr: ["L'ECRP a-t-elle été réalisée avec l'outil officiel du SCT?", "A-t-elle été soumise au SCT pour examen avant la phase de définition?", "A-t-elle été mise à jour depuis le dernier changement important au projet?"],
     },
+    scope: [
+      { when: { pcraRequired: "no" }, status: "recommended", reason: { en: "The cost is below the PCRA threshold for the department's class (DMPP Appendix C); assessing complexity is still good practice.", fr: "Le coût est inférieur au seuil d'ECRP applicable à la catégorie du ministère (DGPP, annexe C); évaluer la complexité demeure une bonne pratique." } },
+    ],
     keywords: { en: ["PCRA", "complexity and risk", "sustaining", "tactical", "evolutionary", "transformational"], fr: ["ECRP", "complexité et des risques", "maintien", "tactique", "évolution", "transformation*"] },
   },
   {
     id: "CAP-2", gate: "G2", sev: "medium", base: "departmental",
-    source: src(DMPP, { en: "mandatory procedures for organizational project management capacity assessments", fr: "procédures obligatoires pour l'évaluation de la capacité organisationnelle de gestion de projets" }),
+    source: src(cite("DMPP 4.1.10, Appendix A", "DGPP 4.1.10, annexe A"), cite("PPMI 4.1.9", "PPGI 4.1.9")),
     title: { en: "Current departmental capacity class (OPMCA)", fr: "Catégorie de capacité ministérielle (ECOGP) à jour" },
-    summary: { en: "The department has an Organizational Project Management Capacity Assessment approved within the last three years. Its class sets how complex a project the department may approve on its own.", fr: "Le ministère dispose d'une évaluation de la capacité organisationnelle de gestion de projets approuvée au cours des trois dernières années. Sa catégorie détermine le degré de complexité des projets que le ministère peut approuver lui-même." },
+    summary: { en: "A department seeking authority above the $2.5M base limit assesses its capacity with the OPMCA tool, with TBS review, and submits the resulting class to Treasury Board at least every three years. Once approved, the class sets the minister's project approval authority: with class 1 or higher, the minister approves projects whose PCRA level does not exceed the class.", fr: "Un ministère qui souhaite un pouvoir supérieur à la limite de base de 2,5 M$ évalue sa capacité au moyen de l'outil d'ECOGP, avec l'examen du SCT, et soumet la catégorie obtenue au Conseil du Trésor au moins tous les trois ans. Une fois approuvée, la catégorie détermine le pouvoir d'approbation des projets du ministre : avec une catégorie 1 ou plus, le ministre approuve les projets dont le niveau d'ECRP ne dépasse pas la catégorie." },
     look: {
       en: ["The department's approved OPMCA class and its date.", "The project approval limit that applies to the department."],
       fr: ["La catégorie d'ECOGP approuvée du ministère et sa date.", "La limite d'approbation des projets qui s'applique au ministère."],
@@ -426,7 +431,7 @@ export const GOVERNANCE = [
       fr: ["Rien à produire à l'échelle du projet : citer l'évaluation ministérielle."],
     },
     consequences: {
-      en: ["Without an approved class, every project over $2.5M needs Treasury Board approval."],
+      en: ["Without an approved class of 1 or higher, every project over $2.5M needs Treasury Board approval."],
       fr: ["Sans catégorie approuvée, tout projet de plus de 2,5 M$ doit être approuvé par le Conseil du Trésor."],
     },
     mitigations: {
@@ -435,16 +440,16 @@ export const GOVERNANCE = [
     },
     describe: { en: "{dept} holds an approved Organizational Project Management Capacity Assessment, which sets the department's project approval authority applied to {project}.", fr: "{dept} dispose d'une évaluation approuvée de la capacité organisationnelle de gestion de projets, qui établit le pouvoir d'approbation des projets du ministère appliqué à {project}." },
     questions: {
-      en: ["Does the department have an OPMCA class approved within the last three years?", "Is the project approval limit that applies to the department known?"],
-      fr: ["Le ministère a-t-il une catégorie d'ECOGP approuvée au cours des trois dernières années?", "La limite d'approbation des projets qui s'applique au ministère est-elle connue?"],
+      en: ["Does the department have an OPMCA class approved by Treasury Board within the last three years?", "Does the project team know the department's class and what it allows the minister to approve?"],
+      fr: ["Le ministère a-t-il une catégorie d'ECOGP approuvée par le Conseil du Trésor au cours des trois dernières années?", "L'équipe de projet connaît-elle la catégorie du ministère et ce qu'elle permet au ministre d'approuver?"],
     },
     keywords: { en: ["OPMCA", "capacity assessment", "capacity class", "approval limit"], fr: ["ECOGP", "évaluation de la capacité", "catégorie de capacité", "limite d'approbation"] },
   },
   {
     id: "CAP-3", gate: "G2", revisit: ["G3"], sev: "high", base: "required",
-    source: src(DMPP, { en: "project approval limits", fr: "limites d'approbation des projets" }),
+    source: src(cite("DMPP Appendix C, 4.2.25", "DGPP annexe C, 4.2.25"), cite("PPMI 4.1.8", "PPGI 4.1.8")),
     title: { en: "Approval authority determined", fr: "Pouvoir d'approbation déterminé" },
-    summary: { en: "The project's cost and PCRA level are compared with the department's project approval limit and capacity class to decide whether the department can approve it or Treasury Board approval is required.", fr: "Le coût et le niveau d'ECRP du projet sont comparés à la limite d'approbation et à la catégorie de capacité du ministère pour déterminer si le ministère peut l'approuver ou si l'approbation du Conseil du Trésor est requise." },
+    summary: { en: "Without an approved OPMCA class of 1 or higher, every project over $2.5M (taxes included) needs Treasury Board approval. With class 1 or higher, authority depends on the relationship between the class and the project's PCRA level: a level above the class needs Treasury Board approval. Treasury Board may call in any project, and no action is taken without the required authorities.", fr: "Sans catégorie d'ECOGP approuvée de 1 ou plus, tout projet de plus de 2,5 M$ (taxes comprises) doit être approuvé par le Conseil du Trésor. Avec une catégorie 1 ou plus, le pouvoir dépend de la relation entre la catégorie et le niveau d'ECRP du projet : un niveau supérieur à la catégorie exige l'approbation du Conseil du Trésor. Le Conseil du Trésor peut exiger que tout projet lui soit soumis, et aucune mesure n'est prise sans les pouvoirs requis." },
     look: {
       en: ["A written authority determination, confirmed by the PMO or CFO.", "Early contact with the Treasury Board Secretariat program sector if approval is needed."],
       fr: ["Une détermination écrite du pouvoir, confirmée par le BGP ou le DPF.", "Une prise de contact précoce avec le secteur de programme du Secrétariat du Conseil du Trésor si une approbation est nécessaire."],
@@ -461,7 +466,7 @@ export const GOVERNANCE = [
       en: ["Confirm the determination with the PMO and CFO, and contact the TBS analyst early if approval is needed."],
       fr: ["Confirmer la détermination avec le BGP et le DPF, et communiquer tôt avec l'analyste du SCT si une approbation est nécessaire."],
     },
-    describe: { en: "The approval authority for {project} was determined by comparing its estimated cost and PCRA level with the {dept} project approval limit and capacity class. {authority}", fr: "Le pouvoir d'approbation de {project} a été déterminé en comparant son coût estimatif et son niveau d'ECRP à la limite d'approbation des projets et à la catégorie de capacité de {dept}. {authority}" },
+    describe: { en: "The approval authority for {project} was determined under Appendix C of the Directive on the Management of Projects and Programmes, from its estimated cost, its PCRA level and the {dept} capacity class. {authority}", fr: "Le pouvoir d'approbation de {project} a été déterminé conformément à l'annexe C de la Directive sur la gestion des projets et programmes, à partir de son coût estimatif, de son niveau d'ECRP et de la catégorie de capacité de {dept}. {authority}" },
     questions: {
       en: ["Has the approval authority been determined in writing?", "Has the PMO or CFO confirmed the determination?"],
       fr: ["Le pouvoir d'approbation a-t-il été déterminé par écrit?", "Le BGP ou le DPF a-t-il confirmé la détermination?"],
@@ -471,10 +476,10 @@ export const GOVERNANCE = [
 
   // ---------------------------------------------------------------- APP
   {
-    id: "APP-1", gate: "G3", sev: "high", base: "required",
-    source: src(DMPP, { en: "Treasury Board project approval", fr: "approbation des projets par le Conseil du Trésor" }),
+    id: "APP-1", gate: "G3", revisit: ["G5"], sev: "high", base: "required",
+    source: src(cite("DMPP 4.2.4, 4.2.25, Appendices D and E", "DGPP 4.2.4, 4.2.25, annexes D et E")),
     title: { en: "Treasury Board project approval sought", fr: "Approbation du projet demandée au Conseil du Trésor" },
-    summary: { en: "When the project exceeds the department's authority, a Treasury Board submission seeks project approval, supported by the PCRA, the business case, costing, the procurement strategy and the CFO attestation. Historically this was done in two stages: preliminary project approval and effective project approval.", fr: "Lorsque le projet dépasse le pouvoir du ministère, une présentation au Conseil du Trésor demande l'approbation du projet, appuyée par l'ECRP, l'analyse de rentabilisation, l'établissement des coûts, la stratégie d'approvisionnement et l'attestation du DPF. Historiquement, cela se faisait en deux étapes : l'approbation préliminaire et l'approbation définitive du projet." },
+    summary: { en: "A project above the minister's authority needs two distinct Treasury Board approvals: expenditure authority to begin definition (before then, only pre-definition work such as options analysis and feasibility studies may proceed), then project approval and expenditure authority to begin implementation. Each submission appends a Project Brief; TBS may request the business case, project management plan, gating plan, procurement plan and charter. Project, procurement and real property authorities should be sought together where possible.", fr: "Un projet qui dépasse le pouvoir du ministre exige deux approbations distinctes du Conseil du Trésor : le pouvoir de dépenser pour commencer la définition (d'ici là, seuls des travaux préalables comme l'analyse des options et les études de faisabilité peuvent avoir lieu), puis l'approbation du projet et le pouvoir de dépenser pour commencer la mise en œuvre. Chaque présentation comprend en annexe un sommaire de projet; le SCT peut demander l'analyse de rentabilisation, le plan de gestion du projet, le plan des points de contrôle, le plan d'approvisionnement et la charte. Les pouvoirs relatifs au projet, à l'approvisionnement et aux biens immobiliers devraient être demandés ensemble lorsque c'est possible." },
     look: {
       en: ["The submission timeline agreed with the TBS program sector analyst.", "Draft submission, with the CFO attestation.", "TBS feedback on drafts."],
       fr: ["L'échéancier de la présentation convenu avec l'analyste du secteur de programme du SCT.", "L'ébauche de présentation, avec l'attestation du DPF.", "La rétroaction du SCT sur les ébauches."],
@@ -493,17 +498,17 @@ export const GOVERNANCE = [
     },
     describe: { en: "{project} exceeds the project approval authority of {dept}. Treasury Board approval is sought through a submission supported by the PCRA, business case, costing, procurement strategy and CFO attestation, prepared with the Treasury Board Secretariat.", fr: "{project} dépasse le pouvoir d'approbation des projets de {dept}. L'approbation du Conseil du Trésor est demandée au moyen d'une présentation appuyée par l'ECRP, l'analyse de rentabilisation, l'établissement des coûts, la stratégie d'approvisionnement et l'attestation du DPF, préparée avec le Secrétariat du Conseil du Trésor." },
     questions: {
-      en: ["Is the Treasury Board submission planned with TBS, with dates?", "Are the supporting documents (PCRA, business case, costing, procurement strategy) ready?", "Has the CFO attestation been planned?"],
-      fr: ["La présentation au Conseil du Trésor est-elle planifiée avec le SCT, avec des dates?", "Les documents à l'appui (ECRP, analyse de rentabilisation, coûts, stratégie d'approvisionnement) sont-ils prêts?", "L'attestation du DPF a-t-elle été planifiée?"],
+      en: ["Are both submissions (definition, then implementation) planned with TBS, with dates?", "Is the Project Brief drafted, with the documents TBS may request ready?", "Is only pre-definition work under way until expenditure authority for definition is granted?"],
+      fr: ["Les deux présentations (définition, puis mise en œuvre) sont-elles planifiées avec le SCT, avec des dates?", "Le sommaire de projet est-il rédigé, et les documents que le SCT peut demander sont-ils prêts?", "Seuls des travaux préalables à la définition sont-ils en cours jusqu'à l'obtention du pouvoir de dépenser pour la définition?"],
     },
     keywords: { en: ["Treasury Board submission", "TB submission", "project approval", "preliminary project approval", "effective project approval", "expenditure authority"], fr: ["présentation au Conseil du Trésor", "présentation au CT", "approbation du projet", "approbation préliminaire", "approbation définitive", "pouvoir de dépenser"] },
     scope: [
-      { when: { tb: "no" }, status: "na", reason: { en: "The project is within the department's project approval authority.", fr: "Le projet relève du pouvoir d'approbation des projets du ministère." } },
+      { when: { tb: "no" }, status: "na", reason: { en: "The project is within the minister's project approval authority.", fr: "Le projet relève du pouvoir d'approbation des projets du ministre." } },
     ],
   },
   {
     id: "APP-2", gate: "G5", sev: "high", base: "required",
-    source: src({ en: "Financial Administration Act, sections 32 and 34", fr: "Loi sur la gestion des finances publiques, articles 32 et 34" }, DMPP),
+    source: src(cite("DMPP Appendix D (D.1, D.2.2)", "DGPP annexe D (D.1, D.2.2)"), { en: "Financial Administration Act, sections 32 and 34", fr: "Loi sur la gestion des finances publiques, articles 32 et 34" }),
     title: { en: "Authority to spend on implementation", fr: "Pouvoir de dépenser pour la mise en œuvre" },
     summary: { en: "Before major implementation spending or contract award, the project confirms the expenditure authority for the baselined cost (departmental or Treasury Board) and that funds are available.", fr: "Avant d'engager des dépenses de mise en œuvre importantes ou d'attribuer un contrat, le projet confirme le pouvoir de dépenser pour le coût de référence (ministériel ou du Conseil du Trésor) et la disponibilité des fonds." },
     look: {
@@ -562,10 +567,10 @@ export const GOVERNANCE = [
     ],
   },
   {
-    id: "APP-4", gate: "G2", revisit: ["G4"], sev: "high", base: "required",
-    source: { en: "Directive on Service and Digital (GC Enterprise Architecture Review Board)", fr: "Directive sur les services et le numérique (Conseil d'examen de l'architecture intégrée du GC)" },
+    id: "APP-4", gate: "G2", sev: "high", base: "required",
+    source: { en: "Directive on Service and Digital 4.3.2 to 4.3.5", fr: "Directive sur les services et le numérique 4.3.2 à 4.3.5" },
     title: { en: "GC Enterprise Architecture Review Board (GC EARB)", fr: "Conseil d'examen de l'architecture intégrée du GC (CEAI du GC)" },
-    summary: { en: "Digital initiatives above the department's threshold (from $2.5M with no or a class 1 OPMCA, rising with capacity class), or that use emerging technology or need a policy exception, are presented to the GC EARB, normally at concept and again before detailed design is final.", fr: "Les initiatives numériques au-delà du seuil du ministère (dès 2,5 M$ sans ECOGP ou avec une catégorie 1, en hausse selon la catégorie de capacité), ou qui utilisent une technologie émergente ou nécessitent une exception à la politique, sont présentées au CEAI du GC, normalement à l'étape du concept puis avant que la conception détaillée soit finalisée." },
+    summary: { en: "Digital initiatives at or above the department's threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4, $15M for National Defence), or that involve emerging technology, need a policy exception, host Protected B or lower outside public cloud, or extend support for an unsupported technology, go to the GC EARB. Proposals are first assessed by the departmental architecture review board, and are submitted after the concept case is reviewed and before the business case or Treasury Board submission is developed.", fr: "Les initiatives numériques égales ou supérieures au seuil du ministère (2,5 M$ sans catégorie ou en catégorie 1, 5 M$ en catégorie 2, 10 M$ en catégorie 3, 25 M$ en catégorie 4, 15 M$ pour la Défense nationale), ou qui font appel à une technologie émergente, nécessitent une exception à la politique, hébergent de l'information Protégé B ou moins ailleurs que dans le nuage public, ou prolongent le soutien d'une technologie non soutenue, sont présentées au CEAI du GC. Elles sont d'abord évaluées par le conseil ministériel d'examen de l'architecture, puis soumises après l'examen du cas conceptuel et avant l'élaboration de l'analyse de rentabilisation ou de la présentation au Conseil du Trésor." },
     look: {
       en: ["The GC EARB presentation and its outcome or conditions.", "The departmental architecture review board's prior endorsement.", "Alignment with the GC Enterprise Architecture Framework."],
       fr: ["La présentation au CEAI du GC et son résultat ou ses conditions.", "L'approbation préalable du conseil ministériel d'examen de l'architecture.", "L'harmonisation avec le Cadre d'architecture intégrée du GC."],
@@ -594,7 +599,7 @@ export const GOVERNANCE = [
   },
   {
     id: "APP-5", gate: "G2", sev: "medium", base: "required",
-    source: { en: "Directive on Service and Digital (departmental CIO responsibilities)", fr: "Directive sur les services et le numérique (responsabilités du DPI ministériel)" },
+    source: { en: "Directive on Service and Digital 4.3.1, 4.3.3, 4.3.6", fr: "Directive sur les services et le numérique 4.3.1, 4.3.3, 4.3.6" },
     title: { en: "Departmental architecture review and CIO endorsement", fr: "Examen de l'architecture ministérielle et appui du DPI" },
     summary: { en: "The departmental CIO and architecture review board review the proposed solution for alignment with departmental and GC architecture, security and reuse expectations.", fr: "Le DPI ministériel et le conseil d'examen de l'architecture examinent la solution proposée pour vérifier son harmonisation avec l'architecture ministérielle et du GC ainsi qu'avec les attentes en matière de sécurité et de réutilisation." },
     look: {
@@ -689,9 +694,9 @@ export const GOVERNANCE = [
   // ---------------------------------------------------------------- GAT
   {
     id: "GAT-1", gate: "G2", sev: "medium", base: "required",
-    source: src(DMPP, GUIDE),
+    source: src(cite("DMPP 4.2.18", "DGPP 4.2.18"), GUIDE),
     title: { en: "Gating plan defined", fr: "Plan des points de contrôle défini" },
-    summary: { en: "The project knows which gates it will pass, using which model, who the gatekeepers are, the evidence expected at each, and roughly when each gate will occur.", fr: "Le projet sait quels points de contrôle il franchira, selon quel modèle, qui en sont les responsables, quels éléments probants sont attendus à chacun et approximativement quand chacun aura lieu." },
+    summary: { en: "At the outset, consistent with the departmental framework, the sponsor establishes a gating plan that documents the decision at each gate, the evidence required, the criteria used to assess it and the gate governance, and that reflects the project's specific risks, stakeholder input, procurement strategy, dependencies and constraints.", fr: "Dès le départ, conformément au cadre ministériel, le promoteur établit un plan des points de contrôle qui documente la décision prise à chacun, les éléments probants exigés, les critères d'évaluation et la gouvernance, et qui tient compte des risques propres au projet, de l'apport des intervenants, de la stratégie d'approvisionnement, des dépendances et des contraintes." },
     look: {
       en: ["A gating plan in the project management plan or charter.", "Gate dates in the integrated schedule."],
       fr: ["Un plan des points de contrôle dans le plan de gestion du projet ou la charte.", "Les dates des points de contrôle dans le calendrier intégré."],
@@ -710,16 +715,16 @@ export const GOVERNANCE = [
     },
     describe: { en: "{project} follows the {model} model. The gating plan names the gatekeepers and evidence expected at each gate, and gate dates are part of the integrated schedule.", fr: "{project} suit le modèle {model}. Le plan des points de contrôle désigne les responsables et les éléments probants attendus à chacun, et les dates font partie du calendrier intégré." },
     questions: {
-      en: ["Is there a gating plan naming the gates, gatekeepers and evidence?", "Are gate dates in the schedule?"],
-      fr: ["Existe-t-il un plan des points de contrôle qui en précise les responsables et les éléments probants?", "Les dates des points de contrôle figurent-elles au calendrier?"],
+      en: ["Does the gating plan document each gate's decision, evidence, assessment criteria and governance?", "Does it reflect the project's risks, procurement strategy and dependencies?", "Are gate dates in the schedule?"],
+      fr: ["Le plan des points de contrôle documente-t-il la décision, les éléments probants, les critères d'évaluation et la gouvernance de chaque point de contrôle?", "Tient-il compte des risques, de la stratégie d'approvisionnement et des dépendances du projet?", "Les dates des points de contrôle figurent-elles au calendrier?"],
     },
     keywords: { en: ["gating plan", "gate", "gates", "gatekeeper*"], fr: ["plan des points de contrôle", "point de contrôle", "points de contrôle"] },
   },
   {
     id: "GAT-2", gate: "G3", revisit: ["G5"], sev: "medium", base: "recommended",
-    source: { en: "The Independent Reviewer's Handbook (TBS); Policy on the Planning and Management of Investments (independent reviews)", fr: "Guide de l'examinateur indépendant (SCT); Politique sur la planification et la gestion des investissements (examens indépendants)" },
+    source: { en: "DMPP 4.2.21, 4.5.1.2; PPMI 4.1.10.3; A Guide to Project Gating for IT-Enabled Projects; The Independent Reviewer's Handbook", fr: "DGPP 4.2.21, 4.5.1.2; PPGI 4.1.10.3; Guide sur le contrôle des projets de TI par points de contrôle; Guide de l'examinateur indépendant" },
     title: { en: "Independent review at key gates", fr: "Examen indépendant aux points de contrôle clés" },
-    summary: { en: "High-risk or Treasury Board-approved projects get an independent third-party review at key gates, typically before the business case and before implementation, so that gatekeepers have a view not owned by the project team.", fr: "Les projets à risque élevé ou approuvés par le Conseil du Trésor font l'objet d'un examen indépendant par un tiers aux points de contrôle clés, généralement avant l'analyse de rentabilisation et avant la mise en œuvre, afin que les responsables disposent d'un point de vue qui n'appartient pas à l'équipe de projet." },
+    summary: { en: "Assurance activities and independent reviews are conducted as set out in the gating plan. The gating guide recommends independent reviews where an outside view helps, and at least one independent full review a year on large or long projects. For digital projects under its oversight, the Chief Information Officer of Canada can require or commission independent reviews at the department's cost.", fr: "Les activités d'assurance et les examens indépendants sont réalisés selon le plan des points de contrôle. Le guide recommande des examens indépendants lorsqu'un regard extérieur est utile, et au moins un examen indépendant complet par année pour les projets importants ou de longue durée. Pour les projets numériques sous sa surveillance, le dirigeant principal de l'information du Canada peut exiger ou commander des examens indépendants aux frais du ministère." },
     look: {
       en: ["The independent review terms of reference and reviewer independence.", "The review report and the project's management response."],
       fr: ["Le mandat de l'examen indépendant et l'indépendance de l'examinateur.", "Le rapport d'examen et la réponse de la direction du projet."],
@@ -775,8 +780,98 @@ export const GOVERNANCE = [
     keywords: { en: ["conditions", "recommendations", "follow-up", "action items"], fr: ["conditions", "recommandations", "suivi", "mesures de suivi"] },
   },
   {
+    id: "GOV-7", gate: "G1", revisit: ["G3"], sev: "high", base: "required",
+    source: src(cite("DMPP 4.2.16, 4.2.17, 4.2.23", "DGPP 4.2.16, 4.2.17, 4.2.23"), cite("PPMI 4.1.11", "PPGI 4.1.11")),
+    title: { en: "Joint governance for horizontal projects", fr: "Gouvernance conjointe des projets horizontaux" },
+    summary: { en: "For joint and enterprise projects, a common governance framework is set up with key stakeholders: a Senior Board of participating deputy heads, an ADM-level committee and a DG committee. The deputy heads on the Senior Board sign the sponsor's appointment letter, each department's roles, accountabilities and authorities are documented in signed agreements, and gate decisions consider the input of all affected stakeholders.", fr: "Pour les projets conjoints et ministériels, un cadre de gouvernance commun est établi avec les principaux intervenants : un conseil supérieur formé des administrateurs généraux participants, un comité de niveau SMA et un comité de DG. Les administrateurs généraux membres du conseil supérieur signent la lettre de nomination du promoteur, les rôles, responsabilités et pouvoirs de chaque ministère sont consignés dans des ententes signées, et les décisions aux points de contrôle tiennent compte de l'apport de tous les intervenants touchés." },
+    look: {
+      en: ["Signed agreements (memorandum of understanding) among participating departments.", "The sponsor's appointment letter signed by the participating deputy heads.", "Terms of reference for the Senior Board, ADM and DG committees."],
+      fr: ["Les ententes signées (protocole d'entente) entre les ministères participants.", "La lettre de nomination du promoteur signée par les administrateurs généraux participants.", "Le mandat du conseil supérieur et des comités de SMA et de DG."],
+    },
+    rightsize: {
+      en: ["Reuse an existing interdepartmental committee structure where one already covers the same deputy heads."],
+      fr: ["Réutiliser une structure de comités interministériels existante lorsqu'elle réunit déjà les mêmes administrateurs généraux."],
+    },
+    consequences: {
+      en: ["Partner departments withdraw resources or contest decisions they did not agree to.", "No one can resolve disputes between departments, so the project stalls."],
+      fr: ["Des ministères partenaires retirent des ressources ou contestent des décisions qu'ils n'ont pas approuvées.", "Personne ne peut régler les différends entre ministères, et le projet stagne."],
+    },
+    mitigations: {
+      en: ["Draft the agreements and the appointment letter now and take them to the partners' deputy heads."],
+      fr: ["Rédiger dès maintenant les ententes et la lettre de nomination et les présenter aux administrateurs généraux des partenaires."],
+    },
+    describe: { en: "{project} is governed by a Senior Board of participating deputy heads supported by ADM and DG committees. The deputy heads signed {sponsor}'s appointment letter, and each department's roles and authorities are set out in signed agreements.", fr: "{project} est régi par un conseil supérieur formé des administrateurs généraux participants, appuyé par des comités de SMA et de DG. Les administrateurs généraux ont signé la lettre de nomination de {sponsor}, et les rôles et pouvoirs de chaque ministère sont énoncés dans des ententes signées." },
+    questions: {
+      en: ["Is there a Senior Board of participating deputy heads with ADM and DG committees?", "Did the participating deputy heads sign the sponsor's appointment letter?", "Are each department's roles and authorities in signed agreements?"],
+      fr: ["Existe-t-il un conseil supérieur des administrateurs généraux participants, avec des comités de SMA et de DG?", "Les administrateurs généraux participants ont-ils signé la lettre de nomination du promoteur?", "Les rôles et pouvoirs de chaque ministère figurent-ils dans des ententes signées?"],
+    },
+    keywords: { en: ["Senior Board", "memorandum of understanding", "MOU", "participating departments", "appointment letter"], fr: ["conseil supérieur", "protocole d'entente", "ministères participants", "lettre de nomination"] },
+    scope: [
+      { when: { horizontal: "no" }, status: "na", reason: { en: "Not a joint or enterprise project.", fr: "Il ne s'agit pas d'un projet conjoint ou ministériel." } },
+    ],
+  },
+  {
+    id: "APP-8", gate: "G1", sev: "high", base: "required",
+    source: src(cite("PPMI 4.1.7, Appendix B", "PPGI 4.1.7, annexe B")),
+    title: { en: "Digital concept case reviewed by the GC CIO", fr: "Cas conceptuel numérique examiné par le DPI du GC" },
+    summary: { en: "For a digitally enabled project at or above the department's threshold ($2.5M with no class or class 1, $5M class 2, $10M class 3, $25M class 4, $15M for National Defence), a concept case is prepared with the Concept Case Template, approved by the business owner (ADM or above), reviewed by the departmental investment oversight body for inclusion in the investment plan, and submitted to TBS for review by the Chief Information Officer of the Government of Canada.", fr: "Pour un projet numérique égal ou supérieur au seuil du ministère (2,5 M$ sans catégorie ou en catégorie 1, 5 M$ en catégorie 2, 10 M$ en catégorie 3, 25 M$ en catégorie 4, 15 M$ pour la Défense nationale), un cas conceptuel est préparé avec le gabarit prévu, approuvé par le responsable opérationnel (SMA ou plus), examiné par l'organe ministériel de surveillance des investissements en vue de son inclusion dans le plan d'investissement, et soumis au SCT pour examen par le dirigeant principal de l'information du gouvernement du Canada." },
+    look: {
+      en: ["The concept case and the business owner's approval.", "The investment oversight body's decision.", "The submission to TBS and the GC CIO's response."],
+      fr: ["Le cas conceptuel et l'approbation du responsable opérationnel.", "La décision de l'organe de surveillance des investissements.", "La soumission au SCT et la réponse du DPI du GC."],
+    },
+    rightsize: {
+      en: ["Write the concept case from the Gate 1 problem statement and options; it is short by design."],
+      fr: ["Rédiger le cas conceptuel à partir de l'énoncé du problème et des options du point de contrôle 1; il est court par nature."],
+    },
+    consequences: {
+      en: ["The GC EARB review and the business case cannot proceed in the required order.", "Non-compliance with the Policy on the Planning and Management of Investments."],
+      fr: ["L'examen par le CEAI du GC et l'analyse de rentabilisation ne peuvent se faire dans l'ordre exigé.", "Non-conformité à la Politique sur la planification et la gestion des investissements."],
+    },
+    mitigations: {
+      en: ["Prepare the concept case now and schedule it with the departmental investment committee."],
+      fr: ["Préparer dès maintenant le cas conceptuel et l'inscrire au calendrier du comité ministériel des investissements."],
+    },
+    describe: { en: "A concept case for {project} was approved by the business owner, reviewed by the {dept} investment oversight body and submitted to TBS for review by the Chief Information Officer of the Government of Canada.", fr: "Un cas conceptuel de {project} a été approuvé par le responsable opérationnel, examiné par l'organe de surveillance des investissements de {dept} et soumis au SCT pour examen par le dirigeant principal de l'information du gouvernement du Canada." },
+    questions: {
+      en: ["Has a concept case been approved by the business owner (ADM or above)?", "Has the departmental investment oversight body reviewed it?", "Has it been submitted to TBS for GC CIO review?"],
+      fr: ["Un cas conceptuel a-t-il été approuvé par le responsable opérationnel (SMA ou plus)?", "L'organe ministériel de surveillance des investissements l'a-t-il examiné?", "A-t-il été soumis au SCT pour examen par le DPI du GC?"],
+    },
+    keywords: { en: ["concept case", "GC CIO", "Chief Information Officer of the Government of Canada"], fr: ["cas conceptuel", "DPI du GC", "dirigeant principal de l'information du gouvernement du Canada"] },
+    scope: [
+      { when: { conceptCase: "no" }, status: "na", reason: { en: "Not a digital investment at or above the concept case threshold.", fr: "Il ne s'agit pas d'un investissement numérique égal ou supérieur au seuil du cas conceptuel." } },
+    ],
+  },
+  {
+    id: "GAT-4", gate: "G2", revisit: ["G3", "G4", "G5", "G6"], sev: "high", base: "required",
+    source: src(cite("DMPP 4.2.19, 4.2.22", "DGPP 4.2.19, 4.2.22")),
+    title: { en: "Business case and viability revalidated at each gate", fr: "Analyse de rentabilisation et viabilité revalidées à chaque point de contrôle" },
+    summary: { en: "Each gate includes a revalidation of the business case, confirmation that the intended benefits are still relevant and attainable, an overall determination of the project's ongoing viability, and a determination of whether the project has met the gate's requirements.", fr: "Chaque point de contrôle comprend une revalidation de l'analyse de rentabilisation, la confirmation que les avantages visés sont toujours pertinents et atteignables, une décision globale sur la viabilité continue du projet et une décision sur le respect des exigences du point de contrôle." },
+    look: {
+      en: ["The gate package's section revalidating the business case and benefits.", "The gate decision record stating whether the gate's requirements were met."],
+      fr: ["La section du dossier du point de contrôle qui revalide l'analyse de rentabilisation et les avantages.", "Le compte rendu de décision indiquant si les exigences du point de contrôle ont été respectées."],
+    },
+    rightsize: {
+      en: ["A one-page revalidation (what changed in costs, benefits and risks since the last gate) is enough when nothing material changed."],
+      fr: ["Une revalidation d'une page (ce qui a changé dans les coûts, les avantages et les risques depuis le dernier point de contrôle) suffit lorsque rien d'important n'a changé."],
+    },
+    consequences: {
+      en: ["A project that is no longer worth doing continues because nobody asked.", "Gate decisions are taken on evidence that is out of date."],
+      fr: ["Un projet qui ne vaut plus la peine se poursuit parce que personne n'a posé la question.", "Des décisions sont prises sur la foi d'éléments probants périmés."],
+    },
+    mitigations: {
+      en: ["Add a standing revalidation section to the gate template and complete it before the next gate."],
+      fr: ["Ajouter une section permanente de revalidation au gabarit des points de contrôle et la remplir avant le prochain point de contrôle."],
+    },
+    describe: { en: "At each gate, {project} revalidates its business case, confirms that the intended benefits remain relevant and attainable, and records a determination of its ongoing viability and of whether the gate's requirements were met.", fr: "À chaque point de contrôle, {project} revalide son analyse de rentabilisation, confirme que les avantages visés demeurent pertinents et atteignables, et consigne une décision sur sa viabilité continue et sur le respect des exigences du point de contrôle." },
+    questions: {
+      en: ["Is the business case revalidated at this gate?", "Are the intended benefits confirmed as still relevant and attainable?", "Is the project's ongoing viability explicitly decided?"],
+      fr: ["L'analyse de rentabilisation est-elle revalidée à ce point de contrôle?", "Les avantages visés sont-ils confirmés comme toujours pertinents et atteignables?", "La viabilité continue du projet fait-elle l'objet d'une décision explicite?"],
+    },
+    keywords: { en: ["revalidat*", "viability", "still relevant", "ongoing viability"], fr: ["revalid*", "viabilité", "toujours pertinent*"] },
+  },
+  {
     id: "PGM-1", area: "GOV", gate: "G1", revisit: ["G3"], sev: "medium", base: "required",
-    source: src(DMPP, { en: "programme management", fr: "gestion des programmes" }),
+    source: src(cite("DMPP 4.1.7, Appendix F", "DGPP 4.1.7, annexe F")),
     title: { en: "Programme alignment and interdependencies", fr: "Harmonisation avec le programme et interdépendances" },
     summary: { en: "When the project is part of a programme, its contribution to programme outcomes, its dependencies on other projects and the programme's governance are defined.", fr: "Lorsque le projet fait partie d'un programme, sa contribution aux résultats du programme, ses dépendances envers d'autres projets et la gouvernance du programme sont définies." },
     look: {
