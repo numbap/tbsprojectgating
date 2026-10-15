@@ -11,7 +11,7 @@ Based on VPAT® Version 2.5Rev (EU edition: WCAG and EN 301 549)
 
 ## Build status
 
-- Automated suite passed: 105 axe-core runs with no WCAG violations, and 564 scripted checks passed across 35 page states (axe-core 4.14.0, Chromium (Playwright 1.56.1)).
+- Automated suite failed: 0 WCAG violation(s) and 3 failed scripted check(s). Affected criteria are downgraded below.
 - Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint ecdea3043859abf4).
 
 ## Notes
@@ -31,7 +31,7 @@ Based on VPAT® Version 2.5Rev (EU edition: WCAG and EN 301 549)
 
 ## WCAG 2.x Report
 
-Summary: 45 Supports, 11 Not Applicable.
+Summary: 44 Supports, 1 Partially Supports, 11 Not Applicable.
 
 ### Table 1: Success Criteria, Level A
 
@@ -83,7 +83,7 @@ Summary: 45 Supports, 11 Not Applicable.
 | 1.4.5 Images of Text | Supports | No images of text are used. Evidence: code review. |
 | 1.4.10 Reflow | Supports | No two-dimensional scrolling at 320 CSS px on any page state. Data tables in the report scroll within their own container, which WCAG allows for content that needs two-dimensional layout. The header stops being sticky on narrow screens so it does not take space at high zoom. Evidence: scripted checks reflow-320 (35 runs, all passed); visual inspection. |
 | 1.4.11 Non-text Contrast | Supports | Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation. Evidence: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection. |
-| 1.4.12 Text Spacing | Supports | With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed). |
+| 1.4.12 Text Spacing | Partially Supports | With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs). |
 | 1.4.13 Content on Hover or Focus | Supports | No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser. Evidence: code review. |
 | 2.4.5 Multiple Ways | Supports | Main navigation, a gate sidebar, previous/next links, a gate guide, a decision tree with a full map, and a searchable, filterable library of all requirements. Evidence: code review. |
 | 2.4.6 Headings and Labels | Supports | Headings and labels describe their topic or purpose; repeated “Questions” headings include the requirement ID for assistive technology. Evidence: code review, accessibility tree inspection. |
@@ -178,7 +178,7 @@ Not evaluated.
 | 9.1.4.5 Images of Text | Supports | See WCAG 1.4.5. |
 | 9.1.4.10 Reflow | Supports | See WCAG 1.4.10. |
 | 9.1.4.11 Non-text Contrast | Supports | See WCAG 1.4.11. |
-| 9.1.4.12 Text Spacing | Supports | See WCAG 1.4.12. |
+| 9.1.4.12 Text Spacing | Partially Supports | See WCAG 1.4.12. |
 | 9.1.4.13 Content on Hover or Focus | Supports | See WCAG 1.4.13. |
 | 9.2.4.5 Multiple Ways | Supports | See WCAG 2.4.5. |
 | 9.2.4.6 Headings and Labels | Supports | See WCAG 2.4.6. |
@@ -189,7 +189,7 @@ Not evaluated.
 | 9.3.3.3 Error Suggestion | Supports | See WCAG 3.3.3. |
 | 9.3.3.4 Error Prevention (Legal, Financial, Data) | Supports | See WCAG 3.3.4. |
 | 9.4.1.3 Status Messages | Supports | See WCAG 4.1.3. |
-| 9.6 WCAG conformance requirements | Supports | All clauses 9.1 to 9.4 are supported or not applicable. |
+| 9.6 WCAG conformance requirements | Partially Supports | One or more clauses are not fully supported. |
 
 ### Chapters 10 to 12
 

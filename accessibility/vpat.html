@@ -30,7 +30,7 @@
 </tbody></table></div>
 
 <h2>Build status</h2>
-<p class="notice ok">Automated suite passed: 105 axe-core runs with no WCAG violations, and 564 scripted checks passed across 35 page states (axe-core 4.14.0, Chromium (Playwright 1.56.1)).</p>
+<p class="notice bad"><strong>Automated suite failed:</strong> 0 WCAG violation(s) and 3 failed scripted check(s). Affected criteria are downgraded below.</p>
 <p class="notice ok">Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint <code>ecdea3043859abf4</code>).</p>
 
 <h2>Notes</h2>
@@ -54,7 +54,7 @@
 </dl>
 
 <h2>Summary</h2>
-<p>WCAG 2.2 Level A and AA (56 criteria, including 4.1.1): 45 Supports, 11 Not Applicable.</p>
+<p>WCAG 2.2 Level A and AA (56 criteria, including 4.1.1): 44 Supports, 1 Partially Supports, 11 Not Applicable.</p>
 
 <h2>WCAG 2.x Report</h2>
 <p>Tables 1 and 2 cover WCAG 2.0, 2.1 and 2.2. Criteria introduced in WCAG 2.1 or 2.2 are marked. EN 301 549 chapter 9 results follow from these tables.</p>
@@ -186,8 +186,8 @@
 <td><span class="lvl lvl-S">Supports</span></td>
 <td>Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation.<p class="ev"><strong>Evidence:</strong> scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection.</p></td></tr>
 <tr><th scope="row">1.4.12 Text Spacing <span class="meta">(Level AA, WCAG 2.1 and 2.2)</span></th>
-<td><span class="lvl lvl-S">Supports</span></td>
-<td>With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears.<p class="ev"><strong>Evidence:</strong> 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed).</p></td></tr>
+<td><span class="lvl lvl-P">Partially Supports</span></td>
+<td>With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px.<p class="ev"><strong>Evidence:</strong> 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs).</p></td></tr>
 <tr><th scope="row">1.4.13 Content on Hover or Focus <span class="meta">(Level AA, WCAG 2.1 and 2.2)</span></th>
 <td><span class="lvl lvl-S">Supports</span></td>
 <td>No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser.<p class="ev"><strong>Evidence:</strong> code review.</p></td></tr>
@@ -302,7 +302,7 @@
 <tr><th scope="row">9.1.4.5 Images of Text</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 1.4.5.</td></tr>
 <tr><th scope="row">9.1.4.10 Reflow</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 1.4.10.</td></tr>
 <tr><th scope="row">9.1.4.11 Non-text Contrast</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 1.4.11.</td></tr>
-<tr><th scope="row">9.1.4.12 Text Spacing</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 1.4.12.</td></tr>
+<tr><th scope="row">9.1.4.12 Text Spacing</th><td><span class="lvl lvl-P">Partially Supports</span></td><td>See WCAG 1.4.12. text-spacing on report (320px): Page scrolls horizontally by 11px.</td></tr>
 <tr><th scope="row">9.1.4.13 Content on Hover or Focus</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 1.4.13.</td></tr>
 <tr><th scope="row">9.2.4.5 Multiple Ways</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 2.4.5.</td></tr>
 <tr><th scope="row">9.2.4.6 Headings and Labels</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 2.4.6.</td></tr>
@@ -313,7 +313,7 @@
 <tr><th scope="row">9.3.3.3 Error Suggestion</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 3.3.3.</td></tr>
 <tr><th scope="row">9.3.3.4 Error Prevention (Legal, Financial, Data)</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 3.3.4.</td></tr>
 <tr><th scope="row">9.4.1.3 Status Messages</th><td><span class="lvl lvl-S">Supports</span></td><td>See WCAG 4.1.3.</td></tr>
-<tr><th scope="row">9.6 WCAG conformance requirements</th><td><span class="lvl lvl-S">Supports</span></td><td>All clauses 9.1 to 9.4 are supported or not applicable.</td></tr></tbody></table></div>
+<tr><th scope="row">9.6 WCAG conformance requirements</th><td><span class="lvl lvl-P">Partially Supports</span></td><td>One or more clauses 9.1 to 9.4 are not fully supported.</td></tr></tbody></table></div>
 <h3>Chapters 10 to 12</h3>
 <div class="table-wrap" role="region" tabindex="0" aria-label="Chapters 10 to 12: Non-web documents, software, documentation and support"><table><caption>Chapters 10 to 12: Non-web documents, software, documentation and support</caption>
 <thead><tr><th scope="col">Criteria</th><th scope="col">Conformance level</th><th scope="col">Remarks and explanations</th></tr></thead>
