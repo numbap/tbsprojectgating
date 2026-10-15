@@ -1236,7 +1236,7 @@
       "incomplete": [
         {
           "id": "color-contrast",
-          "count": 1
+          "count": 2
         },
         {
           "id": "label-content-name-mismatch",
@@ -2534,7 +2534,7 @@
       "incomplete": [
         {
           "id": "color-contrast",
-          "count": 117
+          "count": 120
         },
         {
           "id": "label-content-name-mismatch",
@@ -5585,6 +5585,7 @@
         "meta-viewport-large",
         "page-has-heading-one",
         "region",
+        "scrollable-region-focusable",
         "skip-link",
         "tabindex",
         "table-duplicate-name",

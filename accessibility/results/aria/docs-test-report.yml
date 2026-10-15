@@ -35,7 +35,7 @@
           - /url: remediation-log.html
 - main:
   - heading "Automated test report" [level=1]
-  - paragraph: "Failed: 105 axe-core runs (0 WCAG violations, 0 best-practice issues), 561 of 564 scripted checks passed, 0 JavaScript errors."
+  - paragraph: "Passed: 105 axe-core runs (0 WCAG violations, 0 best-practice issues), 564 of 564 scripted checks passed, 0 JavaScript errors."
   - heading "Tools" [level=2]
   - list:
     - listitem: "axe-core: 4.14.0"
@@ -355,18 +355,13 @@
           - cell "1.4.4"
           - cell "35"
           - cell "All passed"
-        - 'row "text-spacing No clipped content with WCAG text-spacing overrides 1.4.12 70 3 failed report (320px): Page scrolls horizontally by 11px; div \"26%Assessment progress\" fr-report (320px): Page scrolls horizontally by 5px; div \"26 %Progression de l''évaluation\" fr-assess (320px): Page scrolls horizontally by 10px"':
+        - row "text-spacing No clipped content with WCAG text-spacing overrides 1.4.12 70 All passed":
           - rowheader "text-spacing No clipped content with WCAG text-spacing overrides":
             - code: text-spacing
             - text: No clipped content with WCAG text-spacing overrides
           - cell "1.4.12"
           - cell "70"
-          - 'cell "3 failed report (320px): Page scrolls horizontally by 11px; div \"26%Assessment progress\" fr-report (320px): Page scrolls horizontally by 5px; div \"26 %Progression de l''évaluation\" fr-assess (320px): Page scrolls horizontally by 10px"':
-            - text: 3 failed
-            - list:
-              - listitem: "report (320px): Page scrolls horizontally by 11px; div \"26%Assessment progress\""
-              - listitem: "fr-report (320px): Page scrolls horizontally by 5px; div \"26 %Progression de l'évaluation\""
-              - listitem: "fr-assess (320px): Page scrolls horizontally by 10px"
+          - cell "All passed"
         - row "route-focus Navigation moves focus to the new page heading and updates title 2.4.3, 2.4.2, 4.1.2 1 All passed":
           - rowheader "route-focus Navigation moves focus to the new page heading and updates title":
             - code: route-focus

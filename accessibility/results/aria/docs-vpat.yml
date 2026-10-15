@@ -68,15 +68,10 @@
           - rowheader "Evaluation methods used"
           - cell "WCAG 2.2 A/AA evaluation combining (1) axe-core automated rules on every page state in light and dark themes; (2) scripted Playwright checks for keyboard access, keyboard traps, focus visibility and contrast, focus obscuring, reflow at 320 CSS px, resize at 200%, text spacing, target size, non-text contrast, ARIA tabs, focus management and status messages; (3) code review of templates, styles and event handling; (4) visual inspection of light, dark and forced-colours rendering at several widths; and (5) review of the generated accessibility tree. Details are in the test methodology and test report."
   - heading "Build status" [level=2]
+  - paragraph: "Automated suite passed: 105 axe-core runs with no WCAG violations, and 564 scripted checks passed across 35 page states (axe-core 4.14.0, Chromium (Playwright 1.56.1))."
   - paragraph:
-    - strong: "Automated suite failed:"
-    - text: 0 WCAG violation(s) and 3 failed scripted check(s). Affected criteria are downgraded below.
-  - paragraph:
-    - strong: Manual review pending.
-    - text: "The user interface has changed since the last attested manual review (2026-10-15). Changed:"
-    - code: css/styles.css
-    - text: . Automated results in this report are current; judgements based on code review or visual inspection must be re-confirmed (
-    - code: npm run a11y:attest
+    - text: "Manual review is current: the code-review and visual judgements were made on the same user-interface code this report describes (fingerprint"
+    - code: f1aa0321a47e0d7b
     - text: ).
   - heading "Notes" [level=2]
   - list:
@@ -116,7 +111,7 @@
   - term: Not Evaluated
   - definition: The product has not been evaluated against the criterion.
   - heading "Summary" [level=2]
-  - paragraph: "WCAG 2.2 Level A and AA (56 criteria, including 4.1.1): 44 Supports, 1 Partially Supports, 11 Not Applicable."
+  - paragraph: "WCAG 2.2 Level A and AA (56 criteria, including 4.1.1): 45 Supports, 11 Not Applicable."
   - heading "WCAG 2.x Report" [level=2]
   - paragraph: Tables 1 and 2 cover WCAG 2.0, 2.1 and 2.2. Criteria introduced in WCAG 2.1 or 2.2 are marked. EN 301 549 chapter 9 results follow from these tables.
   - 'region "Table 1: Success Criteria, Level A"':
@@ -128,86 +123,86 @@
           - columnheader "Conformance level"
           - columnheader "Remarks and explanations"
       - rowgroup:
-        - 'row "1.1.1 Non-text Content (Level A) Supports The logo graphic is hidden from assistive technology and accompanied by the product name in text. Progress rings and score bars use role=img with a text alternative giving the percentage. Decorative glyphs (disclosure triangle, check marks, theme icon) are hidden with aria-hidden or empty CSS alternative text. The theme button has an accessible name. Evidence: 1 axe-core rule passed (role-img-alt); code review, accessibility tree inspection (pending re-review after UI changes)."':
+        - 'row "1.1.1 Non-text Content (Level A) Supports The logo graphic is hidden from assistive technology and accompanied by the product name in text. Progress rings and score bars use role=img with a text alternative giving the percentage. Decorative glyphs (disclosure triangle, check marks, theme icon) are hidden with aria-hidden or empty CSS alternative text. The theme button has an accessible name. Evidence: 1 axe-core rule passed (role-img-alt); code review, accessibility tree inspection."':
           - rowheader "1.1.1 Non-text Content (Level A)"
           - cell "Supports"
-          - 'cell "The logo graphic is hidden from assistive technology and accompanied by the product name in text. Progress rings and score bars use role=img with a text alternative giving the percentage. Decorative glyphs (disclosure triangle, check marks, theme icon) are hidden with aria-hidden or empty CSS alternative text. The theme button has an accessible name. Evidence: 1 axe-core rule passed (role-img-alt); code review, accessibility tree inspection (pending re-review after UI changes)."':
+          - 'cell "The logo graphic is hidden from assistive technology and accompanied by the product name in text. Progress rings and score bars use role=img with a text alternative giving the percentage. Decorative glyphs (disclosure triangle, check marks, theme icon) are hidden with aria-hidden or empty CSS alternative text. The theme button has an accessible name. Evidence: 1 axe-core rule passed (role-img-alt); code review, accessibility tree inspection."':
             - text: The logo graphic is hidden from assistive technology and accompanied by the product name in text. Progress rings and score bars use role=img with a text alternative giving the percentage. Decorative glyphs (disclosure triangle, check marks, theme icon) are hidden with aria-hidden or empty CSS alternative text. The theme button has an accessible name.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (role-img-alt); code review, accessibility tree inspection (pending re-review after UI changes).
-        - 'row "1.2.1 Audio-only and Video-only (Prerecorded) (Level A) Not Applicable The product contains no audio or video. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (role-img-alt); code review, accessibility tree inspection.
+        - 'row "1.2.1 Audio-only and Video-only (Prerecorded) (Level A) Not Applicable The product contains no audio or video. Evidence: code review."':
           - rowheader "1.2.1 Audio-only and Video-only (Prerecorded) (Level A)"
           - cell "Not Applicable"
-          - 'cell "The product contains no audio or video. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The product contains no audio or video. Evidence: code review."':
             - text: The product contains no audio or video.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.2.2 Captions (Prerecorded) (Level A) Not Applicable The product contains no audio or video. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.2.2 Captions (Prerecorded) (Level A) Not Applicable The product contains no audio or video. Evidence: code review."':
           - rowheader "1.2.2 Captions (Prerecorded) (Level A)"
           - cell "Not Applicable"
-          - 'cell "The product contains no audio or video. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The product contains no audio or video. Evidence: code review."':
             - text: The product contains no audio or video.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.2.3 Audio Description or Media Alternative (Prerecorded) (Level A) Not Applicable The product contains no video. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.2.3 Audio Description or Media Alternative (Prerecorded) (Level A) Not Applicable The product contains no video. Evidence: code review."':
           - rowheader "1.2.3 Audio Description or Media Alternative (Prerecorded) (Level A)"
           - cell "Not Applicable"
-          - 'cell "The product contains no video. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The product contains no video. Evidence: code review."':
             - text: The product contains no video.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.3.1 Info and Relationships (Level A) Supports Structure is conveyed with native semantics: landmarks, headings in order, lists, data tables with captions and th scope, fieldset/legend for each question, labelled radio groups for scoping questions, and labels for every field. Evidence: 9 axe-core rules passed (aria-hidden-body, aria-required-children, aria-required-parent, definition-list, dlitem, list, listitem, td-headers-attr, th-has-data-cells); code review, accessibility tree inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.3.1 Info and Relationships (Level A) Supports Structure is conveyed with native semantics: landmarks, headings in order, lists, data tables with captions and th scope, fieldset/legend for each question, labelled radio groups for scoping questions, and labels for every field. Evidence: 9 axe-core rules passed (aria-hidden-body, aria-required-children, aria-required-parent, definition-list, dlitem, list, listitem, td-headers-attr, th-has-data-cells); code review, accessibility tree inspection."':
           - rowheader "1.3.1 Info and Relationships (Level A)"
           - cell "Supports"
-          - 'cell "Structure is conveyed with native semantics: landmarks, headings in order, lists, data tables with captions and th scope, fieldset/legend for each question, labelled radio groups for scoping questions, and labels for every field. Evidence: 9 axe-core rules passed (aria-hidden-body, aria-required-children, aria-required-parent, definition-list, dlitem, list, listitem, td-headers-attr, th-has-data-cells); code review, accessibility tree inspection (pending re-review after UI changes)."':
+          - 'cell "Structure is conveyed with native semantics: landmarks, headings in order, lists, data tables with captions and th scope, fieldset/legend for each question, labelled radio groups for scoping questions, and labels for every field. Evidence: 9 axe-core rules passed (aria-hidden-body, aria-required-children, aria-required-parent, definition-list, dlitem, list, listitem, td-headers-attr, th-has-data-cells); code review, accessibility tree inspection."':
             - text: "Structure is conveyed with native semantics: landmarks, headings in order, lists, data tables with captions and th scope, fieldset/legend for each question, labelled radio groups for scoping questions, and labels for every field."
             - paragraph:
               - strong: "Evidence:"
-              - text: 9 axe-core rules passed (aria-hidden-body, aria-required-children, aria-required-parent, definition-list, dlitem, list, listitem, td-headers-attr, th-has-data-cells); code review, accessibility tree inspection (pending re-review after UI changes).
-        - 'row "1.3.2 Meaningful Sequence (Level A) Supports DOM order matches visual reading order. The only CSS reordering places the main navigation below the product name on narrow screens, which does not change meaning. Evidence: code review, visual inspection (pending re-review after UI changes)."':
+              - text: 9 axe-core rules passed (aria-hidden-body, aria-required-children, aria-required-parent, definition-list, dlitem, list, listitem, td-headers-attr, th-has-data-cells); code review, accessibility tree inspection.
+        - 'row "1.3.2 Meaningful Sequence (Level A) Supports DOM order matches visual reading order. The only CSS reordering places the main navigation below the product name on narrow screens, which does not change meaning. Evidence: code review, visual inspection."':
           - rowheader "1.3.2 Meaningful Sequence (Level A)"
           - cell "Supports"
-          - 'cell "DOM order matches visual reading order. The only CSS reordering places the main navigation below the product name on narrow screens, which does not change meaning. Evidence: code review, visual inspection (pending re-review after UI changes)."':
+          - 'cell "DOM order matches visual reading order. The only CSS reordering places the main navigation below the product name on narrow screens, which does not change meaning. Evidence: code review, visual inspection."':
             - text: DOM order matches visual reading order. The only CSS reordering places the main navigation below the product name on narrow screens, which does not change meaning.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review, visual inspection (pending re-review after UI changes).
-        - 'row "1.3.3 Sensory Characteristics (Level A) Supports Instructions refer to sections by name, not by shape, size or position. One location-based instruction found during evaluation (“right-hand panel”) was reworded. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review, visual inspection.
+        - 'row "1.3.3 Sensory Characteristics (Level A) Supports Instructions refer to sections by name, not by shape, size or position. One location-based instruction found during evaluation (“right-hand panel”) was reworded. Evidence: code review."':
           - rowheader "1.3.3 Sensory Characteristics (Level A)"
           - cell "Supports"
-          - 'cell "Instructions refer to sections by name, not by shape, size or position. One location-based instruction found during evaluation (“right-hand panel”) was reworded. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Instructions refer to sections by name, not by shape, size or position. One location-based instruction found during evaluation (“right-hand panel”) was reworded. Evidence: code review."':
             - text: Instructions refer to sections by name, not by shape, size or position. One location-based instruction found during evaluation (“right-hand panel”) was reworded.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.4.1 Use of Color (Level A) Supports Status, risk, applicability and severity are always shown as text. Selected answers show a check mark and bold text in addition to colour. Links within text are underlined. Evidence: 1 axe-core rule passed (link-in-text-block); code review, visual inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.4.1 Use of Color (Level A) Supports Status, risk, applicability and severity are always shown as text. Selected answers show a check mark and bold text in addition to colour. Links within text are underlined. Evidence: 1 axe-core rule passed (link-in-text-block); code review, visual inspection."':
           - rowheader "1.4.1 Use of Color (Level A)"
           - cell "Supports"
-          - 'cell "Status, risk, applicability and severity are always shown as text. Selected answers show a check mark and bold text in addition to colour. Links within text are underlined. Evidence: 1 axe-core rule passed (link-in-text-block); code review, visual inspection (pending re-review after UI changes)."':
+          - 'cell "Status, risk, applicability and severity are always shown as text. Selected answers show a check mark and bold text in addition to colour. Links within text are underlined. Evidence: 1 axe-core rule passed (link-in-text-block); code review, visual inspection."':
             - text: Status, risk, applicability and severity are always shown as text. Selected answers show a check mark and bold text in addition to colour. Links within text are underlined.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (link-in-text-block); code review, visual inspection (pending re-review after UI changes).
-        - 'row "1.4.2 Audio Control (Level A) Not Applicable The product plays no audio. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (link-in-text-block); code review, visual inspection.
+        - 'row "1.4.2 Audio Control (Level A) Not Applicable The product plays no audio. Evidence: code review."':
           - rowheader "1.4.2 Audio Control (Level A)"
           - cell "Not Applicable"
-          - 'cell "The product plays no audio. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The product plays no audio. Evidence: code review."':
             - text: The product plays no audio.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.1.1 Keyboard (Level A) Supports All functions use native, keyboard-operable controls. Scripted checks Tab through every page state and confirm every focusable control is reached, that button-styled file pickers are keyboard operable, that the requirement lens tabs work with arrow keys, and that questionnaire answers can be selected with the keyboard. Evidence: 1 axe-core rule passed (scrollable-region-focusable); scripted checks keyboard-reach, lookalike-controls, tabs-pattern, status-messages (107 runs, all passed); code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.1.1 Keyboard (Level A) Supports All functions use native, keyboard-operable controls. Scripted checks Tab through every page state and confirm every focusable control is reached, that button-styled file pickers are keyboard operable, that the requirement lens tabs work with arrow keys, and that questionnaire answers can be selected with the keyboard. Evidence: 1 axe-core rule passed (scrollable-region-focusable); scripted checks keyboard-reach, lookalike-controls, tabs-pattern, status-messages (107 runs, all passed); code review."':
           - rowheader "2.1.1 Keyboard (Level A)"
           - cell "Supports"
-          - 'cell "All functions use native, keyboard-operable controls. Scripted checks Tab through every page state and confirm every focusable control is reached, that button-styled file pickers are keyboard operable, that the requirement lens tabs work with arrow keys, and that questionnaire answers can be selected with the keyboard. Evidence: 1 axe-core rule passed (scrollable-region-focusable); scripted checks keyboard-reach, lookalike-controls, tabs-pattern, status-messages (107 runs, all passed); code review (pending re-review after UI changes)."':
+          - 'cell "All functions use native, keyboard-operable controls. Scripted checks Tab through every page state and confirm every focusable control is reached, that button-styled file pickers are keyboard operable, that the requirement lens tabs work with arrow keys, and that questionnaire answers can be selected with the keyboard. Evidence: 1 axe-core rule passed (scrollable-region-focusable); scripted checks keyboard-reach, lookalike-controls, tabs-pattern, status-messages (107 runs, all passed); code review."':
             - text: All functions use native, keyboard-operable controls. Scripted checks Tab through every page state and confirm every focusable control is reached, that button-styled file pickers are keyboard operable, that the requirement lens tabs work with arrow keys, and that questionnaire answers can be selected with the keyboard.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (scrollable-region-focusable); scripted checks keyboard-reach, lookalike-controls, tabs-pattern, status-messages (107 runs, all passed); code review (pending re-review after UI changes).
+              - text: 1 axe-core rule passed (scrollable-region-focusable); scripted checks keyboard-reach, lookalike-controls, tabs-pattern, status-messages (107 runs, all passed); code review.
         - 'row "2.1.2 No Keyboard Trap (Level A) Supports Scripted traversal confirms focus moves through and out of every page state. Evidence: scripted checks no-keyboard-trap (70 runs, all passed)."':
           - rowheader "2.1.2 No Keyboard Trap (Level A)"
           - cell "Supports"
@@ -216,46 +211,46 @@
             - paragraph:
               - strong: "Evidence:"
               - text: scripted checks no-keyboard-trap (70 runs, all passed).
-        - 'row "2.1.4 Character Key Shortcuts (Level A, WCAG 2.1 and 2.2) Not Applicable No single-character shortcuts are defined. Arrow, Home and End keys act only while a tab has focus, and Escape dismisses the confirmation message. Evidence: code review (pending re-review after UI changes)."':
+        - 'row "2.1.4 Character Key Shortcuts (Level A, WCAG 2.1 and 2.2) Not Applicable No single-character shortcuts are defined. Arrow, Home and End keys act only while a tab has focus, and Escape dismisses the confirmation message. Evidence: code review."':
           - rowheader "2.1.4 Character Key Shortcuts (Level A, WCAG 2.1 and 2.2)"
           - cell "Not Applicable"
-          - 'cell "No single-character shortcuts are defined. Arrow, Home and End keys act only while a tab has focus, and Escape dismisses the confirmation message. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No single-character shortcuts are defined. Arrow, Home and End keys act only while a tab has focus, and Escape dismisses the confirmation message. Evidence: code review."':
             - text: No single-character shortcuts are defined. Arrow, Home and End keys act only while a tab has focus, and Escape dismisses the confirmation message.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.2.1 Timing Adjustable (Level A) Supports The only time limit is the auto-lock for encrypted Protected storage (a security safeguard). Users can adjust it before encountering it, from 15 minutes to 8 hours (more than ten times the default), or turn it off on the Data and security page. Locking loses no work: the assessment is saved before locking and restored on unlock. Confirmation messages stay visible until dismissed. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.2.1 Timing Adjustable (Level A) Supports The only time limit is the auto-lock for encrypted Protected storage (a security safeguard). Users can adjust it before encountering it, from 15 minutes to 8 hours (more than ten times the default), or turn it off on the Data and security page. Locking loses no work: the assessment is saved before locking and restored on unlock. Confirmation messages stay visible until dismissed. Evidence: code review."':
           - rowheader "2.2.1 Timing Adjustable (Level A)"
           - cell "Supports"
-          - 'cell "The only time limit is the auto-lock for encrypted Protected storage (a security safeguard). Users can adjust it before encountering it, from 15 minutes to 8 hours (more than ten times the default), or turn it off on the Data and security page. Locking loses no work: the assessment is saved before locking and restored on unlock. Confirmation messages stay visible until dismissed. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The only time limit is the auto-lock for encrypted Protected storage (a security safeguard). Users can adjust it before encountering it, from 15 minutes to 8 hours (more than ten times the default), or turn it off on the Data and security page. Locking loses no work: the assessment is saved before locking and restored on unlock. Confirmation messages stay visible until dismissed. Evidence: code review."':
             - text: "The only time limit is the auto-lock for encrypted Protected storage (a security safeguard). Users can adjust it before encountering it, from 15 minutes to 8 hours (more than ten times the default), or turn it off on the Data and security page. Locking loses no work: the assessment is saved before locking and restored on unlock. Confirmation messages stay visible until dismissed."
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.2.2 Pause, Stop, Hide (Level A) Not Applicable There is no moving, blinking, scrolling or auto-updating content. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.2.2 Pause, Stop, Hide (Level A) Not Applicable There is no moving, blinking, scrolling or auto-updating content. Evidence: code review."':
           - rowheader "2.2.2 Pause, Stop, Hide (Level A)"
           - cell "Not Applicable"
-          - 'cell "There is no moving, blinking, scrolling or auto-updating content. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "There is no moving, blinking, scrolling or auto-updating content. Evidence: code review."':
             - text: There is no moving, blinking, scrolling or auto-updating content.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.3.1 Three Flashes or Below Threshold (Level A) Supports No content flashes. Transitions are disabled when the user prefers reduced motion. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.3.1 Three Flashes or Below Threshold (Level A) Supports No content flashes. Transitions are disabled when the user prefers reduced motion. Evidence: code review."':
           - rowheader "2.3.1 Three Flashes or Below Threshold (Level A)"
           - cell "Supports"
-          - 'cell "No content flashes. Transitions are disabled when the user prefers reduced motion. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No content flashes. Transitions are disabled when the user prefers reduced motion. Evidence: code review."':
             - text: No content flashes. Transitions are disabled when the user prefers reduced motion.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.4.1 Bypass Blocks (Level A) Supports A skip link is the first focusable element, and pages use banner, navigation, main and contentinfo landmarks. Evidence: 1 axe-core rule passed (bypass); code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.4.1 Bypass Blocks (Level A) Supports A skip link is the first focusable element, and pages use banner, navigation, main and contentinfo landmarks. Evidence: 1 axe-core rule passed (bypass); code review."':
           - rowheader "2.4.1 Bypass Blocks (Level A)"
           - cell "Supports"
-          - 'cell "A skip link is the first focusable element, and pages use banner, navigation, main and contentinfo landmarks. Evidence: 1 axe-core rule passed (bypass); code review (pending re-review after UI changes)."':
+          - 'cell "A skip link is the first focusable element, and pages use banner, navigation, main and contentinfo landmarks. Evidence: 1 axe-core rule passed (bypass); code review."':
             - text: A skip link is the first focusable element, and pages use banner, navigation, main and contentinfo landmarks.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (bypass); code review (pending re-review after UI changes).
+              - text: 1 axe-core rule passed (bypass); code review.
         - 'row "2.4.2 Page Titled (Level A) Supports Each view sets a unique, descriptive document title on navigation (verified by the route-focus check). Documentation pages have unique titles. Evidence: 1 axe-core rule passed (document-title); scripted checks route-focus (1 runs, all passed)."':
           - rowheader "2.4.2 Page Titled (Level A)"
           - cell "Supports"
@@ -264,54 +259,54 @@
             - paragraph:
               - strong: "Evidence:"
               - text: 1 axe-core rule passed (document-title); scripted checks route-focus (1 runs, all passed).
-        - 'row "2.4.3 Focus Order (Level A) Supports Focus order follows the DOM. After in-app navigation focus moves to the new page heading (or to the requested control); after an action re-renders a view, focus returns to the control that triggered it. Evidence: scripted checks route-focus (1 runs, all passed); code review (pending re-review after UI changes)."':
+        - 'row "2.4.3 Focus Order (Level A) Supports Focus order follows the DOM. After in-app navigation focus moves to the new page heading (or to the requested control); after an action re-renders a view, focus returns to the control that triggered it. Evidence: scripted checks route-focus (1 runs, all passed); code review."':
           - rowheader "2.4.3 Focus Order (Level A)"
           - cell "Supports"
-          - 'cell "Focus order follows the DOM. After in-app navigation focus moves to the new page heading (or to the requested control); after an action re-renders a view, focus returns to the control that triggered it. Evidence: scripted checks route-focus (1 runs, all passed); code review (pending re-review after UI changes)."':
+          - 'cell "Focus order follows the DOM. After in-app navigation focus moves to the new page heading (or to the requested control); after an action re-renders a view, focus returns to the control that triggered it. Evidence: scripted checks route-focus (1 runs, all passed); code review."':
             - text: Focus order follows the DOM. After in-app navigation focus moves to the new page heading (or to the requested control); after an action re-renders a view, focus returns to the control that triggered it.
             - paragraph:
               - strong: "Evidence:"
-              - text: scripted checks route-focus (1 runs, all passed); code review (pending re-review after UI changes).
-        - 'row "2.4.4 Link Purpose (In Context) (Level A) Supports Link text is descriptive or made clear by its card or list item (e.g. requirement links show the requirement ID and title). Evidence: 1 axe-core rule passed (link-name); code review (pending re-review after UI changes)."':
+              - text: scripted checks route-focus (1 runs, all passed); code review.
+        - 'row "2.4.4 Link Purpose (In Context) (Level A) Supports Link text is descriptive or made clear by its card or list item (e.g. requirement links show the requirement ID and title). Evidence: 1 axe-core rule passed (link-name); code review."':
           - rowheader "2.4.4 Link Purpose (In Context) (Level A)"
           - cell "Supports"
-          - 'cell "Link text is descriptive or made clear by its card or list item (e.g. requirement links show the requirement ID and title). Evidence: 1 axe-core rule passed (link-name); code review (pending re-review after UI changes)."':
+          - 'cell "Link text is descriptive or made clear by its card or list item (e.g. requirement links show the requirement ID and title). Evidence: 1 axe-core rule passed (link-name); code review."':
             - text: Link text is descriptive or made clear by its card or list item (e.g. requirement links show the requirement ID and title).
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (link-name); code review (pending re-review after UI changes).
-        - 'row "2.5.1 Pointer Gestures (Level A, WCAG 2.1 and 2.2) Not Applicable No multipoint or path-based gestures are used. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (link-name); code review.
+        - 'row "2.5.1 Pointer Gestures (Level A, WCAG 2.1 and 2.2) Not Applicable No multipoint or path-based gestures are used. Evidence: code review."':
           - rowheader "2.5.1 Pointer Gestures (Level A, WCAG 2.1 and 2.2)"
           - cell "Not Applicable"
-          - 'cell "No multipoint or path-based gestures are used. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No multipoint or path-based gestures are used. Evidence: code review."':
             - text: No multipoint or path-based gestures are used.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.5.2 Pointer Cancellation (Level A, WCAG 2.1 and 2.2) Supports All actions use native click activation, which fires on release and can be cancelled by moving the pointer away. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.5.2 Pointer Cancellation (Level A, WCAG 2.1 and 2.2) Supports All actions use native click activation, which fires on release and can be cancelled by moving the pointer away. Evidence: code review."':
           - rowheader "2.5.2 Pointer Cancellation (Level A, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "All actions use native click activation, which fires on release and can be cancelled by moving the pointer away. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "All actions use native click activation, which fires on release and can be cancelled by moving the pointer away. Evidence: code review."':
             - text: All actions use native click activation, which fires on release and can be cancelled by moving the pointer away.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.5.3 Label in Name (Level A, WCAG 2.1 and 2.2) Supports Accessible names contain the visible label text. Buttons with extra context (“Apply: Where does it run?”, “Dismiss message”) start with the visible label. Evidence: 1 axe-core rule passed (label-content-name-mismatch); code review, accessibility tree inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.5.3 Label in Name (Level A, WCAG 2.1 and 2.2) Supports Accessible names contain the visible label text. Buttons with extra context (“Apply: Where does it run?”, “Dismiss message”) start with the visible label. Evidence: 1 axe-core rule passed (label-content-name-mismatch); code review, accessibility tree inspection."':
           - rowheader "2.5.3 Label in Name (Level A, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "Accessible names contain the visible label text. Buttons with extra context (“Apply: Where does it run?”, “Dismiss message”) start with the visible label. Evidence: 1 axe-core rule passed (label-content-name-mismatch); code review, accessibility tree inspection (pending re-review after UI changes)."':
+          - 'cell "Accessible names contain the visible label text. Buttons with extra context (“Apply: Where does it run?”, “Dismiss message”) start with the visible label. Evidence: 1 axe-core rule passed (label-content-name-mismatch); code review, accessibility tree inspection."':
             - text: "Accessible names contain the visible label text. Buttons with extra context (“Apply: Where does it run?”, “Dismiss message”) start with the visible label."
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (label-content-name-mismatch); code review, accessibility tree inspection (pending re-review after UI changes).
-        - 'row "2.5.4 Motion Actuation (Level A, WCAG 2.1 and 2.2) Not Applicable No functions are triggered by device motion. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (label-content-name-mismatch); code review, accessibility tree inspection.
+        - 'row "2.5.4 Motion Actuation (Level A, WCAG 2.1 and 2.2) Not Applicable No functions are triggered by device motion. Evidence: code review."':
           - rowheader "2.5.4 Motion Actuation (Level A, WCAG 2.1 and 2.2)"
           - cell "Not Applicable"
-          - 'cell "No functions are triggered by device motion. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No functions are triggered by device motion. Evidence: code review."':
             - text: No functions are triggered by device motion.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
+              - text: code review.
         - 'row "3.1.1 Language of Page (Level A) Supports Pages declare lang=\"en\" or lang=\"fr\"; the application updates the html lang attribute when the language is switched. Evidence: 2 axe-core rules passed (html-has-lang, html-lang-valid); scripted checks language-switch (1 runs, all passed)."':
           - rowheader "3.1.1 Language of Page (Level A)"
           - cell "Supports"
@@ -320,70 +315,70 @@
             - paragraph:
               - strong: "Evidence:"
               - text: 2 axe-core rules passed (html-has-lang, html-lang-valid); scripted checks language-switch (1 runs, all passed).
-        - 'row "3.2.1 On Focus (Level A) Supports Receiving focus never changes context. Evidence: code review (pending re-review after UI changes)."':
+        - 'row "3.2.1 On Focus (Level A) Supports Receiving focus never changes context. Evidence: code review."':
           - rowheader "3.2.1 On Focus (Level A)"
           - cell "Supports"
-          - 'cell "Receiving focus never changes context. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Receiving focus never changes context. Evidence: code review."':
             - text: Receiving focus never changes context.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.2.2 On Input (Level A) Supports Changing a field updates related summaries, statuses and search results on the same page but never navigates, submits or moves focus. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.2.2 On Input (Level A) Supports Changing a field updates related summaries, statuses and search results on the same page but never navigates, submits or moves focus. Evidence: code review."':
           - rowheader "3.2.2 On Input (Level A)"
           - cell "Supports"
-          - 'cell "Changing a field updates related summaries, statuses and search results on the same page but never navigates, submits or moves focus. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Changing a field updates related summaries, statuses and search results on the same page but never navigates, submits or moves focus. Evidence: code review."':
             - text: Changing a field updates related summaries, statuses and search results on the same page but never navigates, submits or moves focus.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.2.6 Consistent Help (Level A, WCAG 2.2 only) Supports Links to the accessibility statement and to the problem-reporting page appear in the same footer position on every application and documentation page. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.2.6 Consistent Help (Level A, WCAG 2.2 only) Supports Links to the accessibility statement and to the problem-reporting page appear in the same footer position on every application and documentation page. Evidence: code review."':
           - rowheader "3.2.6 Consistent Help (Level A, WCAG 2.2 only)"
           - cell "Supports"
-          - 'cell "Links to the accessibility statement and to the problem-reporting page appear in the same footer position on every application and documentation page. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Links to the accessibility statement and to the problem-reporting page appear in the same footer position on every application and documentation page. Evidence: code review."':
             - text: Links to the accessibility statement and to the problem-reporting page appear in the same footer position on every application and documentation page.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.3.1 Error Identification (Level A) Supports Form errors (passphrase rules, a wrong passphrase, a storage choice not allowed for the marking, import problems) appear in an error summary that receives focus and links to the field, with an inline message on the field, aria-invalid and aria-describedby. Other errors (analyzing empty text) are described in text and announced. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.3.1 Error Identification (Level A) Supports Form errors (passphrase rules, a wrong passphrase, a storage choice not allowed for the marking, import problems) appear in an error summary that receives focus and links to the field, with an inline message on the field, aria-invalid and aria-describedby. Other errors (analyzing empty text) are described in text and announced. Evidence: code review."':
           - rowheader "3.3.1 Error Identification (Level A)"
           - cell "Supports"
-          - 'cell "Form errors (passphrase rules, a wrong passphrase, a storage choice not allowed for the marking, import problems) appear in an error summary that receives focus and links to the field, with an inline message on the field, aria-invalid and aria-describedby. Other errors (analyzing empty text) are described in text and announced. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Form errors (passphrase rules, a wrong passphrase, a storage choice not allowed for the marking, import problems) appear in an error summary that receives focus and links to the field, with an inline message on the field, aria-invalid and aria-describedby. Other errors (analyzing empty text) are described in text and announced. Evidence: code review."':
             - text: Form errors (passphrase rules, a wrong passphrase, a storage choice not allowed for the marking, import problems) appear in an error summary that receives focus and links to the field, with an inline message on the field, aria-invalid and aria-describedby. Other errors (analyzing empty text) are described in text and announced.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.3.2 Labels or Instructions (Level A) Supports Every field has a visible label; scoping questions also explain why they are asked. Evidence: 1 axe-core rule passed (form-field-multiple-labels); code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.3.2 Labels or Instructions (Level A) Supports Every field has a visible label; scoping questions also explain why they are asked. Evidence: 1 axe-core rule passed (form-field-multiple-labels); code review."':
           - rowheader "3.3.2 Labels or Instructions (Level A)"
           - cell "Supports"
-          - 'cell "Every field has a visible label; scoping questions also explain why they are asked. Evidence: 1 axe-core rule passed (form-field-multiple-labels); code review (pending re-review after UI changes)."':
+          - 'cell "Every field has a visible label; scoping questions also explain why they are asked. Evidence: 1 axe-core rule passed (form-field-multiple-labels); code review."':
             - text: Every field has a visible label; scoping questions also explain why they are asked.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (form-field-multiple-labels); code review (pending re-review after UI changes).
-        - 'row "3.3.7 Redundant Entry (Level A, WCAG 2.2 only) Supports Information entered once (product name, organization, scope) is reused automatically in statements and reports; nothing has to be entered twice. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (form-field-multiple-labels); code review.
+        - 'row "3.3.7 Redundant Entry (Level A, WCAG 2.2 only) Supports Information entered once (product name, organization, scope) is reused automatically in statements and reports; nothing has to be entered twice. Evidence: code review."':
           - rowheader "3.3.7 Redundant Entry (Level A, WCAG 2.2 only)"
           - cell "Supports"
-          - 'cell "Information entered once (product name, organization, scope) is reused automatically in statements and reports; nothing has to be entered twice. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Information entered once (product name, organization, scope) is reused automatically in statements and reports; nothing has to be entered twice. Evidence: code review."':
             - text: Information entered once (product name, organization, scope) is reused automatically in statements and reports; nothing has to be entered twice.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "4.1.1 Parsing (obsolete and removed in WCAG 2.2) (Level A) Supports Removed in WCAG 2.2 and treated as always satisfied. For WCAG 2.0 and 2.1: markup is generated from templates with unique IDs, and the browser DOM is checked by axe-core for duplicate IDs referenced by ARIA. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "4.1.1 Parsing (obsolete and removed in WCAG 2.2) (Level A) Supports Removed in WCAG 2.2 and treated as always satisfied. For WCAG 2.0 and 2.1: markup is generated from templates with unique IDs, and the browser DOM is checked by axe-core for duplicate IDs referenced by ARIA. Evidence: code review."':
           - rowheader "4.1.1 Parsing (obsolete and removed in WCAG 2.2) (Level A)"
           - cell "Supports"
-          - 'cell "Removed in WCAG 2.2 and treated as always satisfied. For WCAG 2.0 and 2.1: markup is generated from templates with unique IDs, and the browser DOM is checked by axe-core for duplicate IDs referenced by ARIA. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Removed in WCAG 2.2 and treated as always satisfied. For WCAG 2.0 and 2.1: markup is generated from templates with unique IDs, and the browser DOM is checked by axe-core for duplicate IDs referenced by ARIA. Evidence: code review."':
             - text: "Removed in WCAG 2.2 and treated as always satisfied. For WCAG 2.0 and 2.1: markup is generated from templates with unique IDs, and the browser DOM is checked by axe-core for duplicate IDs referenced by ARIA."
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "4.1.2 Name, Role, Value (Level A) Supports Native controls are used throughout. Custom patterns expose correct roles and states: tabs (tablist/tab/tabpanel, aria-selected, roving tabindex), the theme toggle (aria-pressed), the current page (aria-current) and disclosure (details/summary). Evidence: 17 axe-core rules passed (aria-allowed-attr, aria-conditional-attr, aria-deprecated-role, aria-hidden-body, aria-hidden-focus, aria-prohibited-attr, aria-required-attr, aria-roles, aria-valid-attr, aria-valid-attr-value, button-name, duplicate-id-aria, label, link-name, nested-interactive, select-name, summary-name); scripted checks lookalike-controls, route-focus, tabs-pattern (37 runs, all passed); accessibility tree inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "4.1.2 Name, Role, Value (Level A) Supports Native controls are used throughout. Custom patterns expose correct roles and states: tabs (tablist/tab/tabpanel, aria-selected, roving tabindex), the theme toggle (aria-pressed), the current page (aria-current) and disclosure (details/summary). Evidence: 17 axe-core rules passed (aria-allowed-attr, aria-conditional-attr, aria-deprecated-role, aria-hidden-body, aria-hidden-focus, aria-prohibited-attr, aria-required-attr, aria-roles, aria-valid-attr, aria-valid-attr-value, button-name, duplicate-id-aria, label, link-name, nested-interactive, select-name, summary-name); scripted checks lookalike-controls, route-focus, tabs-pattern (37 runs, all passed); accessibility tree inspection."':
           - rowheader "4.1.2 Name, Role, Value (Level A)"
           - cell "Supports"
-          - 'cell "Native controls are used throughout. Custom patterns expose correct roles and states: tabs (tablist/tab/tabpanel, aria-selected, roving tabindex), the theme toggle (aria-pressed), the current page (aria-current) and disclosure (details/summary). Evidence: 17 axe-core rules passed (aria-allowed-attr, aria-conditional-attr, aria-deprecated-role, aria-hidden-body, aria-hidden-focus, aria-prohibited-attr, aria-required-attr, aria-roles, aria-valid-attr, aria-valid-attr-value, button-name, duplicate-id-aria, label, link-name, nested-interactive, select-name, summary-name); scripted checks lookalike-controls, route-focus, tabs-pattern (37 runs, all passed); accessibility tree inspection (pending re-review after UI changes)."':
+          - 'cell "Native controls are used throughout. Custom patterns expose correct roles and states: tabs (tablist/tab/tabpanel, aria-selected, roving tabindex), the theme toggle (aria-pressed), the current page (aria-current) and disclosure (details/summary). Evidence: 17 axe-core rules passed (aria-allowed-attr, aria-conditional-attr, aria-deprecated-role, aria-hidden-body, aria-hidden-focus, aria-prohibited-attr, aria-required-attr, aria-roles, aria-valid-attr, aria-valid-attr-value, button-name, duplicate-id-aria, label, link-name, nested-interactive, select-name, summary-name); scripted checks lookalike-controls, route-focus, tabs-pattern (37 runs, all passed); accessibility tree inspection."':
             - text: "Native controls are used throughout. Custom patterns expose correct roles and states: tabs (tablist/tab/tabpanel, aria-selected, roving tabindex), the theme toggle (aria-pressed), the current page (aria-current) and disclosure (details/summary)."
             - paragraph:
               - strong: "Evidence:"
-              - text: 17 axe-core rules passed (aria-allowed-attr, aria-conditional-attr, aria-deprecated-role, aria-hidden-body, aria-hidden-focus, aria-prohibited-attr, aria-required-attr, aria-roles, aria-valid-attr, aria-valid-attr-value, button-name, duplicate-id-aria, label, link-name, nested-interactive, select-name, summary-name); scripted checks lookalike-controls, route-focus, tabs-pattern (37 runs, all passed); accessibility tree inspection (pending re-review after UI changes).
+              - text: 17 axe-core rules passed (aria-allowed-attr, aria-conditional-attr, aria-deprecated-role, aria-hidden-body, aria-hidden-focus, aria-prohibited-attr, aria-required-attr, aria-roles, aria-valid-attr, aria-valid-attr-value, button-name, duplicate-id-aria, label, link-name, nested-interactive, select-name, summary-name); scripted checks lookalike-controls, route-focus, tabs-pattern (37 runs, all passed); accessibility tree inspection.
   - 'region "Table 2: Success Criteria, Level AA"':
     - 'table "Table 2: Success Criteria, Level AA"':
       - caption: "Table 2: Success Criteria, Level AA"
@@ -393,134 +388,134 @@
           - columnheader "Conformance level"
           - columnheader "Remarks and explanations"
       - rowgroup:
-        - 'row "1.2.4 Captions (Live) (Level AA) Not Applicable The product contains no live audio. Evidence: code review (pending re-review after UI changes)."':
+        - 'row "1.2.4 Captions (Live) (Level AA) Not Applicable The product contains no live audio. Evidence: code review."':
           - rowheader "1.2.4 Captions (Live) (Level AA)"
           - cell "Not Applicable"
-          - 'cell "The product contains no live audio. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The product contains no live audio. Evidence: code review."':
             - text: The product contains no live audio.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.2.5 Audio Description (Prerecorded) (Level AA) Not Applicable The product contains no video. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.2.5 Audio Description (Prerecorded) (Level AA) Not Applicable The product contains no video. Evidence: code review."':
           - rowheader "1.2.5 Audio Description (Prerecorded) (Level AA)"
           - cell "Not Applicable"
-          - 'cell "The product contains no video. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The product contains no video. Evidence: code review."':
             - text: The product contains no video.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.3.4 Orientation (Level AA, WCAG 2.1 and 2.2) Supports No orientation lock; layouts were checked at portrait phone widths (320 px) and desktop widths. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.3.4 Orientation (Level AA, WCAG 2.1 and 2.2) Supports No orientation lock; layouts were checked at portrait phone widths (320 px) and desktop widths. Evidence: code review."':
           - rowheader "1.3.4 Orientation (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "No orientation lock; layouts were checked at portrait phone widths (320 px) and desktop widths. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No orientation lock; layouts were checked at portrait phone widths (320 px) and desktop widths. Evidence: code review."':
             - text: No orientation lock; layouts were checked at portrait phone widths (320 px) and desktop widths.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.3.5 Identify Input Purpose (Level AA, WCAG 2.1 and 2.2) Supports Passphrase fields declare autocomplete=\"new-password\" or \"current-password\". Other fields describe the product being assessed (name, responsible organization, scope), not the user, so no WCAG input purpose applies to them. Evidence: 1 axe-core rule passed (autocomplete-valid); code review, accessibility tree inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.3.5 Identify Input Purpose (Level AA, WCAG 2.1 and 2.2) Supports Passphrase fields declare autocomplete=\"new-password\" or \"current-password\". Other fields describe the product being assessed (name, responsible organization, scope), not the user, so no WCAG input purpose applies to them. Evidence: 1 axe-core rule passed (autocomplete-valid); code review, accessibility tree inspection."':
           - rowheader "1.3.5 Identify Input Purpose (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "Passphrase fields declare autocomplete=\"new-password\" or \"current-password\". Other fields describe the product being assessed (name, responsible organization, scope), not the user, so no WCAG input purpose applies to them. Evidence: 1 axe-core rule passed (autocomplete-valid); code review, accessibility tree inspection (pending re-review after UI changes)."':
+          - 'cell "Passphrase fields declare autocomplete=\"new-password\" or \"current-password\". Other fields describe the product being assessed (name, responsible organization, scope), not the user, so no WCAG input purpose applies to them. Evidence: 1 axe-core rule passed (autocomplete-valid); code review, accessibility tree inspection."':
             - text: Passphrase fields declare autocomplete="new-password" or "current-password". Other fields describe the product being assessed (name, responsible organization, scope), not the user, so no WCAG input purpose applies to them.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (autocomplete-valid); code review, accessibility tree inspection (pending re-review after UI changes).
-        - 'row "1.4.3 Contrast (Minimum) (Level AA) Supports axe-core contrast checks pass in light and dark themes on every page state. Dark-theme accent colours were changed during evaluation to meet 4.5:1. Evidence: 1 axe-core rule passed (color-contrast); visual inspection (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (autocomplete-valid); code review, accessibility tree inspection.
+        - 'row "1.4.3 Contrast (Minimum) (Level AA) Supports axe-core contrast checks pass in light and dark themes on every page state. Dark-theme accent colours were changed during evaluation to meet 4.5:1. Evidence: 1 axe-core rule passed (color-contrast); visual inspection."':
           - rowheader "1.4.3 Contrast (Minimum) (Level AA)"
           - cell "Supports"
-          - 'cell "axe-core contrast checks pass in light and dark themes on every page state. Dark-theme accent colours were changed during evaluation to meet 4.5:1. Evidence: 1 axe-core rule passed (color-contrast); visual inspection (pending re-review after UI changes)."':
+          - 'cell "axe-core contrast checks pass in light and dark themes on every page state. Dark-theme accent colours were changed during evaluation to meet 4.5:1. Evidence: 1 axe-core rule passed (color-contrast); visual inspection."':
             - text: axe-core contrast checks pass in light and dark themes on every page state. Dark-theme accent colours were changed during evaluation to meet 4.5:1.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (color-contrast); visual inspection (pending re-review after UI changes).
-        - 'row "1.4.4 Resize Text (Level AA) Supports No loss of content or function at 200% zoom (640 CSS px viewport); text scales with browser zoom. Evidence: 1 axe-core rule passed (meta-viewport); scripted checks reflow-640 (35 runs, all passed); visual inspection (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (color-contrast); visual inspection.
+        - 'row "1.4.4 Resize Text (Level AA) Supports No loss of content or function at 200% zoom (640 CSS px viewport); text scales with browser zoom. Evidence: 1 axe-core rule passed (meta-viewport); scripted checks reflow-640 (35 runs, all passed); visual inspection."':
           - rowheader "1.4.4 Resize Text (Level AA)"
           - cell "Supports"
-          - 'cell "No loss of content or function at 200% zoom (640 CSS px viewport); text scales with browser zoom. Evidence: 1 axe-core rule passed (meta-viewport); scripted checks reflow-640 (35 runs, all passed); visual inspection (pending re-review after UI changes)."':
+          - 'cell "No loss of content or function at 200% zoom (640 CSS px viewport); text scales with browser zoom. Evidence: 1 axe-core rule passed (meta-viewport); scripted checks reflow-640 (35 runs, all passed); visual inspection."':
             - text: No loss of content or function at 200% zoom (640 CSS px viewport); text scales with browser zoom.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (meta-viewport); scripted checks reflow-640 (35 runs, all passed); visual inspection (pending re-review after UI changes).
-        - 'row "1.4.5 Images of Text (Level AA) Supports No images of text are used. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (meta-viewport); scripted checks reflow-640 (35 runs, all passed); visual inspection.
+        - 'row "1.4.5 Images of Text (Level AA) Supports No images of text are used. Evidence: code review."':
           - rowheader "1.4.5 Images of Text (Level AA)"
           - cell "Supports"
-          - 'cell "No images of text are used. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No images of text are used. Evidence: code review."':
             - text: No images of text are used.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "1.4.10 Reflow (Level AA, WCAG 2.1 and 2.2) Supports No two-dimensional scrolling at 320 CSS px on any page state. Data tables in the report scroll within their own container, which WCAG allows for content that needs two-dimensional layout. The header stops being sticky on narrow screens so it does not take space at high zoom. Evidence: scripted checks reflow-320 (35 runs, all passed); visual inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "1.4.10 Reflow (Level AA, WCAG 2.1 and 2.2) Supports No two-dimensional scrolling at 320 CSS px on any page state. Data tables in the report scroll within their own container, which WCAG allows for content that needs two-dimensional layout. The header stops being sticky on narrow screens so it does not take space at high zoom. Evidence: scripted checks reflow-320 (35 runs, all passed); visual inspection."':
           - rowheader "1.4.10 Reflow (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "No two-dimensional scrolling at 320 CSS px on any page state. Data tables in the report scroll within their own container, which WCAG allows for content that needs two-dimensional layout. The header stops being sticky on narrow screens so it does not take space at high zoom. Evidence: scripted checks reflow-320 (35 runs, all passed); visual inspection (pending re-review after UI changes)."':
+          - 'cell "No two-dimensional scrolling at 320 CSS px on any page state. Data tables in the report scroll within their own container, which WCAG allows for content that needs two-dimensional layout. The header stops being sticky on narrow screens so it does not take space at high zoom. Evidence: scripted checks reflow-320 (35 runs, all passed); visual inspection."':
             - text: No two-dimensional scrolling at 320 CSS px on any page state. Data tables in the report scroll within their own container, which WCAG allows for content that needs two-dimensional layout. The header stops being sticky on narrow screens so it does not take space at high zoom.
             - paragraph:
               - strong: "Evidence:"
-              - text: scripted checks reflow-320 (35 runs, all passed); visual inspection (pending re-review after UI changes).
-        - 'row "1.4.11 Non-text Contrast (Level AA, WCAG 2.1 and 2.2) Supports Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation. Evidence: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection (pending re-review after UI changes)."':
+              - text: scripted checks reflow-320 (35 runs, all passed); visual inspection.
+        - 'row "1.4.11 Non-text Contrast (Level AA, WCAG 2.1 and 2.2) Supports Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation. Evidence: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection."':
           - rowheader "1.4.11 Non-text Contrast (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation. Evidence: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection (pending re-review after UI changes)."':
+          - 'cell "Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation. Evidence: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection."':
             - text: Field and choice boundaries have at least 3:1 contrast in both themes, and focus indicators have at least 3:1 against their background (both verified by scripted checks). Field borders were darkened during evaluation.
             - paragraph:
               - strong: "Evidence:"
-              - text: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection (pending re-review after UI changes).
-        - 'row "1.4.12 Text Spacing (Level AA, WCAG 2.1 and 2.2) Partially Supports With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs)."':
+              - text: scripted checks focus-visible, non-text-contrast (140 runs, all passed); visual inspection.
+        - 'row "1.4.12 Text Spacing (Level AA, WCAG 2.1 and 2.2) Supports With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed)."':
           - rowheader "1.4.12 Text Spacing (Level AA, WCAG 2.1 and 2.2)"
-          - cell "Partially Supports"
-          - 'cell "With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs)."':
-            - text: "With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Automated regression detected in the current build: text-spacing on report (320px): Page scrolls horizontally by 11px; text-spacing on fr-report (320px): Page scrolls horizontally by 5px; text-spacing on fr-assess (320px): Page scrolls horizontally by 10px."
+          - cell "Supports"
+          - 'cell "With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears. Evidence: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed)."':
+            - text: With the WCAG text-spacing overrides applied at 1280 px and 320 px, no content is clipped and no horizontal scrolling appears.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs).
-        - 'row "1.4.13 Content on Hover or Focus (Level AA, WCAG 2.1 and 2.2) Supports No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (avoid-inline-spacing); scripted checks text-spacing (70 runs, all passed).
+        - 'row "1.4.13 Content on Hover or Focus (Level AA, WCAG 2.1 and 2.2) Supports No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser. Evidence: code review."':
           - rowheader "1.4.13 Content on Hover or Focus (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser. Evidence: code review."':
             - text: No custom hover or focus pop-ups. Some badges have a native title tooltip, which is controlled by the browser.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.4.5 Multiple Ways (Level AA) Supports Main navigation, a gate sidebar, previous/next links, a gate guide, a decision tree with a full map, and a searchable, filterable library of all requirements. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.4.5 Multiple Ways (Level AA) Supports Main navigation, a gate sidebar, previous/next links, a gate guide, a decision tree with a full map, and a searchable, filterable library of all requirements. Evidence: code review."':
           - rowheader "2.4.5 Multiple Ways (Level AA)"
           - cell "Supports"
-          - 'cell "Main navigation, a gate sidebar, previous/next links, a gate guide, a decision tree with a full map, and a searchable, filterable library of all requirements. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Main navigation, a gate sidebar, previous/next links, a gate guide, a decision tree with a full map, and a searchable, filterable library of all requirements. Evidence: code review."':
             - text: Main navigation, a gate sidebar, previous/next links, a gate guide, a decision tree with a full map, and a searchable, filterable library of all requirements.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "2.4.6 Headings and Labels (Level AA) Supports Headings and labels describe their topic or purpose; repeated “Questions” headings include the requirement ID for assistive technology. Evidence: code review, accessibility tree inspection (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "2.4.6 Headings and Labels (Level AA) Supports Headings and labels describe their topic or purpose; repeated “Questions” headings include the requirement ID for assistive technology. Evidence: code review, accessibility tree inspection."':
           - rowheader "2.4.6 Headings and Labels (Level AA)"
           - cell "Supports"
-          - 'cell "Headings and labels describe their topic or purpose; repeated “Questions” headings include the requirement ID for assistive technology. Evidence: code review, accessibility tree inspection (pending re-review after UI changes)."':
+          - 'cell "Headings and labels describe their topic or purpose; repeated “Questions” headings include the requirement ID for assistive technology. Evidence: code review, accessibility tree inspection."':
             - text: Headings and labels describe their topic or purpose; repeated “Questions” headings include the requirement ID for assistive technology.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review, accessibility tree inspection (pending re-review after UI changes).
-        - 'row "2.4.7 Focus Visible (Level AA) Supports Every focus stop on every page state shows an outline (scripted check), including visually hidden radio and file inputs, whose indicator appears on their visible label, and the date input''s calendar button. Evidence: scripted checks focus-visible (70 runs, all passed); visual inspection (pending re-review after UI changes)."':
+              - text: code review, accessibility tree inspection.
+        - 'row "2.4.7 Focus Visible (Level AA) Supports Every focus stop on every page state shows an outline (scripted check), including visually hidden radio and file inputs, whose indicator appears on their visible label, and the date input''s calendar button. Evidence: scripted checks focus-visible (70 runs, all passed); visual inspection."':
           - rowheader "2.4.7 Focus Visible (Level AA)"
           - cell "Supports"
-          - 'cell "Every focus stop on every page state shows an outline (scripted check), including visually hidden radio and file inputs, whose indicator appears on their visible label, and the date input''s calendar button. Evidence: scripted checks focus-visible (70 runs, all passed); visual inspection (pending re-review after UI changes)."':
+          - 'cell "Every focus stop on every page state shows an outline (scripted check), including visually hidden radio and file inputs, whose indicator appears on their visible label, and the date input''s calendar button. Evidence: scripted checks focus-visible (70 runs, all passed); visual inspection."':
             - text: Every focus stop on every page state shows an outline (scripted check), including visually hidden radio and file inputs, whose indicator appears on their visible label, and the date input's calendar button.
             - paragraph:
               - strong: "Evidence:"
-              - text: scripted checks focus-visible (70 runs, all passed); visual inspection (pending re-review after UI changes).
-        - 'row "2.4.11 Focus Not Obscured (Minimum) (Level AA, WCAG 2.2 only) Supports Scroll padding keeps focused elements clear of the sticky header and of the confirmation message, which can also be dismissed with Escape. The scripted check confirms no focused element is hidden on any page state, including one with the message showing. Evidence: scripted checks focus-not-obscured (70 runs, all passed); code review (pending re-review after UI changes)."':
+              - text: scripted checks focus-visible (70 runs, all passed); visual inspection.
+        - 'row "2.4.11 Focus Not Obscured (Minimum) (Level AA, WCAG 2.2 only) Supports Scroll padding keeps focused elements clear of the sticky header and of the confirmation message, which can also be dismissed with Escape. The scripted check confirms no focused element is hidden on any page state, including one with the message showing. Evidence: scripted checks focus-not-obscured (70 runs, all passed); code review."':
           - rowheader "2.4.11 Focus Not Obscured (Minimum) (Level AA, WCAG 2.2 only)"
           - cell "Supports"
-          - 'cell "Scroll padding keeps focused elements clear of the sticky header and of the confirmation message, which can also be dismissed with Escape. The scripted check confirms no focused element is hidden on any page state, including one with the message showing. Evidence: scripted checks focus-not-obscured (70 runs, all passed); code review (pending re-review after UI changes)."':
+          - 'cell "Scroll padding keeps focused elements clear of the sticky header and of the confirmation message, which can also be dismissed with Escape. The scripted check confirms no focused element is hidden on any page state, including one with the message showing. Evidence: scripted checks focus-not-obscured (70 runs, all passed); code review."':
             - text: Scroll padding keeps focused elements clear of the sticky header and of the confirmation message, which can also be dismissed with Escape. The scripted check confirms no focused element is hidden on any page state, including one with the message showing.
             - paragraph:
               - strong: "Evidence:"
-              - text: scripted checks focus-not-obscured (70 runs, all passed); code review (pending re-review after UI changes).
-        - 'row "2.5.7 Dragging Movements (Level AA, WCAG 2.2 only) Not Applicable No dragging is required. (Text area resize handles are provided by the browser.) Evidence: code review (pending re-review after UI changes)."':
+              - text: scripted checks focus-not-obscured (70 runs, all passed); code review.
+        - 'row "2.5.7 Dragging Movements (Level AA, WCAG 2.2 only) Not Applicable No dragging is required. (Text area resize handles are provided by the browser.) Evidence: code review."':
           - rowheader "2.5.7 Dragging Movements (Level AA, WCAG 2.2 only)"
           - cell "Not Applicable"
-          - 'cell "No dragging is required. (Text area resize handles are provided by the browser.) Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "No dragging is required. (Text area resize handles are provided by the browser.) Evidence: code review."':
             - text: No dragging is required. (Text area resize handles are provided by the browser.)
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
+              - text: code review.
         - 'row "2.5.8 Target Size (Minimum) (Level AA, WCAG 2.2 only) Supports Every pointer target is at least 24 by 24 CSS px, except links inside sentences, which WCAG exempts (scripted check). The skip link and footer links were enlarged during evaluation. Evidence: 1 axe-core rule passed (target-size); scripted checks target-size (35 runs, all passed)."':
           - rowheader "2.5.8 Target Size (Minimum) (Level AA, WCAG 2.2 only)"
           - cell "Supports"
@@ -529,62 +524,62 @@
             - paragraph:
               - strong: "Evidence:"
               - text: 1 axe-core rule passed (target-size); scripted checks target-size (35 runs, all passed).
-        - 'row "3.1.2 Language of Parts (Level AA) Supports The interface is available in English and French. The document language (html lang) follows the selected language, and the language toggle, whose label is always in the other language, carries its own lang attribute. Exported reports declare their language. Project data typed by users (names, descriptions) is not language-tagged. Evidence: 1 axe-core rule passed (valid-lang); scripted checks language-switch (1 runs, all passed); code review (pending re-review after UI changes)."':
+        - 'row "3.1.2 Language of Parts (Level AA) Supports The interface is available in English and French. The document language (html lang) follows the selected language, and the language toggle, whose label is always in the other language, carries its own lang attribute. Exported reports declare their language. Project data typed by users (names, descriptions) is not language-tagged. Evidence: 1 axe-core rule passed (valid-lang); scripted checks language-switch (1 runs, all passed); code review."':
           - rowheader "3.1.2 Language of Parts (Level AA)"
           - cell "Supports"
-          - 'cell "The interface is available in English and French. The document language (html lang) follows the selected language, and the language toggle, whose label is always in the other language, carries its own lang attribute. Exported reports declare their language. Project data typed by users (names, descriptions) is not language-tagged. Evidence: 1 axe-core rule passed (valid-lang); scripted checks language-switch (1 runs, all passed); code review (pending re-review after UI changes)."':
+          - 'cell "The interface is available in English and French. The document language (html lang) follows the selected language, and the language toggle, whose label is always in the other language, carries its own lang attribute. Exported reports declare their language. Project data typed by users (names, descriptions) is not language-tagged. Evidence: 1 axe-core rule passed (valid-lang); scripted checks language-switch (1 runs, all passed); code review."':
             - text: The interface is available in English and French. The document language (html lang) follows the selected language, and the language toggle, whose label is always in the other language, carries its own lang attribute. Exported reports declare their language. Project data typed by users (names, descriptions) is not language-tagged.
             - paragraph:
               - strong: "Evidence:"
-              - text: 1 axe-core rule passed (valid-lang); scripted checks language-switch (1 runs, all passed); code review (pending re-review after UI changes).
-        - 'row "3.2.3 Consistent Navigation (Level AA) Supports The header navigation and footer are identical and in the same order on every view. Evidence: code review (pending re-review after UI changes)."':
+              - text: 1 axe-core rule passed (valid-lang); scripted checks language-switch (1 runs, all passed); code review.
+        - 'row "3.2.3 Consistent Navigation (Level AA) Supports The header navigation and footer are identical and in the same order on every view. Evidence: code review."':
           - rowheader "3.2.3 Consistent Navigation (Level AA)"
           - cell "Supports"
-          - 'cell "The header navigation and footer are identical and in the same order on every view. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "The header navigation and footer are identical and in the same order on every view. Evidence: code review."':
             - text: The header navigation and footer are identical and in the same order on every view.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.2.4 Consistent Identification (Level AA) Supports Components with the same function use the same labels throughout (e.g. status and applicability badges, export buttons). Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.2.4 Consistent Identification (Level AA) Supports Components with the same function use the same labels throughout (e.g. status and applicability badges, export buttons). Evidence: code review."':
           - rowheader "3.2.4 Consistent Identification (Level AA)"
           - cell "Supports"
-          - 'cell "Components with the same function use the same labels throughout (e.g. status and applicability badges, export buttons). Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Components with the same function use the same labels throughout (e.g. status and applicability badges, export buttons). Evidence: code review."':
             - text: Components with the same function use the same labels throughout (e.g. status and applicability badges, export buttons).
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.3.3 Error Suggestion (Level AA) Supports Error messages say how to fix the problem (e.g. “Use at least 15 characters. Four or more unrelated words work well.”, “Paste some documentation text first”). Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.3.3 Error Suggestion (Level AA) Supports Error messages say how to fix the problem (e.g. “Use at least 15 characters. Four or more unrelated words work well.”, “Paste some documentation text first”). Evidence: code review."':
           - rowheader "3.3.3 Error Suggestion (Level AA)"
           - cell "Supports"
-          - 'cell "Error messages say how to fix the problem (e.g. “Use at least 15 characters. Four or more unrelated words work well.”, “Paste some documentation text first”). Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Error messages say how to fix the problem (e.g. “Use at least 15 characters. Four or more unrelated words work well.”, “Paste some documentation text first”). Evidence: code review."':
             - text: Error messages say how to fix the problem (e.g. “Use at least 15 characters. Four or more unrelated words work well.”, “Paste some documentation text first”).
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.3.4 Error Prevention (Legal, Financial, Data) (Level AA) Supports Actions that delete or replace the user''s data (erase all data, start a new project, load the sample, import, replace a gate statement) ask for confirmation. Passphrases must be entered twice when created. Assessments can be exported and re-imported. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.3.4 Error Prevention (Legal, Financial, Data) (Level AA) Supports Actions that delete or replace the user''s data (erase all data, start a new project, load the sample, import, replace a gate statement) ask for confirmation. Passphrases must be entered twice when created. Assessments can be exported and re-imported. Evidence: code review."':
           - rowheader "3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)"
           - cell "Supports"
-          - 'cell "Actions that delete or replace the user''s data (erase all data, start a new project, load the sample, import, replace a gate statement) ask for confirmation. Passphrases must be entered twice when created. Assessments can be exported and re-imported. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Actions that delete or replace the user''s data (erase all data, start a new project, load the sample, import, replace a gate statement) ask for confirmation. Passphrases must be entered twice when created. Assessments can be exported and re-imported. Evidence: code review."':
             - text: Actions that delete or replace the user's data (erase all data, start a new project, load the sample, import, replace a gate statement) ask for confirmation. Passphrases must be entered twice when created. Assessments can be exported and re-imported.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "3.3.8 Accessible Authentication (Minimum) (Level AA, WCAG 2.2 only) Supports Unlocking an encrypted assessment requires a passphrase. Pasting is allowed and the fields declare autocomplete (new-password / current-password), so password managers can supply it; a “Show passphrase” option is provided. No other cognitive function test is used. Evidence: code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "3.3.8 Accessible Authentication (Minimum) (Level AA, WCAG 2.2 only) Supports Unlocking an encrypted assessment requires a passphrase. Pasting is allowed and the fields declare autocomplete (new-password / current-password), so password managers can supply it; a “Show passphrase” option is provided. No other cognitive function test is used. Evidence: code review."':
           - rowheader "3.3.8 Accessible Authentication (Minimum) (Level AA, WCAG 2.2 only)"
           - cell "Supports"
-          - 'cell "Unlocking an encrypted assessment requires a passphrase. Pasting is allowed and the fields declare autocomplete (new-password / current-password), so password managers can supply it; a “Show passphrase” option is provided. No other cognitive function test is used. Evidence: code review (pending re-review after UI changes)."':
+          - 'cell "Unlocking an encrypted assessment requires a passphrase. Pasting is allowed and the fields declare autocomplete (new-password / current-password), so password managers can supply it; a “Show passphrase” option is provided. No other cognitive function test is used. Evidence: code review."':
             - text: Unlocking an encrypted assessment requires a passphrase. Pasting is allowed and the fields declare autocomplete (new-password / current-password), so password managers can supply it; a “Show passphrase” option is provided. No other cognitive function test is used.
             - paragraph:
               - strong: "Evidence:"
-              - text: code review (pending re-review after UI changes).
-        - 'row "4.1.3 Status Messages (Level AA, WCAG 2.1 and 2.2) Supports Results of actions (answer status, scope changes, analysis results, search result counts, import, export, lock and unlock confirmations) are announced through a polite live region without moving focus (scripted check). Form error summaries use role=alert. Evidence: scripted checks language-switch, status-messages (2 runs, all passed); code review (pending re-review after UI changes)."':
+              - text: code review.
+        - 'row "4.1.3 Status Messages (Level AA, WCAG 2.1 and 2.2) Supports Results of actions (answer status, scope changes, analysis results, search result counts, import, export, lock and unlock confirmations) are announced through a polite live region without moving focus (scripted check). Form error summaries use role=alert. Evidence: scripted checks language-switch, status-messages (2 runs, all passed); code review."':
           - rowheader "4.1.3 Status Messages (Level AA, WCAG 2.1 and 2.2)"
           - cell "Supports"
-          - 'cell "Results of actions (answer status, scope changes, analysis results, search result counts, import, export, lock and unlock confirmations) are announced through a polite live region without moving focus (scripted check). Form error summaries use role=alert. Evidence: scripted checks language-switch, status-messages (2 runs, all passed); code review (pending re-review after UI changes)."':
+          - 'cell "Results of actions (answer status, scope changes, analysis results, search result counts, import, export, lock and unlock confirmations) are announced through a polite live region without moving focus (scripted check). Form error summaries use role=alert. Evidence: scripted checks language-switch, status-messages (2 runs, all passed); code review."':
             - text: Results of actions (answer status, scope changes, analysis results, search result counts, import, export, lock and unlock confirmations) are announced through a polite live region without moving focus (scripted check). Form error summaries use role=alert.
             - paragraph:
               - strong: "Evidence:"
-              - text: scripted checks language-switch, status-messages (2 runs, all passed); code review (pending re-review after UI changes).
+              - text: scripted checks language-switch, status-messages (2 runs, all passed); code review.
   - paragraph: "Table 3: Success Criteria, Level AAA: not evaluated."
   - heading "EN 301 549 Report" [level=2]
   - 'heading "Chapter 4: Functional Performance Statements" [level=3]'
@@ -854,10 +849,10 @@
           - rowheader "9.1.4.11 Non-text Contrast"
           - cell "Supports"
           - cell "See WCAG 1.4.11."
-        - 'row "9.1.4.12 Text Spacing Partially Supports See WCAG 1.4.12. text-spacing on report (320px): Page scrolls horizontally by 11px."':
+        - row "9.1.4.12 Text Spacing Supports See WCAG 1.4.12.":
           - rowheader "9.1.4.12 Text Spacing"
-          - cell "Partially Supports"
-          - 'cell "See WCAG 1.4.12. text-spacing on report (320px): Page scrolls horizontally by 11px."'
+          - cell "Supports"
+          - cell "See WCAG 1.4.12."
         - row "9.1.4.13 Content on Hover or Focus Supports See WCAG 1.4.13.":
           - rowheader "9.1.4.13 Content on Hover or Focus"
           - cell "Supports"
@@ -898,10 +893,10 @@
           - rowheader "9.4.1.3 Status Messages"
           - cell "Supports"
           - cell "See WCAG 4.1.3."
-        - row "9.6 WCAG conformance requirements Partially Supports One or more clauses 9.1 to 9.4 are not fully supported.":
+        - row "9.6 WCAG conformance requirements Supports All clauses 9.1 to 9.4 are supported or not applicable.":
           - rowheader "9.6 WCAG conformance requirements"
-          - cell "Partially Supports"
-          - cell "One or more clauses 9.1 to 9.4 are not fully supported."
+          - cell "Supports"
+          - cell "All clauses 9.1 to 9.4 are supported or not applicable."
   - heading "Chapters 10 to 12" [level=3]
   - 'region "Chapters 10 to 12: Non-web documents, software, documentation and support"':
     - 'table "Chapters 10 to 12: Non-web documents, software, documentation and support"':

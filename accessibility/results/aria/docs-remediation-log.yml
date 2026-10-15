@@ -359,6 +359,12 @@
           - cell "The complexity estimator's category headings jumped from h1 to h3"
           - cell "Heading level chosen for size"
           - cell "Category headings are h2, styled small"
+        - row "32 1.4.12 In CI only (wider runner fonts), the report's summary tiles and the French gate readiness page scrolled horizontally by 5 to 11 px at 320 px with text-spacing overrides Fixed-width grid tracks and pills that could not wrap Tiles stack in one column below 480 px; tiles, pills and requirement titles may wrap":
+          - cell "32"
+          - cell "1.4.12"
+          - cell "In CI only (wider runner fonts), the report's summary tiles and the French gate readiness page scrolled horizontally by 5 to 11 px at 320 px with text-spacing overrides"
+          - cell "Fixed-width grid tracks and pills that could not wrap"
+          - cell "Tiles stack in one column below 480 px; tiles, pills and requirement titles may wrap"
 - contentinfo:
   - paragraph:
     - link "Privacy policy":
