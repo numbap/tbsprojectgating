@@ -1,0 +1,13 @@
+/* SA&A Wizard additions to the shared styles in ../css/styles.css. */
+.sticky .kpi-v { margin-bottom: .2em; }
+.hints .pills { flex: none; }
+.finding-head h3 { margin: 0; }
+.finding-head { margin-bottom: 12px; }
+td select, td input[type="text"] { min-width: 9em; }
+th[scope="row"] { font-weight: 600; background: none; }
+th[scope="row"] details { font-weight: 400; margin-top: 4px; }
+.fam-score { flex: none; }
+@media (max-width: 640px) {
+  .fam-head { gap: 8px; }
+}
+.inline-select { width: auto; max-width: 100%; }

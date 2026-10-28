@@ -121,10 +121,10 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
 
-      - name: Assemble the static site (application, policies, accessibility documentation)
+      - name: Assemble the static site (applications, policies, accessibility documentation)
         run: |
           mkdir _site
-          cp -r index.html css js policies accessibility LICENSE _site/
+          cp -r index.html css js policies accessibility saa LICENSE _site/
           rm -f _site/policies/*.md
           touch _site/.nojekyll
 

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- No network connections, no inline code, no remote content: data cannot leave the page. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>SA&amp;A Wizard</title>
+  <meta name="description" content="Step-by-step guide to IT security assessment and authorization (SA&amp;A) for software in the Government of Canada.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='3' y='3' width='26' height='26' rx='5' fill='%23b8202f'/><path d='M16 7l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9v-6z' stroke='white' stroke-width='2.2' fill='none'/></svg>">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/saa.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+  <header class="topbar">
+    <p id="marking" class="marking" role="note" aria-label="Security marking" hidden></p>
+    <div class="brand">
+      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="5" fill="var(--accent)"/><path d="M16 7l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9v-6z" stroke="#fff" stroke-width="2.2" fill="none"/></svg>
+      <span>SA&amp;A <strong>Wizard</strong></span>
+    </div>
+    <nav class="steps" aria-label="Main">
+      <a href="#/" data-nav="home">Overview</a>
+      <a href="#/step/context" data-nav="steps">Steps</a>
+      <a href="#/report" data-nav="report">Summary report</a>
+      <a href="#/data" data-nav="data">Data &amp; security</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Toggle dark mode"><span aria-hidden="true">◐</span></button>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <footer class="foot">
+    <p>Self-assessment aid for security assessment and authorization, based on paraphrased Treasury Board and Canadian Centre for Cyber Security publications. Not an official Government of Canada tool. Your departmental SA&amp;A procedure takes precedence. Runs entirely in your browser: nothing you enter is sent to any server.</p>
+    <p class="foot-links"><a href="../index.html">Project Gating Navigator</a></p>
+  </footer>
+  <aside id="toast" class="toast" aria-label="Notification" hidden><span id="toast-msg"></span><button type="button" id="toast-close" class="btn small">Dismiss<span class="sr-only"> message</span></button></aside>
+  <div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

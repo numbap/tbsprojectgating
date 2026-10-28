@@ -25,6 +25,32 @@ Also:
 - **Gate guide**: the three gating models and a page per gate (question, purpose, decision, gatekeepers, deliverables, review topics, pitfalls, requirements first due and revisited).
 - **Governance path**: an interactive decision tree from the departmental framework and OPMCA through each gate to close-out, including approval authority, GC EARB, agile delivery, failed gates, tolerance breaches and rebaselining, and stopping a project.
 
+## SA&A Wizard (`saa/`)
+
+A second, separate app in this repository: a step-by-step guide through **IT security assessment and authorization (SA&A)** for a software product in the Government of Canada, following the ITSG-33 information system lifecycle. Open `saa/index.html` (with `npm start`: http://localhost:8080/saa/).
+
+1. **Context and roles**: the system, its exposure, and who owns the risk and signs.
+2. **Security categorization**: injury tests for confidentiality, integrity and availability, giving the category (for example PBMM) and the control profile to start from: ITSG-33 Annex 4A Profile 1 on premises, CCCS Medium or Low Cloud Control Profile in the cloud, with warnings for Protected C and classified.
+3. **Plan and scope**: a suggested **tier** (light, standard or enhanced) from category and exposure, which you can override, and how SA&A lines up with project gates.
+4. **Threat and risk assessment**: a risk register (5 × 5 likelihood × impact, inherent and residual) with a starter catalogue of 13 common threats.
+5. **Controls and requirements**: status by ITSG-33 control family, and the 13 GC Cloud Guardrails for IaaS and PaaS tenancies.
+6. **Security assessment**: a findings register (severity, source, control, owner, due date, action, interim measures).
+7. **Authorization**: package checklist, the residual risks to accept, the decision the evidence supports (not ready, do not authorize, interim, with conditions, authorize), and the decision record.
+8. **Continuous monitoring**: reauthorization date and triggers.
+
+Each step has a checklist (63 activities in all). Each activity is marked required, recommended or not applicable for the system (SaaS, cloud tenancy, custom code, personal information, internet exposure, tier), with guidance and what good evidence looks like. The **summary report** exports as print/PDF and Markdown, and the POA&M as CSV.
+
+Data handling matches the Project Gating Navigator: nothing leaves the browser (`connect-src 'none'`), storage is encrypted by default (AES-256-GCM, PBKDF2 600,000 iterations), Protected A and B files are never stored or exported unencrypted, and work locks after 30 minutes of inactivity. The SA&A Wizard is **English only** for now, and it is not yet covered by the accessibility suite or the VPAT, although a manual axe-core check at 320, 640 and 1280 px in light and dark themes found no violations. Tests are in `tests/saa.test.mjs`.
+
+| Path | Purpose |
+|---|---|
+| `saa/js/data.js` | Steps, checklist items and their applicability rules, categorization scales, control families, guardrails, threats, sources |
+| `saa/js/engine.js` | Categorization, profile, tier, applicability, progress, risk ratings, POA&M, suggested decision, reauthorization date (pure functions) |
+| `saa/js/report.js` | Summary report as HTML and Markdown; POA&M as CSV |
+| `saa/js/store.js` | Encrypted, in-memory or (Unclassified only) plain storage |
+| `saa/js/app.js` | UI: routing, step panels, registers, events |
+| `saa/js/sample.js` | Fictional sample system |
+
 ## Sources
 
 Content is paraphrased from the following, and should be checked against their current versions:
