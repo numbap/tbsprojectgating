@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Autofill</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Form Autofill</h1>
+    <p>Paste a link to a form. A browser window opens the page and fills in your details. Check the form, then submit it yourself.</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="fill-h">
+      <h2 id="fill-h">Fill a form</h2>
+      <form id="fill-form">
+        <label for="url">Web address of the form</label>
+        <div class="row">
+          <input id="url" name="url" type="text" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://example.com/apply" required>
+          <button type="submit" id="fill-btn">Fill form</button>
+        </div>
+        <label class="check"><input type="checkbox" id="overwrite"> Replace answers already on the page</label>
+      </form>
+      <button type="button" id="refill-btn" class="secondary" hidden>Fill the open page again (next step of a multi-page form)</button>
+      <div id="status" role="status" aria-live="polite"></div>
+      <div id="result" hidden>
+        <table>
+          <caption id="result-caption"></caption>
+          <thead><tr><th scope="col">Field on page</th><th scope="col">Your detail</th><th scope="col">Value</th><th scope="col">Result</th></tr></thead>
+          <tbody id="result-body"></tbody>
+        </table>
+        <details id="shot-wrap">
+          <summary>Screenshot of the filled page</summary>
+          <img id="shot" alt="Screenshot of the page after filling">
+        </details>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="profile-h">
+      <h2 id="profile-h">Your details</h2>
+      <p class="hint">Saved on this computer only (in <code>data/profile.json</code>). Leave anything blank that you don't want filled.</p>
+      <form id="profile-form">
+        <fieldset>
+          <legend>Name and contact</legend>
+          <div class="grid">
+            <p><label for="firstName">First name</label><input id="firstName" name="firstName" autocomplete="given-name"></p>
+            <p><label for="middleName">Middle name</label><input id="middleName" name="middleName" autocomplete="additional-name"></p>
+            <p><label for="lastName">Last name</label><input id="lastName" name="lastName" autocomplete="family-name"></p>
+            <p><label for="fullName">Full name <span class="opt">(if different from first + last)</span></label><input id="fullName" name="fullName" autocomplete="name"></p>
+            <p><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></p>
+            <p><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></p>
+            <p><label for="birthDate">Date of birth</label><input id="birthDate" name="birthDate" type="date" autocomplete="bday"></p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Address</legend>
+          <div class="grid">
+            <p class="wide"><label for="address1">Street address</label><input id="address1" name="address1" autocomplete="address-line1"></p>
+            <p class="wide"><label for="address2">Apartment, suite, unit</label><input id="address2" name="address2" autocomplete="address-line2"></p>
+            <p><label for="city">City</label><input id="city" name="city" autocomplete="address-level2"></p>
+            <p><label for="region">Province / state</label><input id="region" name="region" autocomplete="address-level1"></p>
+            <p><label for="postalCode">Postal / ZIP code</label><input id="postalCode" name="postalCode" autocomplete="postal-code"></p>
+            <p><label for="country">Country</label><input id="country" name="country" autocomplete="country-name"></p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Work and online</legend>
+          <div class="grid">
+            <p><label for="company">Company / organization</label><input id="company" name="company" autocomplete="organization"></p>
+            <p><label for="jobTitle">Job title</label><input id="jobTitle" name="jobTitle" autocomplete="organization-title"></p>
+            <p><label for="website">Website</label><input id="website" name="website" type="url"></p>
+            <p><label for="linkedin">LinkedIn</label><input id="linkedin" name="linkedin" type="url"></p>
+            <p><label for="github">GitHub</label><input id="github" name="github" type="url"></p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Other answers</legend>
+          <p class="hint">For questions not listed above. The <strong>question</strong> is matched against the field's label, so use words that appear on the form, e.g. “pronouns”, “cover letter”, “how did you hear”.</p>
+          <div id="custom-list"></div>
+          <button type="button" id="add-custom" class="secondary">Add an answer</button>
+        </fieldset>
+        <div class="row end">
+          <span id="saved" role="status" aria-live="polite"></span>
+          <button type="submit">Save details</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="bm-h">
+      <h2 id="bm-h">Fill forms in your own browser (bookmarklet)</h2>
+      <p>For pages where you are already signed in, drag this button to your bookmarks bar. Open any form, then click the bookmark to fill it.</p>
+      <p><a id="bookmarklet" class="bookmarklet" href="#">Autofill me</a></p>
+      <p class="hint">The bookmark contains a copy of your details, so update it after you change them, and don't use it on a shared computer. On pages that put the form inside another site's frame, use “Fill form” above instead.</p>
+    </section>
+  </main>
+
+  <template id="custom-tpl">
+    <div class="custom">
+      <p><label>Question</label><input class="c-label" placeholder="e.g. pronouns"></p>
+      <p><label>Answer</label><textarea class="c-value" rows="1"></textarea></p>
+      <button type="button" class="remove secondary" aria-label="Remove this answer">Remove</button>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Job application</title></head>
+<body>
+<form id="apply">
+  <label for="fn">First name *</label><input id="fn" name="applicant[first_name]">
+  <label for="ln">Last name *</label><input id="ln" name="applicant[last_name]">
+  <input name="emailAddress" type="email" placeholder="Email address">
+  <label>Mobile phone <input name="contact_no" type="tel"></label>
+  <label for="addr">Street address</label><input id="addr" name="addr">
+  <label for="c">City</label><input id="c" name="c">
+  <label for="prov">Province</label>
+  <select id="prov" name="prov"><option value="">Choose…</option><option value="ON">Ontario</option><option value="QC">Quebec</option></select>
+  <label for="zip">Postal code</label><input id="zip" name="zip">
+  <label for="ctry">Country</label>
+  <select id="ctry"><option value="">--</option><option value="US">United States</option><option value="CA">Canada</option></select>
+  <label for="dob">Date of birth</label><input id="dob" type="date">
+  <input name="org" autocomplete="organization">
+  <label for="li">LinkedIn profile URL</label><input id="li" name="li" type="url">
+  <label for="web">Personal website</label><input id="web" name="web" type="url">
+  <fieldset><legend>Pronouns</legend>
+    <label><input type="radio" name="pr" value="he"> he/him</label>
+    <label><input type="radio" name="pr" value="she"> she/her</label>
+    <label><input type="radio" name="pr" value="they"> they/them</label>
+  </fieldset>
+  <label for="hear">How did you hear about us?</label><textarea id="hear"></textarea>
+  <label for="pw">Password</label><input id="pw" type="password">
+  <label for="card">Card number</label><input id="card" name="cardnumber">
+  <label for="pre">Middle name</label><input id="pre" value="Already">
+  <input type="hidden" name="email_hidden">
+  <button type="submit">Submit</button>
+</form>
+<p id="submitted" hidden>SUBMITTED</p>
+<script>document.getElementById('apply').addEventListener('submit',e=>{e.preventDefault();document.getElementById('submitted').hidden=false});</script>
+</body></html>
